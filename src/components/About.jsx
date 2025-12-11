@@ -53,8 +53,9 @@ const About = () => {
                             Berpengalaman mengembangkan dashboard, sistem kendali perangkat, dan alur pengolahan data real-time, pengelolaan end-to-end.
                         </p>
                         <p>
-                            Bersertifikat <strong>Hardware Installation Supervisor (BNSP)</strong> dengan penguasaan
-                            dasar jaringan, pemrograman Python, serta troubleshooting teknis.
+                            Bersertifikat <strong>Hardware Installation Supervisor (BNSP)</strong>,
+                            <strong>Google Analytics Certification</strong>, dan <strong>Integrated Speaking English</strong> dengan
+                            penguasaan dasar jaringan, pemrograman Python, analisis data, penguasaan elektronika, serta troubleshooting teknis.
                         </p>
 
                         <div className="about-stats">

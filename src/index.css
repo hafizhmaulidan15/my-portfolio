@@ -1010,6 +1010,229 @@ a:hover {
 }
 
 /* ======================================
+   PROJECTS SECTION
+   ====================================== */
+.projects {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card.expanded {
+  box-shadow: var(--shadow-elevated), var(--glow-mixed);
+}
+
+.project-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.project-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.2) 0%, rgba(0, 245, 255, 0.05) 100%);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  color: var(--accent-cyan);
+  transition: var(--transition-smooth);
+}
+
+.project-icon.cyan {
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.2) 0%, rgba(0, 245, 255, 0.05) 100%);
+  border-color: rgba(0, 245, 255, 0.3);
+  color: var(--accent-cyan);
+}
+
+.project-icon.purple {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.05) 100%);
+  border-color: rgba(168, 85, 247, 0.3);
+  color: var(--accent-purple);
+}
+
+.project-icon.pink {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.05) 100%);
+  border-color: rgba(236, 72, 153, 0.3);
+  color: var(--accent-pink);
+}
+
+.project-icon.blue {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.05) 100%);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: var(--accent-blue);
+}
+
+.project-icon.green {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--accent-green);
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--glow-cyan);
+}
+
+.project-header-content {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.project-period {
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.project-association {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.project-role-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(0, 245, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 245, 255, 0.1);
+}
+
+.project-role-title {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.project-expand-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  border-radius: 10px;
+  color: var(--accent-cyan);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  width: 100%;
+  margin-top: auto;
+}
+
+.project-expand-btn:hover {
+  background: linear-gradient(135deg, rgba(0, 245, 255, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+  border-color: rgba(0, 245, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+  animation: slide-up 0.3s ease-out;
+}
+
+.project-responsibilities h4,
+.project-impact h4,
+.project-skills h4 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.project-responsibilities ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-responsibilities li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.project-responsibilities li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+.project-impact {
+  padding: 16px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(236, 72, 153, 0.05) 100%);
+  border-radius: 12px;
+  border-left: 3px solid var(--accent-purple);
+}
+
+.project-impact p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.project-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-skills-list .tag {
+  font-size: 0.75rem;
+  padding: 5px 12px;
+}
+
+/* ======================================
    CONTACT SECTION
    ====================================== */
 .contact {
@@ -1169,6 +1392,10 @@ a:hover {
   .about-content {
     grid-template-columns: 1fr;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1236,6 +1463,35 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
+  .projects-grid {
+    gap: 24px;
+  }
+
+  .project-header {
+    flex-direction: column;
+  }
+
+  .project-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .project-role-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   .contact-info {
     flex-direction: column;
     gap: 24px;
@@ -1267,5 +1523,19 @@ a:hover {
   .contact-buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  .project-expand-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .project-responsibilities li {
+    font-size: 0.85rem;
+  }
+
+  .project-skills-list .tag {
+    font-size: 0.7rem;
+    padding: 4px 10px;
   }
 }

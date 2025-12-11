@@ -26,7 +26,12 @@ const Contact = () => {
                     </p>
 
                     <div className="contact-buttons">
-                        <a href="mailto:mhafizh.maulidan@gmail.com" className="btn btn-primary">
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=mhafizh.maulidan@gmail.com&su=Hello%20Hafizh%20-%20Inquiry%20from%20Portfolio&body=Halo%20Hafizh%2C%0A%0ASaya%20menemukan%20portfolio%20kamu%20dan%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut.%0A%0ANama%3A%20%5BNama%20Anda%5D%0APerusahaan%2FInstansi%3A%20%5BNama%20Perusahaan%5D%0AKeperluan%3A%20%5BProject%20%2F%20Job%20Opportunity%20%2F%20Collaboration%20%2F%20Other%5D%0A%0APesan%3A%0A%5BTulis%20pesan%20Anda%20di%20sini%5D%0A%0ATerima%20kasih%2C%0A%5BNama%20Anda%5D"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-primary"
+                        >
                             <Send size={20} />
                             Say Hello
                         </a>
