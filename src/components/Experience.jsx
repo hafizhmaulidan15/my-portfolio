@@ -63,7 +63,7 @@ const Experience = () => {
 
                 <div className="experience-wrapper" style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(450px, 100%), 1fr))',
                     gap: '60px',
                     marginTop: '48px'
                 }}>
