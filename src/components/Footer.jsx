@@ -1,41 +1,38 @@
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     return (
         <footer className="footer">
             <div className="container">
                 <div className="footer-content">
-                    <a href="#home" className="navbar-logo" style={{ fontSize: '1.25rem' }}>
-                        &lt;HM /&gt;
+                    <a href="#home" className="navbar-logo footer-logo">
+                        <span className="text-terminal">&lt;</span>
+                        <span className="text-shimmer">MHM</span>
+                        <span className="text-terminal">&gt;</span>
                     </a>
 
-                    <div className="footer-socials">
-                        <a
-                            href="https://github.com/hafizhmaulidan15"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-icon github"
-                            aria-label="GitHub"
-                        >
-                            <Github size={16} />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/hafizhmaulidan/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-icon linkedin"
-                            aria-label="LinkedIn"
-                        >
-                            <Linkedin size={16} />
-                        </a>
-                    </div>
-
                     <p className="footer-text">
-                        © {currentYear} Muhammad Hafizh Maulidan. All Rights Reserved
+                        <span className="text-terminal">&copy;</span> {currentYear} Muhammad Hafizh Maulidan
+                        <span className="text-muted"> | </span>
+                        <span className="text-gradient">Built with React</span>
                     </p>
                 </div>
+
+                {/* Back to Top Button */}
+                <button
+                    onClick={scrollToTop}
+                    className="back-to-top btn-icon neon-glow"
+                    aria-label="Back to top"
+                    title="Back to top"
+                >
+                    <ArrowUp size={20} />
+                </button>
             </div>
         </footer>
     );

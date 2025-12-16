@@ -1,22 +1,44 @@
 import {
     Cpu, Database, Wifi, Zap, Code, BarChart3,
-    Network, Settings, Brain, Globe, Wrench, Users
+    Network, Settings, Brain, Globe, Wrench, Layers, Cog,
+    CircuitBoard, Cloud, Terminal
 } from 'lucide-react';
 
 const Skills = () => {
-    const skills = [
-        { name: 'Python', icon: <Code size={28} />, color: 'cyan' },
-        { name: 'C/C++', icon: <Cpu size={28} />, color: 'purple' },
-        { name: 'IoT', icon: <Wifi size={28} />, color: 'pink' },
-        { name: 'Data Analysis', icon: <BarChart3 size={28} />, color: 'green' },
-        { name: 'Machine Learning', icon: <Brain size={28} />, color: 'cyan' },
-        { name: 'Data Visualization', icon: <Database size={28} />, color: 'purple' },
-        { name: 'Networking', icon: <Network size={28} />, color: 'pink' },
-        { name: 'Automation', icon: <Settings size={28} />, color: 'green' },
-        { name: 'Electrical Eng.', icon: <Zap size={28} />, color: 'cyan' },
-        { name: 'Hardware Eng.', icon: <Wrench size={28} />, color: 'purple' },
-        { name: 'English', icon: <Globe size={28} />, color: 'pink' },
-        { name: 'Agile PM', icon: <Users size={28} />, color: 'green' },
+    const skillCategories = [
+        {
+            category: 'Core Engineering',
+            skills: [
+                { name: 'IoT Systems', icon: <Wifi size={28} /> },
+                { name: 'Embedded Systems', icon: <Cpu size={28} /> },
+                { name: 'ESP32 & Arduino', icon: <CircuitBoard size={28} /> },
+                { name: 'Electronics & Hardware', icon: <Layers size={28} /> },
+                { name: 'Sensor Integration', icon: <Zap size={28} /> },
+                { name: 'Automation', icon: <Settings size={28} /> },
+            ]
+        },
+        {
+            category: 'Programming & Data',
+            skills: [
+                { name: 'Python', icon: <Code size={28} /> },
+                { name: 'C/C++', icon: <Cog size={28} /> },
+                { name: 'JavaScript', icon: <Terminal size={28} /> },
+                { name: 'Data Analysis', icon: <BarChart3 size={28} /> },
+                { name: 'Machine Learning', icon: <Brain size={28} /> },
+                { name: 'Data Visualization', icon: <Database size={28} /> },
+            ]
+        },
+        {
+            category: 'Web & Tools',
+            skills: [
+                { name: 'Web Development', icon: <Globe size={28} /> },
+                { name: 'HTML/CSS', icon: <Code size={28} /> },
+                { name: 'React', icon: <Cog size={28} /> },
+                { name: 'Networking', icon: <Network size={28} /> },
+                { name: 'Arduino Cloud', icon: <Cloud size={28} /> },
+                { name: 'Agile PM', icon: <Wrench size={28} /> },
+            ]
+        }
     ];
 
     return (
@@ -27,17 +49,26 @@ const Skills = () => {
                     Technologies and tools I work with to bring ideas to life
                 </p>
 
-                <div className="skills-grid">
-                    {skills.map((skill, index) => (
-                        <div
-                            key={index}
-                            className="skill-item card"
-                            style={{ animationDelay: `${index * 0.1}s` }}
-                        >
-                            <div className={`skill-icon`}>
-                                {skill.icon}
+                <div className="skills-categories">
+                    {skillCategories.map((category, catIndex) => (
+                        <div key={catIndex} className="skill-category">
+                            <h3 className="skill-category-title">
+                                <span className="category-border"></span>
+                                {category.category}
+                            </h3>
+                            <div className="skill-category-grid">
+                                {category.skills.map((skill, skillIndex) => (
+                                    <div
+                                        key={skillIndex}
+                                        className="skill-item-categorized glass-card hover-lift"
+                                    >
+                                        <div className="skill-icon-categorized">
+                                            {skill.icon}
+                                        </div>
+                                        <span className="skill-name-categorized">{skill.name}</span>
+                                    </div>
+                                ))}
                             </div>
-                            <span className="skill-name">{skill.name}</span>
                         </div>
                     ))}
                 </div>

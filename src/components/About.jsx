@@ -12,7 +12,7 @@ const About = () => {
         {
             icon: <GraduationCap size={24} />,
             title: 'Education',
-            description: 'D4 - IPB University (2021 - 2025)',
+            description: 'Bachelor of Engineering - IPB University (2021 - 2025)',
         },
         {
             icon: <MapPin size={24} />,
@@ -40,47 +40,50 @@ const About = () => {
                     Get to know more about my background and what drives me
                 </p>
 
-                <div className="about-content" style={{ marginTop: '48px' }}>
+                {/* Main Content - Text + Stats Grid */}
+                <div className="about-main-content">
                     <div className="about-text">
                         <p>
-                            Saya adalah Fresh Graduate dari <strong>IPB University</strong> dengan program D4,
-                            fokus pada bidang <strong>IoT Engineering</strong>, <strong>Data Analytics</strong>,
-                            dan <strong>Web Development</strong>.
+                            I am a Fresh Graduate from <strong>IPB University</strong> with a Bachelor of Engineering,
+                            focusing on <strong>IoT Engineering</strong>, <strong>Data Analytics</strong>,
+                            and <strong>Web Development</strong>.
                         </p>
                         <p>
-                            Memiliki pemahaman kuat terhadap mikrokontroler, integrasi sensor - aktuator,
-                            rangkaian elektronik, serta sistem kelistrikan dasar yang digunakan pada perangkat otomatisasi.
-                            Berpengalaman mengembangkan dashboard, sistem kendali perangkat, dan alur pengolahan data real-time, pengelolaan end-to-end.
+                            I have a strong understanding of microcontrollers, sensor-actuator integration,
+                            electronic circuits, and basic electrical systems used in automation devices.
+                            Experienced in developing dashboards, device control systems, and real-time data processing flows with end-to-end management.
                         </p>
                         <p>
-                            Bersertifikat <strong>Hardware Installation Supervisor (BNSP)</strong>,
-                            <strong>Google Analytics Certification</strong>, dan <strong>Integrated Speaking English</strong> dengan
-                            penguasaan dasar jaringan, pemrograman Python, analisis data, penguasaan elektronika, serta troubleshooting teknis.
+                            Certified as <strong>Hardware Installation Supervisor (BNSP)</strong>,
+                            <strong>Google Analytics Certification</strong>, and <strong>Integrated Speaking English</strong> with
+                            foundational knowledge in networking, Python programming, data analysis, electronics mastery, and technical troubleshooting.
                         </p>
-
-                        <div className="about-stats">
-                            {stats.map((stat, index) => (
-                                <div key={index} className="stat-card card">
-                                    <div className="stat-value">{stat.value}</div>
-                                    <div className="stat-label">{stat.label}</div>
-                                </div>
-                            ))}
-                        </div>
                     </div>
 
-                    <div className="about-info">
-                        {infoCards.map((info, index) => (
-                            <div key={index} className="info-card card">
-                                <div className="info-icon">
-                                    {info.icon}
-                                </div>
-                                <div className="info-content">
-                                    <h4>{info.title}</h4>
-                                    <p>{info.description}</p>
-                                </div>
+                    {/* Stats Grid - Right Side */}
+                    <div className="about-stats-grid">
+                        {stats.map((stat, index) => (
+                            <div key={index} className="stat-card-new glass-card hover-lift">
+                                <div className="stat-value-new text-terminal">{stat.value}</div>
+                                <div className="stat-label-new">{stat.label}</div>
                             </div>
                         ))}
                     </div>
+                </div>
+
+                {/* Info Cards - Full Width Bottom */}
+                <div className="about-info-grid">
+                    {infoCards.map((info, index) => (
+                        <div key={index} className="info-card-new glass-card hover-lift">
+                            <div className="info-icon-new neon-glow">
+                                {info.icon}
+                            </div>
+                            <div className="info-content-new">
+                                <h4 className="text-terminal">{info.title}</h4>
+                                <p>{info.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

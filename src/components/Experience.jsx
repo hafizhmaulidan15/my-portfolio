@@ -1,3 +1,5 @@
+import { Terminal, Code } from 'lucide-react';
+
 const Experience = () => {
     const experiences = [
         {
@@ -5,7 +7,7 @@ const Experience = () => {
             company: 'PT. Matra Kreasi Mandiri',
             location: 'Kedung Jaya, Tanah Sareal, KOTA BOGOR, JAWA BARAT',
             date: 'September 2025 - December 2025',
-            description: 'Developing and maintaining front-end web applications with modern technologies and best practices.',
+            description: 'Developing and maintaining front-end web applications for educational technology platforms using modern web technologies. Responsibilities include creating responsive user interfaces, implementing design systems, collaborating with design teams, and ensuring optimal performance across various devices and browsers.',
             type: 'freelance'
         },
         {
@@ -13,7 +15,7 @@ const Experience = () => {
             company: 'PT. Matra Kreasi Mandiri',
             location: 'Kedung Jaya, Tanah Sareal, KOTA BOGOR, JAWA BARAT',
             date: 'August 2024 - November 2024',
-            description: 'Developed IoT solutions including embedded systems, sensor integration, and real-time monitoring dashboards.',
+            description: 'Developed comprehensive IoT solutions including embedded systems design, sensor integration (TCS34725, ultrasonic, DHT22, YF-S201), real-time monitoring dashboards, and Arduino IoT Cloud integration. Successfully delivered multiple projects including banana ripeness detection system, flood monitoring system, and water level detection with Telegram bot integration.',
             type: 'internship'
         },
         {
@@ -21,35 +23,39 @@ const Experience = () => {
             company: 'PT. Matra Kreasi Mandiri',
             location: 'Kedung Jaya, Tanah Sareal, KOTA BOGOR, JAWA BARAT',
             date: 'August 2024 - November 2024',
-            description: 'Built responsive web interfaces and collaborated with the development team on various projects.',
+            description: 'Built responsive and user-friendly web interfaces for company profile websites and educational platforms. Collaborated with development teams on various projects, implemented modern web design practices, and optimized website performance using HTML, CSS, JavaScript, and Bootstrap frameworks.',
             type: 'internship'
         },
     ];
 
     const trainings = [
         {
-            title: 'Data Science & Analytics',
-            provider: 'HP Life',
+            title: 'Hardware Installation Supervisor',
+            provider: 'Badan Nasional Sertifikasi Profesi (BNSP)',
             date: 'September 2025 - September 2028',
-            description: 'Comprehensive training covering data science practices, methodologies, and analytical tools.',
+            description: 'Certified in Computer Hardware Occupation with competencies in disaster recovery planning, hardware specification, system analysis, and IT maintenance.',
+            skills: ['Computer Hardware', 'IT Hardware Support', 'Disaster Recovery', 'System Analysis']
         },
         {
-            title: 'Data Visualization',
-            provider: 'Dicoding',
-            date: 'May 2025 - May 2028',
-            description: 'Python programming with industry standards including data processing, visualization, and machine learning basics.',
+            title: 'Google Analytics Certification',
+            provider: 'Google Digital Academy (Skillshop)',
+            date: 'August 2025 - August 2026',
+            description: 'Certified ability to set up Google Analytics 4 property, collect business data, and recognize key measurement features for marketing effectiveness.',
+            skills: ['Google Analytics 4', 'Data Collection', 'Marketing Analytics']
         },
         {
-            title: 'Python Programming',
-            provider: 'SkillVul',
-            date: 'August 2024 - January 2025',
-            description: 'Advanced Python programming covering OOP, data structures, algorithms, and automation.',
+            title: 'Integrated Speaking English',
+            provider: 'Language Center Bogor',
+            date: 'November 2025 - November 2026',
+            description: 'English language proficiency certification focusing on spoken English, grammar, and communication skills.',
+            skills: ['Spoken English', 'Grammar', 'Communication']
         },
         {
-            title: 'Network Professional',
-            provider: 'Cisco Academy',
-            date: 'June 2022 - June 2024',
-            description: 'CCNA-level networking covering configuration, troubleshooting, routing, switching, WLAN, and security.',
+            title: 'Junior Network Engineer - Digital Talent Scholarship 2024',
+            provider: 'Kementerian Kominfo',
+            date: 'February 2024 - June 2024',
+            description: 'Completed 256 hours of training covering computer networking concepts, IPv4/IPv6, VLAN, routing, OSPF, network security, and Cisco automation.',
+            skills: ['Networking', 'IPv4/IPv6', 'VLAN', 'OSPF', '+3 more']
         },
     ];
 
@@ -69,33 +75,20 @@ const Experience = () => {
                 }}>
                     {/* Work Experience */}
                     <div>
-                        <h3 style={{
-                            fontSize: '1.5rem',
-                            marginBottom: '32px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '12px'
-                        }}>
-                            <span style={{
-                                width: '40px',
-                                height: '40px',
-                                background: 'var(--gradient-primary)',
-                                borderRadius: '10px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                fontSize: '20px'
-                            }}>💼</span>
-                            Work Experience
+                        <h3 className="experience-section-header">
+                            <span className="experience-icon-box neon-glow">
+                                <Terminal size={24} />
+                            </span>
+                            <span className="text-gradient">Work Experience</span>
                         </h3>
                         <div className="timeline">
                             {experiences.map((exp, index) => (
                                 <div key={index} className="timeline-item">
                                     <div className="timeline-dot"></div>
-                                    <div className="timeline-date">{exp.date}</div>
-                                    <div className="timeline-content card" style={{ marginTop: '8px' }}>
+                                    <div className="timeline-date text-terminal">{exp.date}</div>
+                                    <div className="timeline-content card glass-card hover-lift" style={{ marginTop: '8px' }}>
                                         <h3>{exp.title}</h3>
-                                        <h4>{exp.company}</h4>
+                                        <h4 className="text-gradient">{exp.company}</h4>
                                         <p>{exp.description}</p>
                                         <span className={`tag ${exp.type === 'internship' ? 'purple' : exp.type === 'freelance' ? 'green' : ''}`} style={{ marginTop: '12px' }}>
                                             {exp.type === 'internship' ? 'Internship' : exp.type === 'freelance' ? 'Freelance' : 'Full-time'}
@@ -106,36 +99,30 @@ const Experience = () => {
                         </div>
                     </div>
 
-                    {/* Training & Courses */}
+                    {/* Professional Certifications */}
                     <div>
-                        <h3 style={{
-                            fontSize: '1.5rem',
-                            marginBottom: '32px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '12px'
-                        }}>
-                            <span style={{
-                                width: '40px',
-                                height: '40px',
-                                background: 'var(--gradient-secondary)',
-                                borderRadius: '10px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                fontSize: '20px'
-                            }}>📚</span>
-                            Training & Courses
+                        <h3 className="experience-section-header">
+                            <span className="experience-icon-box neon-glow" style={{ background: 'var(--gradient-secondary)' }}>
+                                <Code size={24} />
+                            </span>
+                            <span className="text-shimmer">Professional Certifications</span>
                         </h3>
                         <div className="timeline">
                             {trainings.map((training, index) => (
                                 <div key={index} className="timeline-item">
                                     <div className="timeline-dot" style={{ background: 'var(--accent-purple)' }}></div>
-                                    <div className="timeline-date">{training.date}</div>
-                                    <div className="timeline-content card" style={{ marginTop: '8px' }}>
+                                    <div className="timeline-date text-terminal">{training.date}</div>
+                                    <div className="timeline-content card glass-card hover-lift" style={{ marginTop: '8px' }}>
                                         <h3>{training.title}</h3>
-                                        <h4>{training.provider}</h4>
+                                        <h4 className="text-gradient">{training.provider}</h4>
                                         <p>{training.description}</p>
+                                        {training.skills && (
+                                            <div className="cert-skills-mini" style={{ marginTop: '12px' }}>
+                                                {training.skills.map((skill, idx) => (
+                                                    <span key={idx} className="skill-tag-mini">{skill}</span>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             ))}

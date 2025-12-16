@@ -13,15 +13,15 @@ const Projects = () => {
             icon: <Globe size={28} />,
             role: 'Frontend Developer',
             roleType: 'developer',
-            description: 'Mengembangkan website company profile yang responsif dan user-friendly untuk DR.MATT, platform Smart Learning & Smart Solution di bidang teknologi industri 4.0.',
+            description: 'Developed a responsive and user-friendly company profile website for DR.MATT, a Smart Learning & Smart Solution platform in the field of Industry 4.0 technology.',
             responsibilities: [
-                'Mengembangkan website company profile yang responsif dan user-friendly, memastikan konsistensi dengan visual identity dan design direction brand',
-                'Berkolaborasi dengan tim design dan content untuk menyempurnakan layout, meningkatkan UI/UX flow, dan memberikan user experience yang engaging',
-                'Mengimplementasikan fitur front-end dan mengoptimalkan performa halaman menggunakan teknologi web modern',
-                'Troubleshoot dan menyelesaikan isu UI selama development untuk menjaga kelancaran fungsionalitas',
-                'Berpartisipasi dalam diskusi proyek dengan manajemen, berkontribusi ide dan memastikan alignment dengan kebutuhan bisnis'
+                'Developed responsive and user-friendly company profile website, ensuring consistency with brand visual identity and design direction',
+                'Collaborated with design and content teams to refine layout, improve UI/UX flow, and deliver engaging user experience',
+                'Implemented front-end features and optimized page performance using modern web technologies',
+                'Troubleshot and resolved UI issues during development to maintain smooth functionality',
+                'Participated in project discussions with management, contributing ideas and ensuring alignment with business needs'
             ],
-            impact: 'Proyek ini memperkuat kemampuan teknis dan teamwork saya melalui keterlibatan langsung dalam lingkungan development real-world, membangun website untuk platform edukasi teknologi industri 4.0.',
+            impact: 'This project strengthened my technical skills and teamwork through direct involvement in a real-world development environment, building a website for an Industry 4.0 technology education platform.',
             skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Git', 'Visual Studio Code', 'Testing', 'Responsive Design', 'UI/UX'],
             color: 'cyan',
             link: 'https://drmatt.id/'
@@ -34,15 +34,15 @@ const Projects = () => {
             icon: <Code size={28} />,
             role: 'Frontend Developer',
             roleType: 'developer',
-            description: 'Mengembangkan website untuk Nano Robotic, platform edukasi Robotic & Coding untuk anak usia 3-15 tahun dengan tagline "Smart Way in Technology for Brighter Future".',
+            description: 'Developed a website for Nano Robotic, a Robotic & Coding education platform for children aged 3-15 years with the tagline "Smart Way in Technology for Brighter Future".',
             responsibilities: [
-                'Mengembangkan website edukatif yang menarik untuk platform pembelajaran Robotic dan Coding',
-                'Memastikan website responsif dan optimal di berbagai device untuk memenuhi kebutuhan orang tua dan anak',
-                'Berkolaborasi dengan tim design untuk menciptakan tampilan yang fun, colorful, dan engaging untuk target audience anak-anak',
-                'Mengimplementasikan layout untuk menampilkan berbagai kelas (Online, Hybrid, Offline) dan informasi kurikulum',
-                'Optimasi performa halaman untuk loading yang cepat dan user experience yang smooth'
+                'Developed engaging educational website for Robotic and Coding learning platform',
+                'Ensured responsive and optimized website across various devices to meet the needs of parents and children',
+                'Collaborated with design team to create fun, colorful, and engaging interface for child audience',
+                'Implemented layout to display various class types (Online, Hybrid, Offline) and curriculum information',
+                'Optimized page performance for fast loading and smooth user experience'
             ],
-            impact: 'Proyek ini memberikan pengalaman dalam membangun website edukatif yang target audience-nya adalah anak-anak dan orang tua, dengan fokus pada desain yang menarik dan informatif.',
+            impact: 'This project provided experience in building educational websites targeting children and parents, with focus on attractive and informative design.',
             skills: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Git', 'Visual Studio Code', 'Testing', 'Responsive Design', 'UI/UX'],
             color: 'purple',
             link: 'https://nanorobotic.co.id/'
@@ -55,14 +55,14 @@ const Projects = () => {
             icon: <Cpu size={28} />,
             role: 'IoT Developer & Team Member',
             roleType: 'team',
-            description: 'Sistem deteksi kematangan pisang berbasis IoT yang dirancang untuk mendukung inovasi pertanian melalui monitoring cerdas dan integrasi sensor.',
+            description: 'IoT-based banana ripeness detection system designed to support agricultural innovation through smart monitoring and sensor integration.',
             responsibilities: [
-                'Berkolaborasi erat dengan rekan tim untuk merencanakan, mendesain, dan mengimplementasikan sistem menggunakan prinsip Agile',
-                'Menggunakan sensor warna TCS34725 untuk mengklasifikasikan kematangan pisang berdasarkan nilai RGB secara akurat',
-                'Membangun sistem monitoring real-time menggunakan ESP32, terintegrasi dengan Arduino IoT Cloud untuk tracking dan visualisasi data',
-                'Meningkatkan usability dengan mengintegrasikan modul J5019 dan display LCD untuk menampilkan status kematangan secara langsung'
+                'Collaborated closely with team members to plan, design, and implement the system using Agile principles',
+                'Utilized TCS34725 color sensor to accurately classify banana ripeness based on RGB values',
+                'Built real-time monitoring system using ESP32, integrated with Arduino IoT Cloud for data tracking and visualization',
+                'Enhanced usability by integrating J5019 module and LCD display for direct ripeness status display'
             ],
-            impact: 'Proyek ini menunjukkan kemampuan saya dalam bekerja secara kolaboratif dalam tim, menerapkan teknologi IoT dan sensor, serta mengelola proyek dari konsep hingga deployment dengan pendekatan client-focused.',
+            impact: 'This project demonstrated my ability to work collaboratively in a team, apply IoT and sensor technology, and manage projects from concept to deployment with a client-focused approach.',
             skills: ['Internet of Things (IoT)', 'Arduino IDE', 'ESP32', 'Arduino Cloud', 'Embedded Systems', 'Hardware', 'C++', 'Testing', 'Fritzing', 'Agile Project Management'],
             color: 'green'
         },
@@ -74,14 +74,14 @@ const Projects = () => {
             icon: <Droplets size={28} />,
             role: 'IoT Developer',
             roleType: 'individual',
-            description: 'Sistem deteksi banjir yang dirancang untuk memonitor ketinggian air dan laju aliran dengan alert real-time.',
+            description: 'Flood detection system designed to monitor water level and flow rate with real-time alerts.',
             responsibilities: [
-                'Mengintegrasikan sensor ultrasonik untuk pengukuran ketinggian air dan sensor YF-S201 untuk tracking laju aliran',
-                'Mengkonfigurasi sistem untuk mengirim data ke Arduino IoT Cloud setiap 30 detik, memungkinkan monitoring real-time',
-                'Mengimplementasikan empat level alert berdasarkan ketinggian air dengan indikator LED dan buzzer yang berbeda',
-                'Mengembangkan sistem notifikasi intuitif untuk membantu manajemen banjir proaktif'
+                'Integrated ultrasonic sensor for water level measurement and YF-S201 sensor for flow rate tracking',
+                'Configured system to send data to Arduino IoT Cloud every 30 seconds, enabling real-time monitoring',
+                'Implemented four alert levels based on water height with different LED indicators and buzzers',
+                'Developed intuitive notification system to support proactive flood management'
             ],
-            impact: 'Proyek ini menunjukkan keahlian saya dalam integrasi sistem IoT, manajemen data real-time, dan otomasi untuk solusi monitoring lingkungan.',
+            impact: 'This project demonstrated my expertise in IoT system integration, real-time data management, and automation for environmental monitoring solutions.',
             skills: ['Internet of Things (IoT)', 'Arduino IDE', 'Project Management', 'Hardware', 'Analytical Chemistry', 'C++', 'Teamwork', 'Testing', 'Automation', 'Agile Project Management'],
             color: 'blue'
         },
@@ -93,15 +93,15 @@ const Projects = () => {
             icon: <Activity size={28} />,
             role: 'Project Lead & IoT Developer',
             roleType: 'lead',
-            description: 'Merancang, mengembangkan, dan mengelola sistem monitoring ketinggian air real-time untuk kebutuhan praktis dalam otomasi dan monitoring lingkungan.',
+            description: 'Designed, developed, and managed a real-time water level monitoring system for practical needs in automation and environmental monitoring.',
             responsibilities: [
-                'Memimpin full product lifecycle menggunakan metodologi Agile, dari perencanaan hingga deployment',
-                'Mengelola tugas proyek, timeline, dan kolaborasi antar tahap development',
-                'Menggunakan tiga sensor ultrasonik dan ESP32 untuk pengukuran ketinggian air yang akurat',
-                'Mengembangkan Telegram bot untuk notifikasi instan perubahan ketinggian air',
-                'Mengimplementasikan sistem kontrol relay untuk mengotomasi respons peralatan berdasarkan data sensor'
+                'Led full product lifecycle using Agile methodology, from planning to deployment',
+                'Managed project tasks, timelines, and cross-stage development collaboration',
+                'Utilized three ultrasonic sensors and ESP32 for accurate water level measurement',
+                'Developed Telegram bot for instant water level change notifications',
+                'Implemented relay control system to automate equipment response based on sensor data'
             ],
-            impact: 'Proyek ini menunjukkan kapabilitas saya dalam IoT development, sistem real-time, dan manajemen proyek cross-functional, menggabungkan eksekusi teknis dengan pemikiran strategis.',
+            impact: 'This project demonstrated my capabilities in IoT development, real-time systems, and cross-functional project management, combining technical execution with strategic thinking.',
             skills: ['Internet of Things (IoT)', 'Arduino IDE', 'ESP32', 'Project Management', 'Arduino Cloud', 'Embedded Systems', 'Hardware', 'C++', 'Teamwork', 'Testing', 'Fritzing', 'Automation', 'Agile Project Management'],
             color: 'pink'
         },
@@ -113,14 +113,14 @@ const Projects = () => {
             icon: <Sprout size={28} />,
             role: 'System Analyst & Web Developer',
             roleType: 'analyst',
-            description: 'Berkontribusi sebagai system analyst dan web developer dalam proyek berbasis tim untuk mengotomasi budidaya microgreen menggunakan teknologi IoT.',
+            description: 'Contributed as system analyst and web developer in a team-based project to automate microgreen cultivation using IoT technology.',
             responsibilities: [
-                'Menganalisis kebutuhan pengguna dan mendefinisikan key performance indicators (suhu, kelembaban, kelembaban tanah) untuk monitoring real-time',
-                'Mendesain dashboard intuitif dan process flow untuk mendukung pengambilan keputusan berbasis data',
-                'Berkolaborasi dengan tim back-end dan hardware untuk memastikan integrasi seamless data IoT ke web interface',
-                'Mengimplementasikan best practices front-end menggunakan HTML, CSS, dan JavaScript untuk mengoptimalkan performa dan usability'
+                'Analyzed user requirements and defined key performance indicators (temperature, humidity, soil moisture) for real-time monitoring',
+                'Designed intuitive dashboard and process flow to support data-driven decision making',
+                'Collaborated with back-end and hardware teams to ensure seamless IoT data integration into web interface',
+                'Implemented front-end best practices using HTML, CSS, and JavaScript to optimize performance and usability'
             ],
-            impact: 'Proyek ini memperkuat kemampuan analytical thinking, dokumentasi, dan kolaborasi saya—menjembatani pengembangan teknis dengan peningkatan proses bisnis dalam lingkungan IoT.',
+            impact: 'This project strengthened my analytical thinking, documentation, and collaboration skills—bridging technical development with business process improvement in an IoT environment.',
             skills: ['Internet of Things (IoT)', 'Analytical Skills', 'Web Development', 'Critical Thinking', 'Embedded Systems', 'Hardware', 'Teamwork', 'Testing', 'Automation', 'Agile Project Management', 'Collaborative Problem Solving'],
             color: 'cyan'
         },
@@ -128,20 +128,40 @@ const Projects = () => {
             id: 7,
             title: 'Curug Cikoneng Logo Decoration Project',
             period: 'Jul 2023 - Oct 2023',
-            association: 'Tempat Wisata Curug Cikoneng Bogor',
+            association: 'Curug Cikoneng Tourist Attraction Bogor',
             icon: <Lightbulb size={28} />,
             role: 'Web Developer & Team Member',
             roleType: 'team',
-            description: 'Berkontribusi sebagai bagian dari tim multidisiplin dalam merancang dan mengembangkan sistem dekorasi logo LED interaktif untuk Curug Cikoneng, mengintegrasikan komponen IoT dengan kontrol berbasis web.',
+            description: 'Contributed as part of a multidisciplinary team in designing and developing an interactive LED logo decoration system for Curug Cikoneng, integrating IoT components with web-based control.',
             responsibilities: [
-                'Melakukan diskusi stakeholder untuk mengidentifikasi kebutuhan otomasi pencahayaan dan sinkronisasi',
-                'Mendesain user flow diagram dan dokumentasi proses sistem untuk kontrol LED berbasis waktu dan lingkungan',
-                'Mengembangkan web dashboard responsif untuk memonitor dan mengelola perilaku pencahayaan secara real-time',
-                'Mengintegrasikan LED WS2812B, DS3232 real-time clock, dan sensor suhu DHT22 untuk display adaptif'
+                'Conducted stakeholder discussions to identify lighting automation and synchronization requirements',
+                'Designed user flow diagrams and system process documentation for time-based and environment-based LED control',
+                'Developed responsive web dashboard to monitor and manage lighting behavior in real-time',
+                'Integrated WS2812B LEDs, DS3232 real-time clock, and DHT22 temperature sensor for adaptive display'
             ],
-            impact: 'Proyek ini meningkatkan kemampuan saya dalam menerjemahkan kebutuhan pengguna menjadi desain sistem fungsional dan memperdalam pemahaman tentang bagaimana sistem visual berbasis IoT dapat meningkatkan engagement di instalasi nyata.',
+            impact: 'This project enhanced my ability to translate user needs into functional system design and deepened my understanding of how IoT-based visual systems can improve engagement in real installations.',
             skills: ['Internet of Things (IoT)', 'Analytical Skills', 'Project Management', 'Web Development', 'Embedded Systems', 'Hardware', 'IT Hardware Support', 'Teamwork', 'Testing', 'Automation', 'Agile Project Management', 'Collaborative Problem Solving'],
             color: 'purple'
+        },
+        {
+            id: 8,
+            title: 'Robot Pemadam Api Otomatis (Autonomous Fire-Fighting Robot)',
+            period: 'Mar 2023 - Jun 2023',
+            association: 'Institut Pertanian Bogor (IPB)',
+            icon: <Cpu size={28} />,
+            role: 'Project Lead & Developer',
+            roleType: 'lead',
+            description: 'Designed and developed an autonomous fire-fighting robot based on Arduino Uno for early fire detection and response.',
+            responsibilities: [
+                'Designed and built autonomous fire-fighting robot using Arduino Uno for automatic fire detection and suppression',
+                'Implemented navigation system using ultrasonic sensors and motor control with L298N driver, enabling precise autonomous movement',
+                'Integrated flame sensors for fire detection and automated water pump system for fire suppression',
+                'Developed innovative solution effective in improving safety and security against potential fire hazards',
+                'Successfully completed final project with full functionality as proof of deep understanding in hardware-software integration'
+            ],
+            impact: 'This project demonstrated my capability in robotics development, autonomous system design, and practical problem-solving for safety applications.',
+            skills: ['Arduino IDE', 'Robotic Process Automation (RPA)', 'Hardware', 'C++', 'Teamwork', 'Testing', 'Embedded Systems', 'Sensor Integration'],
+            color: 'cyan'
         }
     ];
 
@@ -175,7 +195,7 @@ const Projects = () => {
             <div className="container">
                 <h2 className="section-title">Projects</h2>
                 <p className="section-subtitle">
-                    Koleksi proyek IoT dan Web Development yang telah saya kerjakan, menampilkan peran dan dampak saya di setiap proyek
+                    Collection of IoT and Web Development projects I've worked on, showcasing my role and impact in each project
                 </p>
 
                 <div className="projects-grid">
@@ -216,12 +236,12 @@ const Projects = () => {
                             >
                                 {expandedProject === project.id ? (
                                     <>
-                                        <span>Sembunyikan Detail</span>
+                                        <span>Hide Details</span>
                                         <ChevronUp size={18} />
                                     </>
                                 ) : (
                                     <>
-                                        <span>Lihat Detail</span>
+                                        <span>View Details</span>
                                         <ChevronDown size={18} />
                                     </>
                                 )}

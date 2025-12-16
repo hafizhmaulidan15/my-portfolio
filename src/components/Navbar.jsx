@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Download } from 'lucide-react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -36,8 +36,10 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container">
-                <a href="#home" className="navbar-logo">
-                    &lt;HM /&gt;
+                <a href="#home" className="navbar-logo" onClick={(e) => handleNavClick(e, '#home')}>
+                    <span className="text-terminal">&lt;</span>
+                    <span className="text-shimmer">Portfolio Hafizh</span>
+                    <span className="text-terminal">&gt;</span>
                 </a>
 
                 <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
