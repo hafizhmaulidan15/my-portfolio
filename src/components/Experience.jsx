@@ -62,9 +62,9 @@ const Experience = () => {
     return (
         <section id="experience" className="experience section">
             <div className="container">
-                <h2 className="section-title">Experience</h2>
+                <h2 className="section-title">Experience & Certifications</h2>
                 <p className="section-subtitle">
-                    My professional journey and continuous learning path
+                    My professional journey and certified competencies
                 </p>
 
                 <div className="experience-wrapper" style={{
