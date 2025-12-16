@@ -1,4 +1,5 @@
 import './index.css';
+import { Analytics } from '@vercel/analytics/react';
 import {
   Navbar,
   Hero,
@@ -25,6 +26,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
