@@ -3,7 +3,7 @@ import { Mail, Terminal, Code2, Cpu, Wifi } from 'lucide-react';
 
 const Hero = () => {
     const [typedText, setTypedText] = useState('');
-    const fullText = 'IoT Engineer & Data Analyst';
+    const fullText = 'IoT Engineer & Web Developer';
     const [showCursor, setShowCursor] = useState(true);
 
     // Typing effect
@@ -53,9 +53,9 @@ const Hero = () => {
                         </div>
 
                         <p className="hero-description">
-                            Internet of Things (IoT), Automation, and Electrical Engineer with experience in designing embedded systems,
-                            automation solutions, and real-time monitoring. Passionate about turning data into insights
-                            and building smart systems.
+                            IoT Engineer, Data Analyst, and Web Developer with hands-on experience in designing embedded systems,
+                            real-time monitoring solutions, and modern web applications. Passionate about building smart, connected systems 
+                            that solve real-world problems through automation and data-driven insights.
                         </p>
 
                         <div className="hero-buttons">

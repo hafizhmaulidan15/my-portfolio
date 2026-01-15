@@ -1,0 +1,28 @@
+Berikut adalah draft jawaban untuk mengisi formulir bagian "Informasi Tambahan" FIFGROUP. Silakan sesuaikan jika ada yang kurang pas dengan kondisi sebenarnya.
+
+---
+
+**Siapa yang membiayai pendidikan Anda?**
+Orang Tua
+
+**Apa yang menyebabkan Anda memilih jurusan/bagian tersebut?**
+Saya memilih jurusan Teknologi Rekayasa Komputer karena ketertarikan mendalam saya pada bagaimana hardware dan software dapat diintegrasikan untuk memecahkan masalah nyata. Di era industri 4.0, kemampuan untuk mengelola data dan sistem teknologi menjadi sangat krusial, dan saya ingin menjadi bagian dari inovasi tersebut, khususnya dalam penerapan IoT dan pengembangan sistem cerdas.
+
+**Di pendidikan manakah Anda paling puas dengan prestasi yang Anda capai? Apa sebabnya?**
+Diploma 4 (D4) di IPB University.
+Sebabnya: Pada masa ini, saya berhasil menyeimbangkan teori akademik dengan praktik lapangan secara langsung. Saya tidak hanya mendapatkan IPK yang baik (3.33), tetapi juga berhasil memimpin dan menyelesaikan berbagai proyek teknis yang kompleks seperti Sistem Monitoring Banjir dan Pengembangan Website E-Commerce. Pengalaman ini mengesahkan kemampuan saya dalam kerja tim, kepemimpinan, dan technical problem solving yang tidak saya dapatkan sedalam ini di jenjang pendidikan sebelumnya.
+
+**Di pendidikan manakah Anda paling tidak puas dengan prestasi Anda? Apa sebabnya?**
+Sekolah Menengah Atas (SMA).
+Sebabnya: Pada masa itu, saya merasa eksplorasi saya terhadap minat teknologi belum maksimal dan masih terlalu umum. Saya merasa seharusnya bisa lebih aktif dalam kegiatan ekstrakurikuler atau kompetisi yang berkaitan dengan IT lebih dini. Namun, ketidakpuasan ini justru menjadi motivasi terbesar saya untuk "lari kencang" mengejar ketertinggalan dan memaksimalkan setiap kesempatan praktik saat kuliah.
+
+**Judul Skripsi / Tugas Akhir**
+(Pilih salah satu proyek terbesar kamu, atau judul skripsi asli jika sudah ada. Jika belum ada judul fix, gunakan proyek Admigre atau Robot Pemadam Api sebagai referensi Tugas Akhir)
+Contoh: "Rancang Bangun Sistem Monitoring dan Otomasi Budidaya Microgreen Berbasis Internet of Things (IoT)"
+
+**Publikasi (jurnal/artikel/karya tulis/blog/buku)**
+(Jika belum ada, isi dengan strip atau "Belum ada")
+-
+
+---
+*Tips: Jawaban di atas dirancang dengan tone profesional, optimis, dan growth-oriented yang disukai rekruter untuk posisi Trainee.*

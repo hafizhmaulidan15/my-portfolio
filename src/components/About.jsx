@@ -45,25 +45,26 @@ const About = () => {
                     <div className="about-text">
                         <p>
                             I am a Fresh Graduate from <strong>IPB University</strong> with a Bachelor of Engineering,
-                            focusing on <strong>IoT Engineering</strong>, <strong>Data Analytics</strong>,
+                            specializing in <strong>IoT Engineering</strong>, <strong>Data Analytics</strong>,
                             and <strong>Web Development</strong>.
                         </p>
                         <p>
-                            I have a strong understanding of microcontrollers, sensor-actuator integration,
-                            electronic circuits, and basic electrical systems used in automation devices.
-                            Experienced in developing dashboards, device control systems, and real-time data processing flows with end-to-end management.
+                            I have hands-on experience in developing IoT solutions, embedded systems design, 
+                            and sensor integration. Skilled in microcontroller programming (ESP32, Arduino), 
+                            electronic circuits, and automation systems. Experienced in building real-time 
+                            monitoring dashboards, device control systems, and end-to-end data processing flows.
                         </p>
                         <p>
                             Certified as <strong>Hardware Installation Supervisor (BNSP)</strong>,
                             <strong>Google Analytics Certification</strong>, and <strong>Integrated Speaking English</strong> with
-                            foundational knowledge in networking, Python programming, data analysis, electronics mastery, and technical troubleshooting.
+                            strong foundation in networking, Python programming, data analysis, electronics, and technical troubleshooting.
                         </p>
                     </div>
 
                     {/* Stats Grid - Right Side */}
                     <div className="about-stats-grid">
                         {stats.map((stat, index) => (
-                            <div key={index} className="stat-card-new glass-card hover-lift">
+                            <div key={index} className="stat-card-new glass-card">
                                 <div className="stat-value-new text-terminal">{stat.value}</div>
                                 <div className="stat-label-new">{stat.label}</div>
                             </div>
@@ -74,7 +75,7 @@ const About = () => {
                 {/* Info Cards - Full Width Bottom */}
                 <div className="about-info-grid">
                     {infoCards.map((info, index) => (
-                        <div key={index} className="info-card-new glass-card hover-lift">
+                        <div key={index} className="info-card-new glass-card">
                             <div className="info-icon-new neon-glow">
                                 {info.icon}
                             </div>

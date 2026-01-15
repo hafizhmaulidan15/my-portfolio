@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Home, User, Lightbulb, Briefcase, Award, FolderOpen, Mail } from 'lucide-react';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -15,13 +15,13 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { href: '#home', label: 'Home' },
-        { href: '#about', label: 'About' },
-        { href: '#skills', label: 'Skills' },
-        { href: '#experience', label: 'Experience & Certs' },
-        { href: '#projects', label: 'Projects' },
-        { href: '#certifications', label: 'Achievements' },
-        { href: '#contact', label: 'Contact' },
+        { href: '#home', label: 'Home', icon: <Home size={18} /> },
+        { href: '#about', label: 'About', icon: <User size={18} /> },
+        { href: '#skills', label: 'Skills', icon: <Lightbulb size={18} /> },
+        { href: '#experience', label: 'Exp', icon: <Briefcase size={18} /> },
+        { href: '#projects', label: 'Projects', icon: <FolderOpen size={18} /> },
+        { href: '#certifications', label: 'Awards', icon: <Award size={18} /> },
+        { href: '#contact', label: 'Contact', icon: <Mail size={18} /> },
     ];
 
     const handleNavClick = (e, href) => {
@@ -38,11 +38,12 @@ const Navbar = () => {
             <div className="container">
                 <a href="#home" className="navbar-logo" onClick={(e) => handleNavClick(e, '#home')}>
                     <span className="text-terminal">&lt;</span>
-                    <span className="text-shimmer">Portfolio Hafizh</span>
-                    <span className="text-terminal">&gt;</span>
+                    <span className="text-shimmer">Hafizh</span>
+                    <span className="text-terminal">/&gt;</span>
                 </a>
 
-                <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
+                {/* Desktop Menu */}
+                <ul className="navbar-links desktop-only">
                     {navLinks.map((link) => (
                         <li key={link.href}>
                             <a
@@ -55,7 +56,25 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                <div className="navbar-socials">
+                {/* Mobile Menu Overlay */}
+                <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}>
+                    <ul className="mobile-nav-links">
+                        {navLinks.map((link) => (
+                            <li key={link.href}>
+                                <a
+                                    href={link.href}
+                                    onClick={(e) => handleNavClick(e, link.href)}
+                                >
+                                    {link.icon}
+                                    <span>{link.label}</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+
+                <div className="navbar-socials desktop-only">
                     <a
                         href="https://github.com/hafizhmaulidan15"
                         target="_blank"

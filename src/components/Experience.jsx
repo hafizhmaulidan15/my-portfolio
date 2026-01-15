@@ -86,7 +86,7 @@ const Experience = () => {
                                 <div key={index} className="timeline-item">
                                     <div className="timeline-dot"></div>
                                     <div className="timeline-date text-terminal">{exp.date}</div>
-                                    <div className="timeline-content card glass-card hover-lift" style={{ marginTop: '8px' }}>
+                                    <div className="timeline-content card glass-card" style={{ marginTop: '8px' }}>
                                         <h3>{exp.title}</h3>
                                         <h4 className="text-gradient">{exp.company}</h4>
                                         <p>{exp.description}</p>
@@ -112,7 +112,7 @@ const Experience = () => {
                                 <div key={index} className="timeline-item">
                                     <div className="timeline-dot" style={{ background: 'var(--accent-purple)' }}></div>
                                     <div className="timeline-date text-terminal">{training.date}</div>
-                                    <div className="timeline-content card glass-card hover-lift" style={{ marginTop: '8px' }}>
+                                    <div className="timeline-content card glass-card" style={{ marginTop: '8px' }}>
                                         <h3>{training.title}</h3>
                                         <h4 className="text-gradient">{training.provider}</h4>
                                         <p>{training.description}</p>

@@ -34,7 +34,7 @@ const Certifications = () => {
 
                 <div className="achievements-grid-new">
                     {achievements.map((achievement, index) => (
-                        <div key={index} className="achievement-card-new glass-card hover-lift">
+                        <div key={index} className="achievement-card-new glass-card">
                             <div className="achievement-header">
                                 <h4>{achievement.title}</h4>
                                 <Star size={20} className="achievement-star" />

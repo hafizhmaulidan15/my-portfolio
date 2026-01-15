@@ -7,7 +7,7 @@ import {
 const Skills = () => {
     const skillCategories = [
         {
-            category: 'Core Engineering',
+            category: 'IoT & Embedded Systems',
             skills: [
                 { name: 'IoT Systems', icon: <Wifi size={28} /> },
                 { name: 'Embedded Systems', icon: <Cpu size={28} /> },
@@ -18,25 +18,25 @@ const Skills = () => {
             ]
         },
         {
-            category: 'Programming & Data',
+            category: 'Programming & Development',
             skills: [
                 { name: 'Python', icon: <Code size={28} /> },
                 { name: 'C/C++', icon: <Cog size={28} /> },
                 { name: 'JavaScript', icon: <Terminal size={28} /> },
-                { name: 'Data Analysis', icon: <BarChart3 size={28} /> },
-                { name: 'Machine Learning', icon: <Brain size={28} /> },
-                { name: 'Data Visualization', icon: <Database size={28} /> },
+                { name: 'HTML/CSS', icon: <Code size={28} /> },
+                { name: 'React', icon: <Cog size={28} /> },
+                { name: 'Web Development', icon: <Globe size={28} /> },
             ]
         },
         {
-            category: 'Web & Tools',
+            category: 'Data & Tools',
             skills: [
-                { name: 'Web Development', icon: <Globe size={28} /> },
-                { name: 'HTML/CSS', icon: <Code size={28} /> },
-                { name: 'React', icon: <Cog size={28} /> },
+                { name: 'Data Analysis', icon: <BarChart3 size={28} /> },
+                { name: 'Machine Learning', icon: <Brain size={28} /> },
+                { name: 'Data Visualization', icon: <Database size={28} /> },
                 { name: 'Networking', icon: <Network size={28} /> },
                 { name: 'Arduino Cloud', icon: <Cloud size={28} /> },
-                { name: 'Agile PM', icon: <Wrench size={28} /> },
+                { name: 'Git & Version Control', icon: <Wrench size={28} /> },
             ]
         }
     ];
@@ -60,7 +60,7 @@ const Skills = () => {
                                 {category.skills.map((skill, skillIndex) => (
                                     <div
                                         key={skillIndex}
-                                        className="skill-item-categorized glass-card hover-lift"
+                                        className="skill-item-categorized glass-card"
                                     >
                                         <div className="skill-icon-categorized">
                                             {skill.icon}

@@ -1,0 +1,28 @@
+Berikut adalah saran jawaban untuk formulir aplikasi Synapsis:
+
+1. **How many years of work experience do you have with developing and implementing firmware for embedded systems or IoT devices?**
+   **1 Year**
+   *(Alasan: Meskipun "Fresh Graduate", Anda memiliki pengalaman Magang 4 bulan + Freelance 4 bulan + Proyek kuliah intensif di tahun terakhir. Total praktis mendekati 1 tahun. Jika ada opsi "Less than 1 year", pilih itu, tapi jika diminta angka integer, 1 adalah jawaban kompetitif yang bisa dipertanggungjawabkan skill-nya).*
+
+2. **How many years of work experience do you have with Python frameworks like Flask, especially in combination with databases such as MySQL or MongoDB?**
+   **1 Year**
+   *(Alasan: Anda menggunakan Python untuk scripting backend dan integrasi MySQL di proyek Freelance serta coursework. Jika diminta angka pasti, 1 tahun cukup aman).*
+
+3. **How many years of work experience do you have working with sensors, actuators, and embedded communication protocols such as UART, SPI, and I2C?**
+   **2 Years**
+   *(Alasan: Kompetensi ini adalah inti dari jurusan Mekatronika. Anda sudah melakukan ini jauh sebelum magang, melalui praktikum dan proyek kuliah sejak tahun ke-3).*
+
+4. **Are you comfortable working in an onsite (Jakarta Based) setting?**
+   **Yes**
+   *(Anda berdomisili di Bogor, yang masih dalam radius komuter wajar ke Jakarta).*
+
+5. **How much is your expected salary?**
+   **Rp 7.000.000 - Rp 9.000.000**
+   *(Saran Strategis: Untuk posisi "Mid" biasanya range-nya 10-15jt, TAPI karena pengalaman Anda terhitung "Fresh Graduate" secara tahun kerja, memasang angka 10-12jt (seperti di CV sebelumnya) mungkin agak berisiko jika mereka strict soal "years of experience". Range 7-9jt lebih menarik bagi HR untuk profil Junior yang High-Potential. Namun, jika Anda percaya diri dengan skill "Mid" Anda, tetap di angka **Rp 8.000.000 - Rp 10.000.000** juga oke).*
+
+**Opsi Copy-Paste Cepat:**
+1. 1
+2. 1
+3. 2
+4. Yes
+5. 8000000
