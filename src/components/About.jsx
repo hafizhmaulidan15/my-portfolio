@@ -17,7 +17,7 @@ const About = () => {
         {
             icon: <MapPin size={24} />,
             title: 'Location',
-            description: 'Bogor, West Java, Indonesia',
+            description: 'Bogor (Open to Jakarta, Kudus, Semarang, Bandung, Surabaya)',
         },
         {
             icon: <Mail size={24} />,
