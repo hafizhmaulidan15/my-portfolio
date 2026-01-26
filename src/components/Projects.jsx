@@ -195,6 +195,7 @@ const Projects = () => {
             color: 'green',
             link: 'https://github.com/hafizhmaulidan15/pasar-saham-660-emiten-52-WEEK-HIGH-BREAKOUT'
         },
+        /*
         {
             id: 10,
             title: 'PDF Toolkit - Browser-Based PDF Manipulation Tool',
@@ -239,6 +240,7 @@ const Projects = () => {
             color: 'pink',
             link: 'https://github.com/hafizhmaulidan15/My-Brownies-Kahuripan'
         }
+        */
     ];
 
     const getRoleColor = (roleType) => {
