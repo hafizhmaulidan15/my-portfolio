@@ -19,7 +19,7 @@ const Navbar = () => {
         { href: '#about', label: 'About', icon: <User size={18} /> },
         { href: '#skills', label: 'Skills', icon: <Lightbulb size={18} /> },
         { href: '#experience', label: 'Exp', icon: <Briefcase size={18} /> },
-        { href: '#projects', label: 'Projects', icon: <FolderOpen size={18} /> },
+        // { href: '#projects', label: 'Projects', icon: <FolderOpen size={18} /> },
         { href: '#certifications', label: 'Awards', icon: <Award size={18} /> },
         { href: '#contact', label: 'Contact', icon: <Mail size={18} /> },
     ];
