@@ -3,7 +3,7 @@ import { Mail, Terminal, Code2, Cpu, Wifi } from 'lucide-react';
 
 const Hero = () => {
     const [typedText, setTypedText] = useState('');
-    const fullText = 'IoT Engineer & Web Developer';
+    const fullText = 'IoT Engineer, Web Developer & IT Support';
     const [showCursor, setShowCursor] = useState(true);
 
     // Typing effect

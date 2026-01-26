@@ -38,6 +38,17 @@ const Skills = () => {
                 { name: 'Arduino Cloud', icon: <Cloud size={28} /> },
                 { name: 'Git & Version Control', icon: <Wrench size={28} /> },
             ]
+        },
+        {
+            category: 'IT Support & Administration',
+            skills: [
+                { name: 'Windows 10', icon: <Terminal size={28} /> },
+                { name: 'MS Office Suite', icon: <Layers size={28} /> },
+                { name: 'Hardware Config', icon: <Wrench size={28} /> },
+                { name: 'LAN/WAN', icon: <Network size={28} /> },
+                { name: 'Windows Scripting', icon: <Code size={28} /> },
+                { name: 'Troubleshooting', icon: <Settings size={28} /> },
+            ]
         }
     ];
 

@@ -50,14 +50,14 @@ const About = () => {
                         </p>
                         <p>
                             I have hands-on experience in developing IoT solutions, embedded systems design, 
-                            and sensor integration. Skilled in microcontroller programming (ESP32, Arduino), 
-                            electronic circuits, and automation systems. Experienced in building real-time 
-                            monitoring dashboards, device control systems, and end-to-end data processing flows.
+                            and sensor integration. Specialized in microcontroller programming (ESP32, Arduino), 
+                            hardware configuration, and automation systems. Experienced in technical troubleshooting, 
+                            user support, and providing technical assistance for complex IT systems.
                         </p>
                         <p>
                             Certified as <strong>Hardware Installation Supervisor (BNSP)</strong>,
                             <strong>Google Analytics Certification</strong>, and <strong>Integrated Speaking English</strong> with
-                            strong foundation in networking, Python programming, data analysis, electronics, and technical troubleshooting.
+                            strong foundation in IT Support, Windows Environment, MS Office, LAN/WAN Networking, and Windows scripting.
                         </p>
                     </div>
 
