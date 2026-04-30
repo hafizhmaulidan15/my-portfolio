@@ -45,7 +45,7 @@ const About = () => {
                                 <div className="absolute -inset-4 bg-accent/20 blur-2xl rounded-full opacity-50"></div>
                                 <div className="w-48 h-48 md:w-56 md:h-56 rounded-[2.5rem] border-2 border-white/10 overflow-hidden relative group">
                                     <img 
-                                        src="/profile-avatar.png" 
+                                        src="/profile-avatar.jpg" 
                                         alt="Muhammad Hafizh Maulidan" 
                                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                                         onError={(e) => { e.target.src = "https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=00f5ff&color=000&size=512"; }}
