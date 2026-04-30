@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 *.md
 !README.md
+.env
+.env.*
+.gemini
+.agents
+skills-lock.json

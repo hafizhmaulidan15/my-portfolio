@@ -1,83 +1,73 @@
-import {
-    Cpu, Database, Wifi, Zap, Code, BarChart3,
-    Network, Settings, Brain, Globe, Wrench, Layers, Cog,
-    CircuitBoard, Cloud, Terminal
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+    Cpu, Database, WifiHigh, Lightning, Code, ChartBar,
+    Gear, Brain, Globe, Wrench, SquaresFour, Circuitry, Cloud, TerminalWindow,
+    Factory, ChartPieSlice, Truck, ClipboardText, UsersThree
+} from '@phosphor-icons/react';
+import { GlassPanel } from './ui/GlassPanel';
 
 const Skills = () => {
-    const skillCategories = [
+    const skillGroups = [
         {
-            category: 'IoT & Embedded Systems',
+            title: 'Operations & Leadership',
             skills: [
-                { name: 'IoT Systems', icon: <Wifi size={28} /> },
-                { name: 'Embedded Systems', icon: <Cpu size={28} /> },
-                { name: 'ESP32 & Arduino', icon: <CircuitBoard size={28} /> },
-                { name: 'Electronics & Hardware', icon: <Layers size={28} /> },
-                { name: 'Sensor Integration', icon: <Zap size={28} /> },
-                { name: 'Automation', icon: <Settings size={28} /> },
+                { name: 'SOP Development', icon: <ClipboardText size={24} weight="duotone" /> },
+                { name: 'Supply Chain Coordination', icon: <Truck size={24} weight="duotone" /> },
+                { name: 'Production Planning', icon: <Factory size={24} weight="duotone" /> },
+                { name: 'Quality Control (QC)', icon: <ChartPieSlice size={24} weight="duotone" /> },
+                { name: 'Team Leadership', icon: <UsersThree size={24} weight="duotone" /> },
             ]
         },
         {
-            category: 'Programming & Development',
+            title: 'IoT & Systems',
             skills: [
-                { name: 'Python', icon: <Code size={28} /> },
-                { name: 'C/C++', icon: <Cog size={28} /> },
-                { name: 'JavaScript', icon: <Terminal size={28} /> },
-                { name: 'HTML/CSS', icon: <Code size={28} /> },
-                { name: 'React', icon: <Cog size={28} /> },
-                { name: 'Web Development', icon: <Globe size={28} /> },
+                { name: 'IoT Systems', icon: <WifiHigh size={24} weight="duotone" /> },
+                { name: 'Embedded Systems', icon: <Cpu size={24} weight="duotone" /> },
+                { name: 'ESP32 & Arduino', icon: <Circuitry size={24} weight="duotone" /> },
+                { name: 'Electronics & Hardware', icon: <SquaresFour size={24} weight="duotone" /> },
+                { name: 'Automation', icon: <Gear size={24} weight="duotone" /> },
+                { name: 'Sensor Integration', icon: <Lightning size={24} weight="duotone" /> },
             ]
         },
         {
-            category: 'Data & Tools',
+            title: 'Data & Software',
             skills: [
-                { name: 'Data Analysis', icon: <BarChart3 size={28} /> },
-                { name: 'Machine Learning', icon: <Brain size={28} /> },
-                { name: 'Data Visualization', icon: <Database size={28} /> },
-                { name: 'Networking', icon: <Network size={28} /> },
-                { name: 'Arduino Cloud', icon: <Cloud size={28} /> },
-                { name: 'Git & Version Control', icon: <Wrench size={28} /> },
-            ]
-        },
-        {
-            category: 'IT Support & Administration',
-            skills: [
-                { name: 'Windows 10', icon: <Terminal size={28} /> },
-                { name: 'MS Office Suite', icon: <Layers size={28} /> },
-                { name: 'Hardware Config', icon: <Wrench size={28} /> },
-                { name: 'LAN/WAN', icon: <Network size={28} /> },
-                { name: 'Windows Scripting', icon: <Code size={28} /> },
-                { name: 'Troubleshooting', icon: <Settings size={28} /> },
+                { name: 'Python & C++', icon: <Code size={24} weight="duotone" /> },
+                { name: 'React Development', icon: <TerminalWindow size={24} weight="duotone" /> },
+                { name: 'Data Analysis', icon: <ChartBar size={24} weight="duotone" /> },
+                { name: 'Machine Learning', icon: <Brain size={24} weight="duotone" /> },
+                { name: 'Database Design', icon: <Database size={24} weight="duotone" /> },
+                { name: 'Networking (OSPF/VLAN)', icon: <Globe size={24} weight="duotone" /> },
             ]
         }
     ];
 
     return (
-        <section id="skills" className="skills section">
-            <div className="container">
-                <h2 className="section-title">Technical Skills</h2>
-                <p className="section-subtitle">
-                    Technologies and tools I work with to bring ideas to life
-                </p>
+        <section className="pt-40 pb-24 bg-background relative overflow-hidden min-h-[calc(100vh-80px)]">
+            <div className="container mx-auto px-6 max-w-[1400px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {skillGroups.map((group, groupIdx) => (
+                        <div key={groupIdx} className="space-y-8">
+                            <div className="space-y-2">
+                                <h3 className="text-xl font-bold tracking-tight text-foreground uppercase tracking-[0.1em]">
+                                    {group.title}
+                                </h3>
+                                <div className="h-1 w-12 bg-accent"></div>
+                            </div>
 
-                <div className="skills-categories">
-                    {skillCategories.map((category, catIndex) => (
-                        <div key={catIndex} className="skill-category">
-                            <h3 className="skill-category-title">
-                                <span className="category-border"></span>
-                                {category.category}
-                            </h3>
-                            <div className="skill-category-grid">
-                                {category.skills.map((skill, skillIndex) => (
-                                    <div
-                                        key={skillIndex}
-                                        className="skill-item-categorized glass-card"
+                            <div className="grid grid-cols-1 gap-4">
+                                {group.skills.map((skill, skillIdx) => (
+                                    <GlassPanel 
+                                        key={skillIdx} 
+                                        className="flex items-center gap-4 p-4 border-white/5 hover:border-accent/20 transition-all group"
                                     >
-                                        <div className="skill-icon-categorized">
+                                        <div className="p-2 bg-accent/5 rounded-lg text-accent group-hover:scale-110 transition-transform">
                                             {skill.icon}
                                         </div>
-                                        <span className="skill-name-categorized">{skill.name}</span>
-                                    </div>
+                                        <span className="text-zinc-400 font-medium group-hover:text-foreground transition-colors">
+                                            {skill.name}
+                                        </span>
+                                    </GlassPanel>
                                 ))}
                             </div>
                         </div>

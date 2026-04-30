@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV – Muhammad Hafizh Maulidan | Administrasi Gudang</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-size: 10.5pt;
+        color: #1a1a2e;
+        background: #f0f2f5;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ── HEADER ── */
+      .header {
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 60%,
+          #0f3460 100%
+        );
+        color: #fff;
+        padding: 28px 32px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .header-photo {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #e94560;
+        flex-shrink: 0;
+      }
+
+      .header-info h1 {
+        font-size: 20pt;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .header-info .title {
+        font-size: 9.5pt;
+        font-weight: 400;
+        color: #e94560;
+        margin-top: 3px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      .header-contacts {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 20px;
+      }
+
+      .header-contacts span {
+        font-size: 8.5pt;
+        color: #c9d1e3;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .header-contacts a {
+        color: #c9d1e3;
+        text-decoration: none;
+      }
+
+      /* ── BODY LAYOUT ── */
+      .body {
+        display: flex;
+        flex: 1;
+      }
+
+      /* ── LEFT SIDEBAR ── */
+      .sidebar {
+        width: 62mm;
+        background: #f7f8fc;
+        border-right: 1px solid #e8eaf0;
+        padding: 22px 18px;
+        flex-shrink: 0;
+      }
+
+      .sidebar-section {
+        margin-bottom: 20px;
+      }
+
+      .sidebar-section h3 {
+        font-size: 7.5pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #e94560;
+        border-bottom: 1.5px solid #e94560;
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+      }
+
+      .skill-item {
+        margin-bottom: 8px;
+      }
+
+      .skill-item .skill-name {
+        font-size: 8pt;
+        font-weight: 500;
+        color: #2d3561;
+        margin-bottom: 3px;
+      }
+
+      .skill-bar {
+        height: 4px;
+        background: #dee2ec;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+
+      .skill-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #e94560, #0f3460);
+        border-radius: 2px;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .tag {
+        background: #e8eaf6;
+        color: #2d3561;
+        font-size: 7.5pt;
+        font-weight: 500;
+        padding: 2px 7px;
+        border-radius: 10px;
+      }
+
+      .cert-item {
+        margin-bottom: 8px;
+      }
+
+      .cert-item .cert-name {
+        font-size: 8pt;
+        font-weight: 600;
+        color: #1a1a2e;
+      }
+
+      .cert-item .cert-issuer {
+        font-size: 7.5pt;
+        color: #666;
+      }
+
+      .edu-degree {
+        font-size: 8.5pt;
+        font-weight: 600;
+        color: #1a1a2e;
+        line-height: 1.4;
+      }
+
+      .edu-school {
+        font-size: 8pt;
+        color: #444;
+        margin-top: 2px;
+      }
+
+      .edu-detail {
+        font-size: 7.5pt;
+        color: #666;
+        margin-top: 1px;
+      }
+
+      /* ── MAIN CONTENT ── */
+      .main {
+        flex: 1;
+        padding: 22px 24px;
+      }
+
+      .section {
+        margin-bottom: 18px;
+      }
+
+      .section-title {
+        font-size: 8.5pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #0f3460;
+        border-bottom: 2px solid #e94560;
+        padding-bottom: 4px;
+        margin-bottom: 12px;
+      }
+
+      .summary-text {
+        font-size: 9pt;
+        line-height: 1.65;
+        color: #333;
+        text-align: justify;
+      }
+
+      /* Experience */
+      .exp-item {
+        margin-bottom: 14px;
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2px;
+      }
+
+      .exp-role {
+        font-size: 9.5pt;
+        font-weight: 700;
+        color: #1a1a2e;
+      }
+
+      .exp-period {
+        font-size: 7.5pt;
+        font-weight: 500;
+        color: #e94560;
+        white-space: nowrap;
+      }
+
+      .exp-company {
+        font-size: 8.5pt;
+        font-weight: 500;
+        color: #0f3460;
+        margin-top: 1px;
+      }
+
+      .exp-bullets {
+        margin-top: 5px;
+        padding-left: 14px;
+      }
+
+      .exp-bullets li {
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 2px;
+      }
+
+      /* Achievement */
+      .ach-item {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 5px;
+        align-items: flex-start;
+      }
+
+      .ach-dot {
+        width: 6px;
+        height: 6px;
+        background: #e94560;
+        border-radius: 50%;
+        margin-top: 5px;
+        flex-shrink: 0;
+      }
+
+      .ach-text {
+        font-size: 8.5pt;
+        line-height: 1.55;
+        color: #333;
+      }
+
+      /* Print */
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page {
+          margin: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- HEADER -->
+      <div class="header">
+        <img
+          class="header-photo"
+          src="public/profile-avatar.jpg"
+          alt="Foto Hafizh"
+        />
+        <div class="header-info">
+          <h1>Muhammad Hafizh Maulidan</h1>
+          <div class="title">Administrasi &amp; Staff Operasional</div>
+          <div class="header-contacts">
+            <span>📞 +62 896 0381 8819</span>
+            <span>📧 mhafizh.maulidan@gmail.com</span>
+            <span>📍 Kemang, Kab. Bogor, Jawa Barat</span>
+            <span
+              >🔗
+              <a href="https://linkedin.com/in/hafizhmaulidan"
+                >linkedin.com/in/hafizhmaulidan</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- BODY -->
+      <div class="body">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+          <div class="sidebar-section">
+            <h3>Keahlian Utama</h3>
+
+            <div class="skill-item">
+              <div class="skill-name">Microsoft Office (Excel/Word)</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Database & Monitoring Sistem</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 82%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">MySQL / SQL</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Pencatatan & Dokumentasi</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Google Workspace</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Administrasi & Pengarsipan</div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3>Pendidikan</h3>
+            <div class="edu-degree">
+              S.Tr.Kom. – Teknik Komputer & Mekatronika
+            </div>
+            <div class="edu-school">IPB University – Sekolah Vokasi</div>
+            <div class="edu-detail">IPK: 3.33/4.00 | 2021 – 2025</div>
+            <div class="edu-detail" style="margin-top: 5px">
+              SEAMEO TVET Student Exchange, Malaysia (2022)
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3>Sertifikasi</h3>
+            <div class="cert-item">
+              <div class="cert-name">Hardware Installation Supervisor</div>
+              <div class="cert-issuer">BNSP · 2025–2028</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">Junior Network Engineer</div>
+              <div class="cert-issuer">Kominfo – Digital Talent · 2023</div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-name">Google Analytics</div>
+              <div class="cert-issuer">Google Skillshop · 2025–2026</div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <h3>Soft Skills</h3>
+            <div class="tag-list">
+              <span class="tag">Teliti</span>
+              <span class="tag">Terstruktur</span>
+              <span class="tag">Inisiatif</span>
+              <span class="tag">Kerja Tim</span>
+              <span class="tag">Komunikasi</span>
+              <span class="tag">Disiplin</span>
+              <span class="tag">Adaptif</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main">
+          <!-- PROFIL -->
+          <div class="section">
+            <div class="section-title">Profil</div>
+            <p class="summary-text">
+              Fresh graduate Teknik Komputer dari IPB University dengan
+              pengalaman nyata dalam pengelolaan data, pencatatan dokumen
+              teknis, dan monitoring sistem secara digital. Terbiasa bekerja
+              dengan spreadsheet, database, dan sistem pencatatan terstruktur.
+              Memiliki rekam jejak dalam mendigitalisasi data manual, membuat
+              laporan berkala, dan berkoordinasi lintas tim. Berorientasi pada
+              ketelitian, kerapihan data, dan penyelesaian tugas tepat waktu.
+            </p>
+          </div>
+
+          <!-- PENGALAMAN -->
+          <div class="section">
+            <div class="section-title">Pengalaman</div>
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div class="exp-role">
+                  IT Project Lead & Koordinator Operasional
+                </div>
+                <div class="exp-period">Sep 2025 – Jan 2026</div>
+              </div>
+              <div class="exp-company">PT. Matra Kreasi Mandiri</div>
+              <ul class="exp-bullets">
+                <li>
+                  Mengelola dan memperbarui database aset digital perusahaan
+                  secara berkala menggunakan sistem pencatatan terstruktur.
+                </li>
+                <li>
+                  Menyusun laporan progres mingguan dan dokumentasi teknis untuk
+                  pelaporan kepada manajemen dan pemangku kepentingan.
+                </li>
+                <li>
+                  Berkoordinasi lintas divisi (desain, teknis, manajemen) untuk
+                  memastikan alur kerja operasional berjalan sesuai jadwal.
+                </li>
+                <li>
+                  Menangani administrasi proyek termasuk pencatatan tugas,
+                  distribusi dokumen, dan monitor progres tim.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div class="exp-role">
+                  IoT Engineer Intern – Dokumentasi & SOP
+                </div>
+                <div class="exp-period">Agt – Nov 2024</div>
+              </div>
+              <div class="exp-company">PT. Matra Kreasi Mandiri</div>
+              <ul class="exp-bullets">
+                <li>
+                  Mencatat dan mengelola log aset perangkat lapangan secara
+                  harian menggunakan spreadsheet dan form digital.
+                </li>
+                <li>
+                  Menyiapkan dan mengarsipkan dokumen teknis: checklist
+                  pemeliharaan, laporan kinerja, dan diagram pengkabelan.
+                </li>
+                <li>
+                  Memastikan keakuratan data stok perangkat lapangan dan
+                  melaporkan selisih atau kondisi kritis kepada atasan.
+                </li>
+                <li>
+                  Menyusun Standar Operasional Prosedur (SOP) pemeliharaan yang
+                  digunakan sebagai acuan kerja tim.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <div class="exp-role">
+                  Web Developer Intern – Data & Monitoring
+                </div>
+                <div class="exp-period">Agt – Nov 2024</div>
+              </div>
+              <div class="exp-company">PT. Matra Kreasi Mandiri</div>
+              <ul class="exp-bullets">
+                <li>
+                  Mendigitalisasi sistem pelacakan aset manual ke dalam database
+                  elektronik menggunakan MySQL dan spreadsheet.
+                </li>
+                <li>
+                  Membangun dashboard monitoring untuk memantau data operasional
+                  secara real-time dan menghasilkan laporan otomatis.
+                </li>
+                <li>
+                  Memastikan integritas dan konsistensi data antara catatan
+                  fisik dan sistem digital perusahaan.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ORGANISASI -->
+          <div class="section">
+            <div class="section-title">Organisasi</div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <div class="exp-role">
+                  Koordinator Kesejahteraan Mahasiswa (Ketua Bidang)
+                </div>
+                <div class="exp-period">Jul 2022 – Des 2023</div>
+              </div>
+              <div class="exp-company">
+                IPB University – Program Studi Teknik Komputer
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Mengelola database administrasi beasiswa dan kesejahteraan
+                  mahasiswa sesuai regulasi akademik yang berlaku.
+                </li>
+                <li>
+                  Mengkoordinasikan logistik dan administrasi acara organisasi
+                  berskala besar secara sistematis.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PRESTASI -->
+          <div class="section">
+            <div class="section-title">Prestasi</div>
+            <div class="ach-item">
+              <div class="ach-dot"></div>
+              <div class="ach-text">
+                Perwakilan Indonesia – SEAMEO TVET Student Exchange, Malaysia
+                (2022) – 6 negara ASEAN.
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-dot"></div>
+              <div class="ach-text">
+                Junior Network Engineer Certification – Digital Talent
+                Scholarship, Kominfo (2023).
+              </div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-dot"></div>
+              <div class="ach-text">
+                Hafiz Al-Quran – menyelesaikan hafalan 30 Juz (2018–2020).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

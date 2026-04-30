@@ -1,4 +1,4 @@
-import { Github, Linkedin, ArrowUp } from 'lucide-react';
+import { CaretUp } from '@phosphor-icons/react';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -8,31 +8,26 @@ const Footer = () => {
     };
 
     return (
-        <footer className="footer">
-            <div className="container">
-                <div className="footer-content">
-                    <a href="#home" className="navbar-logo footer-logo">
-                        <span className="text-terminal">&lt;</span>
-                        <span className="text-shimmer">MHM</span>
-                        <span className="text-terminal">&gt;</span>
-                    </a>
-
-                    <p className="footer-text">
-                        <span className="text-terminal">&copy;</span> {currentYear} Muhammad Hafizh Maulidan
-                        <span className="text-muted"> | </span>
-                        <span className="text-gradient">Built with React</span>
+        <footer className="py-12 bg-background border-t border-white/5">
+            <div className="container mx-auto px-6 max-w-[1400px] flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="flex items-center gap-4">
+                    <span className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-xs font-bold">
+                        H
+                    </span>
+                    <p className="text-zinc-500 text-sm font-medium tracking-tight">
+                        © {currentYear} MUHAMMAD <span className="text-foreground">HAFIZH</span> MAULIDAN
                     </p>
                 </div>
 
-                {/* Back to Top Button */}
-                <button
-                    onClick={scrollToTop}
-                    className="back-to-top btn-icon neon-glow"
-                    aria-label="Back to top"
-                    title="Back to top"
-                >
-                    <ArrowUp size={20} />
-                </button>
+                <div className="flex items-center gap-6">
+                    <button 
+                        onClick={scrollToTop}
+                        className="flex items-center gap-2 text-xs font-bold text-zinc-500 hover:text-accent uppercase tracking-widest transition-colors group"
+                    >
+                        <span>Back to top</span>
+                        <CaretUp size={16} weight="bold" className="group-hover:-translate-y-1 transition-transform" />
+                    </button>
+                </div>
             </div>
         </footer>
     );

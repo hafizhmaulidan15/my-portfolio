@@ -1,0 +1,136 @@
+{
+  "personal_info": {
+    "name": "Muhammad Hafizh Maulidan",
+    "title": "Hardware & IoT Engineer | Embedded Systems Engineer | Data Analyst | Web Developer",
+    "location": "Bogor, West Java, Indonesia",
+    "email": "mhafizh.maulidan@gmail.com",
+    "linkedin": "linkedin.com/in/hafizhmaulidan",
+    "portfolio": "my-portfolio-hafizh-maulidan.vercel.app",
+    "education": [
+      {
+        "degree": "Bachelor of Engineering (S.Tr.Kom) - Mechatronics & IoT Engineering",
+        "institution": "IPB University",
+        "period": "2021 - 2025",
+        "gpa": "3.33/4.00",
+        "key_achievements": [
+          "Developed an Automated Predictive Classification System using Fuzzy Logic (73.33% accuracy).",
+          "Selected Representative for SEAMEO TVET Student Exchange in Malaysia."
+        ]
+      },
+      {
+        "program": "Student Exchange Programme Southeast Asia (SEAMEO TVET)",
+        "institution": "Politeknik Mersing, Malaysia",
+        "period": "May 2022 - Jun 2022",
+        "focus": "Network Security, TCP/IP, Wireshark, XAMPP Configuration"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Frontend Developer (Freelance)",
+      "company": "PT Matra Kreasi Mandiri",
+      "period": "Sep 2025 - Jan 2026",
+      "location": "Bogor, West Java, Indonesia (Hybrid)",
+      "responsibilities": [
+        "End-to-end Web Development for NanoRobotic website from concept to deployment.",
+        "Built custom WhatsApp API integration for contact forms and 'Join Now' features.",
+        "Engineered mobile-first responsive interfaces using Bootstrap, HTML5, and CSS3.",
+        "Implemented semantic HTML, meta-tag strategies, and asset optimization for SEO.",
+        "Conducted rigorous cross-browser testing and debugging."
+      ],
+      "skills": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Responsive Web Design", "SEO", "API Integration"]
+    },
+    {
+      "role": "Frontend Developer (Intern)",
+      "company": "PT Matra Kreasi Mandiri",
+      "period": "Aug 2024 - Nov 2024",
+      "location": "Bogor, West Java, Indonesia",
+      "responsibilities": [
+        "Developed responsive company profile website.",
+        "Collaborated with design teams to refine UI/UX flows.",
+        "Optimized page performance and resolved front-end bugs."
+      ],
+      "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Git", "VS Code"]
+    },
+    {
+      "role": "Internet of Things Engineer (Intern)",
+      "company": "PT Matra Kreasi Mandiri",
+      "period": "Aug 2024 - Nov 2024",
+      "responsibilities": [
+        "Maintained IoT-driven automation systems integrating sensors and microcontrollers.",
+        "Assisted in monitoring solutions for system diagnostics and real-time reporting.",
+        "Built small-scale automation features like relay control and alert systems.",
+        "Performed hardware testing, calibration, and wiring validation."
+      ],
+      "skills": ["Arduino", "ESP32", "C/C++", "Python", "MQTT", "Networking", "Troubleshooting"]
+    }
+  ],
+  "publications": [
+    {
+      "title": "IoT-based Automation Tool Innovation to Optimize Microgreen Cultivation",
+      "journal": "Jurnal Ilmiah Teknik Elektro",
+      "date": "Jun 25, 2024",
+      "description": "Research on integrating irrigation, lighting, and temperature regulation using WS2812B LEDs, DHT22 sensors, and ESP32."
+    },
+    {
+      "title": "WordPress Vulnerability Analysis with WPScan and Mitigation Techniques",
+      "journal": "Journal of Internet and Software Engineering",
+      "date": "Jun 9, 2024",
+      "description": "Security research identifying vulnerabilities like SQL injection and XSS using WPScan and providing mitigation strategies."
+    },
+    {
+      "title": "Application of Fuzzy Logic to Predict Rice Production Quantity in Bogor Regency",
+      "date": "May 30, 2024",
+      "description": "Developed a prediction model using Fuzzy Mamdani logic to assist in resource allocation based on weather and humidity."
+    }
+  ],
+  "expertise": {
+    "iot_embedded": {
+      "skills": ["ESP32", "Arduino", "RFID (RC522)", "NFC (PN532)", "MQTT", "HTTP/REST API", "Sensors (Ultrasonic, Temp, Flow)", "Circuit Design", "Troubleshooting"],
+      "experience_years": "1+",
+      "highlights": "Successfully deployed real-time flood monitoring systems and access control prototypes with cloud integration."
+    },
+    "data_analysis": {
+      "skills": ["Python (Pandas, NumPy)", "SQL", "MATLAB", "Tableau/PowerBI", "Google Analytics", "Fuzzy Logic", "Statistical Analysis"],
+      "highlights": "Developed an Automated Predictive Classification System using Fuzzy Logic with 73.33% accuracy."
+    },
+    "web_development": {
+      "skills": ["React", "JavaScript", "Tailwind CSS", "Vite", "Node.js", "WebSocket", "REST API Integration", "Bootstrap"],
+      "highlights": "Developed responsive web dashboards for real-time IoT data visualization and the NanoRobotic educational platform."
+    },
+    "it_support_networking": {
+      "skills": ["Hardware Troubleshooting", "Network Installation (LAN/WLAN)", "Cisco/Mikrotik Configuration", "OSPF", "VLAN", "Windows/OS Maintenance"],
+      "certifications": ["Hardware Installation Supervisor (BNSP)", "Junior Network Engineer (Kominfo)", "Google Analytics"]
+    }
+  },
+  "projects": [
+    {
+      "name": "NanoRobotic.co.id Website",
+      "tech": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "WhatsApp API"],
+      "description": "A responsive educational platform landing page with integrated communication features."
+    },
+    {
+      "name": "Flood Detection and Monitoring System",
+      "tech": ["ESP32", "Ultrasonic Sensor", "YF-S201 Flow Sensor", "Arduino Cloud"],
+      "description": "Real-time water level and flow rate tracking with a 4-level alert system and automated notifications."
+    },
+    {
+      "name": "Advanced Banana Ripeness Detection",
+      "tech": ["ESP32", "TCS34725 Color Sensor", "Fuzzy Logic", "Arduino Cloud"],
+      "description": "Predictive model to classify banana ripeness stages automatically with validated accuracy."
+    },
+    {
+      "name": "Autonomous Fire-Fighting Robot",
+      "tech": ["Arduino UNO", "Flame Sensors", "Ultrasonic Sensors", "L298N Motor Driver"],
+      "description": "Robot designed for autonomous navigation and automated fire suppression."
+    }
+  ],
+  "additional_info": {
+    "languages": [
+      { "name": "Indonesian", "proficiency": "Native" },
+      { "name": "English", "proficiency": "Professional Working Proficiency", "score": "Duolingo 106 (Jan 2026)" }
+    ],
+    "willing_to_travel": true,
+    "salary_expectation": "Rp 10,000,000 - Rp 12,000,000 (negotiable)"
+  }
+}
