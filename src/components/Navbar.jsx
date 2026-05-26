@@ -1,139 +1,197 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { 
     House, User, Lightbulb, Briefcase, 
     Folder, Certificate, Envelope, GithubLogo, LinkedinLogo,
-    List, X
+    List, X, BookOpen
 } from '@phosphor-icons/react';
 import { cn } from '../lib/utils';
 
 const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const navLinks = [
         { path: '/', label: 'Home', icon: <House size={20} /> },
         { path: '/about', label: 'About', icon: <User size={20} /> },
         { path: '/skills', label: 'Skills', icon: <Lightbulb size={20} /> },
-        { path: '/experience', label: 'Exp', icon: <Briefcase size={20} /> },
+        { path: '/experience', label: 'Experience', icon: <Briefcase size={20} /> },
         { path: '/projects', label: 'Projects', icon: <Folder size={20} /> },
-        { path: '/certifications', label: 'Cert', icon: <Certificate size={20} /> },
+        { path: '/publications', label: 'Publications', icon: <BookOpen size={20} /> },
+        { path: '/certifications', label: 'Certifications', icon: <Certificate size={20} /> },
         { path: '/contact', label: 'Contact', icon: <Envelope size={20} /> },
     ];
 
     return (
-        <nav className={cn(
-            "fixed top-0 left-0 right-0 z-[1000] transition-all duration-500 py-6",
-            isScrolled ? "py-4 bg-background/80 backdrop-blur-md" : "py-8"
-        )}>
-            <div className="container mx-auto px-6 max-w-[1400px] flex items-center justify-between">
-                
-                {/* Logo */}
-                <Link 
-                    to="/" 
-                    className="text-xl font-bold tracking-tighter text-foreground flex items-center gap-2 group"
-                >
-                    <span className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center text-background">
-                        H
-                    </span>
-                    <span className="group-hover:text-accent transition-colors">MAULIDAN</span>
-                </Link>
+        <>
+            {/* Desktop Sidebar */}
+            <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-[284px] flex-col justify-between bg-background z-50 py-[72px] px-0 border-r border-white/[0.06]">
+                <div>
+                    {/* Logo */}
+                    <Link 
+                        to="/" 
+                        className="flex items-center gap-3 px-6 mb-12 group"
+                    >
+                        <span className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold text-lg">
+                            H
+                        </span>
+                        <span className="font-sans text-foreground font-semibold tracking-tight group-hover:text-primary transition-colors duration-200">MAULIDAN</span>
+                    </Link>
 
-                {/* Desktop Dock-style Navigation */}
-                <div className="hidden lg:flex items-center gap-1 p-1.5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl">
-                    {navLinks.map((link) => (
-                        <motion.div key={link.path} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Link
-                                to={link.path}
-                                className={cn(
-                                    "px-4 py-2 rounded-xl transition-all text-sm font-medium flex items-center gap-2",
-                                    location.pathname === link.path 
-                                        ? "text-foreground bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.1)]" 
-                                        : "text-zinc-500 hover:text-zinc-300 hover:bg-white/5"
-                                )}
-                            >
-                                {link.icon}
-                                {link.label}
-                            </Link>
-                        </motion.div>
-                    ))}
+                    {/* Navigation Items */}
+                    <nav className="px-4">
+                        {navLinks.map((link) => {
+                            const isActive = location.pathname === link.path;
+                            return (
+                                <Link
+                                    key={link.path}
+                                    to={link.path}
+                                    className={cn(
+                                        "flex items-center gap-3 px-4 py-3 rounded mb-3 transition-all duration-200 font-sans text-foreground",
+                                        isActive 
+                                            ? "bg-primary/[0.15] text-primary border-l-[3px] border-l-primary" 
+                                            : "hover:bg-white/[0.05] border-l-[3px] border-l-transparent"
+                                    )}
+                                >
+                                    <span className={cn(isActive ? "text-primary" : "text-text-muted")}>
+                                        {link.icon}
+                                    </span>
+                                    <span className="text-[14px] font-normal">{link.label}</span>
+                                </Link>
+                            );
+                        })}
+                    </nav>
                 </div>
 
-                {/* Socials & Mobile Toggle */}
-                <div className="flex items-center gap-3">
-                    <div className="hidden md:flex items-center gap-2">
-                        <motion.a
-                            href="https://github.com/hafizhmaulidan15"
-                            target="_blank"
-                            whileHover={{ scale: 1.1 }}
-                            className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent transition-colors"
-                        >
-                            <GithubLogo size={20} />
-                        </motion.a>
-                        <motion.a
-                            href="https://www.linkedin.com/in/hafizhmaulidan/"
-                            target="_blank"
-                            whileHover={{ scale: 1.1 }}
-                            className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-accent transition-colors"
-                        >
-                            <LinkedinLogo size={20} />
-                        </motion.a>
-                    </div>
+                {/* Social Links */}
+                <div className="px-6 flex items-center gap-3">
+                    <a
+                        href="https://github.com/hafizhmaulidan15"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground hover:border-border-light transition-all duration-200"
+                        aria-label="GitHub Profile"
+                    >
+                        <GithubLogo size={18} />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/hafizhmaulidan/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground hover:border-border-light transition-all duration-200"
+                        aria-label="LinkedIn Profile"
+                    >
+                        <LinkedinLogo size={18} />
+                    </a>
+                </div>
+            </aside>
+
+            {/* Mobile Top Bar */}
+            <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-white/[0.06]">
+                <div className="flex items-center justify-between px-4 py-4">
+                    <Link 
+                        to="/" 
+                        className="flex items-center gap-2"
+                    >
+                        <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold">
+                            H
+                        </span>
+                        <span className="font-sans text-foreground font-semibold tracking-tight">MAULIDAN</span>
+                    </Link>
 
                     <button
-                        className="lg:hidden w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-foreground"
+                        className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-foreground"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                        aria-expanded={isMobileMenuOpen}
                     >
-                        {isMobileMenuOpen ? <X size={24} /> : <List size={24} />}
+                        {isMobileMenuOpen ? <X size={20} /> : <List size={20} />}
                     </button>
                 </div>
-            </div>
+            </header>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Menu Drawer */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 p-6 bg-background/95 backdrop-blur-2xl border-b border-white/10 lg:hidden"
-                    >
-                        <ul className="space-y-4">
-                            {navLinks.map((link) => (
-                                <li key={link.path}>
-                                    <Link
-                                        to={link.path}
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                        className={cn(
-                                            "flex items-center gap-4 text-lg font-medium p-2 rounded-xl transition-all",
-                                            location.pathname === link.path ? "text-accent bg-accent/5" : "text-zinc-400 hover:text-accent"
-                                        )}
-                                    >
-                                        <span className={cn(
-                                            "p-2 rounded-lg transition-colors",
-                                            location.pathname === link.path ? "bg-accent/10 text-accent" : "bg-white/5 text-zinc-500"
-                                        )}>
-                                            {link.icon}
-                                        </span>
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="lg:hidden fixed inset-0 z-40 bg-black/50"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        />
+                        <motion.div
+                            initial={{ x: '-100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '-100%' }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="lg:hidden fixed left-0 top-0 bottom-0 w-[280px] bg-background z-50 flex flex-col py-[72px] px-0 border-r border-white/[0.06]"
+                        >
+                            <div className="px-4 mb-8">
+                                <Link 
+                                    to="/" 
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="flex items-center gap-3 px-4"
+                                >
+                                    <span className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold text-lg">
+                                        H
+                                    </span>
+                                    <span className="font-sans text-foreground font-semibold tracking-tight">MAULIDAN</span>
+                                </Link>
+                            </div>
+
+                            <nav className="px-4 flex-1">
+                                {navLinks.map((link) => {
+                                    const isActive = location.pathname === link.path;
+                                    return (
+                                        <Link
+                                            key={link.path}
+                                            to={link.path}
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            className={cn(
+                                                "flex items-center gap-3 px-4 py-3 rounded mb-3 transition-all duration-200 font-sans text-foreground",
+                                                isActive 
+                                                    ? "bg-primary/[0.15] text-primary border-l-[3px] border-l-primary" 
+                                                    : "hover:bg-white/[0.05] border-l-[3px] border-l-transparent"
+                                            )}
+                                        >
+                                            <span className={cn(isActive ? "text-primary" : "text-text-muted")}>
+                                                {link.icon}
+                                            </span>
+                                            <span className="text-[14px] font-normal">{link.label}</span>
+                                        </Link>
+                                    );
+                                })}
+                            </nav>
+
+                            <div className="px-6 flex items-center gap-3 pb-8">
+                                <a
+                                    href="https://github.com/hafizhmaulidan15"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
+                                    aria-label="GitHub Profile"
+                                >
+                                    <GithubLogo size={18} />
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/hafizhmaulidan/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
+                                    aria-label="LinkedIn Profile"
+                                >
+                                    <LinkedinLogo size={18} />
+                                </a>
+                            </div>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
-        </nav>
+        </>
     );
 };
 

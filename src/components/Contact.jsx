@@ -4,61 +4,69 @@ import { GlassPanel } from './ui/GlassPanel';
 
 const Contact = () => {
     return (
-        <section className="pt-48 pb-32 bg-background relative overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
-            <div className="container mx-auto px-6 max-w-[1400px] text-center">
+        <section className="py-[72px] px-6 bg-background relative overflow-hidden min-h-[calc(100dvh-80px)] flex items-center">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 blur-[120px] rounded-full pointer-events-none"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
+
+            <div className="container mx-auto px-6 max-w-[1400px] text-center relative z-10">
                 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="max-w-3xl mx-auto space-y-8"
+                    className="max-w-3xl mx-auto space-y-6"
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/5 border border-accent/10 text-accent text-xs font-bold tracking-widest uppercase">
-                        <PaperPlaneTilt size={16} weight="bold" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary/5 border border-primary/10 text-primary text-xs font-medium tracking-widest uppercase">
+                        <PaperPlaneTilt size={14} weight="bold" />
                         <span>Ready to collaborate</span>
                     </div>
 
-                    <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground leading-[0.9]">
-                        LET'S BUILD THE <br />
-                        <span className="text-zinc-500 underline decoration-accent/30 underline-offset-8">NEXT FRONTIER</span>
+                    <h2 className="text-[28px] md:text-[32px] lg:text-[40px] font-bold tracking-tighter text-foreground leading-[1.1]">
+                        Let's build the <br />
+                        <span className="text-gradient-primary">next frontier</span>
                     </h2>
 
-                    <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-[50ch] mx-auto">
+                    <p className="text-text-secondary text-[16px] md:text-[18px] leading-relaxed max-w-[50ch] mx-auto">
                         I am currently seeking opportunities to apply my expertise in IoT and systems engineering. 
                         Whether you have a specific inquiry or just want to connect, my inbox is open.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                         <motion.a
                             href="mailto:mhafizh.maulidan@gmail.com"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="w-full sm:w-auto px-10 py-5 bg-accent text-background font-black rounded-2xl flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(0,245,255,0.2)] hover:shadow-[0_0_50px_rgba(0,245,255,0.4)] transition-all"
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="w-full sm:w-auto px-6 py-3 bg-primary text-foreground font-body rounded border border-primary shadow-primary-btn flex items-center justify-center gap-2 hover:bg-primary-hover hover:shadow-primary-btn-hover transition-all duration-200"
                         >
-                            <Envelope size={24} weight="bold" />
-                            SECURE CONNECTION
+                            <Envelope size={18} weight="bold" />
+                            Secure connection
                         </motion.a>
                     </div>
 
-                    <div className="pt-24 space-y-6">
-                        <p className="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.3em]">Peripheral Links</p>
-                        <div className="flex justify-center gap-6">
+                    <div className="pt-16 space-y-4">
+                        <p className="text-[10px] font-mono text-text-tertiary uppercase tracking-[0.2em]">Peripheral links</p>
+                        <div className="flex justify-center gap-4">
                             <motion.a
                                 href="https://github.com/hafizhmaulidan15"
                                 target="_blank"
-                                whileHover={{ y: -5, color: '#00f5ff' }}
-                                className="text-zinc-500 transition-colors"
+                                rel="noopener noreferrer"
+                                whileHover={{ y: -4 }}
+                                className="text-text-tertiary hover:text-primary transition-colors p-2"
+                                aria-label="GitHub Profile"
                             >
-                                <GithubLogo size={32} weight="duotone" />
+                                <GithubLogo size={28} weight="duotone" />
                             </motion.a>
                             <motion.a
                                 href="https://www.linkedin.com/in/hafizhmaulidan/"
                                 target="_blank"
-                                whileHover={{ y: -5, color: '#00f5ff' }}
-                                className="text-zinc-500 transition-colors"
+                                rel="noopener noreferrer"
+                                whileHover={{ y: -4 }}
+                                className="text-text-tertiary hover:text-primary transition-colors p-2"
+                                aria-label="LinkedIn Profile"
                             >
-                                <LinkedinLogo size={32} weight="duotone" />
+                                <LinkedinLogo size={28} weight="duotone" />
                             </motion.a>
                         </div>
                     </div>

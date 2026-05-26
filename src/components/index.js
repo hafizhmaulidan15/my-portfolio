@@ -5,5 +5,7 @@ export { default as Skills } from './Skills';
 export { default as Experience } from './Experience';
 export { default as Projects } from './Projects';
 export { default as Certifications } from './Certifications';
+export { default as Publications } from './Publications';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
+export { default as NotFound } from './NotFound';

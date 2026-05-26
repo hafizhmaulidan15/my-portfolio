@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
     Globe, Code, Cpu, Drop, Pulse, 
     Plant, Lightbulb, ChartBar, Database, 
-    TrendUp, ArrowUpRight, CaretDown, CaretUp,
-    IdentificationBadge, Users, User,
-    Factory, ClipboardText
+    TrendUp, ArrowUpRight,
+    Factory, Waves, BookOpen, Lightning, Shield,
+    IdentificationBadge, Users, User
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 import { cn } from '../lib/utils';
 
 const Projects = () => {
-    const [expandedProject, setExpandedProject] = useState(null);
     const [activeCategory, setActiveCategory] = useState('all');
 
     const projects = [
@@ -20,27 +19,27 @@ const Projects = () => {
             title: 'Production Operations SOP',
             period: 'Apr 2026 - Present',
             association: 'Rumah Susu Indonesia',
-            icon: <Factory size={32} weight="duotone" />,
+            icon: <Factory size={28} weight="duotone" />,
             role: 'Head of Unit',
             roleType: 'lead',
             category: 'ops',
-            description: 'Architecting end-to-end production systems and SOPs for industrial-scale dairy processing.',
+            description: 'Orchestrating end-to-end production architecture and strategic SOPs for industrial-scale dairy processing.',
             responsibilities: [
-                'Designed production workflows for 25,000 units per batch.',
-                'Implemented QC protocols from reception to distribution.',
-                'Managed supply chain coordination with local cooperatives.',
-                'Optimized distribution efficiency and waste management.'
+                'Engineered production workflows for 25,000 units per batch, optimizing throughput.',
+                'Developed comprehensive QC protocols and supply chain management strategies.',
+                'Led cross-functional coordination between production and local cooperatives.',
+                'Strategized distribution logistics and sustainable waste management.'
             ],
-            impact: 'Bridged engineering methodologies with real-world operational leadership in food processing.',
-            skills: ['SOP Development', 'QC', 'Supply Chain', 'Operations'],
-            color: 'text-orange-400'
+            impact: 'Pivoted engineering precision into operational leadership, managing high-capacity industrial systems.',
+            skills: ['Operational Strategy', 'Project Lifecycle', 'Supply Chain Management', 'SOP Architecture'],
+            color: 'text-accent-orange'
         },
         {
             id: 1,
             title: 'DR.MATT Company Profile',
             period: 'Aug 2024 - Nov 2024',
             association: 'PT Matra Kreasi Mandiri',
-            icon: <Globe size={32} weight="duotone" />,
+            icon: <Globe size={28} weight="duotone" />,
             role: 'Frontend Developer',
             roleType: 'developer',
             category: 'web',
@@ -53,34 +52,159 @@ const Projects = () => {
             ],
             impact: 'Strengthened system management control in a real-world Industry 4.0 development environment.',
             skills: ['React', 'JavaScript', 'Tailwind', 'Git', 'UI/UX'],
-            color: 'text-cyan-400',
+            color: 'text-primary',
             link: 'https://drmatt.id/'
         },
         {
-            id: 3,
-            title: 'Advanced Ripeness Detection',
-            period: 'Oct 2024 - Nov 2024',
-            association: 'UIN Jakarta',
-            icon: <Cpu size={32} weight="duotone" />,
+            id: 2,
+            title: 'Flood Detection & Monitoring System',
+            period: '2024',
+            association: 'PT Matra Kreasi Mandiri',
+            icon: <Drop size={28} weight="duotone" />,
             role: 'IoT Developer',
             roleType: 'team',
             category: 'iot',
-            description: 'IoT-based spectral analysis system for agricultural quality control.',
+            description: 'Real-time water level and flow rate tracking with 4-level alert system and automated notifications.',
+            responsibilities: [
+                'Integrated ESP32 with Ultrasonic and YF-S201 flow sensors.',
+                'Built Arduino Cloud dashboard for real-time monitoring.',
+                'Implemented 4-level alert system with automated Telegram notifications.',
+                'Designed hardware calibration and wiring validation protocols.'
+            ],
+            impact: 'Deployed operational flood monitoring system with cloud integration for early warning.',
+            skills: ['ESP32', 'Arduino', 'Sensors', 'MQTT', 'IoT Cloud'],
+            color: 'text-accent-blue'
+        },
+        {
+            id: 3,
+            title: 'Advanced Banana Ripeness Detection',
+            period: 'Oct 2024 - Nov 2024',
+            association: 'UIN Jakarta',
+            icon: <Cpu size={28} weight="duotone" />,
+            role: 'IoT Developer',
+            roleType: 'team',
+            category: 'iot',
+            description: 'IoT-based spectral analysis system for agricultural quality control using color sensors.',
             responsibilities: [
                 'Utilized TCS34725 sensors for RGB-based ripeness classification.',
                 'Built real-time monitoring via ESP32 & Arduino IoT Cloud.',
-                'Integrated J5019 modules for localized LCD status feedback.'
+                'Integrated J5019 modules for localized LCD status feedback.',
+                'Developed Fuzzy Logic algorithm for predictive classification.'
             ],
-            impact: 'Successfully bridged spectral sensor data with cloud-based visualization.',
-            skills: ['ESP32', 'C++', 'IoT Cloud', 'Embedded Systems'],
-            color: 'text-emerald-400'
+            impact: 'Achieved validated accuracy in automated fruit ripeness classification system.',
+            skills: ['ESP32', 'C++', 'IoT Cloud', 'Fuzzy Logic', 'Embedded Systems'],
+            color: 'text-warning'
+        },
+        {
+            id: 4,
+            title: 'NanoRobotic Website',
+            period: 'Sep 2025 - Jan 2026',
+            association: 'PT Matra Kreasi Mandiri',
+            icon: <Globe size={28} weight="duotone" />,
+            role: 'Full-Stack Developer',
+            roleType: 'lead',
+            category: 'web',
+            description: 'End-to-end responsive educational platform with WhatsApp API integration.',
+            responsibilities: [
+                'Developed responsive landing page from concept to deployment.',
+                'Integrated WhatsApp API for contact forms and Join Now features.',
+                'Engineered mobile-first interfaces using Bootstrap, HTML5, CSS3.',
+                'Implemented SEO strategies with semantic HTML and meta tags.'
+            ],
+            impact: 'Delivered production-ready ed-tech platform with integrated communication features.',
+            skills: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'WhatsApp API', 'SEO'],
+            color: 'text-accent-teal',
+            link: 'https://nanorobotic.co.id'
+        },
+        {
+            id: 5,
+            title: 'Autonomous Fire-Fighting Robot',
+            period: '2023',
+            association: 'IPB University',
+            icon: <Cpu size={28} weight="duotone" />,
+            role: 'Embedded Developer',
+            roleType: 'team',
+            category: 'iot',
+            description: 'Autonomous robot designed for fire detection and automated suppression.',
+            responsibilities: [
+                'Integrated Arduino UNO with flame and ultrasonic sensors.',
+                'Programmed L298N motor driver for autonomous navigation.',
+                'Developed automated fire suppression mechanisms.',
+                'Tested and calibrated sensor integration for accuracy.'
+            ],
+            impact: 'Built prototype autonomous system for fire emergency response.',
+            skills: ['Arduino UNO', 'C++', 'Sensor Integration', 'Motor Control'],
+            color: 'text-accent-red'
+        },
+        {
+            id: 6,
+            title: 'Microgreen Cultivation Automation (Admigre)',
+            period: '2024',
+            association: 'IPB University - Published',
+            icon: <Plant size={28} weight="duotone" />,
+            role: 'IoT Developer',
+            roleType: 'team',
+            category: 'iot',
+            description: 'IoT-based automated system for optimized microgreen cultivation. Published in Jurnal Ilmiah Teknik Elektro IPB.',
+            responsibilities: [
+                'Integrated WS2812B LED for automated lighting control based on growth stage.',
+                'Connected soil moisture and DHT22 sensors for environmental monitoring.',
+                'Developed ESP32-based automated irrigation and climate control.',
+                'Achieved 40% increase in growth efficiency through precise environmental control.'
+            ],
+            impact: 'Published research in Jurnal Ilmiah Teknik Elektro IPB - Contributing to sustainable agriculture technology.',
+            skills: ['ESP32', 'WS2812B', 'DHT22', 'IoT', 'Automation', 'Research'],
+            color: 'text-success',
+            link: null,
+            published: true,
+            journal: 'Jurnal Ilmiah Teknik Elektro IPB'
+        },
+        {
+            id: 7,
+            title: 'Water Level Detection System',
+            period: 'Aug 2024 - Sep 2024',
+            association: 'Telkom University',
+            icon: <Waves size={28} weight="duotone" />,
+            role: 'Lead Developer',
+            roleType: 'team',
+            category: 'iot',
+            description: 'Real-time water level monitoring with Telegram bot integration for instant alerts.',
+            responsibilities: [
+                'Led full product lifecycle from planning to deployment using Agile methodology.',
+                'Utilized three ultrasonic sensors and ESP32 for accurate measurement.',
+                'Developed Telegram bot integration for instant notifications on level changes.',
+                'Implemented relay control system for automated equipment response.'
+            ],
+            impact: 'Reduced emergency response time by 40% through instant alert system.',
+            skills: ['ESP32', 'Telegram Bot', 'Relay Control', 'Agile', 'Ultrasonic'],
+            color: 'text-accent-blue'
+        },
+        {
+            id: 8,
+            title: 'Curug Cikoneng LED Decoration',
+            period: 'Jul 2023 - Oct 2023',
+            association: 'Curug Cikoneng Tourist Attraction',
+            icon: <Lightbulb size={28} weight="duotone" />,
+            role: 'Electrical & Firmware Engineer',
+            roleType: 'team',
+            category: 'iot',
+            description: 'Large-scale programmable LED lighting system for tourist attraction with web dashboard control.',
+            responsibilities: [
+                'Designed time-based and environment-based LED control using RTC DS3231.',
+                'Developed responsive web dashboard for real-time monitoring and control.',
+                'Managed power distribution calculation for extensive WS2812B LED arrays.',
+                'Executed on-site installation with IP65 weatherproofing compliance.'
+            ],
+            impact: 'Successfully installed and commissioned outdoor LED system with 24/7 reliability.',
+            skills: ['ESP32', 'WS2812B', 'RTC', 'Web Dashboard', 'Power Management', 'Field Installation'],
+            color: 'text-warning'
         },
         {
             id: 9,
             title: 'IDX Market Screener',
             period: 'Dec 2025',
             association: 'Personal Project',
-            icon: <TrendUp size={32} weight="duotone" />,
+            icon: <TrendUp size={28} weight="duotone" />,
             role: 'ML Developer',
             roleType: 'individual',
             category: 'data',
@@ -92,20 +216,56 @@ const Projects = () => {
             ],
             impact: 'Automated complex technical analysis for high-probability trade setups.',
             skills: ['Python', 'Pandas', 'Scikit-Learn', 'ML'],
-            color: 'text-accent'
+            color: 'text-primary'
+        },
+        {
+            id: 10,
+            title: 'Internal Monitoring Dashboard',
+            period: '2024',
+            association: 'PT Matra Kreasi Mandiri',
+            icon: <Database size={28} weight="duotone" />,
+            role: 'Full-Stack Developer',
+            roleType: 'team',
+            category: 'web',
+            description: 'Web-based real-time monitoring dashboard for IoT sensor data with automated alerts.',
+            responsibilities: [
+                'Developed MySQL database for historical sensor data storage and retrieval.',
+                'Utilized Python for backend scripting and data processing.',
+                'Integrated real-time data streaming with WebSocket protocol.',
+                'Created automated alert system with multi-level triggers.'
+            ],
+            impact: 'Enabled management to make immediate data-backed decisions with real-time visualization.',
+            skills: ['MySQL', 'Python', 'WebSocket', 'Dashboard', 'Data Visualization'],
+            color: 'text-primary'
+        },
+        {
+            id: 11,
+            title: 'WordPress Security Analysis',
+            period: '2024',
+            association: 'Security Research',
+            icon: <Shield size={28} weight="duotone" />,
+            role: 'Security Analyst',
+            roleType: 'individual',
+            category: 'data',
+            description: 'Comprehensive CMS security analysis identifying vulnerabilities and providing mitigation strategies.',
+            responsibilities: [
+                'Conducted vulnerability assessment using WPScan tool.',
+                'Identified SQL Injection and XSS vulnerabilities in WordPress sites.',
+                'Documented security findings and recommended mitigation techniques.',
+                'Implemented security hardening for protected web administration.'
+            ],
+            impact: 'Provided comprehensive security recommendations for safe web management practices.',
+            skills: ['WPScan', 'SQL Injection', 'XSS', 'Security Analysis', 'Penetration Testing'],
+            color: 'text-accent-red'
         }
     ];
 
     const getRoleIcon = (roleType) => {
         switch (roleType) {
-            case 'lead': return <IdentificationBadge size={16} weight="bold" />;
-            case 'team': return <Users size={16} weight="bold" />;
-            default: return <User size={16} weight="bold" />;
+            case 'lead': return <IdentificationBadge size={14} weight="bold" />;
+            case 'team': return <Users size={14} weight="bold" />;
+            default: return <User size={14} weight="bold" />;
         }
-    };
-
-    const toggleProject = (id) => {
-        setExpandedProject(expandedProject === id ? null : id);
     };
 
     const filteredProjects = activeCategory === 'all'
@@ -113,29 +273,32 @@ const Projects = () => {
         : projects.filter(project => project.category === activeCategory);
 
     return (
-        <section className="pt-40 pb-24 bg-background relative min-h-[calc(100vh-80px)]">
+        <section className="py-[72px] px-6 bg-background relative">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 blur-[100px] rounded-full pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
+
             <div className="container mx-auto px-6 max-w-[1400px]">
-                <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
-                    <div className="space-y-4">
-                        <div className="h-1 w-12 bg-accent"></div>
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground">
-                            SYSTEMS <span className="text-zinc-500">EXHIBITION</span>
+                <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+                    <div className="space-y-3">
+                        <div className="h-0.5 w-10 bg-gradient-to-r from-primary to-accent-teal"></div>
+                        <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
+                            Strategic <span className="text-gradient-cool">execution</span>
                         </h2>
-                        <p className="text-zinc-400 max-w-[50ch] text-lg leading-relaxed">
-                            A showcase of precision across Operations, IoT, Web, and Data.
+                        <p className="text-text-secondary max-w-[55ch] text-[16px] leading-relaxed">
+                            A portfolio of precision, orchestrating the intersection of Operations, Engineering, and Data.
                         </p>
                     </div>
 
-                    <div className="flex bg-white/[0.03] border border-white/10 p-1 rounded-2xl backdrop-blur-xl">
+                    <div className="flex bg-surface border border-border p-1 rounded">
                         {['all', 'ops', 'iot', 'web', 'data'].map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={cn(
-                                    "px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-all",
+                                    "px-4 py-2 rounded-sm text-xs font-medium uppercase tracking-widest transition-all duration-200",
                                     activeCategory === cat 
-                                        ? "bg-accent text-background shadow-[0_0_20px_rgba(0,245,255,0.3)]" 
-                                        : "text-zinc-500 hover:text-zinc-300"
+                                        ? "bg-primary text-foreground shadow-raised" 
+                                        : "text-text-tertiary hover:text-text-secondary hover:bg-white/[0.05]"
                                 )}
                             >
                                 {cat}
@@ -144,95 +307,63 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {filteredProjects.map((project) => (
                         <GlassPanel 
                             key={project.id} 
-                            className="flex flex-col h-full border-white/5 hover:border-accent/20 transition-all group"
+                            overflowVisible
+                            className="flex flex-col h-full border-border/50 hover:border-primary/20 transition-all group"
                         >
-                            <div className="flex justify-between items-start mb-8">
-                                <div className={cn("p-4 rounded-2xl bg-white/[0.03] transition-colors group-hover:bg-accent/10", project.color)}>
+                            <div className="flex justify-between items-start mb-6">
+                                <div className={cn("p-3 rounded-sm bg-interactive-button transition-colors group-hover:bg-primary/10", project.color)}>
                                     {project.icon}
                                 </div>
                                 {project.link && (
                                     <motion.a 
                                         href={project.link}
                                         target="_blank"
-                                        whileHover={{ scale: 1.1, rotate: 5 }}
-                                        className="p-2 text-zinc-500 hover:text-accent transition-colors"
+                                        whileHover={{ scale: 1.05 }}
+                                        className="p-2 text-text-tertiary hover:text-primary transition-colors"
                                     >
-                                        <ArrowUpRight size={24} weight="bold" />
+                                        <ArrowUpRight size={20} weight="bold" />
                                     </motion.a>
                                 )}
                             </div>
 
-                            <div className="space-y-2 mb-6">
-                                <h3 className="text-2xl font-bold tracking-tight text-foreground leading-tight">{project.title}</h3>
-                                <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-500">
-                                    <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/5 whitespace-nowrap">
+                            <div className="space-y-2 mb-4">
+                                <h3 className="text-[18px] font-semibold tracking-tight text-foreground leading-tight">{project.title}</h3>
+                                <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-text-tertiary">
+                                    <span className="px-2 py-0.5 rounded-sm bg-interactive-button border border-border whitespace-nowrap">
                                         {project.period}
                                     </span>
                                     <span className="whitespace-nowrap">{project.association}</span>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-2 mb-6">
-                                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/5 border border-accent/10 text-accent text-[10px] font-bold uppercase tracking-widest">
+                            <div className="flex items-center gap-2 mb-4">
+                                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-primary/5 border border-primary/10 text-primary text-[10px] font-medium uppercase tracking-widest">
                                     {getRoleIcon(project.roleType)}
                                     {project.role}
                                 </div>
+                                {project.published && (
+                                    <div className="flex items-center gap-1 px-2 py-1 rounded-sm bg-success/10 border border-success/30 text-success text-[10px] font-medium uppercase tracking-widest">
+                                        <BookOpen size={10} weight="bold" />
+                                        Published
+                                    </div>
+                                )}
                             </div>
 
-                            <p className="text-zinc-400 text-sm leading-relaxed flex-grow">
+                            <p className="text-text-secondary text-sm leading-relaxed flex-grow">
                                 {project.description}
                             </p>
 
-                            <div className="mt-8 pt-6 border-t border-white/5 flex flex-wrap gap-2">
+                            <div className="mt-6 pt-4 border-t border-white/[0.06] flex flex-wrap gap-2">
                                 {project.skills.slice(0, 4).map((skill) => (
-                                    <span key={skill} className="text-[10px] font-mono text-zinc-500 uppercase">
+                                    <span key={skill} className="text-[10px] font-mono text-text-tertiary uppercase">
                                         #{skill}
                                     </span>
                                 ))}
                             </div>
-
-                            <button 
-                                onClick={() => toggleProject(project.id)}
-                                className="mt-6 flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-widest hover:opacity-70 transition-opacity"
-                            >
-                                {expandedProject === project.id ? <CaretUp weight="bold" /> : <CaretDown weight="bold" />}
-                                {expandedProject === project.id ? 'Hide Specs' : 'View Specs'}
-                            </button>
-
-                            <AnimatePresence>
-                                {expandedProject === project.id && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: 'auto', opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        className="overflow-hidden"
-                                    >
-                                        <div className="pt-6 space-y-6">
-                                            <div className="space-y-3">
-                                                <h4 className="text-[10px] font-bold text-zinc-500 uppercase tracking-[0.2em]">Strategic Focus</h4>
-                                                <ul className="space-y-2">
-                                                    {project.responsibilities.map((resp, i) => (
-                                                        <li key={i} className="text-sm text-zinc-300 flex items-start gap-3">
-                                                            <div className="w-1 h-1 rounded-full bg-accent mt-2 shrink-0"></div>
-                                                            {resp}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                            <div className="space-y-3">
-                                                <h4 className="text-[10px] font-bold text-zinc-500 uppercase tracking-[0.2em]">Systems Impact</h4>
-                                                <p className="text-sm text-zinc-300 leading-relaxed italic border-l-2 border-accent/20 pl-4">
-                                                    "{project.impact}"
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
                         </GlassPanel>
                     ))}
                 </div>

@@ -1,73 +1,94 @@
 import { motion } from 'framer-motion';
-import { Student, MapPin, Envelope, Briefcase, Factory, ChartPieSlice } from '@phosphor-icons/react';
+import { Student, MapPin, Envelope, Briefcase, Factory, ChartPieSlice, Trophy, Globe, Circle } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 
 const About = () => {
     const infoCards = [
         {
-            icon: <Factory size={28} weight="duotone" />,
-            title: 'Current Role',
+            icon: <Factory size={24} weight="duotone" />,
+            title: 'Current role',
             description: 'Head of Unit — Rumah Susu Indonesia',
+            color: 'text-accent-orange',
+            bg: 'bg-accent-orange/10',
+            glow: 'border-glow-top-orange'
         },
         {
-            icon: <Student size={28} weight="duotone" />,
+            icon: <Student size={24} weight="duotone" />,
             title: 'Education',
             description: 'B.Eng - IPB University (GPA 3.33)',
+            color: 'text-primary',
+            bg: 'bg-primary/10',
+            glow: 'border-glow-top-primary'
         },
         {
-            icon: <ChartPieSlice size={28} weight="duotone" />,
+            icon: <ChartPieSlice size={24} weight="duotone" />,
             title: 'Specialization',
             description: 'IoT, Operations & Data Analytics',
+            color: 'text-accent-teal',
+            bg: 'bg-accent-teal/10',
+            glow: 'border-glow-top-teal'
         },
         {
-            icon: <MapPin size={28} weight="duotone" />,
+            icon: <MapPin size={24} weight="duotone" />,
             title: 'Location',
-            description: 'Bogor & Tasikmalaya (Operations)',
+            description: 'Bogor & Tasikmalaya',
+            color: 'text-accent-orange',
+            bg: 'bg-accent-orange/10',
+            glow: 'border-glow-top-orange'
         },
     ];
 
+    const achievements = [
+        { text: '73.33% Accuracy - Fuzzy Logic', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-orange' },
+        { text: '40% Downtime Reduction', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
+        { text: 'SEAMEO TVET 2022', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-teal' },
+        { text: 'Hafidz Al-Quran', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
+    ];
+
     return (
-        <section className="pt-40 pb-24 bg-background relative overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
+        <section className="py-[72px] px-6 bg-background relative overflow-hidden">
+            <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
+            <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
+            
             <div className="container mx-auto px-6 max-w-[1400px]">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     
-                    {/* Left: Profile Image & Narrative */}
-                    <div className="lg:col-span-7 space-y-12">
+                    <div className="lg:col-span-7 space-y-8">
                         <div className="flex flex-col md:flex-row gap-8 items-center md:items-end">
-                            {/* Profile Image with Premium Frame */}
                             <motion.div 
-                                initial={{ opacity: 0, scale: 0.9 }}
+                                initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
                                 className="relative shrink-0"
                             >
-                                <div className="absolute -inset-4 bg-accent/20 blur-2xl rounded-full opacity-50"></div>
-                                <div className="w-48 h-48 md:w-56 md:h-56 rounded-[2.5rem] border-2 border-white/10 overflow-hidden relative group">
+                                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent-teal/10 blur-2xl rounded-full opacity-60"></div>
+                                <div className="w-40 h-40 md:w-48 md:h-48 rounded-lg border border-border overflow-hidden relative group">
                                     <img 
-                                        src="/profile-avatar.jpg" 
+                                        src="/profile-avatar.png" 
                                         alt="Muhammad Hafizh Maulidan" 
-                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                                        onError={(e) => { e.target.src = "https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=00f5ff&color=000&size=512"; }}
+                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 scale-110 group-hover:scale-100"
+                                        onError={(e) => { e.target.src = "https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=1447E6&color=fff&size=512"; }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60"></div>
                                 </div>
-                                <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-accent rounded-2xl flex items-center justify-center text-background shadow-xl">
-                                    <Briefcase size={24} weight="bold" />
+                                <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-primary to-accent-teal rounded-lg flex items-center justify-center text-foreground shadow-floating">
+                                    <Briefcase size={20} weight="bold" />
                                 </div>
                             </motion.div>
 
-                            <div className="space-y-4 text-center md:text-left">
-                                <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-foreground">
-                                    SYSTEMS <span className="text-zinc-500">ARCHITECT</span>
+                            <div className="space-y-3 text-center md:text-left">
+                                <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
+                                    Systems <span className="text-gradient-primary">architect</span>
                                 </h2>
-                                <div className="h-1 w-20 bg-accent mx-auto md:ml-0"></div>
+                                <div className="h-0.5 w-16 bg-gradient-to-r from-primary to-accent-teal mx-auto md:ml-0 rounded-full"></div>
                             </div>
                         </div>
 
-                        <div className="space-y-6 text-zinc-400 text-lg leading-relaxed max-w-[65ch]">
+                        <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed max-w-[65ch]">
                             <p>
-                                I am a multidisciplinary <span className="text-foreground font-medium">B.Eng graduate from IPB University</span>, 
+                                I am a multidisciplinary <span className="text-foreground font-medium">B.Eng graduate from IPB University</span> (GPA 3.33), 
                                 specializing in the convergence of IoT engineering, data intelligence, and operational leadership.
                             </p>
                             <p>
@@ -79,22 +100,33 @@ const About = () => {
                                 Currently leading dairy production operations at <span className="text-foreground font-medium">Rumah Susu Indonesia</span>, 
                                 where I manage end-to-end supply chains, QC protocols, and production efficiency through an engineering lens.
                             </p>
+                            
+                            <div className="pt-4">
+                                <h4 className="text-sm font-medium text-text-tertiary uppercase tracking-widest mb-4">Key achievements</h4>
+                                <div className="flex flex-wrap gap-3">
+                                    {achievements.map((ach, idx) => (
+                                        <div key={idx} className="flex items-center gap-2 px-3 py-2 rounded-sm bg-surface border border-border">
+                                            <span className={ach.color}>{ach.icon}</span>
+                                            <span className="text-sm text-text-secondary font-medium">{ach.text}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Right: Info Bento Grid */}
                     <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {infoCards.map((info, idx) => (
                             <GlassPanel 
                                 key={idx} 
-                                className="flex flex-col gap-6 group hover:border-accent/20 transition-all p-6"
+                                className={`flex flex-col gap-4 group hover:border-primary/20 transition-all p-5 ${info.glow}`}
                             >
-                                <div className="p-3 bg-accent/5 rounded-xl text-accent w-fit group-hover:scale-110 transition-transform">
+                                <div className={`p-2.5 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
                                     {info.icon}
                                 </div>
-                                <div className="space-y-2">
-                                    <h4 className="font-bold text-lg text-foreground tracking-tight">{info.title}</h4>
-                                    <p className="text-zinc-500 text-sm leading-snug">{info.description}</p>
+                                <div className="space-y-1.5">
+                                    <h4 className="font-semibold text-[16px] tracking-tight text-foreground">{info.title}</h4>
+                                    <p className="text-text-tertiary text-sm leading-snug">{info.description}</p>
                                 </div>
                             </GlassPanel>
                         ))}
