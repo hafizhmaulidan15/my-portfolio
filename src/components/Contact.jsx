@@ -4,7 +4,7 @@ import { GlassPanel } from './ui/GlassPanel';
 
 const Contact = () => {
     return (
-        <section className="py-[72px] px-6 bg-background relative overflow-hidden min-h-[calc(100dvh-80px)] flex items-center">
+        <section id="contact" className="py-[72px] px-6 bg-background relative overflow-hidden min-h-[calc(100dvh-80px)] flex items-center">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 blur-[120px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
@@ -29,19 +29,19 @@ const Contact = () => {
                     </h2>
 
                     <p className="text-text-secondary text-[16px] md:text-[18px] leading-relaxed max-w-[50ch] mx-auto">
-                        I am currently seeking opportunities to apply my expertise in IoT and systems engineering. 
+                        I am currently seeking opportunities to apply my expertise in operations management and production leadership. 
                         Whether you have a specific inquiry or just want to connect, my inbox is open.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                         <motion.a
-                            href="mailto:mhafizh.maulidan@gmail.com"
+                            href="mailto:mhafizh.maulidan@gmail.com?subject=Collaboration%20Opportunity&body=Halo%20Hafizh%2C%0D%0A%0D%0ASaya%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut%20mengenai%20...%5Bisi%20topik%5D%0D%0A%0D%0ATerima%20kasih"
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.98 }}
                             className="w-full sm:w-auto px-6 py-3 bg-primary text-foreground font-body rounded border border-primary shadow-primary-btn flex items-center justify-center gap-2 hover:bg-primary-hover hover:shadow-primary-btn-hover transition-all duration-200"
                         >
                             <Envelope size={18} weight="bold" />
-                            Secure connection
+                            Send Email
                         </motion.a>
                     </div>
 

@@ -23,7 +23,7 @@ const About = () => {
         {
             icon: <ChartPieSlice size={24} weight="duotone" />,
             title: 'Specialization',
-            description: 'IoT, Operations & Data Analytics',
+            description: 'Operations & Production Management',
             color: 'text-accent-teal',
             bg: 'bg-accent-teal/10',
             glow: 'border-glow-top-teal'
@@ -39,14 +39,14 @@ const About = () => {
     ];
 
     const achievements = [
-        { text: '73.33% Accuracy - Fuzzy Logic', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-orange' },
-        { text: '40% Downtime Reduction', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
-        { text: 'SEAMEO TVET 2022', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-teal' },
-        { text: 'Hafidz Al-Quran', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
+        { text: 'SOP Architecture', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-orange' },
+        { text: 'QC Protocols', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
+        { text: 'Team Coordination', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-teal' },
+        { text: 'Production Scaling', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
     ];
 
     return (
-        <section className="py-[72px] px-6 bg-background relative overflow-hidden">
+        <section id="about" className="py-[72px] px-6 bg-background relative overflow-hidden">
             <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
@@ -80,7 +80,7 @@ const About = () => {
 
                             <div className="space-y-3 text-center md:text-left">
                                 <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
-                                    Systems <span className="text-gradient-primary">architect</span>
+                                    Operations & Production <span className="text-gradient-primary">Leader</span>
                                 </h2>
                                 <div className="h-0.5 w-16 bg-gradient-to-r from-primary to-accent-teal mx-auto md:ml-0 rounded-full"></div>
                             </div>
@@ -88,17 +88,10 @@ const About = () => {
 
                         <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed max-w-[65ch]">
                             <p>
-                                I am a multidisciplinary <span className="text-foreground font-medium">B.Eng graduate from IPB University</span> (GPA 3.33), 
-                                specializing in the convergence of IoT engineering, data intelligence, and operational leadership.
+                                My background in engineering from IPB University instilled a structured, systematic approach to problem-solving—rooted in technical planning, process optimization, and attention to detail. I see operations not as isolated tasks, but as interconnected systems that demand clarity, measurement, and continuous improvement.
                             </p>
                             <p>
-                                My methodology bridges the gap between <span className="text-foreground font-medium">complex technical systems</span> and 
-                                <span className="text-foreground font-medium">high-stakes operational execution</span>. From managing production lines 
-                                of 25,000 units to architecting spectral analysis IoT clusters, I solve problems at a systems level.
-                            </p>
-                            <p>
-                                Currently leading dairy production operations at <span className="text-foreground font-medium">Rumah Susu Indonesia</span>, 
-                                where I manage end-to-end supply chains, QC protocols, and production efficiency through an engineering lens.
+                                Currently serving as <span className="text-foreground font-medium">Head of Unit at Rumah Susu Indonesia</span>, I lead end-to-end dairy production—from raw milk receiving to distribution—with a focus on building scalable, quality-driven production systems. My engineering lens allows me to bridge technical fundamentals with real-world operational execution.
                             </p>
                             
                             <div className="pt-4">
@@ -115,17 +108,17 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-5 self-center">
                         {infoCards.map((info, idx) => (
                             <GlassPanel 
                                 key={idx} 
-                                className={`flex flex-col gap-4 group hover:border-primary/20 transition-all p-5 ${info.glow}`}
+                                className={`flex flex-col gap-5 group hover:border-primary/20 transition-all p-6 md:p-7 min-h-[160px] ${info.glow}`}
                             >
-                                <div className={`p-2.5 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
+                                <div className={`p-3 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
                                     {info.icon}
                                 </div>
                                 <div className="space-y-1.5">
-                                    <h4 className="font-semibold text-[16px] tracking-tight text-foreground">{info.title}</h4>
+                                    <h4 className="font-semibold text-[17px] md:text-[18px] tracking-tight text-foreground">{info.title}</h4>
                                     <p className="text-text-tertiary text-sm leading-snug">{info.description}</p>
                                 </div>
                             </GlassPanel>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { 
     Briefcase, Certificate, TerminalWindow, 
     Code, Globe, Wrench, ShieldCheck, ChartBarHorizontal,
-    Factory, UsersThree, ChartLineUp, GraduationCap, Circle, Student
+    Factory, ChartLineUp, GraduationCap, Circle, Student
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 
@@ -20,7 +20,7 @@ const Experience = () => {
             highlights: ['25K units/batch production', 'SOP Development', 'Supply Chain Management', 'Digital Inventory']
         },
         {
-            title: 'Full Stack IoT Developer',
+            title: 'Frontend Developer',
             company: 'PT. Matra Kreasi Mandiri',
             location: 'Bogor, West Java',
             date: 'Sep 2025 - Jan 2026',
@@ -28,7 +28,7 @@ const Experience = () => {
             type: 'developer',
             icon: <Code size={18} weight="bold" />,
             color: 'primary',
-            highlights: ['nanorobotic.co.id', 'WhatsApp API Integration', 'Team Leadership', 'Full-Stack Development']
+            highlights: ['nanorobotic.co.id', 'WhatsApp API Integration', 'Team Leadership', 'Frontend Development']
         },
         {
             title: 'IoT Engineer Intern',
@@ -51,17 +51,6 @@ const Experience = () => {
             icon: <Globe size={18} weight="bold" />,
             color: 'primary',
             highlights: ['drmatt.id', 'IoT Dashboards', 'Real-time Data', 'Responsive Design']
-        },
-        {
-            title: 'Head Student Welfare Coordinator',
-            company: 'IPB University',
-            location: 'Bogor, West Java',
-            date: 'Jul 2022 - Dec 2023',
-            description: 'Led student welfare programs for 100+ students. Coordinated with faculty for conflict mediation and transparent information flow. Managed administrative procedures and organized welfare programs systematically.',
-            type: 'leadership',
-            icon: <UsersThree size={18} weight="bold" />,
-            color: 'accent-orange',
-            highlights: ['100+ Students', 'Conflict Resolution', 'Team Coordination', 'Event Management']
         }
     ];
 
@@ -115,13 +104,6 @@ const Experience = () => {
             icon: <Circle size={20} weight="duotone" />,
             color: 'success'
         },
-        {
-            title: '73.33% Accuracy - Fuzzy Logic',
-            provider: 'Undergraduate Thesis',
-            description: 'Automated Predictive Classification System for agricultural quality detection.',
-            icon: <ChartBarHorizontal size={20} weight="duotone" />,
-            color: 'accent-orange'
-        }
     ];
 
     const getColorClasses = (color) => {
@@ -135,7 +117,7 @@ const Experience = () => {
     };
 
     return (
-        <section className="py-[72px] px-6 bg-background relative overflow-hidden">
+        <section id="experience" className="py-[72px] px-6 bg-background relative overflow-hidden">
             <div className="absolute top-1/3 -left-32 w-64 h-64 bg-accent-orange/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/3 -right-32 w-64 h-64 bg-accent-teal/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute top-2/3 left-1/3 w-48 h-48 bg-primary/4 blur-[60px] rounded-full pointer-events-none"></div>

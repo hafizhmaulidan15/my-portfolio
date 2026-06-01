@@ -3,29 +3,29 @@ import { useLocation } from 'react-router-dom';
 
 const pageMeta = {
   '/': {
-    title: 'Muhammad Hafizh Maulidan | IoT Engineer & Systems Architect',
-    description: 'Technical Operations Lead specializing in IoT, Automation, and Production Management. B.Eng Mechatronics - IPB University.',
-    keywords: 'IoT Engineer, Systems Architect, Mechatronics, Automation, Production Management, Portfolio'
+    title: 'Muhammad Hafizh Maulidan | Operations & Production Leader',
+    description: 'Head of Unit & Production Leader at Rumah Susu Indonesia. Specializing in end-to-end dairy manufacturing, process optimization, and quality systems.',
+    keywords: 'Production Leader, Operations Management, Dairy Manufacturing, Head of Unit, Quality Control, Supply Chain'
   },
   '/about': {
     title: 'About | Muhammad Hafizh Maulidan',
     description: 'Learn about my journey from IPB University to leading dairy production operations at Rumah Susu Indonesia.',
-    keywords: 'about, biography, profile, mechatronics engineer'
+    keywords: 'about, biography, profile, production leader'
   },
   '/skills': {
     title: 'Skills | Muhammad Hafizh Maulidan',
-    description: 'Technical skills in IoT Systems, Embedded Development, Python, React, Data Analysis, and Operations Leadership.',
-    keywords: 'skills, technical skills, IoT, embedded systems, Python, React'
+    description: 'Skills in Operations Management, Production Planning, Quality Control, Supply Chain, IoT Systems, and Web Development.',
+    keywords: 'skills, operations management, production planning, quality control'
   },
   '/experience': {
     title: 'Experience | Muhammad Hafizh Maulidan',
     description: 'Professional experience: Head of Unit at Rumah Susu Indonesia, Frontend Developer at PT Matra Kreasi Mandiri.',
-    keywords: 'experience, work history, career'
+    keywords: 'experience, work history, career, operations management'
   },
   '/projects': {
     title: 'Projects | Muhammad Hafizh Maulidan',
     description: 'Featured projects: Production Operations SOP, Flood Detection System, Banana Ripeness Detection, IDX Market Screener.',
-    keywords: 'projects, portfolio, IoT, web development'
+    keywords: 'projects, portfolio, production, web development'
   },
   '/publications': {
     title: 'Publications | Muhammad Hafizh Maulidan',
@@ -39,8 +39,8 @@ const pageMeta = {
   },
   '/contact': {
     title: 'Contact | Muhammad Hafizh Maulidan',
-    description: 'Get in touch for collaboration opportunities in IoT, Automation, or Production Management.',
-    keywords: 'contact, hire, collaboration'
+    description: 'Get in touch for collaboration opportunities in Operations Management, Production Leadership, or Dairy Manufacturing.',
+    keywords: 'contact, hire, collaboration, operations management'
   }
 };
 

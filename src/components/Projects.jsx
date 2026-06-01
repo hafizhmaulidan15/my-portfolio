@@ -15,6 +15,26 @@ const Projects = () => {
 
     const projects = [
         {
+            id: 13,
+            title: 'Rumah Susu Inventory Dashboard',
+            period: 'Apr 2026 - Present',
+            association: 'Rumah Susu Indonesia',
+            icon: <Database size={28} weight="duotone" />,
+            role: 'Head of Unit',
+            roleType: 'lead',
+            category: 'ops',
+            description: 'Real-time inventory dashboard for stock opname monitoring using Google Sheets API integration.',
+            responsibilities: [
+                'Built Next.js dashboard with TypeScript and Tailwind CSS for real-time inventory tracking.',
+                'Integrated Google Sheets as a lightweight API-based database for stock data.',
+                'Designed responsive interface for daily stock opname and production monitoring.',
+                'Enabled team-wide access to inventory data without complex backend infrastructure.'
+            ],
+            impact: 'Alternative solution for production stock monitoring using spreadsheet API, eliminating the need for dedicated database setup.',
+            skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Google Sheets API'],
+            color: 'text-accent-teal'
+        },
+        {
             id: 0,
             title: 'Production Operations SOP',
             period: 'Apr 2026 - Present',
@@ -112,7 +132,7 @@ const Projects = () => {
                 'Implemented SEO strategies with semantic HTML and meta tags.'
             ],
             impact: 'Delivered production-ready ed-tech platform with integrated communication features.',
-            skills: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'WhatsApp API', 'SEO'],
+            skills: ['HTML', 'CSS', 'JavaScript'],
             color: 'text-accent-teal',
             link: 'https://nanorobotic.co.id'
         },
@@ -273,7 +293,7 @@ const Projects = () => {
         : projects.filter(project => project.category === activeCategory);
 
     return (
-        <section className="py-[72px] px-6 bg-background relative">
+        <section id="projects" className="py-[72px] px-6 bg-background relative">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
 
