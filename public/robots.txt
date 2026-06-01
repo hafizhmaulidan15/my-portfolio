@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://my-portfolio-hafizh-maulidan.vercel.app/sitemap.xml
+Sitemap: https://portfolio-muhammad-hafizh-maulidan.vercel.app/sitemap.xml
