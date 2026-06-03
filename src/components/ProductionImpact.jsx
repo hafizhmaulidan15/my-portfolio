@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChartBar, Factory, CircleNotch, WarningCircle, Flask } from '@phosphor-icons/react';
+import { ChartBar, Factory, WarningCircle, Flask } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 import { useProductionImpact } from '../hooks/useProductionData';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
@@ -42,6 +42,51 @@ function ChartTooltip({ active, payload, label, unit }) {
       <div className="text-[10px] text-text-tertiary font-mono">{label}</div>
       <div className="text-sm font-mono font-bold text-foreground">{payload[0].value.toLocaleString()} {unit}</div>
     </div>
+  );
+}
+
+function SkeletonBar({ className, style }) {
+  return (
+    <div className={`relative overflow-hidden rounded-sm bg-white/[0.04] ${className}`} style={style}>
+      <div className="absolute inset-0 animate-shimmer bg-[length:200%_100%] bg-gradient-to-r from-transparent via-white/[0.07] to-transparent" />
+    </div>
+  );
+}
+
+function SkeletonMetricCard({ accent }) {
+  return (
+    <div className="group">
+      <GlassPanel className={`flex flex-col gap-3 p-5 border-l-[3px] ${accent} h-full`}>
+        <SkeletonBar className="w-9 h-9 rounded-sm" />
+        <SkeletonBar className="w-24 h-7" />
+        <div className="space-y-1.5">
+          <SkeletonBar className="w-20 h-3" />
+          <SkeletonBar className="w-32 h-2.5" />
+        </div>
+      </GlassPanel>
+    </div>
+  );
+}
+
+const barHeights = [65, 85, 45, 90, 55, 75, 40, 80];
+
+function SkeletonChart() {
+  return (
+    <GlassPanel className="p-5 h-full">
+      <div className="flex items-center gap-2 mb-4">
+        <SkeletonBar className="w-4 h-4 rounded-sm" />
+        <SkeletonBar className="w-28 h-4" />
+      </div>
+      <div className="w-full h-[200px] flex items-end gap-2 px-1">
+        {barHeights.map((h, i) => (
+          <SkeletonBar
+            key={i}
+            className="flex-1 rounded-t-sm"
+            style={{ height: `${h}%` }}
+          />
+        ))}
+      </div>
+    </GlassPanel>
   );
 }
 
@@ -125,9 +170,51 @@ const ProductionImpact = () => {
         </motion.div>
 
         {!showContent ? (
-          <div className="flex items-center justify-center py-16">
-            <CircleNotch size={20} className="text-text-tertiary animate-spin" />
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0 }}
+              >
+                <SkeletonMetricCard accent="border-l-primary" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                <SkeletonMetricCard accent="border-l-accent-orange" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <SkeletonMetricCard accent="border-l-white/[0.08]" />
+              </motion.div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.15 }}
+              >
+                <SkeletonChart />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.25 }}
+              >
+                <SkeletonChart />
+              </motion.div>
+            </div>
+          </motion.div>
         ) : (
           <>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">

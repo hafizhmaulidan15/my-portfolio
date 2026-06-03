@@ -54,7 +54,11 @@ const Hero = () => {
                         </p>
 
                         <p className="text-sm md:text-base lg:text-lg text-text-secondary max-w-[60ch] leading-relaxed">
-                            Operations & Production Leader specializing in end-to-end dairy manufacturing, process optimization, and quality systems — currently serving as <span className="text-foreground font-medium">Head of Unit at Rumah Susu Indonesia</span>.
+                            Operations & Production Leader specializing in end-to-end dairy manufacturing, process optimization, and quality systems and currently serving as <span className="text-foreground font-medium">Head of Unit at Rumah Susu Indonesia</span>.
+                        </p>
+
+                        <p className="text-xs md:text-sm text-text-tertiary max-w-[60ch] leading-relaxed font-mono tracking-wide">
+                            Proven track record scaling dairy production from scratch to 53K+ liters through repeatable operational systems
                         </p>
 
                         <div className="flex flex-wrap gap-4 pt-2">
@@ -86,7 +90,6 @@ const Hero = () => {
                             <div>
                                 <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-foreground">Up to 25K</div>
                                 <div className="text-[10px] md:text-xs text-text-tertiary uppercase tracking-widest mt-1">Units/Batch</div>
-                                <div className="text-[8px] md:text-[9px] text-text-tertiary/60 italic mt-0.5">never under 10K per run</div>
                             </div>
                             <div>
                                 <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-accent-orange">3.33</div>

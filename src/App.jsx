@@ -18,6 +18,7 @@ const Publications = lazy(() => import('./components/Publications'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 const NotFound = lazy(() => import('./components/NotFound'));
+const ProductionImpact = lazy(() => import('./components/ProductionImpact'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,11 +43,11 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="app bg-background min-h-screen">
+    <div className="app bg-background min-h-screen flex flex-col">
       <ScrollToTop />
       <Suspense fallback={<LoadingFallback />}>
         <Navbar />
-        <div className="lg:ml-[284px] lg:pt-0 pt-16">
+        <div className="lg:ml-[284px] lg:pt-0 pt-16 flex-1 flex flex-col">
           <AnimatePresence mode="wait">
             <motion.main
               key={location.pathname}
@@ -54,12 +55,14 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="flex-1"
             >
               <Routes>
                 <Route path="/" element={<Hero />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/skills" element={<Skills />} />
                 <Route path="/experience" element={<Experience />} />
+                <Route path="/impact" element={<ProductionImpact />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/certifications" element={<Certifications />} />
                 <Route path="/publications" element={<Publications />} />

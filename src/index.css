@@ -462,6 +462,16 @@
     background: radial-gradient(ellipse at 30% 50%, rgba(20, 71, 230, 0.06) 0%, transparent 50%),
                 radial-gradient(ellipse at 70% 50%, rgba(0, 149, 136, 0.05) 0%, transparent 50%);
   }
+
+  .animate-shimmer {
+    background-size: 200% 100% !important;
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
 }
 
 ::-webkit-scrollbar {

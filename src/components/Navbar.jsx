@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
     House, User, Lightbulb, Briefcase, 
     Folder, Certificate, Envelope, GithubLogo, LinkedinLogo,
-    List, X, BookOpen
+    List, X, BookOpen, ChartBar
 } from '@phosphor-icons/react';
 import { cn } from '../lib/utils';
 
@@ -17,6 +17,7 @@ const Navbar = () => {
         { path: '/about', label: 'About', icon: <User size={20} /> },
         { path: '/skills', label: 'Skills', icon: <Lightbulb size={20} /> },
         { path: '/experience', label: 'Experience', icon: <Briefcase size={20} /> },
+        { path: '/impact', label: 'Impact', icon: <ChartBar size={20} /> },
         { path: '/projects', label: 'Projects', icon: <Folder size={20} /> },
         { path: '/publications', label: 'Publications', icon: <BookOpen size={20} /> },
         { path: '/certifications', label: 'Certifications', icon: <Certificate size={20} /> },

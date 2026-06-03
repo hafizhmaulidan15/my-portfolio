@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { 
     Briefcase, Certificate, TerminalWindow, 
     Code, Globe, Wrench, ShieldCheck, ChartBarHorizontal,
-    Factory, ChartLineUp, GraduationCap, Circle, Student
+    Factory, ChartLineUp, GraduationCap, Circle, Student,
+    ChatCircleText
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 
@@ -17,7 +18,11 @@ const Experience = () => {
             type: 'leadership',
             icon: <Factory size={18} weight="bold" />,
             color: 'accent-orange',
-            highlights: ['25K units/batch production', 'SOP Development', 'Supply Chain Management', 'Digital Inventory']
+            metrics: [
+                { value: '25K', label: 'units/batch', color: 'text-primary' },
+                { value: '100%', label: 'inventory accuracy', color: 'text-accent-teal' }
+            ],
+            pillars: ['SOP Design', 'Cold Chain', 'QC Protocols', 'Supply Chain']
         },
         {
             title: 'Frontend Developer',
@@ -28,7 +33,11 @@ const Experience = () => {
             type: 'developer',
             icon: <Code size={18} weight="bold" />,
             color: 'primary',
-            highlights: ['nanorobotic.co.id', 'WhatsApp API Integration', 'Team Leadership', 'Frontend Development']
+            metrics: [
+                { value: '5', label: 'projects delivered', color: 'text-primary' },
+                { value: '2', label: 'person team lead', color: 'text-accent-teal' }
+            ],
+            pillars: ['HTML/CSS', 'Vanilla JS', 'API Integration', 'SEO']
         },
         {
             title: 'IoT Engineer Intern',
@@ -39,7 +48,11 @@ const Experience = () => {
             type: 'internship',
             icon: <TerminalWindow size={18} weight="bold" />,
             color: 'accent-teal',
-            highlights: ['40% Downtime Reduction', '99% System Uptime', 'Field Installation', 'Firmware Development (C++)']
+            metrics: [
+                { value: '40%', label: 'downtime reduction', color: 'text-primary' },
+                { value: '99%', label: 'system uptime', color: 'text-accent-teal' }
+            ],
+            pillars: ['ESP32', 'C++', 'Sensors', 'Calibration']
         },
         {
             title: 'Web Developer Intern',
@@ -50,8 +63,12 @@ const Experience = () => {
             type: 'internship',
             icon: <Globe size={18} weight="bold" />,
             color: 'primary',
-            highlights: ['drmatt.id', 'IoT Dashboards', 'Real-time Data', 'Responsive Design']
-        }
+            metrics: [
+                { value: '2', label: 'corporate sites', color: 'text-primary' },
+                { value: '3', label: 'IoT dashboards', color: 'text-accent-teal' }
+            ],
+            pillars: ['HTML/CSS', 'JS', 'IoT Viz', 'Responsive']
+        },
     ];
 
     const certifications = [
@@ -79,23 +96,16 @@ const Experience = () => {
             icon: <GraduationCap size={20} weight="duotone" />,
             color: 'accent-teal'
         },
-        {
-            title: 'SEAMEO TVET Student Exchange',
-            provider: 'Politeknik Mersing, Malaysia',
-            date: '2022',
-            description: 'Selected from 800+ candidates for international program focused on Network Security and Wireshark.',
-            icon: <Globe size={20} weight="duotone" />,
-            color: 'accent-orange'
-        }
     ];
 
     const achievements = [
         {
-            title: 'Star Energy Geothermal Scholarship',
-            provider: 'PT Star Energy Geothermal',
-            description: 'Recipient of prestigious scholarship program.',
-            icon: <ChartLineUp size={20} weight="duotone" />,
-            color: 'primary'
+            title: 'SEAMEO TVET Student Exchange',
+            provider: 'Politeknik Mersing, Malaysia',
+            date: '2022',
+            description: 'Selected from 800+ candidates for international student exchange program focused on Network Security and Wireshark, collaborating with ASEAN peers in Malaysia.',
+            icon: <Globe size={20} weight="duotone" />,
+            color: 'accent-orange'
         },
         {
             title: 'Hafidz Al-Quran (30 Juz)',
@@ -169,11 +179,21 @@ const Experience = () => {
                                                 <span>{exp.location}</span>
                                             </div>
                                             <p className="text-text-tertiary text-sm leading-relaxed">{exp.description}</p>
-                                            {exp.highlights && (
-                                                <div className="flex flex-wrap gap-2 pt-2">
-                                                    {exp.highlights.map((highlight, hIdx) => (
-                                                        <span key={hIdx} className="text-[10px] px-2 py-1 rounded-sm bg-interactive-button text-text-tertiary border border-border">
-                                                            {highlight}
+                                            {exp.metrics && (
+                                                <div className="flex gap-6 pt-3 border-t border-white/[0.06]">
+                                                    {exp.metrics.map((m, mIdx) => (
+                                                        <div key={mIdx}>
+                                                            <div className={`text-sm font-bold font-mono tracking-tighter ${m.color}`}>{m.value}</div>
+                                                            <div className="text-[9px] text-text-tertiary uppercase tracking-wider">{m.label}</div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                            {exp.pillars && (
+                                                <div className="flex flex-wrap gap-2">
+                                                    {exp.pillars.map((p, pIdx) => (
+                                                        <span key={pIdx} className="text-[10px] px-2 py-1 rounded-sm bg-interactive-button text-text-tertiary border border-border">
+                                                            {p}
                                                         </span>
                                                     ))}
                                                 </div>
@@ -258,6 +278,56 @@ const Experience = () => {
                     </div>
 
                 </div>
+
+                {/* Testimonial Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-16 border-t border-white/[0.06] pt-12"
+                >
+                    <div className="space-y-3 mb-8">
+                        <div className="flex items-center gap-3 text-primary font-mono text-sm tracking-widest uppercase">
+                            <ChatCircleText size={18} weight="bold" />
+                            <span>What collaborators say</span>
+                        </div>
+                        <h2 className="text-[24px] font-semibold tracking-tight text-foreground">
+                            Trusted by <span className="text-gradient-primary">peers</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <GlassPanel className="p-6 flex flex-col gap-4">
+                            <div className="relative">
+                                <span className="text-4xl text-primary/20 font-serif absolute -top-2 -left-1 leading-none select-none">&ldquo;</span>
+                                <p className="text-sm text-text-secondary leading-relaxed relative z-10 pl-4">
+                                    I am pleased to recommend Hafizh Maulidan as a highly capable Automation Engineer. He has demonstrated strong expertise in IoT, embedded systems, and automation during his internships and academic journey. Beyond technical skill, Hafizh is a quick learner with excellent communication, making him a valuable team contributor in any engineering environment.
+                                </p>
+                            </div>
+                            <div className="mt-auto pt-3 border-t border-white/[0.06]">
+                                <div className="font-semibold text-sm text-foreground">Muhammad Haikal Ramadhika</div>
+                                <div className="text-[11px] text-text-tertiary">Junior Network Engineer</div>
+                                <div className="text-[10px] text-text-tertiary/60 italic mt-1">Previously worked alongside on IoT and automation projects</div>
+                            </div>
+                        </GlassPanel>
+
+                        <GlassPanel className="p-6 flex flex-col gap-4">
+                            <div className="relative">
+                                <span className="text-4xl text-primary/20 font-serif absolute -top-2 -left-1 leading-none select-none">&ldquo;</span>
+                                <p className="text-sm text-text-secondary leading-relaxed relative z-10 pl-4">
+                                    I had the pleasure of working alongside Hafizh, an outstanding Front-End Developer with exceptional technical skills and an incredible eye for detail. Hafizh consistently impressed our team with his ability to translate complex design concepts into seamless, user-friendly interfaces.
+                                </p>
+                            </div>
+                            <div className="mt-auto pt-3 border-t border-white/[0.06]">
+                                <div className="font-semibold text-sm text-foreground">Angga Eben Ezer</div>
+                                <div className="text-[11px] text-text-tertiary">Business Analyst, BCA</div>
+                                <div className="text-[10px] text-text-tertiary/60 italic mt-1">Former teammate at PT Matra Kreasi Mandiri</div>
+                            </div>
+                        </GlassPanel>
+                    </div>
+                </motion.div>
+
             </div>
         </section>
     );

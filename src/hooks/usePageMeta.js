@@ -41,6 +41,11 @@ const pageMeta = {
     title: 'Contact | Muhammad Hafizh Maulidan',
     description: 'Get in touch for collaboration opportunities in Operations Management, Production Leadership, or Dairy Manufacturing.',
     keywords: 'contact, hire, collaboration, operations management'
+  },
+  '/impact': {
+    title: 'Production Impact | Muhammad Hafizh Maulidan',
+    description: 'Live production data from Rumah Susu Indonesia: total output, reject rates, cup production trends, and raw milk processing metrics.',
+    keywords: 'production impact, dairy manufacturing, production data, quality metrics'
   }
 };
 

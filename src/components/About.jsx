@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Student, MapPin, Envelope, Briefcase, Factory, ChartPieSlice, Trophy, Globe, Circle } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
-import ProductionImpact from './ProductionImpact';
+
 
 const About = () => {
     const infoCards = [
@@ -47,7 +47,6 @@ const About = () => {
     ];
 
     return (
-        <>
             <section id="about" className="py-[72px] px-6 bg-background relative overflow-hidden">
                 <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
                 <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
@@ -68,9 +67,9 @@ const About = () => {
                                     <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent-teal/10 blur-2xl rounded-full opacity-60"></div>
                                     <div className="w-40 h-40 md:w-48 md:h-48 rounded-lg border border-border overflow-hidden relative group">
                                         <img 
-                                            src="/profile-avatar.jpg" 
+                                            src="/profile-avatar.png" 
                                             alt="Muhammad Hafizh Maulidan" 
-                                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 scale-110 group-hover:scale-100"
+                                            className="w-full h-full object-cover object-[center_35%] transition-all duration-300"
                                             onError={(e) => { e.target.src = "https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=1447E6&color=fff&size=512"; }}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60"></div>
@@ -130,9 +129,6 @@ const About = () => {
                     </div>
                 </div>
             </section>
-
-            <ProductionImpact />
-        </>
     );
 };
 
