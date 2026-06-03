@@ -36,31 +36,38 @@ const Certifications = () => {
                     </p>
                 </div>
 
-                <GlassPanel className="overflow-hidden border-border/50">
-                    <div className="divide-y divide-white/[0.04]">
-                        {certData.map((cert, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, x: -10 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: idx * 0.03 }}
-                                viewport={{ once: true }}
-                                className="flex items-center gap-4 px-5 py-3 hover:bg-interactive-button/50 transition-colors group"
-                            >
-                                <div className={`p-2 rounded-sm ${cert.bg} ${cert.color} shrink-0 group-hover:scale-105 transition-transform`}>
-                                    {cert.icon}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {certData.map((cert, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: idx * 0.025 }}
+                            viewport={{ once: true }}
+                        >
+                            <GlassPanel className="p-4 h-full flex flex-col gap-3 group hover:border-primary/20 transition-all">
+                                <div className="flex items-start gap-3">
+                                    <div className={`p-2 rounded-sm ${cert.bg} ${cert.color} shrink-0 group-hover:scale-105 transition-transform`}>
+                                        {cert.icon}
+                                    </div>
+                                    <div className="min-w-0 flex-1 space-y-1">
+                                        <h4 className="text-sm font-medium text-foreground leading-snug">
+                                            {cert.title}
+                                        </h4>
+                                        <p className="text-[10px] text-text-tertiary font-mono uppercase tracking-wider">
+                                            {cert.org}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex-1 min-w-0">
-                                    <h4 className="text-sm font-medium text-foreground truncate">{cert.title}</h4>
-                                    <p className="text-[11px] text-text-tertiary font-mono uppercase tracking-wider">{cert.org}</p>
+                                <div className="mt-auto">
+                                    <span className="inline-block text-[9px] font-mono text-text-tertiary px-2 py-1 rounded-sm bg-interactive-button border border-border uppercase tracking-wider">
+                                        {cert.date}
+                                    </span>
                                 </div>
-                                <span className="text-[10px] font-mono text-text-tertiary px-2 py-1 rounded-sm bg-interactive-button border border-border uppercase shrink-0">
-                                    {cert.date}
-                                </span>
-                            </motion.div>
-                        ))}
-                    </div>
-                </GlassPanel>
+                            </GlassPanel>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     );
