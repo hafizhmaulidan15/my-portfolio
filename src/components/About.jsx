@@ -47,13 +47,13 @@ const About = () => {
     ];
 
     return (
-            <section id="about" className="py-[72px] px-6 bg-background relative overflow-hidden">
+            <section id="about" className="py-[72px] px-6 lg:py-0 lg:min-h-screen lg:flex lg:items-center bg-background relative overflow-hidden">
                 <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
                 <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
                 <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
                 
                 <div className="container mx-auto px-6 max-w-[1400px]">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         
                         <div className="lg:col-span-7 space-y-8">
                             <div className="flex flex-col md:flex-row gap-8 items-center md:items-end">
