@@ -104,7 +104,7 @@ const Hero = () => {
                                 <h2 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h2>
                                 <div className="grid grid-cols-2 gap-4 pt-4 mt-auto border-t border-white/[0.06]">
                                     <div>
-                                        <div className="text-xs md:text-sm lg:text-base font-bold font-mono text-primary">25K</div>
+                                        <div className="text-xs md:text-sm lg:text-base font-bold font-mono text-blue-400">25K</div>
                                         <div className="text-[8px] md:text-[9px] lg:text-[10px] text-text-tertiary uppercase tracking-wider">Batch</div>
                                     </div>
                                     <div>

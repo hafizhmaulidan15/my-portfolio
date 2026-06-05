@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { 
     House, User, Lightbulb, Briefcase, 
@@ -113,85 +112,71 @@ const Navbar = () => {
             </header>
 
             {/* Mobile Menu Drawer */}
-            <AnimatePresence>
-                {isMobileMenuOpen && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="lg:hidden fixed inset-0 z-40 bg-black/50"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        />
-                        <motion.div
-                            initial={{ x: '-100%' }}
-                            animate={{ x: 0 }}
-                            exit={{ x: '-100%' }}
-                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="lg:hidden fixed left-0 top-0 bottom-0 w-[280px] bg-background z-50 flex flex-col py-[72px] px-0 border-r border-white/[0.06]"
-                        >
-                            <div className="px-4 mb-8">
-                                <Link 
-                                    to="/" 
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className="flex items-center gap-3 px-4"
-                                >
-                                    <span className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold text-lg">
-                                        H
-                                    </span>
-                                    <span className="font-sans text-foreground font-semibold tracking-tight">MAULIDAN</span>
-                                </Link>
-                            </div>
+            <div
+              className={`lg:hidden fixed inset-0 z-40 bg-black/50 transition-opacity duration-200 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <div
+              className={`lg:hidden fixed left-0 top-0 bottom-0 w-[280px] bg-background z-50 flex flex-col py-[72px] px-0 border-r border-white/[0.06] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}
+            >
+              <div className="px-4 mb-8">
+                <Link 
+                  to="/" 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-3 px-4"
+                >
+                  <span className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold text-lg">
+                    H
+                  </span>
+                  <span className="font-sans text-foreground font-semibold tracking-tight">MAULIDAN</span>
+                </Link>
+              </div>
 
-                            <nav className="px-4 flex-1">
-                                {navLinks.map((link) => {
-                                    const isActive = location.pathname === link.path;
-                                    return (
-                                        <Link
-                                            key={link.path}
-                                            to={link.path}
-                                            onClick={() => setIsMobileMenuOpen(false)}
-                                            className={cn(
-                                                "flex items-center gap-3 px-4 py-3 rounded mb-3 transition-all duration-200 font-sans text-foreground",
-                                                isActive 
-                                                    ? "bg-primary/[0.15] text-primary border-l-[3px] border-l-primary" 
-                                                    : "hover:bg-white/[0.05] border-l-[3px] border-l-transparent"
-                                            )}
-                                        >
-                                            <span className={cn(isActive ? "text-primary" : "text-text-muted")}>
-                                                {link.icon}
-                                            </span>
-                                            <span className="text-[14px] font-normal">{link.label}</span>
-                                        </Link>
-                                    );
-                                })}
-                            </nav>
+              <nav className="px-4 flex-1">
+                {navLinks.map((link) => {
+                  const isActive = location.pathname === link.path;
+                  return (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={cn(
+                        "flex items-center gap-3 px-4 py-3 rounded mb-3 transition-all duration-200 font-sans text-foreground",
+                        isActive 
+                          ? "bg-primary/[0.15] text-primary border-l-[3px] border-l-primary" 
+                          : "hover:bg-white/[0.05] border-l-[3px] border-l-transparent"
+                      )}
+                    >
+                      <span className={cn(isActive ? "text-primary" : "text-text-muted")}>
+                        {link.icon}
+                      </span>
+                      <span className="text-[14px] font-normal">{link.label}</span>
+                    </Link>
+                  );
+                })}
+              </nav>
 
-                            <div className="px-6 flex items-center gap-3 pb-8">
-                                <a
-                                    href="https://github.com/hafizhmaulidan15"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
-                                    aria-label="GitHub Profile"
-                                >
-                                    <GithubLogo size={18} />
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/hafizhmaulidan/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
-                                    aria-label="LinkedIn Profile"
-                                >
-                                    <LinkedinLogo size={18} />
-                                </a>
-                            </div>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
+              <div className="px-6 flex items-center gap-3 pb-8">
+                <a
+                  href="https://github.com/hafizhmaulidan15"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
+                  aria-label="GitHub Profile"
+                >
+                  <GithubLogo size={18} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/hafizhmaulidan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
+                  aria-label="LinkedIn Profile"
+                >
+                  <LinkedinLogo size={18} />
+                </a>
+              </div>
+            </div>
         </>
     );
 };
