@@ -12,7 +12,7 @@ export default {
         'surface-hover': '#27272A',
         foreground: '#FFFFFF',
         'text-secondary': '#E4E4E7',
-        'text-tertiary': '#71717B',
+        'text-tertiary': '#A1A1AA',
         'text-muted': '#9F9FA9',
         primary: '#1447E6',
         'primary-hover': '#0D3BB8',

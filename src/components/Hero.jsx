@@ -12,23 +12,9 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black_40%,transparent_100%)]"></div>
             </div>
             
-            <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.015] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-            
-            <motion.div 
-                animate={{ x: [0, 30, 0], y: [0, -20, 0], scale: [1, 1.1, 1] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none"
-            ></motion.div>
-            <motion.div 
-                animate={{ x: [0, -20, 0], y: [0, 30, 0], scale: [1, 1.05, 1] }}
-                transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-accent-teal/10 blur-[120px] rounded-full pointer-events-none"
-            ></motion.div>
-            <motion.div 
-                animate={{ x: [0, 15, 0], y: [0, -15, 0] }}
-                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-accent-orange/5 blur-[100px] rounded-full pointer-events-none"
-            ></motion.div>
+            <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none"></div>
+            <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-accent-teal/10 blur-[120px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-accent-orange/5 blur-[100px] rounded-full pointer-events-none"></div>
 
             <div className="container relative z-10 mx-auto px-6 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
@@ -115,7 +101,7 @@ const Hero = () => {
                                         <span className="text-[9px] md:text-[10px] lg:text-xs font-mono text-success uppercase tracking-wider">Active</span>
                                     </div>
                                 </div>
-                                <h3 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h3>
+                                <h2 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h2>
                                 <div className="grid grid-cols-2 gap-4 pt-4 mt-auto border-t border-white/[0.06]">
                                     <div>
                                         <div className="text-xs md:text-sm lg:text-base font-bold font-mono text-primary">25K</div>
@@ -134,7 +120,7 @@ const Hero = () => {
                                 <div className="p-2.5 md:p-3 lg:p-4 bg-accent-teal/10 rounded-sm text-accent-teal w-fit">
                                     <ChartBar size={20} weight="duotone" className="md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px]" />
                                 </div>
-                                <h3 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-accent-teal transition-colors">Operations Management</h3>
+                                <h2 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-accent-teal transition-colors">Operations Management</h2>
                                 <div className="flex flex-wrap gap-1.5 md:gap-2 lg:gap-3 mt-auto">
                                     {['SOP Dev', 'QC', 'Supply Chain', 'Team Lead'].map((s) => (
                                         <span key={s} className="px-2 md:px-3 py-1 md:py-1.5 bg-interactive-button border border-border rounded-sm text-[8px] md:text-[9px] lg:text-xs font-mono text-text-secondary uppercase tracking-wider">
@@ -150,7 +136,7 @@ const Hero = () => {
                                 <div className="p-2.5 md:p-3 lg:p-4 bg-accent-orange/10 rounded-sm text-accent-orange w-fit">
                                     <Lightning size={20} weight="duotone" className="md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px]" />
                                 </div>
-                                <h3 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-accent-orange transition-colors">Core Competencies</h3>
+                                <h2 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-accent-orange transition-colors">Core Competencies</h2>
                                 <div className="flex flex-wrap gap-1.5 md:gap-2 lg:gap-3 mt-auto">
                                     {['Prod Planning', 'Process Opt', 'BPOM', 'Cold Chain'].map((s) => (
                                         <span key={s} className="px-2 md:px-3 py-1 md:py-1.5 bg-interactive-button border border-border rounded-sm text-[8px] md:text-[9px] lg:text-xs font-mono text-text-secondary uppercase tracking-wider">
