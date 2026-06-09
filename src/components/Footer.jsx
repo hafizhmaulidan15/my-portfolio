@@ -3,14 +3,10 @@ import { CaretUp } from '@phosphor-icons/react';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
     return (
         <footer className="py-8 bg-background border-t border-white/[0.06] relative">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-            <div className="container mx-auto px-6 max-w-[1400px] flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="container mx-auto px-6 max-w-[1400px] flex justify-center">
                 <div className="flex items-center gap-3">
                     <span className="w-8 h-8 rounded-sm bg-gradient-to-br from-primary to-accent-teal flex items-center justify-center text-xs font-bold text-foreground">
                         H
@@ -18,16 +14,6 @@ const Footer = () => {
                     <p className="text-text-tertiary text-sm font-medium tracking-tight">
                         &copy; {currentYear} Muhammad <span className="text-foreground">Hafizh</span> Maulidan
                     </p>
-                </div>
-
-                <div className="flex items-center gap-4">
-                    <button 
-                        onClick={scrollToTop}
-                        className="flex items-center gap-2 text-xs font-medium text-text-tertiary hover:text-primary uppercase tracking-widest transition-colors group"
-                    >
-                        <span>Back to top</span>
-                        <CaretUp size={14} weight="bold" className="group-hover:-translate-y-0.5 transition-transform" />
-                    </button>
                 </div>
             </div>
         </footer>

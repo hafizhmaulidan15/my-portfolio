@@ -18,6 +18,7 @@ const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 const NotFound = lazy(() => import('./components/NotFound'));
 const ProductionImpact = lazy(() => import('./components/ProductionImpact'));
+const BackToTop = lazy(() => import('./components/BackToTop'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ function App() {
           <Footer />
         </div>
       </Suspense>
+      <BackToTop />
       <Analytics />
     </div>
   );
