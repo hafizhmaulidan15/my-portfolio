@@ -1,11 +1,21 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 import { Envelope, ArrowUpRight, Factory, Lightning, ChartBar } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 
 const MotionLink = motion(Link);
 
 const Hero = () => {
+    const staggerRef = useRef(null);
+
+    useEffect(() => {
+        const el = staggerRef.current;
+        if (!el) return;
+        const timer = setTimeout(() => el.classList.add('is-shown'), 100);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <section id="home" className="relative min-h-[100dvh] flex items-center justify-center py-[72px] px-6 overflow-hidden bg-background">
             <div className="fixed inset-0 z-0 pointer-events-none">
@@ -30,22 +40,28 @@ const Hero = () => {
                             <span className="tracking-wide">HEAD OF UNIT & PRODUCTION LEADER</span>
                         </div>
 
-                        <h1 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold tracking-tighter leading-[1.1] text-foreground">
-                            MUHAMMAD <br />
-                            <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary">MAULIDAN</span>
-                        </h1>
+                        <div className="t-stagger" ref={staggerRef}>
+                            <h1 className="t-stagger-line text-[32px] md:text-[40px] lg:text-[48px] font-bold tracking-tighter leading-[1.1] text-foreground">
+                                MUHAMMAD <br />
+                                <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary">MAULIDAN</span>
+                            </h1>
 
-                        <p className="text-sm md:text-base text-text-secondary leading-relaxed">
-                            <span className="text-foreground font-semibold">Head of Unit at Rumah Susu Indonesia</span> | Operations & Production Management | Dairy Manufacturing & Process Optimization
-                        </p>
+                            <p className="t-stagger-line t-stagger-line--2 text-sm md:text-base text-text-secondary leading-relaxed mt-4 md:mt-6">
+                                <span className="text-foreground font-semibold">Head of Unit at Rumah Susu Indonesia</span> | Operations & Production Management | Dairy Manufacturing & Process Optimization
+                            </p>
 
-                        <p className="text-sm md:text-base lg:text-lg text-text-secondary max-w-[60ch] leading-relaxed">
-                            Operations & Production Leader specializing in end-to-end dairy manufacturing, process optimization, and quality systems and currently serving as <span className="text-foreground font-medium">Head of Unit at Rumah Susu Indonesia</span>.
-                        </p>
+                            <p className="t-stagger-line t-stagger-line--3 text-sm md:text-base lg:text-lg text-text-secondary max-w-[60ch] leading-relaxed mt-4">
+                                Operations & Production Leader specializing in end-to-end dairy manufacturing, process optimization, and quality systems and currently serving as <span className="text-foreground font-medium">Head of Unit at Rumah Susu Indonesia</span>.
+                            </p>
 
-                        <p className="text-xs md:text-sm text-text-tertiary max-w-[60ch] leading-relaxed font-mono tracking-wide">
-                            Proven track record scaling dairy production from scratch to 53K+ liters through repeatable operational systems
-                        </p>
+                            <p className="t-stagger-line t-stagger-line--3 text-xs md:text-sm text-text-tertiary max-w-[60ch] leading-relaxed font-mono tracking-wide mt-4">
+                                Proven track record scaling dairy production from scratch to <span className="t-digit-group is-animating">
+                                    <span className="t-digit">5</span>
+                                    <span className="t-digit">3</span>
+                                    <span className="t-digit" data-stagger="1">K</span>
+                                </span>+ liters through repeatable operational systems
+                            </p>
+                        </div>
 
                         <div className="flex flex-wrap gap-4 pt-2">
                             <MotionLink 
@@ -74,11 +90,24 @@ const Hero = () => {
 
                         <div className="grid grid-cols-2 gap-4 md:gap-8 pt-6 border-t border-white/[0.06]">
                             <div>
-                                <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-foreground">Up to 25K</div>
+                                <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-foreground">
+                                    Up to <span className="t-digit-group is-animating">
+                                        <span className="t-digit">2</span>
+                                        <span className="t-digit">5</span>
+                                        <span className="t-digit" data-stagger="1">K</span>
+                                    </span>
+                                </div>
                                 <div className="text-[10px] md:text-xs text-text-tertiary uppercase tracking-widest mt-1">Units/Batch</div>
                             </div>
                             <div>
-                                <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-accent-orange">3.33</div>
+                                <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-accent-orange">
+                                    <span className="t-digit-group is-animating">
+                                        <span className="t-digit">3</span>
+                                        <span className="t-digit" data-stagger="1">.</span>
+                                        <span className="t-digit" data-stagger="2">3</span>
+                                        <span className="t-digit" data-stagger="3">3</span>
+                                    </span>
+                                </div>
                                 <div className="text-[10px] md:text-xs text-text-tertiary uppercase tracking-widest mt-1">GPA</div>
                             </div>
                         </div>
