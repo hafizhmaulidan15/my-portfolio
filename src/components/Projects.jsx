@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
     Globe, Code, Cpu, Drop, Pulse, 
     Plant, Lightbulb, ChartBar, Database, 
-    TrendUp, ArrowUpRight,
-    Factory, Waves, BookOpen, Lightning, Shield,
-    IdentificationBadge, Users, User
+    TrendUp,
+    Factory, Waves, BookOpen, Lightning, Shield
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 import { cn } from '../lib/utils';
@@ -32,7 +30,60 @@ const Projects = () => {
             ],
             impact: 'Alternative solution for production stock monitoring using spreadsheet API, eliminating the need for dedicated database setup.',
             skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Google Sheets API'],
-            color: 'text-accent-teal'
+            color: 'text-accent-teal',
+            link: 'https://rumah-susu-tasik-dashboard.vercel.app',
+            stats: [
+                { value: 'Real-time', label: 'Stock Updates' },
+                { value: '100%', label: 'Data Accuracy' },
+                { value: 'Team-wide', label: 'Access' }
+            ]
+        },
+        {
+            id: 14,
+            title: 'Milk Quality Prediction',
+            period: 'Jun 2026',
+            association: 'Personal Project',
+            icon: <Pulse size={28} weight="duotone" />,
+            role: 'ML Engineer',
+            roleType: 'individual',
+            category: 'data',
+            description: 'ML model predicting pasteurized milk quality grade (A/B/C/Reject) from 7 production parameters with 0.92 F1 weighted score.',
+            responsibilities: [
+                'Built Random Forest + XGBoost models achieving 0.92 F1 weighted across all quality grades.',
+                'Implemented SHAP explainability for regulatory-grade feature importance analysis (pH & suhu dominant).',
+                'Developed FastAPI backend with real-time prediction endpoint (<15ms inference time).',
+                'Built Next.js dashboard with interactive visualization, prediction history, and actionable recommendations.',
+                'Containerized fullstack application with Docker Compose for production deployment.'
+            ],
+            impact: 'First ML-driven quality prediction system for dairy — combining data science with food safety in Indonesian dairy context.',
+            skills: ['Python', 'scikit-learn', 'XGBoost', 'SHAP', 'FastAPI', 'Next.js', 'Docker'],
+            color: 'text-primary',
+            link: 'https://milk-quality-prediction.vercel.app',
+            stats: [
+                { value: '0.92 F1', label: 'Weighted Score' },
+                { value: '7 Params', label: 'Production Inputs' },
+                { value: '<15ms', label: 'Inference Time' }
+            ]
+        },
+        {
+            id: 15,
+            title: 'Aussie WHV 2026',
+            period: 'May 2026',
+            association: 'Personal Project',
+            icon: <Globe size={28} weight="duotone" />,
+            role: 'Full-Stack Developer',
+            roleType: 'individual',
+            category: 'web',
+            description: 'Comprehensive resource hub for Australian Working Holiday Visa applicants — visa types, requirements, and living guides.',
+            responsibilities: [
+                'Built responsive info site with Next.js 14 and TypeScript for structured immigration content.',
+                'Designed clean information architecture for complex visa category documentation.',
+                'Deployed and maintained on Vercel with automated CI/CD pipeline.'
+            ],
+            impact: 'Accessible reference for Indonesian WHV aspirants navigating Australian visa pathways.',
+            skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+            color: 'text-accent-teal',
+            link: 'https://aussie-whv-2026.vercel.app'
         },
         {
             id: 0,
@@ -52,7 +103,12 @@ const Projects = () => {
             ],
             impact: 'Pivoted engineering precision into operational leadership, managing high-capacity industrial systems.',
             skills: ['Operational Strategy', 'Project Lifecycle', 'Supply Chain Management', 'SOP Architecture'],
-            color: 'text-accent-orange'
+            color: 'text-accent-orange',
+            stats: [
+                { value: '25K', label: 'Batch Capacity' },
+                { value: '100%', label: 'SOP Compliance' },
+                { value: 'Cross-team', label: 'Coordination' }
+            ]
         },
         {
             id: 1,
@@ -93,7 +149,12 @@ const Projects = () => {
             ],
             impact: 'Deployed operational flood monitoring system with cloud integration for early warning.',
             skills: ['ESP32', 'Arduino', 'Sensors', 'MQTT', 'IoT Cloud'],
-            color: 'text-accent-blue'
+            color: 'text-accent-blue',
+            stats: [
+                { value: '4-Level', label: 'Alert System' },
+                { value: 'Real-time', label: 'Cloud Dashboard' },
+                { value: 'Auto', label: 'Notifications' }
+            ]
         },
         {
             id: 3,
@@ -177,7 +238,12 @@ const Projects = () => {
             color: 'text-success',
             link: null,
             published: true,
-            journal: 'Jurnal Ilmiah Teknik Elektro IPB'
+            journal: 'Jurnal Ilmiah Teknik Elektro IPB',
+            stats: [
+                { value: '40%', label: 'Growth Efficiency' },
+                { value: 'Automated', label: 'Irrigation' },
+                { value: 'Published', label: 'Research' }
+            ]
         },
         {
             id: 7,
@@ -197,7 +263,12 @@ const Projects = () => {
             ],
             impact: 'Reduced emergency response time by 40% through instant alert system.',
             skills: ['ESP32', 'Telegram Bot', 'Relay Control', 'Agile', 'Ultrasonic'],
-            color: 'text-accent-blue'
+            color: 'text-accent-blue',
+            stats: [
+                { value: '40%', label: 'Faster Response' },
+                { value: '3', label: 'Ultrasonic Sensors' },
+                { value: 'Instant', label: 'Telegram Alerts' }
+            ]
         },
         {
             id: 8,
@@ -280,14 +351,6 @@ const Projects = () => {
         }
     ];
 
-    const getRoleIcon = (roleType) => {
-        switch (roleType) {
-            case 'lead': return <IdentificationBadge size={14} weight="bold" />;
-            case 'team': return <Users size={14} weight="bold" />;
-            default: return <User size={14} weight="bold" />;
-        }
-    };
-
     const filteredProjects = activeCategory === 'all'
         ? projects
         : projects.filter(project => project.category === activeCategory);
@@ -334,55 +397,75 @@ const Projects = () => {
                             overflowVisible
                             className="flex flex-col h-full border-border/50 hover:border-primary/20 transition-all group"
                         >
-                            <div className="flex justify-between items-start mb-6">
-                                <div className={cn("p-3 rounded-sm bg-interactive-button transition-colors group-hover:bg-primary/10", project.color)}>
+                            {/* Icon */}
+                            <div className="mb-5">
+                                <div className={cn("inline-flex p-4 rounded-sm bg-interactive-button transition-colors group-hover:bg-primary/15", project.color)}>
                                     {project.icon}
                                 </div>
-                                {project.link && (
-                                    <motion.a 
-                                        href={project.link}
-                                        target="_blank"
-                                        whileHover={{ scale: 1.05 }}
-                                        className="p-2 text-text-tertiary hover:text-primary transition-colors"
-                                    >
-                                        <ArrowUpRight size={20} weight="bold" />
-                                    </motion.a>
-                                )}
                             </div>
 
-                            <div className="space-y-2 mb-4">
+                            {/* Title + Period */}
+                            <div className="space-y-2 mb-3">
                                 <h3 className="text-[18px] font-semibold tracking-tight text-foreground leading-tight">{project.title}</h3>
                                 <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-text-tertiary">
                                     <span className="px-2 py-0.5 rounded-sm bg-interactive-button border border-border whitespace-nowrap">
                                         {project.period}
                                     </span>
-                                    <span className="whitespace-nowrap">{project.association}</span>
                                 </div>
                             </div>
 
+                            {/* Role · Type (combined inline) + Published badge */}
                             <div className="flex items-center gap-2 mb-4">
-                                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-primary/5 border border-primary/10 text-primary text-[10px] font-medium uppercase tracking-widest">
-                                    {getRoleIcon(project.roleType)}
-                                    {project.role}
-                                </div>
+                                <span className="text-[11px] font-mono text-text-tertiary">
+                                    {project.role} · {project.roleType === 'individual' ? 'Personal' : project.roleType === 'lead' ? 'Lead' : 'Team'} Project
+                                </span>
                                 {project.published && (
-                                    <div className="flex items-center gap-1 px-2 py-1 rounded-sm bg-success/10 border border-success/30 text-success text-[10px] font-medium uppercase tracking-widest">
+                                    <span className="flex items-center gap-1 px-2 py-0.5 rounded-sm bg-success/10 border border-success/30 text-success text-[10px] font-medium uppercase tracking-widest">
                                         <BookOpen size={10} weight="bold" />
                                         Published
-                                    </div>
+                                    </span>
                                 )}
                             </div>
 
-                            <p className="text-text-secondary text-sm leading-relaxed flex-grow">
+                            {/* Stats Mini Cards (optional) */}
+                            {project.stats && project.stats.length > 0 && (
+                                <div className="grid grid-cols-3 gap-2 mb-4">
+                                    {project.stats.map((stat, i) => (
+                                        <div key={i} className="bg-interactive-button rounded-sm p-2.5 text-center border border-border/20">
+                                            <div className="text-[14px] font-semibold text-foreground">{stat.value}</div>
+                                            <div className="text-[9px] font-mono text-text-tertiary uppercase tracking-wider mt-0.5">{stat.label}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Description */}
+                            <p className="text-text-secondary text-sm leading-relaxed mb-4">
                                 {project.description}
                             </p>
 
-                            <div className="mt-6 pt-4 border-t border-white/[0.06] flex flex-wrap gap-2">
+                            {/* Bullet Points (first 3) */}
+                            <div className="space-y-1.5 mb-5 flex-grow">
+                                {project.responsibilities.slice(0, 3).map((item, i) => (
+                                    <div key={i} className="flex items-start gap-2 text-[12px] text-text-tertiary leading-relaxed">
+                                        <span className="text-primary/50 mt-0.5 flex-shrink-0">•</span>
+                                        <span>{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Skills */}
+                            <div className="pt-4 border-t border-white/[0.06] flex flex-wrap gap-x-2.5 gap-y-1.5 items-center">
                                 {project.skills.slice(0, 4).map((skill) => (
-                                    <span key={skill} className="text-[10px] font-mono text-text-tertiary uppercase">
+                                    <span key={skill} className="text-[10px] font-mono text-text-tertiary uppercase tracking-wider">
                                         #{skill}
                                     </span>
                                 ))}
+                                {project.skills.length > 4 && (
+                                    <span className="text-[10px] font-mono text-text-muted uppercase tracking-wider">
+                                        +{project.skills.length - 4} more
+                                    </span>
+                                )}
                             </div>
                         </GlassPanel>
                     ))}

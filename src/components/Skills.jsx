@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
     Cpu, Database, WifiHigh, Lightning, Code, ChartBar,
     Gear, Brain, Globe, Wrench, SquaresFour, Circuitry, Cloud, TerminalWindow,
-    Factory, ChartPieSlice, Truck, ClipboardText, UsersThree,
+    Factory, ChartPieSlice, Truck, ClipboardText, UsersThree, Pulse,
     CaretDown, ArrowUpRight
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
@@ -171,6 +171,12 @@ const Skills = () => {
                     icon: <Database size={20} weight="duotone" />,
                     context: 'Historical sensor data storage, retrieval, and backend scripting.',
                     project: 'Internal Monitoring Dashboard'
+                },
+                { 
+                    name: 'ML Quality Prediction', 
+                    icon: <Pulse size={20} weight="duotone" />,
+                    context: 'Random Forest & XGBoost predicting pasteurized milk grade (A/B/C/Reject) from 7 production parameters with 0.92 F1. SHAP explainability for feature importance.',
+                    project: 'Milk Quality Prediction'
                 },
                 { 
                     name: 'Networking (VLAN, OSPF)', 
