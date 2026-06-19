@@ -116,39 +116,39 @@ const Hero = () => {
                         className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 justify-items-start"
                     >
                         <Link to="/experience" className="group block w-full">
-                            <GlassPanel className="h-full flex flex-col gap-4 md:gap-5 lg:gap-6 p-5 md:p-6 lg:p-8 border-glow-top-primary hover:border-primary/40 transition-all">
+                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-3 md:gap-4 p-5 md:p-6 lg:p-7">
                                 <div className="flex items-center gap-3 md:gap-4">
-                                    <div className="p-2.5 md:p-3 lg:p-4 bg-primary/10 rounded-sm text-primary">
-                                        <Factory size={20} weight="duotone" className="md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px]" />
+                                    <div className="p-2.5 md:p-3 bg-primary/10 rounded-sm text-primary">
+                                        <Factory size={20} weight="duotone" className="md:w-[24px] md:h-[24px]" />
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-success animate-pulse"></div>
-                                        <span className="text-[9px] md:text-[10px] lg:text-xs font-mono text-success uppercase tracking-wider">Active</span>
+                                        <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-success"></div>
+                                        <span className="text-[9px] md:text-[10px] font-mono text-success uppercase tracking-wider">Active</span>
                                     </div>
                                 </div>
-                                <h2 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h2>
-                                <div className="grid grid-cols-2 gap-4 pt-4 mt-auto border-t border-white/[0.06]">
+                                <h2 className="text-sm md:text-base font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h2>
+                                <div className="grid grid-cols-2 gap-4 pt-3 mt-auto">
                                     <div>
-                                        <div className="text-xs md:text-sm lg:text-base font-bold font-mono text-blue-400">25K</div>
-                                        <div className="text-[8px] md:text-[9px] lg:text-[10px] text-text-tertiary uppercase tracking-wider">Batch</div>
+                                        <div className="text-xs md:text-sm font-bold font-mono text-primary">25K</div>
+                                        <div className="text-[8px] md:text-[9px] text-text-tertiary uppercase tracking-wider">Batch</div>
                                     </div>
                                     <div>
-                                        <div className="text-xs md:text-sm lg:text-base font-bold font-mono text-accent-blue">E2E</div>
-                                        <div className="text-[8px] md:text-[9px] lg:text-[10px] text-text-tertiary uppercase tracking-wider">Chain</div>
+                                        <div className="text-xs md:text-sm font-bold font-mono text-accent-blue">E2E</div>
+                                        <div className="text-[8px] md:text-[9px] text-text-tertiary uppercase tracking-wider">Chain</div>
                                     </div>
                                 </div>
                             </GlassPanel>
                         </Link>
 
                         <Link to="/skills" className="group block w-full">
-                            <GlassPanel className="h-full flex flex-col gap-4 md:gap-5 lg:gap-6 p-5 md:p-6 lg:p-8 border-glow-top-teal hover:border-accent-blue/40 transition-all">
-                                <div className="p-2.5 md:p-3 lg:p-4 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
-                                    <ChartBar size={20} weight="duotone" className="md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px]" />
+                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-3 md:gap-4 p-5 md:p-6 lg:p-7">
+                                <div className="p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
+                                    <ChartBar size={20} weight="duotone" className="md:w-[24px] md:h-[24px]" />
                                 </div>
-                                <h2 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-accent-blue transition-colors">Operations Management</h2>
-                                <div className="flex flex-wrap gap-1.5 md:gap-2 lg:gap-3 mt-auto">
+                                <h2 className="text-sm md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Operations Management</h2>
+                                <div className="flex flex-wrap gap-1.5 md:gap-2 mt-auto">
                                     {['SOP Dev', 'QC', 'Supply Chain', 'Team Lead'].map((s) => (
-                                        <span key={s} className="px-2 md:px-3 py-1 md:py-1.5 bg-interactive-button border border-border rounded-sm text-[8px] md:text-[9px] lg:text-xs font-mono text-text-secondary uppercase tracking-wider">
+                                        <span key={s} className="px-2 md:px-3 py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[8px] md:text-[9px] font-mono uppercase tracking-wider">
                                             {s}
                                         </span>
                                     ))}
@@ -157,14 +157,14 @@ const Hero = () => {
                         </Link>
 
                         <Link to="/certifications" className="group block w-full sm:col-span-2 justify-self-center max-w-md">
-                            <GlassPanel className="flex flex-col gap-4 md:gap-5 lg:gap-6 p-5 md:p-6 lg:p-8 border-glow-top-teal hover:border-accent-blue/40 transition-all">
-                                <div className="p-2.5 md:p-3 lg:p-4 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
-                                    <Lightning size={20} weight="duotone" className="md:w-[24px] md:h-[24px] lg:w-[28px] lg:h-[28px]" />
+                            <GlassPanel variant="overlap" className="flex flex-col gap-3 md:gap-4 p-5 md:p-6 lg:p-7">
+                                <div className="p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
+                                    <Lightning size={20} weight="duotone" className="md:w-[24px] md:h-[24px]" />
                                 </div>
-                                <h2 className="text-sm md:text-base lg:text-lg font-semibold text-foreground group-hover:text-accent-blue transition-colors">Core Competencies</h2>
-                                <div className="flex flex-wrap gap-1.5 md:gap-2 lg:gap-3 mt-auto">
+                                <h2 className="text-sm md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Core Competencies</h2>
+                                <div className="flex flex-wrap gap-1.5 md:gap-2 mt-auto">
                                     {['Prod Planning', 'Process Opt', 'BPOM', 'Cold Chain'].map((s) => (
-                                        <span key={s} className="px-2 md:px-3 py-1 md:py-1.5 bg-interactive-button border border-border rounded-sm text-[8px] md:text-[9px] lg:text-xs font-mono text-text-secondary uppercase tracking-wider">
+                                        <span key={s} className="px-2 md:px-3 py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[8px] md:text-[9px] font-mono uppercase tracking-wider">
                                             {s}
                                         </span>
                                     ))}

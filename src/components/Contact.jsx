@@ -18,7 +18,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto space-y-6"
                 >
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary/5 border border-primary/10 text-primary text-xs font-medium tracking-widest uppercase">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary/10 text-primary text-xs font-medium tracking-widest uppercase">
                         <PaperPlaneTilt size={14} weight="bold" />
                         <span>Ready to collaborate</span>
                     </div>
@@ -38,7 +38,7 @@ const Contact = () => {
                             href="mailto:mhafizh.maulidan@gmail.com?subject=Collaboration%20Opportunity&body=Halo%20Hafizh%2C%0D%0A%0D%0ASaya%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut%20mengenai%20...%5Bisi%20topik%5D%0D%0A%0D%0ATerima%20kasih"
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full sm:w-auto px-6 py-3 bg-primary text-foreground font-body rounded border border-primary shadow-primary-btn flex items-center justify-center gap-2 hover:bg-primary-hover hover:shadow-primary-btn-hover transition-all duration-200"
+                            className="w-full sm:w-auto px-6 py-3 bg-primary text-foreground font-body rounded flex items-center justify-center gap-2 hover:bg-primary-hover transition-all duration-200 shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
                         >
                             <Envelope size={18} weight="bold" />
                             Send Email

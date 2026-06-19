@@ -27,7 +27,7 @@ const Skills = () => {
             iconBg: 'bg-accent-blue/10',
             borderColor: 'hover:border-accent-blue/30',
             glow: 'hover:shadow-[0_0_20px_rgba(80,186,255,0.08)]',
-            tagColor: 'bg-accent-blue/10 text-accent-blue border-accent-blue/20',
+            tagColor: 'bg-accent-blue/10 text-accent-blue',
             gradient: 'from-accent-blue to-primary',
             skills: [
                 { 
@@ -80,7 +80,7 @@ const Skills = () => {
             iconBg: 'bg-accent-blue/10',
             borderColor: 'hover:border-accent-blue/30',
             glow: 'hover:shadow-[0_0_20px_rgba(80,186,255,0.08)]',
-            tagColor: 'bg-accent-blue/10 text-accent-blue border-accent-blue/20',
+            tagColor: 'bg-accent-blue/10 text-accent-blue',
             gradient: 'from-accent-blue to-primary',
             skills: [
                 { 
@@ -133,7 +133,7 @@ const Skills = () => {
             iconBg: 'bg-primary/10',
             borderColor: 'hover:border-primary/30',
             glow: 'hover:shadow-[0_0_20px_rgba(17,129,255,0.08)]',
-            tagColor: 'bg-primary/10 text-primary border-primary/20',
+            tagColor: 'bg-primary/10 text-primary',
             gradient: 'from-primary to-accent-blue',
             skills: [
                 { 
@@ -207,7 +207,7 @@ const Skills = () => {
                             <h3 className={`text-[18px] font-semibold tracking-tight ${group.accentColor}`}>
                                 {group.title}
                             </h3>
-                            <div className={`h-0.5 w-10 bg-gradient-to-r ${group.gradient} rounded-full`}></div>
+                            <div className="bg-primary/20 h-px w-8"></div>
                         </motion.div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -223,7 +223,8 @@ const Skills = () => {
                                         transition={{ delay: groupIdx * 0.1 + skillIdx * 0.05 }}
                                     >
                                         <GlassPanel
-                                            className={`cursor-pointer transition-all duration-200 border-white/[0.06] ${group.borderColor} ${group.glow}`}
+                                            variant="borderless"
+                                            className={`cursor-pointer transition-all duration-200 shadow-floating ${group.glow}`}
                                             onClick={() => toggleSkill(skillId)}
                                         >
                                             <div className="flex items-center gap-3 p-3">
@@ -241,7 +242,7 @@ const Skills = () => {
                                                             weight="bold"
                                                         />
                                                     </div>
-                                                    <span className={`inline-block text-[10px] px-1.5 py-0.5 rounded-sm border ${group.tagColor} mt-0.5`}>
+                                                    <span className={`inline-block text-[10px] px-1.5 py-0.5 rounded-sm ${group.tagColor} mt-0.5`}>
                                                         {group.title}
                                                     </span>
                                                 </div>
@@ -256,7 +257,6 @@ const Skills = () => {
                                                         transition={{ duration: 0.2, ease: 'easeInOut' }}
                                                         className="overflow-hidden"
                                                     >
-                                                        <div className="border-t border-white/[0.06] mx-3"></div>
                                                         <div className="px-3 pb-4 pt-3 space-y-2.5">
                                                             <p className="text-text-tertiary text-[12.5px] leading-relaxed">
                                                                 {skill.context}

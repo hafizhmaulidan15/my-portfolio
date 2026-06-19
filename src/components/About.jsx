@@ -65,7 +65,7 @@ const About = () => {
                                     className="relative shrink-0"
                                 >
                                     <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent-blue/10 blur-2xl rounded-full opacity-60"></div>
-                                    <div className="w-40 h-40 md:w-48 md:h-48 rounded-lg border border-border overflow-hidden relative group">
+                                    <div className="w-40 h-40 md:w-48 md:h-48 rounded-lg overflow-hidden relative group">
                                         <img 
                                             src="/profile-avatar.png" 
                                             alt="Muhammad Hafizh Maulidan" 
@@ -83,7 +83,7 @@ const About = () => {
                                     <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
                                         Operations & Production <span className="text-gradient-primary">Leader</span>
                                     </h2>
-                                    <div className="h-0.5 w-16 bg-gradient-to-r from-primary to-accent-blue mx-auto md:ml-0 rounded-full"></div>
+                                    
                                 </div>
                             </div>
 
@@ -99,7 +99,7 @@ const About = () => {
                                     <h4 className="text-sm font-medium text-text-tertiary uppercase tracking-widest mb-4">Key achievements</h4>
                                     <div className="flex flex-wrap gap-3">
                                         {achievements.map((ach, idx) => (
-                                            <div key={idx} className="flex items-center gap-2 px-3 py-2 rounded-sm bg-surface border border-border">
+                                            <div key={idx} className="flex items-center gap-2 px-3 py-2 rounded-sm bg-accent-blue/10 text-accent-blue">
                                                 <span className={ach.color}>{ach.icon}</span>
                                                 <span className="text-sm text-text-secondary font-medium">{ach.text}</span>
                                             </div>
@@ -113,7 +113,8 @@ const About = () => {
                             {infoCards.map((info, idx) => (
                                 <GlassPanel 
                                     key={idx} 
-                                    className={`flex flex-col gap-5 group hover:border-primary/20 transition-all p-6 md:p-7 min-h-[160px] ${info.glow}`}
+                                    variant="overlap"
+                                    className={`flex flex-col gap-5 group transition-all p-6 md:p-7 min-h-[160px]`}
                                 >
                                     <div className={`p-3 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
                                         {info.icon}

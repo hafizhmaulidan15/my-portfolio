@@ -162,11 +162,11 @@ const Experience = () => {
                                         <div className={`absolute left-0 top-1.5 w-[23px] h-[23px] rounded-full bg-background border-2 ${colors.border} transition-all z-10 flex items-center justify-center`}>
                                             <div className={`w-2 h-2 rounded-full ${colors.bg.replace('/10', '/50')} ${colors.text} transition-colors`}></div>
                                         </div>
-                                        <div className="space-y-2 p-4 rounded-md bg-surface/50 group-hover:bg-surface transition-all duration-300 shadow-[0_0_0_rgba(17,129,255,0)] group-hover:shadow-[0_0_25px_rgba(17,129,255,0.06)] border border-transparent group-hover:border-border">
+                                        <div className="space-y-2 p-4 rounded-md bg-surface/60 group-hover:bg-surface backdrop-blur-sm shadow-floating group-hover:shadow-lifted">
                                             <div className="flex items-center gap-3 flex-wrap">
                                                 <span className="text-xs font-mono text-text-tertiary uppercase tracking-widest">{exp.date}</span>
                                                 {exp.type === 'leadership' && (
-                                                    <span className={`px-2 py-0.5 rounded-sm text-[10px] font-medium uppercase tracking-widest ${colors.bg} ${colors.text} border ${colors.border}`}>
+                                                    <span className={`px-2 py-0.5 rounded-sm text-[10px] font-medium uppercase tracking-widest ${colors.bg} ${colors.text}`}>
                                                         Lead
                                                     </span>
                                                 )}
@@ -179,7 +179,7 @@ const Experience = () => {
                                             </div>
                                             <p className="text-text-tertiary text-sm leading-relaxed">{exp.description}</p>
                                             {exp.metrics && (
-                                                <div className="flex gap-6 pt-3 border-t border-white/[0.06]">
+                                                <div className="flex gap-6 pt-3">
                                                     {exp.metrics.map((m, mIdx) => (
                                                         <div key={mIdx}>
                                                             <div className={`text-sm font-bold font-mono tracking-tighter ${m.color}`}>{m.value}</div>
@@ -191,7 +191,7 @@ const Experience = () => {
                                             {exp.pillars && (
                                                 <div className="flex flex-wrap gap-2">
                                                     {exp.pillars.map((p, pIdx) => (
-                                                        <span key={pIdx} className="text-[10px] px-2 py-1 rounded-sm bg-interactive-button text-text-tertiary border border-border">
+                                                        <span key={pIdx} className="text-[10px] px-2 py-1 rounded-sm bg-accent-blue/10 text-accent-blue">
                                                             {p}
                                                         </span>
                                                     ))}
@@ -226,7 +226,7 @@ const Experience = () => {
                                         transition={{ delay: idx * 0.1 }}
                                         viewport={{ once: true }}
                                     >
-                                        <GlassPanel className={`flex gap-4 p-4 ${colors.glow} transition-all`}>
+                                        <GlassPanel variant="borderless" className={`flex gap-4 p-4 ${colors.glow} transition-all`}>
                                             <div className={`p-2.5 ${colors.bg} rounded-sm ${colors.text} group-hover:scale-105 transition-transform`}>
                                                 {cert.icon}
                                             </div>
@@ -260,7 +260,7 @@ const Experience = () => {
                                             transition={{ delay: idx * 0.1 }}
                                             viewport={{ once: true }}
                                         >
-                                            <GlassPanel className={`flex gap-3 p-3 ${colors.glow} transition-all`}>
+                                            <GlassPanel variant="borderless" className={`flex gap-3 p-3 ${colors.glow} transition-all`}>
                                                 <div className={`p-2 ${colors.bg} rounded-sm ${colors.text}`}>
                                                     {ach.icon}
                                                 </div>
@@ -284,7 +284,7 @@ const Experience = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mt-16 border-t border-white/[0.06] pt-12"
+                    className="mt-12"
                 >
                     <div className="space-y-3 mb-8">
                         <div className="flex items-center gap-3 text-primary font-mono text-sm tracking-widest uppercase">
@@ -297,28 +297,28 @@ const Experience = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <GlassPanel className="p-6 flex flex-col gap-4">
+                        <GlassPanel variant="overlap" className="p-6 flex flex-col gap-4">
                             <div className="relative">
                                 <span className="text-4xl text-primary/20 font-serif absolute -top-2 -left-1 leading-none select-none">&ldquo;</span>
                                 <p className="text-sm text-text-secondary leading-relaxed relative z-10 pl-4">
                                     I am pleased to recommend Hafizh Maulidan as a highly capable Automation Engineer. He has demonstrated strong expertise in IoT, embedded systems, and automation during his internships and academic journey. Beyond technical skill, Hafizh is a quick learner with excellent communication, making him a valuable team contributor in any engineering environment.
                                 </p>
                             </div>
-                            <div className="mt-auto pt-3 border-t border-white/[0.06]">
+                            <div className="mt-auto pt-3">
                                 <div className="font-semibold text-sm text-foreground">Muhammad Haikal Ramadhika</div>
                                 <div className="text-[11px] text-text-tertiary">Junior Network Engineer</div>
                                 <div className="text-[10px] text-text-tertiary/60 italic mt-1">Previously worked alongside on IoT and automation projects</div>
                             </div>
                         </GlassPanel>
 
-                        <GlassPanel className="p-6 flex flex-col gap-4">
+                        <GlassPanel variant="overlap" className="p-6 flex flex-col gap-4">
                             <div className="relative">
                                 <span className="text-4xl text-primary/20 font-serif absolute -top-2 -left-1 leading-none select-none">&ldquo;</span>
                                 <p className="text-sm text-text-secondary leading-relaxed relative z-10 pl-4">
                                     I had the pleasure of working alongside Hafizh, an outstanding Front-End Developer with exceptional technical skills and an incredible eye for detail. Hafizh consistently impressed our team with his ability to translate complex design concepts into seamless, user-friendly interfaces.
                                 </p>
                             </div>
-                            <div className="mt-auto pt-3 border-t border-white/[0.06]">
+                            <div className="mt-auto pt-3">
                                 <div className="font-semibold text-sm text-foreground">Angga Eben Ezer</div>
                                 <div className="text-[11px] text-text-tertiary">Business Analyst, BCA</div>
                                 <div className="text-[10px] text-text-tertiary/60 italic mt-1">Former teammate at PT Matra Kreasi Mandiri</div>
