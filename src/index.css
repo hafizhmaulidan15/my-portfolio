@@ -29,9 +29,9 @@
     right: 0;
     height: 800px;
     background:
-      radial-gradient(ellipse at 15% 0%, rgba(20, 71, 230, 0.12) 0%, transparent 60%),
-      radial-gradient(ellipse at 85% 10%, rgba(0, 149, 136, 0.08) 0%, transparent 55%),
-      radial-gradient(ellipse at 50% 30%, rgba(20, 71, 230, 0.04) 0%, transparent 50%);
+      radial-gradient(ellipse at 15% 0%, rgba(17, 129, 255, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 85% 10%, rgba(80, 186, 255, 0.08) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 30%, rgba(17, 129, 255, 0.04) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
   }
@@ -44,8 +44,8 @@
     right: 0;
     height: 500px;
     background:
-      radial-gradient(ellipse at 30% 100%, rgba(20, 71, 230, 0.06) 0%, transparent 60%),
-      radial-gradient(ellipse at 70% 100%, rgba(0, 149, 136, 0.05) 0%, transparent 55%);
+      radial-gradient(ellipse at 30% 100%, rgba(17, 129, 255, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 100%, rgba(80, 186, 255, 0.05) 0%, transparent 55%);
     pointer-events: none;
     z-index: 0;
   }
@@ -55,18 +55,18 @@
   }
 
   a {
-    color: #1447E6;
+    color: #1181ff;
     text-decoration: none;
     transition: color 200ms ease;
   }
 
   a:hover {
-    color: #0D3BB8;
+    color: #0a69eb;
   }
 
   a:focus-visible {
     outline: none;
-    outline: 2px solid #1447E6;
+    outline: 2px solid #1181ff;
     outline-offset: 2px;
   }
 
@@ -75,24 +75,24 @@
   textarea:focus-visible,
   select:focus-visible {
     outline: none;
-    outline: 2px solid #1447E6;
+    outline: 2px solid #1181ff;
     outline-offset: 2px;
   }
 
   ::selection {
-    background-color: rgba(20, 71, 230, 0.3);
+    background-color: rgba(17, 129, 255, 0.3);
     color: #FFFFFF;
   }
 }
 
 @layer components {
   .btn-primary {
-    background-color: #1447E6;
+    background-color: #1181ff;
     color: #FFFFFF;
     padding: 12px 24px;
     border-radius: 10px;
-    border: 1px solid #1447E6;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px, 0 0 20px rgba(20, 71, 230, 0.15);
+    border: 1px solid #1181ff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px, 0 0 20px rgba(17, 129, 255, 0.15);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -100,12 +100,12 @@
   }
 
   .btn-primary:hover {
-    background-color: #0D3BB8;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, 0 0 30px rgba(20, 71, 230, 0.25);
+    background-color: #0a69eb;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, 0 0 30px rgba(17, 129, 255, 0.25);
   }
 
   .btn-primary:active {
-    background-color: #0A2E88;
+    background-color: #0e4eb1;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px 0px;
   }
 
@@ -208,7 +208,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(20, 71, 230, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(17, 129, 255, 0.3), transparent);
     opacity: 0;
     transition: opacity 200ms ease;
   }
@@ -282,8 +282,8 @@
   }
 
   .input-text:focus {
-    border: 1px solid #1447E6;
-    box-shadow: 0px 0px 0px 3px rgba(20, 71, 230, 0.1);
+    border: 1px solid #1181ff;
+    box-shadow: 0px 0px 0px 3px rgba(17, 129, 255, 0.1);
   }
 
   .input-text:disabled {
@@ -310,10 +310,10 @@
   }
 
   .nav-item-active {
-    background-color: rgba(20, 71, 230, 0.15);
-    color: #1447E6;
+    background-color: rgba(17, 129, 255, 0.15);
+    color: #1181ff;
     border-radius: 10px;
-    border-left: 3px solid #1447E6;
+    border-left: 3px solid #1181ff;
   }
 }
 
@@ -369,28 +369,28 @@
   }
 
   .text-gradient-primary {
-    background: linear-gradient(135deg, #1447E6, #009588);
+    background: linear-gradient(135deg, #1181ff, #50baff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-warm {
-    background: linear-gradient(135deg, #1447E6, #009588);
+    background: linear-gradient(135deg, #1181ff, #50baff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-cool {
-    background: linear-gradient(135deg, #1447E6, #FF6568);
+    background: linear-gradient(135deg, #1181ff, #50baff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glow-primary {
-    box-shadow: 0 0 30px rgba(20, 71, 230, 0.15);
+    box-shadow: 0 0 30px rgba(17, 129, 255, 0.15);
   }
 
   .glow-orange {
@@ -398,7 +398,7 @@
   }
 
   .glow-teal {
-    box-shadow: 0 0 30px rgba(0, 149, 136, 0.12);
+    box-shadow: 0 0 30px rgba(80, 186, 255, 0.12);
   }
 
   .glow-red {
@@ -420,7 +420,7 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(20, 71, 230, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(17, 129, 255, 0.4), transparent);
   }
 
   .border-glow-top-orange {
@@ -448,11 +448,11 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0, 149, 136, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(80, 186, 255, 0.4), transparent);
   }
 
   .bg-ambient-blue {
-    background: radial-gradient(ellipse at center, rgba(20, 71, 230, 0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(17, 129, 255, 0.08) 0%, transparent 70%);
   }
 
   .bg-ambient-orange {
@@ -460,12 +460,12 @@
   }
 
   .bg-ambient-teal {
-    background: radial-gradient(ellipse at center, rgba(0, 149, 136, 0.06) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(80, 186, 255, 0.06) 0%, transparent 70%);
   }
 
   .bg-ambient-mixed {
-    background: radial-gradient(ellipse at 30% 50%, rgba(20, 71, 230, 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 50%, rgba(0, 149, 136, 0.05) 0%, transparent 50%);
+    background: radial-gradient(ellipse at 30% 50%, rgba(17, 129, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 50%, rgba(80, 186, 255, 0.05) 0%, transparent 50%);
   }
 
   .animate-shimmer {

@@ -6,7 +6,7 @@ export const GlassPanel = ({ children, className, variant = 'primary', overflowV
     primary: "bg-surface text-foreground p-6 rounded-lg border border-border shadow-[rgba(255,255,255,0.12)_0px_-10px_50px_-10px_inset] hover:border-border-light hover:shadow-[rgba(255,255,255,0.15)_0px_-10px_50px_-10px_inset]",
     secondary: "bg-background text-foreground p-4 rounded-md border border-white/[0.08] hover:border-border hover:bg-[#0F0F12]",
     minimal: "bg-transparent text-foreground p-4",
-    elevated: "bg-surface text-foreground p-6 rounded-lg shadow-lifted hover:shadow-[0_0_30px_rgba(20,71,230,0.08)] border border-transparent hover:border-primary/20",
+    elevated: "bg-surface text-foreground p-6 rounded-lg shadow-lifted hover:shadow-[0_0_30px_rgba(17,129,255,0.08)] border border-transparent hover:border-primary/20",
     borderless: "bg-surface text-foreground p-6 rounded-lg hover:bg-surface-hover transition-colors",
     overlap: "bg-surface/80 text-foreground p-6 rounded-lg backdrop-blur-sm border border-border shadow-floating hover:shadow-lifted",
   };

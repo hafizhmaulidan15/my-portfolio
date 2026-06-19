@@ -131,7 +131,7 @@ function ProductionBarChart({ data, title, icon, color, unit }) {
             <Tooltip content={<ChartTooltip unit={unit} />} cursor={{ fill: 'rgba(255,255,255,0.03)' }} />
             <Bar
               dataKey="value"
-              fill={color === 'text-primary' ? '#1447E6' : '#2DD4BF'}
+              fill={color === 'text-primary' ? '#1181ff' : '#2DD4BF'}
               radius={[3, 3, 0, 0]}
               barCategoryGap="20%"
             />
@@ -149,7 +149,7 @@ const ProductionImpact = () => {
 
   return (
     <section id="impact" className="py-[72px] px-6 bg-background relative overflow-hidden">
-      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-accent-teal/5 blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 max-w-[1400px] relative z-10">
@@ -284,7 +284,7 @@ const ProductionImpact = () => {
                   data={data.susuTrend}
                   title="Raw Milk Processed"
                   icon={<Factory size={14} weight="bold" />}
-                  color="text-accent-teal"
+                  color="text-accent-blue"
                   unit="L"
                 />
               </motion.div>

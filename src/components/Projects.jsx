@@ -30,7 +30,7 @@ const Projects = () => {
             ],
             impact: 'Alternative solution for production stock monitoring using spreadsheet API, eliminating the need for dedicated database setup.',
             skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Google Sheets API'],
-            color: 'text-accent-teal',
+            color: 'text-accent-blue',
             link: 'https://rumah-susu-tasik-dashboard.vercel.app',
             stats: [
                 { value: 'Real-time', label: 'Stock Updates' },
@@ -82,7 +82,7 @@ const Projects = () => {
             ],
             impact: 'Accessible reference for Indonesian WHV aspirants navigating Australian visa pathways.',
             skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-            color: 'text-accent-teal',
+            color: 'text-accent-blue',
             link: 'https://aussie-whv-2026.vercel.app'
         },
         {
@@ -103,7 +103,7 @@ const Projects = () => {
             ],
             impact: 'Pivoted engineering precision into operational leadership, managing high-capacity industrial systems.',
             skills: ['Operational Strategy', 'Project Lifecycle', 'Supply Chain Management', 'SOP Architecture'],
-            color: 'text-accent-teal',
+            color: 'text-accent-blue',
             stats: [
                 { value: '25K', label: 'Batch Capacity' },
                 { value: '100%', label: 'SOP Compliance' },
@@ -174,7 +174,7 @@ const Projects = () => {
             ],
             impact: 'Achieved validated accuracy in automated fruit ripeness classification system.',
             skills: ['ESP32', 'C++', 'IoT Cloud', 'Fuzzy Logic', 'Embedded Systems'],
-            color: 'text-warning'
+            color: 'text-primary'
         },
         {
             id: 4,
@@ -194,7 +194,7 @@ const Projects = () => {
             ],
             impact: 'Delivered production-ready ed-tech platform with integrated communication features.',
             skills: ['HTML', 'CSS', 'JavaScript'],
-            color: 'text-accent-teal',
+            color: 'text-accent-blue',
             link: 'https://nanorobotic.co.id'
         },
         {
@@ -215,7 +215,7 @@ const Projects = () => {
             ],
             impact: 'Built prototype autonomous system for fire emergency response.',
             skills: ['Arduino UNO', 'C++', 'Sensor Integration', 'Motor Control'],
-            color: 'text-accent-red'
+            color: 'text-primary'
         },
         {
             id: 6,
@@ -288,7 +288,7 @@ const Projects = () => {
             ],
             impact: 'Successfully installed and commissioned outdoor LED system with 24/7 reliability.',
             skills: ['ESP32', 'WS2812B', 'RTC', 'Web Dashboard', 'Power Management', 'Field Installation'],
-            color: 'text-warning'
+            color: 'text-primary'
         },
         {
             id: 9,
@@ -347,7 +347,7 @@ const Projects = () => {
             ],
             impact: 'Provided comprehensive security recommendations for safe web management practices.',
             skills: ['WPScan', 'SQL Injection', 'XSS', 'Security Analysis', 'Penetration Testing'],
-            color: 'text-accent-red'
+            color: 'text-primary'
         }
     ];
 
@@ -358,7 +358,7 @@ const Projects = () => {
     return (
         <section id="projects" className="py-[72px] px-6 bg-background relative">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 blur-[100px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-teal/4 blur-[80px] rounded-full pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-6 max-w-[1400px]">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">

@@ -9,8 +9,8 @@ const About = () => {
             icon: <Factory size={24} weight="duotone" />,
             title: 'Current role',
             description: 'Head of Unit — Rumah Susu Indonesia',
-            color: 'text-accent-teal',
-            bg: 'bg-accent-teal/10',
+            color: 'text-accent-blue',
+            bg: 'bg-accent-blue/10',
             glow: 'border-glow-top-orange'
         },
         {
@@ -25,32 +25,32 @@ const About = () => {
             icon: <ChartPieSlice size={24} weight="duotone" />,
             title: 'Specialization',
             description: 'Operations & Production Management',
-            color: 'text-accent-teal',
-            bg: 'bg-accent-teal/10',
+            color: 'text-accent-blue',
+            bg: 'bg-accent-blue/10',
             glow: 'border-glow-top-teal'
         },
         {
             icon: <MapPin size={24} weight="duotone" />,
             title: 'Location',
             description: 'Bogor & Tasikmalaya',
-            color: 'text-accent-teal',
-            bg: 'bg-accent-teal/10',
+            color: 'text-accent-blue',
+            bg: 'bg-accent-blue/10',
             glow: 'border-glow-top-orange'
         },
     ];
 
     const achievements = [
-        { text: 'SOP Architecture', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-teal' },
+        { text: 'SOP Architecture', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-blue' },
         { text: 'QC Protocols', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
-        { text: 'Team Coordination', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-teal' },
+        { text: 'Team Coordination', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-blue' },
         { text: 'Production Scaling', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
     ];
 
     return (
             <section id="about" className="py-[72px] px-6 lg:py-0 lg:min-h-screen lg:flex lg:items-center bg-background relative overflow-hidden">
                 <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
-                <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
-                <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-teal/4 blur-[80px] rounded-full pointer-events-none"></div>
+                <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-blue/6 blur-[100px] rounded-full pointer-events-none"></div>
+                <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
                 
                 <div className="container mx-auto px-6 max-w-[1400px]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -64,7 +64,7 @@ const About = () => {
                                     viewport={{ once: true }}
                                     className="relative shrink-0"
                                 >
-                                    <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent-teal/10 blur-2xl rounded-full opacity-60"></div>
+                                    <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent-blue/10 blur-2xl rounded-full opacity-60"></div>
                                     <div className="w-40 h-40 md:w-48 md:h-48 rounded-lg border border-border overflow-hidden relative group">
                                         <img 
                                             src="/profile-avatar.png" 
@@ -74,7 +74,7 @@ const About = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60"></div>
                                     </div>
-                                    <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-primary to-accent-teal rounded-lg flex items-center justify-center text-foreground shadow-floating">
+                                    <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-primary to-accent-blue rounded-lg flex items-center justify-center text-foreground shadow-floating">
                                         <Briefcase size={20} weight="bold" />
                                     </div>
                                 </motion.div>
@@ -83,7 +83,7 @@ const About = () => {
                                     <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
                                         Operations & Production <span className="text-gradient-primary">Leader</span>
                                     </h2>
-                                    <div className="h-0.5 w-16 bg-gradient-to-r from-primary to-accent-teal mx-auto md:ml-0 rounded-full"></div>
+                                    <div className="h-0.5 w-16 bg-gradient-to-r from-primary to-accent-blue mx-auto md:ml-0 rounded-full"></div>
                                 </div>
                             </div>
 

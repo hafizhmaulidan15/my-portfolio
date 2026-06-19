@@ -4,7 +4,7 @@ import { House, ArrowLeft } from '@phosphor-icons/react';
 const NotFound = () => {
     return (
         <div className="min-h-screen bg-background flex items-center justify-center py-[72px] px-6 relative overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent-red/5 blur-[80px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-primary/5 blur-[60px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-6 max-w-[1400px] text-center relative z-10">

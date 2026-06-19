@@ -23,12 +23,12 @@ const Skills = () => {
     const skillGroups = [
         {
             title: 'Operations & Leadership',
-            accentColor: 'text-accent-teal',
-            iconBg: 'bg-accent-teal/10',
-            borderColor: 'hover:border-accent-teal/30',
-            glow: 'hover:shadow-[0_0_20px_rgba(0,149,136,0.08)]',
-            tagColor: 'bg-accent-teal/10 text-accent-teal border-accent-teal/20',
-            gradient: 'from-accent-teal to-primary',
+            accentColor: 'text-accent-blue',
+            iconBg: 'bg-accent-blue/10',
+            borderColor: 'hover:border-accent-blue/30',
+            glow: 'hover:shadow-[0_0_20px_rgba(80,186,255,0.08)]',
+            tagColor: 'bg-accent-blue/10 text-accent-blue border-accent-blue/20',
+            gradient: 'from-accent-blue to-primary',
             skills: [
                 { 
                     name: 'SOP Development', 
@@ -76,12 +76,12 @@ const Skills = () => {
         },
         {
             title: 'IoT & Embedded Systems',
-            accentColor: 'text-accent-teal',
-            iconBg: 'bg-accent-teal/10',
-            borderColor: 'hover:border-accent-teal/30',
-            glow: 'hover:shadow-[0_0_20px_rgba(0,149,136,0.08)]',
-            tagColor: 'bg-accent-teal/10 text-accent-teal border-accent-teal/20',
-            gradient: 'from-accent-teal to-primary',
+            accentColor: 'text-accent-blue',
+            iconBg: 'bg-accent-blue/10',
+            borderColor: 'hover:border-accent-blue/30',
+            glow: 'hover:shadow-[0_0_20px_rgba(80,186,255,0.08)]',
+            tagColor: 'bg-accent-blue/10 text-accent-blue border-accent-blue/20',
+            gradient: 'from-accent-blue to-primary',
             skills: [
                 { 
                     name: 'ESP32 & Arduino', 
@@ -132,9 +132,9 @@ const Skills = () => {
             accentColor: 'text-primary',
             iconBg: 'bg-primary/10',
             borderColor: 'hover:border-primary/30',
-            glow: 'hover:shadow-[0_0_20px_rgba(20,71,230,0.08)]',
+            glow: 'hover:shadow-[0_0_20px_rgba(17,129,255,0.08)]',
             tagColor: 'bg-primary/10 text-primary border-primary/20',
-            gradient: 'from-primary to-accent-teal',
+            gradient: 'from-primary to-accent-blue',
             skills: [
                 { 
                     name: 'Python (Pandas, NumPy)', 
@@ -191,8 +191,8 @@ const Skills = () => {
     return (
         <section id="skills" className="py-[72px] px-6 bg-background relative overflow-hidden">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-teal/5 blur-[100px] rounded-full pointer-events-none"></div>
-            <div className="absolute top-1/2 left-0 w-72 h-72 bg-accent-teal/4 blur-[80px] rounded-full pointer-events-none"></div>
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/2 left-0 w-72 h-72 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-6 max-w-[1400px] space-y-12">
                 {skillGroups.map((group, groupIdx) => (

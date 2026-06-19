@@ -9,8 +9,8 @@ const Publications = () => {
             date: 'June 25, 2024',
             description: 'Research on integrating irrigation, lighting, and temperature regulation using WS2812B LEDs, DHT22 sensors, and ESP32 for automated microgreen farming.',
             category: 'IoT & Automation',
-            color: 'text-accent-teal',
-            bg: 'bg-accent-teal/10'
+            color: 'text-accent-blue',
+            bg: 'bg-accent-blue/10'
         },
         {
             title: 'WordPress Vulnerability Analysis with WPScan and Mitigation Techniques',
@@ -18,8 +18,8 @@ const Publications = () => {
             date: 'June 9, 2024',
             description: 'Security research identifying vulnerabilities like SQL injection and XSS using WPScan, providing comprehensive mitigation strategies for web security.',
             category: 'Cybersecurity',
-            color: 'text-accent-red',
-            bg: 'bg-accent-red/10'
+            color: 'text-primary',
+            bg: 'bg-primary/10'
         },
         {
             title: 'Application of Fuzzy Logic to Predict Rice Production Quantity in Bogor Regency',
@@ -34,13 +34,13 @@ const Publications = () => {
 
     return (
         <section className="py-[72px] px-6 bg-background relative overflow-hidden">
-            <div className="absolute top-0 right-1/3 w-72 h-72 bg-accent-teal/5 blur-[80px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-0 right-1/3 w-72 h-72 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-6 max-w-[1400px]">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
                     <div className="space-y-3">
-                        <div className="h-0.5 w-10 bg-gradient-to-r from-accent-teal to-primary"></div>
+                        <div className="h-0.5 w-10 bg-gradient-to-r from-accent-blue to-primary"></div>
                         <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
                             Published <span className="text-gradient-cool">works</span>
                         </h2>
