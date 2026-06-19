@@ -27,9 +27,11 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 600px;
-    background: radial-gradient(ellipse at 20% 0%, rgba(20, 71, 230, 0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 0%, rgba(0, 149, 136, 0.06) 0%, transparent 50%);
+    height: 800px;
+    background:
+      radial-gradient(ellipse at 15% 0%, rgba(20, 71, 230, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 85% 10%, rgba(0, 149, 136, 0.08) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 30%, rgba(20, 71, 230, 0.04) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
   }
@@ -40,8 +42,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 400px;
-    background: radial-gradient(ellipse at 50% 100%, rgba(240, 81, 0, 0.04) 0%, transparent 60%);
+    height: 500px;
+    background:
+      radial-gradient(ellipse at 30% 100%, rgba(20, 71, 230, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 100%, rgba(0, 149, 136, 0.05) 0%, transparent 55%);
     pointer-events: none;
     z-index: 0;
   }

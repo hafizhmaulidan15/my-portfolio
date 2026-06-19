@@ -14,6 +14,8 @@ export default {
         'text-secondary': '#E4E4E7',
         'text-tertiary': '#A1A1AA',
         'text-muted': '#9F9FA9',
+        'border-light': 'rgba(255, 255, 255, 0.25)',
+        'border': 'rgba(255, 255, 255, 0.1)',
         primary: '#1447E6',
         'primary-hover': '#0D3BB8',
         'primary-active': '#0A2E88',

@@ -2,7 +2,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, lazy, Suspense } from 'react';
 import './index.css';
 import { Analytics } from '@vercel/analytics/react';
-import { CircleNotch } from '@phosphor-icons/react';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 import { usePageMeta } from './hooks/usePageMeta';
 
@@ -46,7 +45,7 @@ function App() {
       <ScrollToTop />
       <Suspense fallback={<LoadingFallback />}>
         <Navbar />
-        <div className="lg:ml-[284px] lg:pt-0 pt-16 flex-1 flex flex-col">
+        <div className="pt-16 lg:pt-16 flex-1 flex flex-col">
             <main className="flex-1 page-fade">
               <Routes>
                 <Route path="/" element={<Hero />} />

@@ -9,8 +9,8 @@ const About = () => {
             icon: <Factory size={24} weight="duotone" />,
             title: 'Current role',
             description: 'Head of Unit — Rumah Susu Indonesia',
-            color: 'text-accent-orange',
-            bg: 'bg-accent-orange/10',
+            color: 'text-accent-teal',
+            bg: 'bg-accent-teal/10',
             glow: 'border-glow-top-orange'
         },
         {
@@ -33,14 +33,14 @@ const About = () => {
             icon: <MapPin size={24} weight="duotone" />,
             title: 'Location',
             description: 'Bogor & Tasikmalaya',
-            color: 'text-accent-orange',
-            bg: 'bg-accent-orange/10',
+            color: 'text-accent-teal',
+            bg: 'bg-accent-teal/10',
             glow: 'border-glow-top-orange'
         },
     ];
 
     const achievements = [
-        { text: 'SOP Architecture', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-orange' },
+        { text: 'SOP Architecture', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-teal' },
         { text: 'QC Protocols', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
         { text: 'Team Coordination', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-teal' },
         { text: 'Production Scaling', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
@@ -50,7 +50,7 @@ const About = () => {
             <section id="about" className="py-[72px] px-6 lg:py-0 lg:min-h-screen lg:flex lg:items-center bg-background relative overflow-hidden">
                 <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
                 <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-teal/6 blur-[100px] rounded-full pointer-events-none"></div>
-                <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
+                <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-teal/4 blur-[80px] rounded-full pointer-events-none"></div>
                 
                 <div className="container mx-auto px-6 max-w-[1400px]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

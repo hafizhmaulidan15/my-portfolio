@@ -17,7 +17,7 @@ const Experience = () => {
             description: 'Leading end-to-end production operations for pasteurized milk (25k cups/batch). Developed SOPs from scratch, managing supply chain coordination with local dairy cooperatives (KPS). Implemented digital inventory systems with 100% accuracy and real-time production monitoring.',
             type: 'leadership',
             icon: <Factory size={18} weight="bold" />,
-            color: 'accent-orange',
+            color: 'accent-teal',
             metrics: [
                 { value: '25K', label: 'units/batch', color: 'text-primary' },
                 { value: '100%', label: 'inventory accuracy', color: 'text-accent-teal' }
@@ -78,7 +78,7 @@ const Experience = () => {
             date: '2025 - 2028',
             description: 'Certified competency in disaster recovery, system analysis, and industrial hardware maintenance.',
             icon: <ShieldCheck size={20} weight="duotone" />,
-            color: 'accent-orange'
+            color: 'accent-teal'
         },
         {
             title: 'Google Analytics Specialist',
@@ -105,7 +105,7 @@ const Experience = () => {
             date: '2022',
             description: 'Selected from 800+ candidates for international student exchange program focused on Network Security and Wireshark, collaborating with ASEAN peers in Malaysia.',
             icon: <Globe size={20} weight="duotone" />,
-            color: 'accent-orange'
+            color: 'accent-teal'
         },
         {
             title: 'Hafidz Al-Quran (30 Juz)',
@@ -118,9 +118,8 @@ const Experience = () => {
 
     const getColorClasses = (color) => {
         const colors = {
-            'accent-orange': { bg: 'bg-accent-orange/10', border: 'border-accent-orange/30', text: 'text-accent-orange', glow: 'group-hover:shadow-[0_0_30px_rgba(240,81,0,0.12)]', line: 'from-accent-orange/50' },
-            'primary': { bg: 'bg-primary/10', border: 'border-primary/30', text: 'text-primary', glow: 'group-hover:shadow-[0_0_30px_rgba(20,71,230,0.12)]', line: 'from-primary/50' },
             'accent-teal': { bg: 'bg-accent-teal/10', border: 'border-accent-teal/30', text: 'text-accent-teal', glow: 'group-hover:shadow-[0_0_30px_rgba(0,149,136,0.12)]', line: 'from-accent-teal/50' },
+            'primary': { bg: 'bg-primary/10', border: 'border-primary/30', text: 'text-primary', glow: 'group-hover:shadow-[0_0_30px_rgba(20,71,230,0.12)]', line: 'from-primary/50' },
             'success': { bg: 'bg-success/10', border: 'border-success/30', text: 'text-success', glow: 'group-hover:shadow-[0_0_30px_rgba(0,187,127,0.12)]', line: 'from-success/50' },
         };
         return colors[color] || colors.primary;
@@ -128,7 +127,7 @@ const Experience = () => {
 
     return (
         <section id="experience" className="py-[72px] px-6 bg-background relative overflow-hidden">
-            <div className="absolute top-1/3 -left-32 w-64 h-64 bg-accent-orange/5 blur-[80px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/3 -left-32 w-64 h-64 bg-accent-teal/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/3 -right-32 w-64 h-64 bg-accent-teal/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute top-2/3 left-1/3 w-48 h-48 bg-primary/4 blur-[60px] rounded-full pointer-events-none"></div>
 
@@ -163,7 +162,7 @@ const Experience = () => {
                                         <div className={`absolute left-0 top-1.5 w-[23px] h-[23px] rounded-full bg-background border-2 ${colors.border} transition-all z-10 flex items-center justify-center`}>
                                             <div className={`w-2 h-2 rounded-full ${colors.bg.replace('/10', '/50')} ${colors.text} transition-colors`}></div>
                                         </div>
-                                        <div className="space-y-2 p-4 rounded-md bg-surface/50 group-hover:bg-surface transition-all border border-transparent group-hover:border-border">
+                                        <div className="space-y-2 p-4 rounded-md bg-surface/50 group-hover:bg-surface transition-all duration-300 shadow-[0_0_0_rgba(20,71,230,0)] group-hover:shadow-[0_0_25px_rgba(20,71,230,0.06)] border border-transparent group-hover:border-border">
                                             <div className="flex items-center gap-3 flex-wrap">
                                                 <span className="text-xs font-mono text-text-tertiary uppercase tracking-widest">{exp.date}</span>
                                                 {exp.type === 'leadership' && (

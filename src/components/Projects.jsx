@@ -103,7 +103,7 @@ const Projects = () => {
             ],
             impact: 'Pivoted engineering precision into operational leadership, managing high-capacity industrial systems.',
             skills: ['Operational Strategy', 'Project Lifecycle', 'Supply Chain Management', 'SOP Architecture'],
-            color: 'text-accent-orange',
+            color: 'text-accent-teal',
             stats: [
                 { value: '25K', label: 'Batch Capacity' },
                 { value: '100%', label: 'SOP Compliance' },
@@ -358,14 +358,16 @@ const Projects = () => {
     return (
         <section id="projects" className="py-[72px] px-6 bg-background relative">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 blur-[100px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-teal/4 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-6 max-w-[1400px]">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
                     <div className="space-y-3">
-                        <div className="h-0.5 w-10 bg-gradient-to-r from-primary to-accent-teal"></div>
+                        <div className="flex items-center gap-3 text-primary font-mono text-sm tracking-widest uppercase">
+                            <span>// Portfolio</span>
+                        </div>
                         <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
-                            Strategic <span className="text-gradient-cool">execution</span>
+                            Strategic <span className="text-gradient-primary">execution</span>
                         </h2>
                         <p className="text-text-secondary max-w-[55ch] text-[16px] leading-relaxed">
                             A portfolio of precision, orchestrating the intersection of Operations, Engineering, and Data.
@@ -394,8 +396,9 @@ const Projects = () => {
                     {filteredProjects.map((project) => (
                         <GlassPanel 
                             key={project.id} 
+                            variant="elevated"
                             overflowVisible
-                            className="flex flex-col h-full border-border/50 hover:border-primary/20 transition-all group"
+                            className="flex flex-col h-full group"
                         >
                             {/* Icon */}
                             <div className="mb-5">
