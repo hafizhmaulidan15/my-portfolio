@@ -23,12 +23,12 @@ const Skills = () => {
     const skillGroups = [
         {
             title: 'Operations & Leadership',
-            accentColor: 'text-accent-orange',
-            iconBg: 'bg-accent-orange/10',
-            borderColor: 'hover:border-accent-orange/30',
-            glow: 'hover:shadow-[0_0_20px_rgba(240,81,0,0.08)]',
-            tagColor: 'bg-accent-orange/10 text-accent-orange border-accent-orange/20',
-            gradient: 'from-accent-orange to-warning',
+            accentColor: 'text-accent-teal',
+            iconBg: 'bg-accent-teal/10',
+            borderColor: 'hover:border-accent-teal/30',
+            glow: 'hover:shadow-[0_0_20px_rgba(0,149,136,0.08)]',
+            tagColor: 'bg-accent-teal/10 text-accent-teal border-accent-teal/20',
+            gradient: 'from-accent-teal to-primary',
             skills: [
                 { 
                     name: 'SOP Development', 
@@ -192,7 +192,7 @@ const Skills = () => {
         <section id="skills" className="py-[72px] px-6 bg-background relative overflow-hidden">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-teal/5 blur-[100px] rounded-full pointer-events-none"></div>
-            <div className="absolute top-1/2 left-0 w-72 h-72 bg-accent-orange/4 blur-[80px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/2 left-0 w-72 h-72 bg-accent-teal/4 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-6 max-w-[1400px] space-y-12">
                 {skillGroups.map((group, groupIdx) => (

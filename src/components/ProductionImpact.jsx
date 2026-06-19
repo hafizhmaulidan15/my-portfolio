@@ -188,7 +188,7 @@ const ProductionImpact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                <SkeletonMetricCard accent="border-l-accent-orange" />
+                <SkeletonMetricCard accent="border-l-primary" />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -232,9 +232,9 @@ const ProductionImpact = () => {
                 label="Reject Rate"
                 value={data.rejectRate + '%'}
                 subtitle="from cup 130 ml production"
-                color="text-accent-orange"
-                bg="bg-accent-orange/10"
-                accent="border-l-accent-orange"
+                color="text-primary"
+                bg="bg-primary/10"
+                accent="border-l-primary"
               />
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
