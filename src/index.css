@@ -21,6 +21,7 @@
     font-display: swap;
     overflow-x: hidden;
     width: 100%;
+    -webkit-overflow-scrolling: touch;
   }
 
   body::before {
@@ -489,6 +490,8 @@
   .page-fade {
     animation: pageFadeIn 0.25s ease-out;
   }
+
+
 
   @keyframes pageFadeIn {
     from { opacity: 0; transform: translateY(8px); }
