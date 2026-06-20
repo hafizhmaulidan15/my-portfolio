@@ -120,7 +120,7 @@ const Experience = () => {
     };
 
     return (
-        <section id="experience" className="py-12 md:py-[72px] px-6 bg-background relative overflow-hidden">
+        <section id="experience" className="py-12 md:py-[72px] bg-background relative overflow-hidden">
             <div className="absolute top-1/3 -left-32 w-64 h-64 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/3 -right-32 w-64 h-64 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute top-2/3 left-1/3 w-48 h-48 bg-primary/4 blur-[60px] rounded-full pointer-events-none"></div>
@@ -134,7 +134,7 @@ const Experience = () => {
                                 <Briefcase size={18} weight="bold" />
                                 <span>Career path</span>
                             </div>
-                            <h2 className="text-[24px] font-semibold tracking-tight text-foreground">
+                            <h2 className="text-[22px] md:text-[24px] font-semibold tracking-tight text-foreground">
                                 Professional <span className="text-gradient-primary">experience</span>
                             </h2>
                         </div>
@@ -198,13 +198,13 @@ const Experience = () => {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-5 space-y-8">
+                    <div className="lg:col-span-5 space-y-6 md:space-y-8">
                         <div className="space-y-3">
                             <div className="flex items-center gap-3 text-text-tertiary font-mono text-sm tracking-widest uppercase">
                                 <Certificate size={18} weight="bold" />
                                 <span>Verification</span>
                             </div>
-                            <h2 className="text-[24px] font-semibold tracking-tight text-foreground">
+                            <h2 className="text-[22px] md:text-[24px] font-semibold tracking-tight text-foreground">
                                 Core <span className="text-gradient-warm">certified</span>
                             </h2>
                         </div>
@@ -226,7 +226,7 @@ const Experience = () => {
                                             </div>
                                             <div className="space-y-1.5">
                                                 <div className="flex justify-between items-start">
-                                                    <h4 className={`font-semibold text-[16px] ${colors.text}`}>{cert.title}</h4>
+                                                    <h4 className={`font-semibold text-sm md:text-[16px] ${colors.text}`}>{cert.title}</h4>
                                                     <span className="text-[10px] font-mono text-text-tertiary">{cert.date}</span>
                                                 </div>
                                                 <p className="text-xs text-text-tertiary font-medium uppercase tracking-wider">{cert.provider}</p>
@@ -285,7 +285,7 @@ const Experience = () => {
                             <ChatCircleText size={18} weight="bold" />
                             <span>What collaborators say</span>
                         </div>
-                        <h2 className="text-[24px] font-semibold tracking-tight text-foreground">
+                        <h2 className="text-[22px] md:text-[24px] font-semibold tracking-tight text-foreground">
                             Trusted by <span className="text-gradient-primary">peers</span>
                         </h2>
                     </div>

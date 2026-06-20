@@ -17,7 +17,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section id="home" className="relative h-[100dvh] flex items-center justify-center px-6 overflow-hidden bg-background">
+        <section id="home" className="relative h-[100dvh] flex items-center justify-center overflow-hidden bg-background">
             <div className="fixed inset-0 z-0 pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black_40%,transparent_100%)]"></div>
             </div>
@@ -122,11 +122,11 @@ const Hero = () => {
                                 <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-2 sm:pt-3 mt-auto">
                                     <div>
                                         <div className="text-[11px] sm:text-xs md:text-sm font-bold font-mono text-primary">25K</div>
-                                        <div className="text-[7px] sm:text-[8px] md:text-[9px] text-text-tertiary uppercase tracking-wider">Batch</div>
+                                        <div className="text-[8px] sm:text-[9px] md:text-[10px] text-text-tertiary uppercase tracking-wider">Batch</div>
                                     </div>
                                     <div>
                                         <div className="text-[11px] sm:text-xs md:text-sm font-bold font-mono text-accent-blue">E2E</div>
-                                        <div className="text-[7px] sm:text-[8px] md:text-[9px] text-text-tertiary uppercase tracking-wider">Chain</div>
+                                        <div className="text-[8px] sm:text-[9px] md:text-[10px] text-text-tertiary uppercase tracking-wider">Chain</div>
                                     </div>
                                 </div>
                             </GlassPanel>
@@ -140,7 +140,7 @@ const Hero = () => {
                                 <h2 className="text-xs sm:text-sm md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Operations Management</h2>
                                 <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 mt-auto">
                                     {['SOP Dev', 'QC', 'Supply Chain', 'Team Lead'].map((s) => (
-                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[7px] sm:text-[8px] md:text-[9px] font-mono uppercase tracking-wider">
+                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[8px] sm:text-[9px] md:text-[10px] font-mono uppercase tracking-wider">
                                             {s}
                                         </span>
                                     ))}
@@ -156,7 +156,7 @@ const Hero = () => {
                                 <h2 className="text-xs sm:text-sm md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Core Competencies</h2>
                                 <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 mt-auto">
                                     {['Prod Planning', 'Process Opt', 'BPOM', 'Cold Chain'].map((s) => (
-                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[7px] sm:text-[8px] md:text-[9px] font-mono uppercase tracking-wider">
+                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[8px] sm:text-[9px] md:text-[10px] font-mono uppercase tracking-wider">
                                             {s}
                                         </span>
                                     ))}

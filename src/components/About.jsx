@@ -80,7 +80,7 @@ const About = () => {
                                 </motion.div>
 
                                 <div className="space-y-3 text-center md:text-left">
-                                    <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
+                                    <h2 className="text-[22px] sm:text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
                                         Operations & Production <span className="text-gradient-primary">Leader</span>
                                     </h2>
                                     

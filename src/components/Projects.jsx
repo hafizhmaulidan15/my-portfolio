@@ -116,7 +116,7 @@ const Projects = () => {
         : projects.filter(project => project.category === activeCategory);
 
     return (
-        <section id="projects" className="py-12 md:py-[72px] px-6 bg-background relative">
+        <section id="projects" className="py-12 md:py-[72px] bg-background relative">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
 
@@ -196,7 +196,7 @@ const Projects = () => {
                                     {project.stats.map((stat, i) => (
                                         <div key={i} className="bg-primary/5 rounded-sm p-1.5 sm:p-2 text-center">
                                             <div className="text-[11px] sm:text-[13px] font-semibold text-foreground">{stat.value}</div>
-                                            <div className="text-[7px] sm:text-[8px] font-mono text-text-tertiary uppercase tracking-wider mt-0.5">{stat.label}</div>
+                                            <div className="text-[8px] sm:text-[9px] font-mono text-text-tertiary uppercase tracking-wider mt-0.5">{stat.label}</div>
                                         </div>
                                     ))}
                                 </div>

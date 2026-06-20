@@ -148,7 +148,7 @@ const ProductionImpact = () => {
   const showContent = data && !error;
 
   return (
-    <section id="impact" className="py-12 md:py-[72px] px-6 bg-background relative overflow-hidden">
+    <section id="impact" className="py-12 md:py-[72px] bg-background relative overflow-hidden">
       <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
 
