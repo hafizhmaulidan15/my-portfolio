@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { 
     Briefcase, Certificate, TerminalWindow, 
     Code, Globe, Wrench, ShieldCheck, ChartBarHorizontal,
-    Factory, ChartLineUp, GraduationCap, Circle, Student,
+    Factory, ChartLineUp, GraduationCap, Student,
     ChatCircleText
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
@@ -107,13 +107,7 @@ const Experience = () => {
             icon: <Globe size={20} weight="duotone" />,
             color: 'accent-blue'
         },
-        {
-            title: 'Hafidz Al-Quran (30 Juz)',
-            provider: 'Personal Achievement',
-            description: 'Completed Quran memorization 2018-2020. Demonstrates discipline, focus, and integrity.',
-            icon: <Circle size={20} weight="duotone" />,
-            color: 'success'
-        },
+
     ];
 
     const getColorClasses = (color) => {
@@ -126,15 +120,15 @@ const Experience = () => {
     };
 
     return (
-        <section id="experience" className="py-[72px] px-6 bg-background relative overflow-hidden">
+        <section id="experience" className="py-12 md:py-[72px] px-6 bg-background relative overflow-hidden">
             <div className="absolute top-1/3 -left-32 w-64 h-64 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/3 -right-32 w-64 h-64 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
             <div className="absolute top-2/3 left-1/3 w-48 h-48 bg-primary/4 blur-[60px] rounded-full pointer-events-none"></div>
 
-            <div className="container mx-auto px-6 max-w-[1400px]">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
                     
-                    <div className="lg:col-span-7 space-y-8">
+                    <div className="lg:col-span-7 space-y-6 md:space-y-8">
                         <div className="space-y-3">
                             <div className="flex items-center gap-3 text-primary font-mono text-sm tracking-widest uppercase">
                                 <Briefcase size={18} weight="bold" />
@@ -145,7 +139,7 @@ const Experience = () => {
                             </h2>
                         </div>
 
-                        <div className="space-y-6 relative">
+                        <div className="space-y-4 md:space-y-6 relative">
                             <div className="absolute left-[11px] top-4 bottom-4 w-px bg-gradient-to-b from-primary via-accent-blue/30 to-transparent"></div>
                             
                             {experiences.map((exp, idx) => {
@@ -162,7 +156,7 @@ const Experience = () => {
                                         <div className={`absolute left-0 top-1.5 w-[23px] h-[23px] rounded-full bg-background border-2 ${colors.border} transition-all z-10 flex items-center justify-center`}>
                                             <div className={`w-2 h-2 rounded-full ${colors.bg.replace('/10', '/50')} ${colors.text} transition-colors`}></div>
                                         </div>
-                                        <div className="space-y-2 p-4 rounded-md bg-surface/60 group-hover:bg-surface backdrop-blur-sm shadow-floating group-hover:shadow-lifted">
+                                        <div className="space-y-1.5 md:space-y-2 p-3 sm:p-4 rounded-md bg-surface/60 group-hover:bg-surface backdrop-blur-sm shadow-floating group-hover:shadow-lifted">
                                             <div className="flex items-center gap-3 flex-wrap">
                                                 <span className="text-xs font-mono text-text-tertiary uppercase tracking-widest">{exp.date}</span>
                                                 {exp.type === 'leadership' && (
@@ -296,32 +290,32 @@ const Experience = () => {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <GlassPanel variant="overlap" className="p-6 flex flex-col gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <GlassPanel variant="overlap" className="p-4 sm:p-6 flex flex-col gap-3 sm:gap-4">
                             <div className="relative">
                                 <span className="text-4xl text-primary/20 font-serif absolute -top-2 -left-1 leading-none select-none">&ldquo;</span>
                                 <p className="text-sm text-text-secondary leading-relaxed relative z-10 pl-4">
-                                    I am pleased to recommend Hafizh Maulidan as a highly capable Automation Engineer. He has demonstrated strong expertise in IoT, embedded systems, and automation during his internships and academic journey. Beyond technical skill, Hafizh is a quick learner with excellent communication, making him a valuable team contributor in any engineering environment.
+                                    Hafizh has demonstrated exceptional capability in building Rumah Susu Indonesia's Tasikmalaya unit from the ground up. His systematic approach to operations — from SOP architecture to cold chain management — has been instrumental in scaling our dairy production. A sharp problem-solver who combines technical precision with strong on-ground execution.
                                 </p>
                             </div>
                             <div className="mt-auto pt-3">
-                                <div className="font-semibold text-sm text-foreground">Muhammad Haikal Ramadhika</div>
-                                <div className="text-[11px] text-text-tertiary">Junior Network Engineer</div>
-                                <div className="text-[10px] text-text-tertiary/60 italic mt-1">Previously worked alongside on IoT and automation projects</div>
+                                <div className="font-semibold text-sm text-foreground">Pak Rio Adhari</div>
+                                <div className="text-[11px] text-text-tertiary">Management — Rumah Susu Indonesia</div>
+                                <div className="text-[10px] text-text-tertiary/60 italic mt-1">Direct supervisor at the Tasikmalaya unit</div>
                             </div>
                         </GlassPanel>
 
-                        <GlassPanel variant="overlap" className="p-6 flex flex-col gap-4">
+                        <GlassPanel variant="overlap" className="p-4 sm:p-6 flex flex-col gap-3 sm:gap-4">
                             <div className="relative">
                                 <span className="text-4xl text-primary/20 font-serif absolute -top-2 -left-1 leading-none select-none">&ldquo;</span>
                                 <p className="text-sm text-text-secondary leading-relaxed relative z-10 pl-4">
-                                    I had the pleasure of working alongside Hafizh, an outstanding Front-End Developer with exceptional technical skills and an incredible eye for detail. Hafizh consistently impressed our team with his ability to translate complex design concepts into seamless, user-friendly interfaces.
+                                    Working with Hafizh at Rumah Susu Indonesia showed me how an engineering mindset transforms operations. He doesn't just manage production — he redesigns the systems behind it. His work on cold chain upgrades, QC protocols, and the quality prediction dashboard proves he thinks at a level most operators don't.
                                 </p>
                             </div>
                             <div className="mt-auto pt-3">
-                                <div className="font-semibold text-sm text-foreground">Angga Eben Ezer</div>
-                                <div className="text-[11px] text-text-tertiary">Business Analyst, BCA</div>
-                                <div className="text-[10px] text-text-tertiary/60 italic mt-1">Former teammate at PT Matra Kreasi Mandiri</div>
+                                <div className="font-semibold text-sm text-foreground">Pak Trie Haryanto</div>
+                                <div className="text-[11px] text-text-tertiary">Production — Rumah Susu Indonesia Tasikmalaya</div>
+                                <div className="text-[10px] text-text-tertiary/60 italic mt-1">Direct collaborator on daily production and cheese processing</div>
                             </div>
                         </GlassPanel>
                     </div>

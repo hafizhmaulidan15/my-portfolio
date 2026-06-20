@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { 
-    Globe, Code, Cpu, Drop, Pulse, 
-    Plant, Lightbulb, ChartBar, Database, 
-    TrendUp,
-    Factory, Waves, BookOpen, Lightning, Shield
+    Globe, Pulse, 
+    Database,
+    Factory,
+    ChartBar, ChartPieSlice, UserCheck
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 import { cn } from '../lib/utils';
@@ -50,10 +50,9 @@ const Projects = () => {
             description: 'ML model predicting pasteurized milk quality grade (A/B/C/Reject) from 7 production parameters with 0.92 F1 weighted score.',
             responsibilities: [
                 'Built Random Forest + XGBoost models achieving 0.92 F1 weighted across all quality grades.',
-                'Implemented SHAP explainability for regulatory-grade feature importance analysis (pH & suhu dominant).',
+                'Implemented SHAP explainability for regulatory-grade feature importance analysis.',
                 'Developed FastAPI backend with real-time prediction endpoint (<15ms inference time).',
-                'Built Next.js dashboard with interactive visualization, prediction history, and actionable recommendations.',
-                'Containerized fullstack application with Docker Compose for production deployment.'
+                'Built Next.js dashboard with interactive visualization, prediction history, and actionable recommendations.'
             ],
             impact: 'First ML-driven quality prediction system for dairy — combining data science with food safety in Indonesian dairy context.',
             skills: ['Python', 'scikit-learn', 'XGBoost', 'SHAP', 'FastAPI', 'Next.js', 'Docker'],
@@ -94,7 +93,7 @@ const Projects = () => {
             role: 'Head of Unit',
             roleType: 'lead',
             category: 'ops',
-            description: 'Orchestrating end-to-end production architecture and strategic SOPs for industrial-scale dairy processing.',
+            description: 'Orchestrating end-to-end production architecture and SOPs for dairy processing.',
             responsibilities: [
                 'Engineered production workflows for 25,000 units per batch, optimizing throughput.',
                 'Developed comprehensive QC protocols and supply chain management strategies.',
@@ -102,7 +101,7 @@ const Projects = () => {
                 'Strategized distribution logistics and sustainable waste management.'
             ],
             impact: 'Pivoted engineering precision into operational leadership, managing high-capacity industrial systems.',
-            skills: ['Operational Strategy', 'Project Lifecycle', 'Supply Chain Management', 'SOP Architecture'],
+            skills: ['Operational Strategy', 'QCMilk', 'Cold Chain', 'SOP Architecture'],
             color: 'text-accent-blue',
             stats: [
                 { value: '25K', label: 'Batch Capacity' },
@@ -110,245 +109,6 @@ const Projects = () => {
                 { value: 'Cross-team', label: 'Coordination' }
             ]
         },
-        {
-            id: 1,
-            title: 'DR.MATT Company Profile',
-            period: 'Aug 2024 - Nov 2024',
-            association: 'PT Matra Kreasi Mandiri',
-            icon: <Globe size={28} weight="duotone" />,
-            role: 'Frontend Developer',
-            roleType: 'developer',
-            category: 'web',
-            description: 'Architected a high-performance company profile for an Industry 4.0 technology platform.',
-            responsibilities: [
-                'Developed responsive interfaces ensuring brand consistency.',
-                'Collaborated with design teams to refine UI/UX flow.',
-                'Optimized page performance using modern web technologies.',
-                'Troubleshot and resolved complex UI/UX bottlenecks.'
-            ],
-            impact: 'Strengthened system management control in a real-world Industry 4.0 development environment.',
-            skills: ['React', 'JavaScript', 'Tailwind', 'Git', 'UI/UX'],
-            color: 'text-primary',
-            link: 'https://drmatt.id/'
-        },
-        {
-            id: 2,
-            title: 'Flood Detection & Monitoring System',
-            period: '2024',
-            association: 'PT Matra Kreasi Mandiri',
-            icon: <Drop size={28} weight="duotone" />,
-            role: 'IoT Developer',
-            roleType: 'team',
-            category: 'iot',
-            description: 'Real-time water level and flow rate tracking with 4-level alert system and automated notifications.',
-            responsibilities: [
-                'Integrated ESP32 with Ultrasonic and YF-S201 flow sensors.',
-                'Built Arduino Cloud dashboard for real-time monitoring.',
-                'Implemented 4-level alert system with automated Telegram notifications.',
-                'Designed hardware calibration and wiring validation protocols.'
-            ],
-            impact: 'Deployed operational flood monitoring system with cloud integration for early warning.',
-            skills: ['ESP32', 'Arduino', 'Sensors', 'MQTT', 'IoT Cloud'],
-            color: 'text-accent-blue',
-            stats: [
-                { value: '4-Level', label: 'Alert System' },
-                { value: 'Real-time', label: 'Cloud Dashboard' },
-                { value: 'Auto', label: 'Notifications' }
-            ]
-        },
-        {
-            id: 3,
-            title: 'Advanced Banana Ripeness Detection',
-            period: 'Oct 2024 - Nov 2024',
-            association: 'UIN Jakarta',
-            icon: <Cpu size={28} weight="duotone" />,
-            role: 'IoT Developer',
-            roleType: 'team',
-            category: 'iot',
-            description: 'IoT-based spectral analysis system for agricultural quality control using color sensors.',
-            responsibilities: [
-                'Utilized TCS34725 sensors for RGB-based ripeness classification.',
-                'Built real-time monitoring via ESP32 & Arduino IoT Cloud.',
-                'Integrated J5019 modules for localized LCD status feedback.',
-                'Developed Fuzzy Logic algorithm for predictive classification.'
-            ],
-            impact: 'Achieved validated accuracy in automated fruit ripeness classification system.',
-            skills: ['ESP32', 'C++', 'IoT Cloud', 'Fuzzy Logic', 'Embedded Systems'],
-            color: 'text-primary'
-        },
-        {
-            id: 4,
-            title: 'NanoRobotic Website',
-            period: 'Sep 2025 - Jan 2026',
-            association: 'PT Matra Kreasi Mandiri',
-            icon: <Globe size={28} weight="duotone" />,
-            role: 'Full-Stack Developer',
-            roleType: 'lead',
-            category: 'web',
-            description: 'End-to-end responsive educational platform with WhatsApp API integration.',
-            responsibilities: [
-                'Developed responsive landing page from concept to deployment.',
-                'Integrated WhatsApp API for contact forms and Join Now features.',
-                'Engineered mobile-first interfaces using Bootstrap, HTML5, CSS3.',
-                'Implemented SEO strategies with semantic HTML and meta tags.'
-            ],
-            impact: 'Delivered production-ready ed-tech platform with integrated communication features.',
-            skills: ['HTML', 'CSS', 'JavaScript'],
-            color: 'text-accent-blue',
-            link: 'https://nanorobotic.co.id'
-        },
-        {
-            id: 5,
-            title: 'Autonomous Fire-Fighting Robot',
-            period: '2023',
-            association: 'IPB University',
-            icon: <Cpu size={28} weight="duotone" />,
-            role: 'Embedded Developer',
-            roleType: 'team',
-            category: 'iot',
-            description: 'Autonomous robot designed for fire detection and automated suppression.',
-            responsibilities: [
-                'Integrated Arduino UNO with flame and ultrasonic sensors.',
-                'Programmed L298N motor driver for autonomous navigation.',
-                'Developed automated fire suppression mechanisms.',
-                'Tested and calibrated sensor integration for accuracy.'
-            ],
-            impact: 'Built prototype autonomous system for fire emergency response.',
-            skills: ['Arduino UNO', 'C++', 'Sensor Integration', 'Motor Control'],
-            color: 'text-primary'
-        },
-        {
-            id: 6,
-            title: 'Microgreen Cultivation Automation (Admigre)',
-            period: '2024',
-            association: 'IPB University - Published',
-            icon: <Plant size={28} weight="duotone" />,
-            role: 'IoT Developer',
-            roleType: 'team',
-            category: 'iot',
-            description: 'IoT-based automated system for optimized microgreen cultivation. Published in Jurnal Ilmiah Teknik Elektro IPB.',
-            responsibilities: [
-                'Integrated WS2812B LED for automated lighting control based on growth stage.',
-                'Connected soil moisture and DHT22 sensors for environmental monitoring.',
-                'Developed ESP32-based automated irrigation and climate control.',
-                'Achieved 40% increase in growth efficiency through precise environmental control.'
-            ],
-            impact: 'Published research in Jurnal Ilmiah Teknik Elektro IPB - Contributing to sustainable agriculture technology.',
-            skills: ['ESP32', 'WS2812B', 'DHT22', 'IoT', 'Automation', 'Research'],
-            color: 'text-success',
-            link: null,
-            published: true,
-            journal: 'Jurnal Ilmiah Teknik Elektro IPB',
-            stats: [
-                { value: '40%', label: 'Growth Efficiency' },
-                { value: 'Automated', label: 'Irrigation' },
-                { value: 'Published', label: 'Research' }
-            ]
-        },
-        {
-            id: 7,
-            title: 'Water Level Detection System',
-            period: 'Aug 2024 - Sep 2024',
-            association: 'Telkom University',
-            icon: <Waves size={28} weight="duotone" />,
-            role: 'Lead Developer',
-            roleType: 'team',
-            category: 'iot',
-            description: 'Real-time water level monitoring with Telegram bot integration for instant alerts.',
-            responsibilities: [
-                'Led full product lifecycle from planning to deployment using Agile methodology.',
-                'Utilized three ultrasonic sensors and ESP32 for accurate measurement.',
-                'Developed Telegram bot integration for instant notifications on level changes.',
-                'Implemented relay control system for automated equipment response.'
-            ],
-            impact: 'Reduced emergency response time by 40% through instant alert system.',
-            skills: ['ESP32', 'Telegram Bot', 'Relay Control', 'Agile', 'Ultrasonic'],
-            color: 'text-accent-blue',
-            stats: [
-                { value: '40%', label: 'Faster Response' },
-                { value: '3', label: 'Ultrasonic Sensors' },
-                { value: 'Instant', label: 'Telegram Alerts' }
-            ]
-        },
-        {
-            id: 8,
-            title: 'Curug Cikoneng LED Decoration',
-            period: 'Jul 2023 - Oct 2023',
-            association: 'Curug Cikoneng Tourist Attraction',
-            icon: <Lightbulb size={28} weight="duotone" />,
-            role: 'Electrical & Firmware Engineer',
-            roleType: 'team',
-            category: 'iot',
-            description: 'Large-scale programmable LED lighting system for tourist attraction with web dashboard control.',
-            responsibilities: [
-                'Designed time-based and environment-based LED control using RTC DS3231.',
-                'Developed responsive web dashboard for real-time monitoring and control.',
-                'Managed power distribution calculation for extensive WS2812B LED arrays.',
-                'Executed on-site installation with IP65 weatherproofing compliance.'
-            ],
-            impact: 'Successfully installed and commissioned outdoor LED system with 24/7 reliability.',
-            skills: ['ESP32', 'WS2812B', 'RTC', 'Web Dashboard', 'Power Management', 'Field Installation'],
-            color: 'text-primary'
-        },
-        {
-            id: 9,
-            title: 'IDX Market Screener',
-            period: 'Dec 2025',
-            association: 'Personal Project',
-            icon: <TrendUp size={28} weight="duotone" />,
-            role: 'ML Developer',
-            roleType: 'individual',
-            category: 'data',
-            description: 'Machine learning system screening 660+ IDX companies for breakout signals.',
-            responsibilities: [
-                'Built volume surge detection with 1.2x multiplier tracking.',
-                'Implemented RandomForestClassifier for movement prediction.',
-                'Developed ATR-based volatility calculators for Stop-Loss levels.'
-            ],
-            impact: 'Automated complex technical analysis for high-probability trade setups.',
-            skills: ['Python', 'Pandas', 'Scikit-Learn', 'ML'],
-            color: 'text-primary'
-        },
-        {
-            id: 10,
-            title: 'Internal Monitoring Dashboard',
-            period: '2024',
-            association: 'PT Matra Kreasi Mandiri',
-            icon: <Database size={28} weight="duotone" />,
-            role: 'Full-Stack Developer',
-            roleType: 'team',
-            category: 'web',
-            description: 'Web-based real-time monitoring dashboard for IoT sensor data with automated alerts.',
-            responsibilities: [
-                'Developed MySQL database for historical sensor data storage and retrieval.',
-                'Utilized Python for backend scripting and data processing.',
-                'Integrated real-time data streaming with WebSocket protocol.',
-                'Created automated alert system with multi-level triggers.'
-            ],
-            impact: 'Enabled management to make immediate data-backed decisions with real-time visualization.',
-            skills: ['MySQL', 'Python', 'WebSocket', 'Dashboard', 'Data Visualization'],
-            color: 'text-primary'
-        },
-        {
-            id: 11,
-            title: 'WordPress Security Analysis',
-            period: '2024',
-            association: 'Security Research',
-            icon: <Shield size={28} weight="duotone" />,
-            role: 'Security Analyst',
-            roleType: 'individual',
-            category: 'data',
-            description: 'Comprehensive CMS security analysis identifying vulnerabilities and providing mitigation strategies.',
-            responsibilities: [
-                'Conducted vulnerability assessment using WPScan tool.',
-                'Identified SQL Injection and XSS vulnerabilities in WordPress sites.',
-                'Documented security findings and recommended mitigation techniques.',
-                'Implemented security hardening for protected web administration.'
-            ],
-            impact: 'Provided comprehensive security recommendations for safe web management practices.',
-            skills: ['WPScan', 'SQL Injection', 'XSS', 'Security Analysis', 'Penetration Testing'],
-            color: 'text-primary'
-        }
     ];
 
     const filteredProjects = activeCategory === 'all'
@@ -356,31 +116,31 @@ const Projects = () => {
         : projects.filter(project => project.category === activeCategory);
 
     return (
-        <section id="projects" className="py-[72px] px-6 bg-background relative">
+        <section id="projects" className="py-12 md:py-[72px] px-6 bg-background relative">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
 
-            <div className="container mx-auto px-6 max-w-[1400px]">
-                <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
-                    <div className="space-y-3">
-                        <div className="flex items-center gap-3 text-primary font-mono text-sm tracking-widest uppercase">
+            <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6 mb-8 md:mb-12">
+                    <div className="space-y-2 md:space-y-3">
+                        <div className="flex items-center gap-2 md:gap-3 text-primary font-mono text-[11px] md:text-sm tracking-widest uppercase">
                             <span>// Portfolio</span>
                         </div>
-                        <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
+                        <h2 className="text-[22px] md:text-[24px] lg:text-[28px] font-semibold tracking-tight text-foreground">
                             Strategic <span className="text-gradient-primary">execution</span>
                         </h2>
-                        <p className="text-text-secondary max-w-[55ch] text-[16px] leading-relaxed">
+                        <p className="text-text-secondary max-w-[55ch] text-sm md:text-[16px] leading-relaxed">
                             A portfolio of precision, orchestrating the intersection of Operations, Engineering, and Data.
                         </p>
                     </div>
 
-                    <div className="flex bg-surface/50 p-1 gap-1 rounded">
-                        {['all', 'ops', 'iot', 'web', 'data'].map((cat) => (
+                    <div className="flex bg-surface/50 p-1 gap-1 rounded overflow-x-auto w-full sm:w-auto">
+                        {['all', 'ops', 'web', 'data'].map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={cn(
-                                    "px-3 py-1.5 rounded-sm text-[10px] font-medium uppercase tracking-widest transition-all duration-200",
+                                    "px-2.5 sm:px-3 py-1.5 rounded-sm text-[9px] sm:text-[10px] font-medium uppercase tracking-widest transition-all duration-200 shrink-0",
                                     activeCategory === cat 
                                         ? "bg-primary text-foreground" 
                                         : "text-text-tertiary hover:text-foreground"
@@ -392,7 +152,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                     {filteredProjects.map((project) => (
                         <GlassPanel 
                             key={project.id} 
@@ -432,23 +192,23 @@ const Projects = () => {
 
                             {/* Stats Mini Cards */}
                             {project.stats && project.stats.length > 0 && (
-                                <div className="grid grid-cols-3 gap-2 mb-4">
+                                <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                                     {project.stats.map((stat, i) => (
-                                        <div key={i} className="bg-primary/5 rounded-sm p-2 text-center">
-                                            <div className="text-[13px] font-semibold text-foreground">{stat.value}</div>
-                                            <div className="text-[8px] font-mono text-text-tertiary uppercase tracking-wider mt-0.5">{stat.label}</div>
+                                        <div key={i} className="bg-primary/5 rounded-sm p-1.5 sm:p-2 text-center">
+                                            <div className="text-[11px] sm:text-[13px] font-semibold text-foreground">{stat.value}</div>
+                                            <div className="text-[7px] sm:text-[8px] font-mono text-text-tertiary uppercase tracking-wider mt-0.5">{stat.label}</div>
                                         </div>
                                     ))}
                                 </div>
                             )}
 
                             {/* Description */}
-                            <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                            <p className="text-text-secondary text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
                                 {project.description}
                             </p>
 
                             {/* Bullet Points (first 3) */}
-                            <div className="space-y-1.5 mb-5 flex-grow">
+                            <div className="space-y-1 sm:space-y-1.5 mb-4 sm:mb-5 flex-grow">
                                 {project.responsibilities.slice(0, 3).map((item, i) => (
                                     <div key={i} className="flex items-start gap-2 text-[12px] text-text-tertiary leading-relaxed">
                                         <span className="text-primary/50 mt-0.5 flex-shrink-0">•</span>
@@ -458,14 +218,14 @@ const Projects = () => {
                             </div>
 
                             {/* Skills */}
-                            <div className="pt-3 flex flex-wrap gap-1.5 gap-y-1 items-center">
+                            <div className="pt-2 sm:pt-3 flex flex-wrap gap-1 sm:gap-1.5 gap-y-1 items-center">
                                 {project.skills.slice(0, 4).map((skill) => (
-                                    <span key={skill} className="px-2 py-0.5 rounded-sm bg-primary/5 text-text-secondary text-[9px] font-mono uppercase tracking-wider">
+                                    <span key={skill} className="px-1.5 sm:px-2 py-0.5 rounded-sm bg-primary/5 text-text-secondary text-[8px] sm:text-[9px] font-mono uppercase tracking-wider">
                                         {skill}
                                     </span>
                                 ))}
                                 {project.skills.length > 4 && (
-                                    <span className="text-[9px] font-mono text-text-muted">
+                                    <span className="text-[8px] sm:text-[9px] font-mono text-text-muted">
                                         +{project.skills.length - 4}
                                     </span>
                                 )}

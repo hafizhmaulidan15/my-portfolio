@@ -5,31 +5,31 @@ const pageMeta = {
   '/': {
     title: 'Muhammad Hafizh Maulidan | Operations & Production Leader',
     description: 'Head of Unit & Production Leader at Rumah Susu Indonesia. Specializing in end-to-end dairy manufacturing, process optimization, and quality systems.',
-    keywords: 'Production Leader, Operations Management, Dairy Manufacturing, Head of Unit, Quality Control, Supply Chain'
+    keywords: 'Production Leader, Operations Management, Dairy Manufacturing, Head of Unit, Quality Control, Cold Chain'
   },
   '/about': {
     title: 'About | Muhammad Hafizh Maulidan',
     description: 'Learn about my journey from IPB University to leading dairy production operations at Rumah Susu Indonesia.',
-    keywords: 'about, biography, profile, production leader'
+    keywords: 'about, biography, production leader, dairy operations'
   },
   '/skills': {
     title: 'Skills | Muhammad Hafizh Maulidan',
-    description: 'Skills in Operations Management, Production Planning, Quality Control, Supply Chain, IoT Systems, and Web Development.',
-    keywords: 'skills, operations management, production planning, quality control'
+    description: 'Skills in Operations Management, Production Planning, Quality Control, Supply Chain, and Dairy Processing.',
+    keywords: 'skills, operations management, production planning, quality control, dairy'
   },
   '/experience': {
     title: 'Experience | Muhammad Hafizh Maulidan',
     description: 'Professional experience: Head of Unit at Rumah Susu Indonesia, Frontend Developer at PT Matra Kreasi Mandiri.',
-    keywords: 'experience, work history, career, operations management'
+    keywords: 'experience, work history, career, operations management, dairy'
   },
   '/projects': {
     title: 'Projects | Muhammad Hafizh Maulidan',
-    description: 'Featured projects: Production Operations SOP, Flood Detection System, Banana Ripeness Detection, IDX Market Screener.',
-    keywords: 'projects, portfolio, production, web development'
+    description: 'Featured projects: Production Operations SOP, Milk Quality Prediction, Inventory Dashboard.',
+    keywords: 'projects, portfolio, dairy operations, production'
   },
   '/publications': {
     title: 'Publications | Muhammad Hafizh Maulidan',
-    description: 'Research publications on IoT Automation, Cybersecurity, and Fuzzy Logic applications.',
+    description: 'Research publications on IoT Automation and Engineering applications.',
     keywords: 'publications, research, papers'
   },
   '/certifications': {

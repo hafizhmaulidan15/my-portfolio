@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Student, MapPin, Envelope, Briefcase, Factory, ChartPieSlice, Trophy, Globe, Circle } from '@phosphor-icons/react';
+import { Student, MapPin, Briefcase, Factory, ChartPieSlice, Globe, Circle } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 
 
@@ -11,7 +11,7 @@ const About = () => {
             description: 'Head of Unit — Rumah Susu Indonesia',
             color: 'text-accent-blue',
             bg: 'bg-accent-blue/10',
-            glow: 'border-glow-top-orange'
+            glow: 'border-glow-top-teal'
         },
         {
             icon: <Student size={24} weight="duotone" />,
@@ -35,28 +35,28 @@ const About = () => {
             description: 'Bogor & Tasikmalaya',
             color: 'text-accent-blue',
             bg: 'bg-accent-blue/10',
-            glow: 'border-glow-top-orange'
+            glow: 'border-glow-top-teal'
         },
     ];
 
     const achievements = [
-        { text: 'SOP Architecture', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-blue' },
-        { text: 'QC Protocols', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
-        { text: 'Team Coordination', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-blue' },
-        { text: 'Production Scaling', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
+        { text: 'Cold Chain Upgrade', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-blue' },
+        { text: '<1% Reject Rate', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
+        { text: 'Traceability System', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-blue' },
+        { text: 'Quality Dashboard', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
     ];
 
     return (
-            <section id="about" className="py-[72px] px-6 lg:py-0 lg:min-h-screen lg:flex lg:items-center bg-background relative overflow-hidden">
+            <section id="about" className="py-12 md:py-[72px] lg:py-0 lg:min-h-screen lg:flex lg:items-center bg-background relative overflow-hidden">
                 <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
                 <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-blue/6 blur-[100px] rounded-full pointer-events-none"></div>
                 <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
                 
-                <div className="container mx-auto px-6 max-w-[1400px]">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
                         
-                        <div className="lg:col-span-7 space-y-8">
-                            <div className="flex flex-col md:flex-row gap-8 items-center md:items-end">
+                        <div className="lg:col-span-7 space-y-6 md:space-y-8">
+                            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-end">
                                 <motion.div 
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
@@ -87,21 +87,21 @@ const About = () => {
                                 </div>
                             </div>
 
-                            <div className="space-y-6 text-text-secondary text-[16px] leading-relaxed max-w-[65ch]">
+                            <div className="space-y-4 md:space-y-6 text-text-secondary text-sm md:text-[16px] leading-relaxed max-w-[65ch]">
                                 <p>
-                                    My background in engineering from IPB University instilled a structured, systematic approach to problem-solving—rooted in technical planning, process optimization, and attention to detail. I see operations not as isolated tasks, but as interconnected systems that demand clarity, measurement, and continuous improvement.
+                                    I joined Rumah Susu Indonesia in March 2026 as part of a new unit in Tasikmalaya. Alongside a lean team of <span className="text-foreground font-medium">four people</span>, I helped set up the SOP architecture, QC protocols — lactoscan analysis, peroxide tests, alcohol tests — and establish the cold chain and production workflows, processing <span className="text-foreground font-medium">2,000–3,500 liters per week</span>.
                                 </p>
                                 <p>
-                                    Currently serving as <span className="text-foreground font-medium">Head of Unit at Rumah Susu Indonesia</span>, I lead end-to-end dairy production—from raw milk receiving to distribution—with a focus on building scalable, quality-driven production systems. My engineering lens allows me to bridge technical fundamentals with real-world operational execution.
+                                    Beyond volume, I worked on a cold chain upgrade — reinforced belts so delivery boxes wouldn't crack in transit — set up a <span className="text-foreground font-medium">3-batch sample retention</span> system to trace spoilage, and built a milk quality dashboard tracking pH, TS, and added water in real time. Reject rates stayed under <span className="text-foreground font-medium">1%</span>. Products: pasteurized milk and moza cheese, with yogurt on the roadmap.
                                 </p>
                                 
                                 <div className="pt-4">
                                     <h4 className="text-sm font-medium text-text-tertiary uppercase tracking-widest mb-4">Key achievements</h4>
-                                    <div className="flex flex-wrap gap-3">
+                                    <div className="flex flex-wrap gap-2 sm:gap-3">
                                         {achievements.map((ach, idx) => (
-                                            <div key={idx} className="flex items-center gap-2 px-3 py-2 rounded-sm bg-accent-blue/10 text-accent-blue">
-                                                <span className={ach.color}>{ach.icon}</span>
-                                                <span className="text-sm text-text-secondary font-medium">{ach.text}</span>
+                                            <div key={idx} className={`flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-sm ${ach.color.replace('text-', 'bg-')}/10 ${ach.color}`}>
+                                                <span>{ach.icon}</span>
+                                                <span className="text-[12px] sm:text-sm text-text-secondary font-medium">{ach.text}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -109,22 +109,22 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-5 self-center">
-                            {infoCards.map((info, idx) => (
-                                <GlassPanel 
-                                    key={idx} 
-                                    variant="overlap"
-                                    className={`flex flex-col gap-5 group transition-all p-6 md:p-7 min-h-[160px]`}
-                                >
-                                    <div className={`p-3 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
-                                        {info.icon}
-                                    </div>
-                                    <div className="space-y-1.5">
-                                        <h4 className="font-semibold text-[17px] md:text-[18px] tracking-tight text-foreground">{info.title}</h4>
-                                        <p className="text-text-tertiary text-sm leading-snug">{info.description}</p>
-                                    </div>
-                                </GlassPanel>
-                            ))}
+                            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 self-center">
+                                {infoCards.map((info, idx) => (
+                                    <GlassPanel 
+                                        key={idx} 
+                                        variant="overlap"
+                                        className={`flex flex-col gap-3 sm:gap-5 group transition-all p-4 sm:p-6 md:p-7 min-h-[120px] sm:min-h-[160px] ${info.glow}`}
+                                    >
+                                        <div className={`p-2 sm:p-3 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
+                                            {info.icon}
+                                        </div>
+                                        <div className="space-y-1 sm:space-y-1.5">
+                                            <h4 className="font-semibold text-[15px] sm:text-[17px] md:text-[18px] tracking-tight text-foreground">{info.title}</h4>
+                                            <p className="text-text-tertiary text-xs sm:text-sm leading-snug">{info.description}</p>
+                                        </div>
+                                    </GlassPanel>
+                                ))}
                         </div>
 
                     </div>

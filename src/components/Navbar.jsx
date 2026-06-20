@@ -43,8 +43,8 @@ const Navbar = () => {
                                     className={cn(
                                         "px-3 py-2 text-xs font-medium tracking-wide transition-all duration-200 rounded-md",
                                         isActive
-                                            ? "text-primary bg-primary/10"
-                                            : "text-text-tertiary hover:text-foreground hover:bg-white/[0.05]"
+                            ? "text-primary bg-primary/10"
+                            : "text-text-tertiary hover:text-foreground"
                                     )}
                                 >
                                     {link.label}
@@ -59,7 +59,7 @@ const Navbar = () => {
                             href="https://github.com/hafizhmaulidan15"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-8 h-8 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground hover:border-white/[0.25] transition-all duration-200"
+                            className="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-primary transition-all duration-200"
                             aria-label="GitHub Profile"
                         >
                             <GithubLogo size={16} />
@@ -68,7 +68,7 @@ const Navbar = () => {
                             href="https://www.linkedin.com/in/hafizhmaulidan/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-8 h-8 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground hover:border-white/[0.25] transition-all duration-200"
+                            className="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-primary transition-all duration-200"
                             aria-label="LinkedIn Profile"
                         >
                             <LinkedinLogo size={16} />
@@ -88,7 +88,7 @@ const Navbar = () => {
                     </Link>
 
                     <button
-                        className="w-9 h-9 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-foreground"
+                        className="w-9 h-9 rounded-lg flex items-center justify-center text-foreground"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                     >
@@ -116,8 +116,8 @@ const Navbar = () => {
                                 className={cn(
                                     "flex items-center px-4 py-3 rounded-md transition-all duration-200 text-sm",
                                     isActive
-                                        ? "bg-primary/10 text-primary font-medium"
-                                        : "text-text-tertiary hover:text-foreground hover:bg-white/[0.05]"
+                            ? "bg-primary/10 text-primary font-medium"
+                            : "text-text-tertiary hover:text-foreground"
                                 )}
                             >
                                 {link.label}
@@ -130,7 +130,7 @@ const Navbar = () => {
                         href="https://github.com/hafizhmaulidan15"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-9 h-9 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
+                        className="w-9 h-9 rounded-lg flex items-center justify-center text-text-muted hover:text-primary transition-all duration-200"
                         aria-label="GitHub Profile"
                     >
                         <GithubLogo size={17} />
@@ -139,7 +139,7 @@ const Navbar = () => {
                         href="https://www.linkedin.com/in/hafizhmaulidan/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-9 h-9 rounded-lg bg-interactive-button border border-border flex items-center justify-center text-text-muted hover:text-foreground transition-all duration-200"
+                        className="w-9 h-9 rounded-lg flex items-center justify-center text-text-muted hover:text-primary transition-all duration-200"
                         aria-label="LinkedIn Profile"
                     >
                         <LinkedinLogo size={17} />

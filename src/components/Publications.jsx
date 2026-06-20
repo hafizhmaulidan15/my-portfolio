@@ -12,24 +12,6 @@ const Publications = () => {
             color: 'text-accent-blue',
             bg: 'bg-accent-blue/10'
         },
-        {
-            title: 'WordPress Vulnerability Analysis with WPScan and Mitigation Techniques',
-            journal: 'Journal of Internet and Software Engineering',
-            date: 'June 9, 2024',
-            description: 'Security research identifying vulnerabilities like SQL injection and XSS using WPScan, providing comprehensive mitigation strategies for web security.',
-            category: 'Cybersecurity',
-            color: 'text-primary',
-            bg: 'bg-primary/10'
-        },
-        {
-            title: 'Application of Fuzzy Logic to Predict Rice Production Quantity in Bogor Regency',
-            journal: 'Academic Research',
-            date: 'May 30, 2024',
-            description: 'Developed a prediction model using Fuzzy Mamdani logic to assist in resource allocation based on weather and humidity factors for agricultural planning.',
-            category: 'Data Science',
-            color: 'text-primary',
-            bg: 'bg-primary/10'
-        }
     ];
 
     return (
@@ -45,14 +27,14 @@ const Publications = () => {
                             Published <span className="text-gradient-cool">works</span>
                         </h2>
                         <p className="text-text-secondary max-w-[50ch] text-[16px]">
-                            Research and publications in IoT, Cybersecurity, and Data Science.
+                            Research publication in IoT and Automation engineering.
                         </p>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {publications.map((pub, index) => (
-                        <GlassPanel key={index} className="flex flex-col p-5 border-border/50 hover:border-primary/20 transition-all group h-full">
+                        <GlassPanel key={index} className="flex flex-col p-5 border-border/50 hover:border-primary/20 transition-all group h-full max-w-md">
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-2.5 ${pub.bg} rounded-sm ${pub.color} group-hover:scale-105 transition-transform`}>
                                     <BookOpen size={20} weight="duotone" />

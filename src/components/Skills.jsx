@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-    Cpu, Database, WifiHigh, Lightning, Code, ChartBar,
-    Gear, Brain, Globe, Wrench, SquaresFour, Circuitry, Cloud, TerminalWindow,
+    ChartBar,
+    Globe, Wrench, Circuitry, TerminalWindow,
     Factory, ChartPieSlice, Truck, ClipboardText, UsersThree, Pulse,
-    CaretDown, ArrowUpRight
+    Brain, CaretDown, ArrowUpRight
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 
@@ -22,7 +22,7 @@ const Skills = () => {
 
     const skillGroups = [
         {
-            title: 'Operations & Leadership',
+            title: 'Operations & Production Management',
             accentColor: 'text-accent-blue',
             iconBg: 'bg-accent-blue/10',
             borderColor: 'hover:border-accent-blue/30',
@@ -33,102 +33,55 @@ const Skills = () => {
                 { 
                     name: 'SOP Development', 
                     icon: <ClipboardText size={20} weight="duotone" />,
-                    context: 'Standardized SOP for 25K batch production, cold chain, and QC protocols at Rumah Susu Indonesia.',
-                    project: 'Production Operations SOP'
+                    context: 'Designed and implemented SOP architecture for pasteurization, QC, cold chain, and peroxide falsification testing at Rumah Susu Indonesia.',
+                    project: 'Rumah Susu Indonesia'
                 },
                 { 
-                    name: 'Supply Chain Management', 
+                    name: 'Cold Chain Management', 
                     icon: <Truck size={20} weight="duotone" />,
-                    context: 'Raw milk supply coordination with local KPS dairy cooperatives for daily production.',
-                    project: 'Production Operations SOP'
+                    context: 'Upgraded cold chain with reinforced belts to prevent box damage. Maintained 2–8°C across cooling, storage, and distribution.',
+                    project: 'Rumah Susu Indonesia'
                 },
                 { 
                     name: 'Production Planning', 
                     icon: <Factory size={20} weight="duotone" />,
-                    context: '25K units/batch capacity planning and throughput optimization.',
-                    project: 'Production Operations SOP'
+                    context: 'Managing 2,000–3,500L/week capacity across pasteurized milk and moza cheese production with a lean team of 4.',
+                    project: 'Rumah Susu Indonesia'
                 },
                 { 
                     name: 'Quality Control (QC)', 
                     icon: <ChartPieSlice size={20} weight="duotone" />,
-                    context: 'Pasteurized milk QC protocols from raw material reception to dispatch.',
-                    project: 'Production Operations SOP'
+                    context: 'Lactoscan analysis, pH/TS/added water monitoring, alcohol & peroxide tests, organoleptic evaluation. Reject rate under 1%.',
+                    project: 'Rumah Susu Indonesia'
+                },
+                { 
+                    name: 'Traceability Systems', 
+                    icon: <Pulse size={20} weight="duotone" />,
+                    context: 'Implemented 3-batch sample retention for spoilage traceability from production through delivery.',
+                    project: 'Rumah Susu Indonesia'
+                },
+                { 
+                    name: 'Supply Chain Coordination', 
+                    icon: <Globe size={20} weight="duotone" />,
+                    context: 'Raw milk supply coordination with KPS cooperatives, delivery scheduling, and stock reconciliation.',
+                    project: 'Rumah Susu Indonesia'
                 },
                 { 
                     name: 'Team Leadership', 
                     icon: <UsersThree size={20} weight="duotone" />,
-                    context: 'Leading cross-functional production team at Rumah Susu Indonesia.',
+                    context: 'Leading a 4-person production team at Rumah Susu Indonesia Tasikmalaya across all operational shifts.',
                     project: null
                 },
                 { 
-                    name: 'Project Management', 
-                    icon: <Wrench size={20} weight="duotone" />,
-                    context: 'End-to-end delivery of IoT automation and web projects using Agile methodology.',
-                    project: null
-                },
-                { 
-                    name: 'Digital Inventory Systems', 
-                    icon: <Database size={20} weight="duotone" />,
-                    context: 'Real-time stock opname monitoring via Google Sheets API dashboard.',
-                    project: 'Rumah Susu Inventory Dashboard'
-                },
-            ]
-        },
-        {
-            title: 'IoT & Embedded Systems',
-            accentColor: 'text-accent-blue',
-            iconBg: 'bg-accent-blue/10',
-            borderColor: 'hover:border-accent-blue/30',
-            glow: 'hover:shadow-[0_0_20px_rgba(80,186,255,0.08)]',
-            tagColor: 'bg-accent-blue/10 text-accent-blue',
-            gradient: 'from-accent-blue to-primary',
-            skills: [
-                { 
-                    name: 'ESP32 & Arduino', 
-                    icon: <Circuitry size={20} weight="duotone" />,
-                    context: 'Core MCU across 5+ IoT deployments for monitoring, automation, and control systems.',
-                    project: 'Flood Detection & Monitoring System'
-                },
-                { 
-                    name: 'Firmware Dev (C/C++)', 
-                    icon: <Cpu size={20} weight="duotone" />,
-                    context: 'ESP32 firmware for sensor reading, actuation logic, and MQTT communication.',
-                    project: 'Advanced Banana Ripeness Detection'
-                },
-                { 
-                    name: 'Sensor Integration', 
-                    icon: <Lightning size={20} weight="duotone" />,
-                    context: 'Integrated ultrasonic, DHT22, TCS34725, YF-S201, and flame sensors.',
-                    project: 'Flood Detection & Monitoring System'
-                },
-                { 
-                    name: 'RFID, NFC & Ultrasonic', 
-                    icon: <WifiHigh size={20} weight="duotone" />,
-                    context: 'Distance sensing for water level monitoring and obstacle detection.',
-                    project: 'Water Level Detection System'
-                },
-                { 
-                    name: 'MQTT, HTTP & REST API', 
-                    icon: <Globe size={20} weight="duotone" />,
-                    context: 'IoT cloud communication protocols for real-time data streaming.',
-                    project: 'Flood Detection & Monitoring System'
-                },
-                { 
-                    name: 'Real-time Monitoring', 
+                    name: 'Quality Prediction Dashboard', 
                     icon: <ChartBar size={20} weight="duotone" />,
-                    context: 'Web dashboard for live sensor data visualization with automated alerts.',
-                    project: 'Internal Monitoring Dashboard'
-                },
-                { 
-                    name: 'Field Installation & Wiring', 
-                    icon: <Wrench size={20} weight="duotone" />,
-                    context: 'On-site IP65-rated LED installation at Curug Cikoneng tourist attraction.',
-                    project: 'Curug Cikoneng LED Decoration'
+                    context: 'Built a real-time milk quality prediction tool using Random Forest & XGBoost, predicting grade from 7 production parameters.',
+                    project: 'Milk Quality Prediction'
                 },
             ]
         },
         {
-            title: 'Programming & Data',
+            title: 'Engineering & Technical Foundation',
             accentColor: 'text-primary',
             iconBg: 'bg-primary/10',
             borderColor: 'hover:border-primary/30',
@@ -137,51 +90,33 @@ const Skills = () => {
             gradient: 'from-primary to-accent-blue',
             skills: [
                 { 
-                    name: 'Python (Pandas, NumPy)', 
-                    icon: <Code size={20} weight="duotone" />,
-                    context: 'Data processing and ML pipeline for stock market screening (660+ companies).',
-                    project: 'IDX Market Screener'
-                },
-                { 
-                    name: 'C/C++ for Embedded', 
-                    icon: <Cpu size={20} weight="duotone" />,
-                    context: 'Arduino/ESP32 firmware across all IoT automation and robotics projects.',
-                    project: 'Autonomous Fire-Fighting Robot'
-                },
-                { 
-                    name: 'JavaScript & React', 
-                    icon: <TerminalWindow size={20} weight="duotone" />,
-                    context: 'Built portfolio, company profile, and educational platform.',
-                    project: 'DR.MATT Company Profile'
+                    name: 'IoT & Embedded Systems', 
+                    icon: <Circuitry size={20} weight="duotone" />,
+                    context: 'ESP32/Arduino firmware development, sensor integration, MQTT communication — deployed in 5+ monitoring and automation projects.',
+                    project: 'Flood Detection & Monitoring System'
                 },
                 { 
                     name: 'Data Analysis & ML', 
                     icon: <Brain size={20} weight="duotone" />,
-                    context: 'RandomForestClassifier for movement prediction, ATR volatility analysis.',
+                    context: 'Python (Pandas, NumPy), Random Forest, XGBoost for milk quality prediction and market screening across 660+ companies.',
                     project: 'IDX Market Screener'
                 },
                 { 
-                    name: 'Fuzzy Logic Systems', 
-                    icon: <Brain size={20} weight="duotone" />,
-                    context: 'Predictive ripeness classification algorithm for agricultural quality sorting.',
-                    project: 'Advanced Banana Ripeness Detection'
+                    name: 'Web Development', 
+                    icon: <TerminalWindow size={20} weight="duotone" />,
+                    context: 'React, JavaScript, HTML/CSS for portfolio, company profiles, educational platforms, and internal dashboards.',
+                    project: 'DR.MATT Company Profile'
                 },
                 { 
-                    name: 'MySQL & Database', 
-                    icon: <Database size={20} weight="duotone" />,
-                    context: 'Historical sensor data storage, retrieval, and backend scripting.',
-                    project: 'Internal Monitoring Dashboard'
-                },
-                { 
-                    name: 'ML Quality Prediction', 
-                    icon: <Pulse size={20} weight="duotone" />,
-                    context: 'Random Forest & XGBoost predicting pasteurized milk grade (A/B/C/Reject) from 7 production parameters with 0.92 F1. SHAP explainability for feature importance.',
-                    project: 'Milk Quality Prediction'
-                },
-                { 
-                    name: 'Networking (VLAN, OSPF)', 
+                    name: 'Networking', 
                     icon: <Globe size={20} weight="duotone" />,
-                    context: 'Certified Junior Network Engineer — IPv4/IPv6, OSPF routing, Cisco automation.',
+                    context: 'Certified Junior Network Engineer (Kominfo DTS) — VLAN, OSPF, IPv4/IPv6, Cisco automation.',
+                    project: null
+                },
+                { 
+                    name: 'IT Support & Hardware', 
+                    icon: <Wrench size={20} weight="duotone" />,
+                    context: 'BNSP-certified Hardware Installation Supervisor. PC assembly, troubleshooting, and on-site installation.',
                     project: null
                 },
             ]
@@ -189,14 +124,14 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="py-[72px] px-6 bg-background relative overflow-hidden">
+        <section id="skills" className="py-12 md:py-[72px] px-6 bg-background relative overflow-hidden">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute top-1/2 left-0 w-72 h-72 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
 
-            <div className="container mx-auto px-6 max-w-[1400px] space-y-12">
+            <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] space-y-8 md:space-y-12">
                 {skillGroups.map((group, groupIdx) => (
-                    <div key={groupIdx} className="space-y-6">
+                        <div key={groupIdx} className="space-y-4 md:space-y-6">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -210,7 +145,7 @@ const Skills = () => {
                             <div className="bg-primary/20 h-px w-8"></div>
                         </motion.div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3">
                             {group.skills.map((skill, skillIdx) => {
                                 const skillId = `${groupIdx}-${skillIdx}`;
                                 const isExpanded = expandedSkills.has(skillId);

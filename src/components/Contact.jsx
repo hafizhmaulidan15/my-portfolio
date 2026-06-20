@@ -4,12 +4,12 @@ import { GlassPanel } from './ui/GlassPanel';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-[72px] px-6 bg-background relative overflow-hidden min-h-[calc(100dvh-80px)] flex items-center">
+        <section id="contact" className="py-12 md:py-[72px] px-6 bg-background relative overflow-hidden min-h-[calc(100dvh-80px)] flex items-center">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 blur-[120px] rounded-full pointer-events-none"></div>
             <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-blue/6 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
 
-            <div className="container mx-auto px-6 max-w-[1400px] text-center relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] text-center relative z-10">
                 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
