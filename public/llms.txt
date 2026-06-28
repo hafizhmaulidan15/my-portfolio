@@ -1,0 +1,26 @@
+# Muhammad Hafizh Maulidan — Operations & Production Leader
+
+> Head of Unit at Rumah Susu Indonesia. Specializing in dairy manufacturing, production optimization, and quality systems.
+
+## Quick Links
+- [LinkedIn](https://www.linkedin.com/in/hafizhmaulidan/)
+- [GitHub](https://github.com/hafizhmaulidan15)
+- [Portfolio](https://portfolio-muhammad-hafizh-maulidan.vercel.app)
+
+## Core Expertise
+- Operations & Production Management
+- Dairy Manufacturing & Cold Chain
+- SOP Development & QC Systems
+- Supply Chain Coordination
+- Process Optimization
+- Team Leadership
+
+## Key Metrics
+- 2,000–3,500 L/week production volume
+- <1% quality reject rate
+- 4-person lean team
+- 25,000 units/batch capacity
+
+## Full Context
+For the complete portfolio with project details, experience, and certifications:
+[llms-full.txt](/llms-full.txt)

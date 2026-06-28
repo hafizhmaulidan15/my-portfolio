@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
 export const GlassPanel = ({ children, className, variant = 'primary', overflowVisible = false, noHover = false, ...props }) => {
@@ -12,11 +11,10 @@ export const GlassPanel = ({ children, className, variant = 'primary', overflowV
   };
 
   return (
-    <motion.div
-      whileHover={noHover ? undefined : { y: -4, scale: 1.005 }}
-      transition={{ type: "spring", stiffness: 300, damping: 25, duration: 0.2 }}
+    <div
       className={cn(
         "relative group transition-all duration-300",
+        noHover ? "" : "hover:-translate-y-1 hover:scale-[1.005]",
         variants[variant] || variants.primary,
         overflowVisible ? "overflow-visible" : "overflow-hidden",
         className
@@ -24,6 +22,6 @@ export const GlassPanel = ({ children, className, variant = 'primary', overflowV
       {...props}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };

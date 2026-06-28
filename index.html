@@ -15,6 +15,9 @@
     <meta property="og:url" content="https://portfolio-muhammad-hafizh-maulidan.vercel.app/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Muhammad Hafizh Maulidan" />
+    <link rel="alternate" hreflang="en" href="https://portfolio-muhammad-hafizh-maulidan.vercel.app" />
+    <link rel="alternate" hreflang="id" href="https://portfolio-muhammad-hafizh-maulidan.vercel.app" />
+    <link rel="alternate" hreflang="x-default" href="https://portfolio-muhammad-hafizh-maulidan.vercel.app" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Muhammad Hafizh Maulidan - Head of Unit & Production Leader at Rumah Susu Indonesia" />
@@ -33,32 +36,48 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebPage",
+          "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#webpage",
+          "url": "https://portfolio-muhammad-hafizh-maulidan.vercel.app",
+          "name": "Muhammad Hafizh Maulidan | Operations & Production Leader",
+          "description": "Head of Unit & Production Leader at Rumah Susu Indonesia. Operations management, dairy manufacturing, and quality systems professional.",
+          "inLanguage": ["en", "id"],
+          "about": { "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#person" },
+          "mainEntity": { "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#person" },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero-speakable"]
+          }
+        },
+        {
           "@type": "Person",
+          "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#person",
           "name": "Muhammad Hafizh Maulidan",
           "givenName": "Muhammad Hafizh",
           "familyName": "Maulidan",
+          "alternateName": ["Hafizh Maulidan", "Hafizh"],
           "description": "Head of Unit & Production Leader at Rumah Susu Indonesia. Operations & production management professional specializing in dairy manufacturing, cold chain management, quality control systems, and process optimization in Tasikmalaya, West Java.",
           "image": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/profile-avatar.png",
           "url": "https://portfolio-muhammad-hafizh-maulidan.vercel.app",
-          "jobTitle": "Head of Unit",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Rumah Susu Indonesia",
-            "url": "https://rumahsusuindonesia.com",
-            "description": "Dairy processing company producing pasteurized milk and moza cheese in Tasikmalaya, West Java.",
-            "foundingDate": "2026",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Tasikmalaya",
-              "addressRegion": "West Java",
-              "addressCountry": "ID"
-            }
-          },
+          "jobTitle": "Head of Unit & Production Leader",
+          "worksFor": { "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#organization" },
           "alumniOf": {
             "@type": "CollegeOrUniversity",
             "name": "IPB University",
-            "url": "https://www.ipb.ac.id"
+            "url": "https://www.ipb.ac.id",
+            "description": "Institut Pertanian Bogor - one of Indonesia's leading agricultural and engineering universities"
           },
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Head of Unit",
+            "occupationalCategory": "Production Management",
+            "skills": "Dairy Manufacturing, Cold Chain Management, Quality Control, SOP Development, Supply Chain Coordination, Team Leadership, Process Optimization",
+            "educationRequirements": "Bachelor of Engineering"
+          },
+          "knowsLanguage": [
+            { "@type": "Language", "name": "Indonesian", "alternateName": "Bahasa Indonesia" },
+            { "@type": "Language", "name": "English", "alternateName": "English" }
+          ],
           "knowsAbout": [
             "Operations Management",
             "Production Management",
@@ -72,9 +91,7 @@
             "Food Safety",
             "Lactoscan Analysis",
             "Inventory Management",
-            "Team Leadership",
-            "IoT & Embedded Systems",
-            "Data Analysis & Machine Learning"
+            "Team Leadership"
           ],
           "sameAs": [
             "https://www.linkedin.com/in/hafizhmaulidan/",
@@ -85,10 +102,34 @@
             "addressLocality": "Bogor",
             "addressRegion": "West Java",
             "addressCountry": "ID"
+          },
+          "workLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tasikmalaya",
+              "addressRegion": "West Java",
+              "addressCountry": "ID"
+            }
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#organization",
+          "name": "Rumah Susu Indonesia",
+          "url": "https://rumahsusuindonesia.com",
+          "description": "Dairy processing company producing pasteurized milk and moza cheese in Tasikmalaya, West Java.",
+          "foundingDate": "2026",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tasikmalaya",
+            "addressRegion": "West Java",
+            "addressCountry": "ID"
           }
         },
         {
           "@type": "BreadcrumbList",
+          "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#breadcrumb",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/" },
             { "@type": "ListItem", "position": 2, "name": "About", "item": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/about" },
@@ -100,13 +141,14 @@
         },
         {
           "@type": "FAQPage",
+          "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#faq",
           "mainEntity": [
             {
               "@type": "Question",
               "name": "Who is Muhammad Hafizh Maulidan?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Muhammad Hafizh Maulidan is the Head of Unit at Rumah Susu Indonesia in Tasikmalaya, leading dairy production operations including pasteurized milk and moza cheese. He holds a Bachelor of Engineering from IPB University and specializes in operations management, cold chain systems, and quality control."
+                "text": "Muhammad Hafizh Maulidan is the Head of Unit at Rumah Susu Indonesia in Tasikmalaya, West Java. He leads dairy production operations including pasteurized milk and moza cheese, manages a team of 4, and oversees processing of 2,000-3,500 liters of milk per week. He holds a Bachelor of Engineering from IPB University with a GPA of 3.33."
               }
             },
             {
@@ -114,23 +156,50 @@
               "name": "What does Hafizh Maulidan do at Rumah Susu Indonesia?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "As Head of Unit, Hafizh manages end-to-end production operations processing 2,000–3,500 liters of milk per week. He developed SOP architecture, QC protocols (lactoscan analysis, alcohol & peroxide tests), cold chain systems, and a milk quality dashboard. He leads a lean team of 4 people and maintains a reject rate under 1%."
+                "text": "As Head of Unit, Hafizh manages end-to-end production operations including raw milk receiving, pasteurization, quality testing (lactoscan analysis, alcohol test, peroxide test), cold chain management, and distribution. He developed the facility's SOP architecture, QC protocols, milk quality dashboard, and maintains a reject rate under 1%."
               }
             },
             {
               "@type": "Question",
-              "name": "What are Hafizh Maulidan's key skills?",
+              "name": "What are Hafizh Maulidan's key skills and expertise?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Hafizh's expertise spans Operations & Production Management (SOP development, cold chain management, production planning, quality control, traceability systems, supply chain coordination, team leadership) and Engineering & Technical Foundation (IoT systems, data analysis & machine learning, web development, networking, IT support)."
+                "text": "Hafizh's expertise spans Operations & Production Management (SOP development, cold chain management, production planning, quality control, traceability systems, supply chain coordination, team leadership) and Engineering & Technical Foundation (data analysis, IoT systems, process automation)."
               }
             },
             {
               "@type": "Question",
-              "name": "Where did Muhammad Hafizh Maulidan study?",
+              "name": "Where did Muhammad Hafizh Maulidan study and what is his educational background?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "He earned a Bachelor of Engineering (B.Eng) from IPB University (Institut Pertanian Bogor), one of Indonesia's leading agricultural and engineering universities, with a GPA of 3.33."
+                "text": "He earned a Bachelor of Engineering (B.Eng) from IPB University (Institut Pertanian Bogor), one of Indonesia's leading agricultural and engineering universities, with a GPA of 3.33 out of 4.00."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Siapa Muhammad Hafizh Maulidan?",
+              "inLanguage": "id",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Muhammad Hafizh Maulidan adalah Head of Unit di Rumah Susu Indonesia, Tasikmalaya. Ia memimpin operasi produksi susu pasteurisasi dan keju moza, mengelola tim beranggotakan 4 orang, dan mengawasi pemrosesan 2.000-3.500 liter susu per minggu. Ia meraih gelar Sarjana Teknik dari IPB University dengan IPK 3.33."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apa saja keterampilan utama Hafizh Maulidan?",
+              "inLanguage": "id",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Keahlian Hafizh meliputi Manajemen Operasi & Produksi (pengembangan SOP, manajemen rantai dingin, perencanaan produksi, quality control, sistem ketertelusuran, koordinasi rantai pasok, kepemimpinan tim) serta Teknik & Fondasi Teknis (analisis data, sistem IoT, otomatisasi proses)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apa proyek yang telah dibuat oleh Hafizh Maulidan?",
+              "inLanguage": "id",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Proyek utama meliputi: Rumah Susu Inventory Dashboard (Next.js + Google Sheets API untuk pemantauan stok real-time), Milk Quality Prediction (model ML dengan skor F1 0.92 untuk memprediksi kualitas susu pasteurisasi), dan SOP Operasi Produksi untuk kapasitas 25.000 unit per batch."
               }
             },
             {
@@ -138,14 +207,15 @@
               "name": "What projects has Hafizh Maulidan built?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Key projects include: Rumah Susu Inventory Dashboard (Next.js + Google Sheets API for real-time stock tracking), Milk Quality Prediction (ML model with 0.92 F1 score predicting pasteurized milk quality grades), Production Operations SOP for 25K batch capacity, and a fully responsive portfolio site."
+                "text": "Key projects include: Rumah Susu Inventory Dashboard (Next.js + Google Sheets API for real-time stock tracking of dairy inventory), Milk Quality Prediction (machine learning model with 0.92 F1 score predicting pasteurized milk quality grades from 7 production parameters using Random Forest and XGBoost), and Production Operations SOP for 25,000-unit batch capacity."
               }
             }
           ]
         },
         {
           "@type": "ItemList",
-          "name": "Featured Projects",
+          "@id": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/#projects",
+          "name": "Featured Projects by Muhammad Hafizh Maulidan",
           "url": "https://portfolio-muhammad-hafizh-maulidan.vercel.app/projects",
           "numberOfItems": 4,
           "itemListElement": [
@@ -156,7 +226,8 @@
                 "@type": "SoftwareApplication",
                 "name": "Rumah Susu Inventory Dashboard",
                 "applicationCategory": "BusinessApplication",
-                "description": "Real-time inventory dashboard for stock opname monitoring using Google Sheets API integration with Next.js and TypeScript."
+                "operatingSystem": "Web",
+                "description": "Real-time inventory dashboard for stock opname monitoring using Google Sheets API integration with Next.js and TypeScript. Designed for dairy production supply chain tracking."
               }
             },
             {
@@ -164,9 +235,10 @@
               "position": 2,
               "item": {
                 "@type": "SoftwareApplication",
-                "name": "Milk Quality Prediction",
+                "name": "Milk Quality Prediction Model",
                 "applicationCategory": "DataScience",
-                "description": "ML model predicting pasteurized milk quality grade from 7 production parameters with 0.92 F1 weighted score using Random Forest and XGBoost."
+                "operatingSystem": "Web",
+                "description": "Machine learning model predicting pasteurized milk quality grade from 7 production parameters with 0.92 F1 weighted score using Random Forest and XGBoost classifiers."
               }
             },
             {
@@ -174,17 +246,9 @@
               "position": 3,
               "item": {
                 "@type": "WebApplication",
-                "name": "Aussie WHV 2026",
-                "description": "Comprehensive resource hub for Australian Working Holiday Visa applicants."
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "Service",
-                "name": "Production Operations SOP",
-                "description": "End-to-end production architecture and SOPs for dairy processing at 25,000 units per batch."
+                "name": "Production Operations SOP Suite",
+                "applicationCategory": "BusinessApplication",
+                "description": "End-to-end production architecture, SOPs, and quality control protocols for dairy processing at 25,000 units per batch capacity covering raw milk receiving to cold chain distribution."
               }
             }
           ]

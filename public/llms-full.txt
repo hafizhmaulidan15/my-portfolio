@@ -1,0 +1,55 @@
+# Muhammad Hafizh Maulidan — Full Context
+
+## Identity
+- **Name:** Muhammad Hafizh Maulidan
+- **Role:** Head of Unit & Production Leader at Rumah Susu Indonesia
+- **Location:** Bogor / Tasikmalaya, West Java, Indonesia
+- **Languages:** Indonesian (native), English (professional)
+- **Education:** B.Eng, IPB University (Institut Pertanian Bogor), GPA 3.33/4.00
+
+## Professional Summary
+Operations & Production Leader with hands-on experience in end-to-end dairy manufacturing. Background encompasses the full dairy value chain — from raw milk quality assessment and pasteurization to cold chain distribution and quality systems. Proven track record scaling production from initial setup to 2,000–3,500 liters per week while maintaining a reject rate under 1%.
+
+## Current Role — Head of Unit at Rumah Susu Indonesia
+- Lead daily production operations for pasteurized milk and moza cheese
+- Manage lean team of 4 across receiving, processing, QC, and distribution
+- Developed complete SOP architecture and QC protocols
+- Implemented lactoscan analysis, alcohol test, and peroxide test procedures
+- Designed and deployed cold chain monitoring system
+- Built milk quality dashboard for real-time decision support
+- Coordinate supply chain from raw milk procurement to distribution
+
+## Key Projects
+
+### Rumah Susu Inventory Dashboard
+Real-time inventory management dashboard using Next.js, TypeScript, and Google Sheets API. Provides live stock opname monitoring and supply chain visibility for dairy production.
+
+### Milk Quality Prediction Model
+Machine learning model that predicts pasteurized milk quality grade from 7 production parameters. Achieves 0.92 F1 weighted score using Random Forest and XGBoost classifiers.
+
+### Production Operations SOP Suite
+Comprehensive production architecture and standard operating procedures for dairy processing at 25,000 units per batch capacity. Covers raw milk receiving, pasteurization, filling, cold storage, and distribution.
+
+## Skills
+
+### Operations & Production Management
+SOP Development, Cold Chain Management, Production Planning, Quality Control (Lactoscan, Alcohol & Peroxide Tests), Traceability Systems, Supply Chain Coordination, Team Leadership, Inventory Management, Food Safety
+
+### Engineering & Technical Foundation
+Data Analysis & Machine Learning (Python, scikit-learn, TensorFlow), IoT Systems (ESP32, sensors), Web Development (React, Next.js, Node.js), IT Support
+
+## Certifications
+- LSP Digital Marketing (BNSP certified)
+- Machine Learning Operations (DBS Foundation)
+- Data Science & AI (DBS Foundation)
+- Basic Barista (BNSP certified)
+- Occupational Health & Safety (K3)
+- MS Excel for Data Processing
+
+## Publications
+- "Response of Strawberry Microgreen Growth to LED Light Color Variations" — research on controlled environment agriculture
+
+## Contact
+- LinkedIn: https://www.linkedin.com/in/hafizhmaulidan/
+- GitHub: https://github.com/hafizhmaulidan15
+- Portfolio: https://portfolio-muhammad-hafizh-maulidan.vercel.app

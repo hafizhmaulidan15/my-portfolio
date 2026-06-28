@@ -1,10 +1,7 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { Envelope, ArrowUpRight, Factory, Lightning, ChartBar } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
-
-const MotionLink = motion(Link);
 
 const Hero = () => {
     const staggerRef = useRef(null);
@@ -17,24 +14,19 @@ const Hero = () => {
     }, []);
 
     return (
-        <section id="home" className="relative min-h-dvh flex items-center justify-center overflow-hidden bg-background">
+        <section id="home" className="hero-speakable relative min-h-dvh flex items-center justify-center overflow-hidden bg-background">
             <div className="fixed inset-0 z-0 pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black_40%,transparent_100%)]"></div>
             </div>
             
-            <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-accent-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
-            <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
+            <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none animate-fade-in"></div>
+            <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-accent-blue/10 blur-[120px] rounded-full pointer-events-none animate-fade-in animation-delay-200"></div>
+            <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none animate-fade-in animation-delay-400"></div>
 
             <div className="container relative z-10 mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10 items-center">
                     
-                    <motion.div 
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        className="lg:col-span-6 space-y-2 sm:space-y-4 md:space-y-5"
-                    >
+                    <div className="lg:col-span-6 space-y-2 sm:space-y-4 md:space-y-5 animate-slide-in-left">
                         <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full bg-surface border border-border text-accent-blue text-[9px] sm:text-[10px] md:text-xs font-medium">
                             <Factory size={12} weight="bold" className="sm:w-[14px] sm:h-[14px]" />
                             <span className="tracking-wide">HEAD OF UNIT & PRODUCTION LEADER</span>
@@ -56,24 +48,20 @@ const Hero = () => {
                         </div>
 
                         <div className="flex flex-wrap gap-2 sm:gap-3 pt-1 sm:pt-2">
-                            <MotionLink 
+                            <Link 
                                 to="/contact"
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.98 }}
-                                className="px-4 py-2.5 sm:px-6 sm:py-3 bg-primary text-foreground text-xs sm:text-sm font-medium rounded-lg border border-primary flex items-center gap-1.5 sm:gap-2 transition-all duration-200 hover:bg-primary-hover shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
+                                className="px-4 py-2.5 sm:px-6 sm:py-3 bg-primary text-foreground text-xs sm:text-sm font-medium rounded-lg border border-primary flex items-center gap-1.5 sm:gap-2 transition-all duration-200 hover:bg-primary-hover hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
                             >
                                 <Envelope size={16} weight="bold" className="sm:w-[18px] sm:h-[18px]" />
                                 Connect now
-                            </MotionLink>
-                            <MotionLink 
+                            </Link>
+                            <Link 
                                 to="/projects"
-                                whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.98 }}
-                                className="px-4 py-2.5 sm:px-6 sm:py-3 bg-surface border border-border text-foreground text-xs sm:text-sm font-medium rounded-lg flex items-center gap-1.5 sm:gap-2 transition-all duration-200 hover:bg-surface-hover hover:border-border-light shadow-floating"
+                                className="px-4 py-2.5 sm:px-6 sm:py-3 bg-surface border border-border text-foreground text-xs sm:text-sm font-medium rounded-lg flex items-center gap-1.5 sm:gap-2 transition-all duration-200 hover:bg-surface-hover hover:border-border-light hover:scale-[1.03] active:scale-[0.98] shadow-floating"
                             >
                                 View works
                                 <ArrowUpRight size={16} weight="bold" className="sm:w-[18px] sm:h-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                            </MotionLink>
+                            </Link>
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 sm:gap-4 md:gap-8 pt-2 sm:pt-4">
@@ -99,14 +87,9 @@ const Hero = () => {
                                 <div className="text-[10px] md:text-xs text-text-tertiary uppercase tracking-widest mt-1">GPA</div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                        className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-items-start"
-                    >
+                    <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-items-start animate-slide-in-right">
                         <Link to="/experience" className="group block w-full">
                             <GlassPanel variant="overlap" className="h-full flex flex-col gap-1.5 sm:gap-3 md:gap-4 p-3 sm:p-5 md:p-6 lg:p-7">
                                 <div className="flex items-center gap-1.5 sm:gap-3 md:gap-4">
@@ -163,7 +146,7 @@ const Hero = () => {
                                 </div>
                             </GlassPanel>
                         </Link>
-                    </motion.div>
+                    </div>
 
                 </div>
             </div>
