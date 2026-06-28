@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion';
 import { Envelope, GithubLogo, LinkedinLogo, PaperPlaneTilt } from '@phosphor-icons/react';
-import { GlassPanel } from './ui/GlassPanel';
 
 const Contact = () => {
     return (
@@ -11,14 +9,8 @@ const Contact = () => {
 
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] text-center relative z-10">
                 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="max-w-3xl mx-auto space-y-6"
-                >
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary/10 text-primary text-xs font-medium tracking-widest uppercase">
+                <div className="max-w-3xl mx-auto space-y-6 animate-fade-in">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary/10 text-primary text-xs sm:text-sm font-medium tracking-widest uppercase">
                         <PaperPlaneTilt size={14} weight="bold" />
                         <span>Ready to collaborate</span>
                     </div>
@@ -34,43 +26,39 @@ const Contact = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                        <motion.a
+                        <a
                             href="mailto:mhafizh.maulidan@gmail.com?subject=Collaboration%20Opportunity&body=Halo%20Hafizh%2C%0D%0A%0D%0ASaya%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut%20mengenai%20...%5Bisi%20topik%5D%0D%0A%0D%0ATerima%20kasih"
-                            whileHover={{ scale: 1.03 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full sm:w-auto px-6 py-3 bg-primary text-foreground font-body rounded flex items-center justify-center gap-2 hover:bg-primary-hover transition-all duration-200 shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
+                            className="w-full sm:w-auto px-6 py-3 bg-primary text-foreground font-body rounded flex items-center justify-center gap-2 hover:bg-primary-hover hover:scale-[1.03] active:scale-[0.98] transition-all duration-200 shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
                         >
                             <Envelope size={18} weight="bold" />
                             Send Email
-                        </motion.a>
+                        </a>
                     </div>
 
                     <div className="pt-16 space-y-4">
-                        <p className="text-[10px] font-mono text-text-tertiary uppercase tracking-[0.2em]">Peripheral links</p>
+                        <p className="text-xs sm:text-sm font-mono text-text-tertiary uppercase tracking-[0.2em]">Peripheral links</p>
                         <div className="flex justify-center gap-4">
-                            <motion.a
+                            <a
                                 href="https://github.com/hafizhmaulidan15"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                whileHover={{ y: -4 }}
-                                className="text-text-tertiary hover:text-primary transition-colors p-2"
+                                className="text-text-tertiary hover:text-primary transition-all duration-200 hover:-translate-y-1 p-2 inline-block"
                                 aria-label="GitHub Profile"
                             >
                                 <GithubLogo size={28} weight="duotone" />
-                            </motion.a>
-                            <motion.a
+                            </a>
+                            <a
                                 href="https://www.linkedin.com/in/hafizhmaulidan/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                whileHover={{ y: -4 }}
-                                className="text-text-tertiary hover:text-primary transition-colors p-2"
+                                className="text-text-tertiary hover:text-primary transition-all duration-200 hover:-translate-y-1 p-2 inline-block"
                                 aria-label="LinkedIn Profile"
                             >
                                 <LinkedinLogo size={28} weight="duotone" />
-                            </motion.a>
+                            </a>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
             </div>
         </section>

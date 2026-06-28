@@ -55,7 +55,7 @@ const About = () => {
                 <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
                         
-                        <div className="lg:col-span-7 space-y-6 md:space-y-8">
+                    <div className="lg:col-span-7 space-y-6 md:space-y-8">
                             <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-end">
                                 <motion.div 
                                     initial={{ opacity: 0, scale: 0.95 }}
@@ -80,14 +80,14 @@ const About = () => {
                                 </motion.div>
 
                                 <div className="space-y-3 text-center md:text-left">
-                                    <h2 className="text-[22px] sm:text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
+                                    <h2 className="text-[24px] sm:text-[26px] md:text-[30px] font-semibold tracking-tight text-foreground">
                                         Operations & Production <span className="text-gradient-primary">Leader</span>
                                     </h2>
                                     
                                 </div>
                             </div>
 
-                            <div className="space-y-4 md:space-y-6 text-text-secondary text-sm md:text-[16px] leading-relaxed max-w-[65ch]">
+                            <div className="space-y-5 md:space-y-6 text-text-secondary text-[15px] md:text-[17px] leading-relaxed max-w-[65ch]">
                                 <p>
                                     I joined Rumah Susu Indonesia in March 2026 as part of a new unit in Tasikmalaya. Alongside a lean team of <span className="text-foreground font-medium">four people</span>, I helped set up the SOP architecture, QC protocols — lactoscan analysis, peroxide tests, alcohol tests — and establish the cold chain and production workflows, processing <span className="text-foreground font-medium">2,000–3,500 liters per week</span>.
                                 </p>
@@ -99,9 +99,9 @@ const About = () => {
                                     <h4 className="text-sm font-medium text-text-tertiary uppercase tracking-widest mb-4">Key achievements</h4>
                                     <div className="flex flex-wrap gap-2 sm:gap-3">
                                         {achievements.map((ach, idx) => (
-                                            <div key={idx} className={`flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-sm ${ach.color.replace('text-', 'bg-')}/10 ${ach.color}`}>
+                                            <div key={idx} className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-sm ${ach.color.replace('text-', 'bg-')}/10 ${ach.color}`}>
                                                 <span>{ach.icon}</span>
-                                                <span className="text-[12px] sm:text-sm text-text-secondary font-medium">{ach.text}</span>
+                                                <span className="text-[13px] sm:text-sm text-text-secondary font-medium">{ach.text}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -109,19 +109,19 @@ const About = () => {
                             </div>
                         </div>
 
-                            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 self-center">
+                            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 self-center">
                                 {infoCards.map((info, idx) => (
                                     <GlassPanel 
                                         key={idx} 
                                         variant="overlap"
-                                        className={`flex flex-col gap-3 sm:gap-5 group transition-all p-4 sm:p-6 md:p-7 min-h-[120px] sm:min-h-[160px] ${info.glow}`}
+                                        className={`flex flex-col gap-3 sm:gap-5 group transition-all p-5 sm:p-6 md:p-7 min-h-[140px] sm:min-h-[160px] ${info.glow}`}
                                     >
-                                        <div className={`p-2 sm:p-3 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
+                                        <div className={`p-2.5 sm:p-3 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
                                             {info.icon}
                                         </div>
-                                        <div className="space-y-1 sm:space-y-1.5">
-                                            <h4 className="font-semibold text-[15px] sm:text-[17px] md:text-[18px] tracking-tight text-foreground">{info.title}</h4>
-                                            <p className="text-text-tertiary text-xs sm:text-sm leading-snug">{info.description}</p>
+                                        <div className="space-y-1.5">
+                                            <h4 className="font-semibold text-[16px] sm:text-[17px] md:text-[18px] tracking-tight text-foreground">{info.title}</h4>
+                                            <p className="text-text-tertiary text-sm sm:text-[15px] leading-snug">{info.description}</p>
                                         </div>
                                     </GlassPanel>
                                 ))}

@@ -45,22 +45,22 @@ const Certifications = () => {
                             transition={{ delay: idx * 0.025 }}
                             viewport={{ once: true }}
                         >
-                            <GlassPanel className="p-3 sm:p-4 h-full flex flex-col gap-2 sm:gap-3 group hover:border-primary/20 transition-all">
+                            <GlassPanel className="p-4 sm:p-4 h-full flex flex-col gap-2 sm:gap-3 group hover:border-primary/20 transition-all">
                                 <div className="flex items-start gap-2 sm:gap-3">
-                                    <div className={`p-1.5 sm:p-2 rounded-sm ${cert.bg} ${cert.color} shrink-0 group-hover:scale-105 transition-transform`}>
+                                    <div className={`p-2 sm:p-2 rounded-sm ${cert.bg} ${cert.color} shrink-0 group-hover:scale-105 transition-transform`}>
                                         {cert.icon}
                                     </div>
-                                    <div className="min-w-0 flex-1 space-y-0.5 sm:space-y-1">
-                                        <h4 className="text-[12px] sm:text-sm font-medium text-foreground leading-snug">
+                                    <div className="min-w-0 flex-1 space-y-1">
+                                        <h4 className="text-[13px] sm:text-sm font-medium text-foreground leading-snug">
                                             {cert.title}
                                         </h4>
-                                        <p className="text-[9px] sm:text-[10px] text-text-tertiary font-mono uppercase tracking-wider">
+                                        <p className="text-[10px] sm:text-[11px] text-text-tertiary font-mono uppercase tracking-wider">
                                             {cert.org}
                                         </p>
                                     </div>
                                 </div>
                                 <div className="mt-auto">
-                                    <span className="inline-block text-[8px] sm:text-[9px] font-mono text-text-tertiary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-sm bg-interactive-button border border-border uppercase tracking-wider">
+                                    <span className="inline-block text-[9px] sm:text-[10px] font-mono text-text-tertiary px-2 sm:px-2 py-1 sm:py-1 rounded-sm bg-interactive-button border border-border uppercase tracking-wider">
                                         {cert.date}
                                     </span>
                                 </div>

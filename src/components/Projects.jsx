@@ -123,13 +123,13 @@ const Projects = () => {
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6 mb-8 md:mb-12">
                     <div className="space-y-2 md:space-y-3">
-                        <div className="flex items-center gap-2 md:gap-3 text-primary font-mono text-[11px] md:text-sm tracking-widest uppercase">
+                        <div className="flex items-center gap-2 md:gap-3 text-primary font-mono text-xs md:text-sm tracking-widest uppercase">
                             <span>// Portfolio</span>
                         </div>
-                        <h2 className="text-[22px] md:text-[24px] lg:text-[28px] font-semibold tracking-tight text-foreground">
+                        <h2 className="text-[24px] md:text-[26px] lg:text-[28px] font-semibold tracking-tight text-foreground">
                             Strategic <span className="text-gradient-primary">execution</span>
                         </h2>
-                        <p className="text-text-secondary max-w-[55ch] text-sm md:text-[16px] leading-relaxed">
+                        <p className="text-text-secondary max-w-[55ch] text-[15px] md:text-[16px] leading-relaxed">
                             A portfolio of precision, orchestrating the intersection of Operations, Engineering, and Data.
                         </p>
                     </div>
@@ -140,7 +140,7 @@ const Projects = () => {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={cn(
-                                    "px-2.5 sm:px-3 py-1.5 rounded-sm text-[9px] sm:text-[10px] font-medium uppercase tracking-widest transition-all duration-200 shrink-0",
+                                    "px-3 sm:px-3 py-1.5 sm:py-2 rounded-sm text-xs sm:text-[11px] font-medium uppercase tracking-widest transition-all duration-200 shrink-0",
                                     activeCategory === cat 
                                         ? "bg-primary text-foreground" 
                                         : "text-text-tertiary hover:text-foreground"
@@ -158,7 +158,7 @@ const Projects = () => {
                             key={project.id} 
                             variant="overlap"
                             overflowVisible
-                            className="flex flex-col h-full group"
+                            className="flex flex-col h-full group p-5 sm:p-6"
                         >
                             {/* Icon */}
                             <div className="mb-4">
@@ -169,8 +169,8 @@ const Projects = () => {
 
                             {/* Title + Period */}
                             <div className="space-y-2 mb-3">
-                                <h3 className="text-[16px] font-semibold tracking-tight text-foreground leading-tight">{project.title}</h3>
-                                <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-text-tertiary">
+                                <h3 className="text-[17px] sm:text-[18px] font-semibold tracking-tight text-foreground leading-tight">{project.title}</h3>
+                                <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-mono text-text-tertiary">
                                     <span className="px-2 py-0.5 rounded-sm bg-primary/10 text-primary/80">
                                         {project.period}
                                     </span>
@@ -179,12 +179,11 @@ const Projects = () => {
 
                             {/* Role · Type + Published badge */}
                             <div className="flex items-center gap-2 mb-4">
-                                <span className="text-[11px] font-mono text-text-tertiary">
+                                <span className="text-xs sm:text-sm font-mono text-text-tertiary">
                                     {project.role} · {project.roleType === 'individual' ? 'Personal' : project.roleType === 'lead' ? 'Lead' : 'Team'} Project
                                 </span>
                                 {project.published && (
-                                    <span className="flex items-center gap-1 px-2 py-0.5 rounded-sm bg-success/10 text-success text-[10px] font-medium uppercase tracking-widest">
-                                        <BookOpen size={10} weight="bold" />
+                                    <span className="flex items-center gap-1 px-2 py-0.5 rounded-sm bg-success/10 text-success text-xs font-medium uppercase tracking-widest">
                                         Published
                                     </span>
                                 )}
@@ -192,40 +191,40 @@ const Projects = () => {
 
                             {/* Stats Mini Cards */}
                             {project.stats && project.stats.length > 0 && (
-                                <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                                <div className="grid grid-cols-3 gap-2 sm:gap-2 mb-4 sm:mb-4">
                                     {project.stats.map((stat, i) => (
-                                        <div key={i} className="bg-primary/5 rounded-sm p-1.5 sm:p-2 text-center">
-                                            <div className="text-[11px] sm:text-[13px] font-semibold text-foreground">{stat.value}</div>
-                                            <div className="text-[8px] sm:text-[9px] font-mono text-text-tertiary uppercase tracking-wider mt-0.5">{stat.label}</div>
+                                        <div key={i} className="bg-primary/5 rounded-sm p-2 sm:p-2 text-center">
+                                            <div className="text-xs sm:text-sm font-semibold text-foreground">{stat.value}</div>
+                                            <div className="text-[9px] sm:text-[10px] font-mono text-text-tertiary uppercase tracking-wider mt-0.5">{stat.label}</div>
                                         </div>
                                     ))}
                                 </div>
                             )}
 
                             {/* Description */}
-                            <p className="text-text-secondary text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
+                            <p className="text-text-secondary text-sm sm:text-[15px] leading-relaxed mb-4">
                                 {project.description}
                             </p>
 
                             {/* Bullet Points (first 3) */}
-                            <div className="space-y-1 sm:space-y-1.5 mb-4 sm:mb-5 flex-grow">
+                            <div className="space-y-1.5 sm:space-y-2 mb-5 flex-grow">
                                 {project.responsibilities.slice(0, 3).map((item, i) => (
-                                    <div key={i} className="flex items-start gap-2 text-[12px] text-text-tertiary leading-relaxed">
-                                        <span className="text-primary/50 mt-0.5 flex-shrink-0">•</span>
+                                    <div key={i} className="flex items-start gap-2 text-[13px] sm:text-sm text-text-tertiary leading-relaxed">
+                                        <span className="text-primary/50 mt-1 flex-shrink-0">•</span>
                                         <span>{item}</span>
                                     </div>
                                 ))}
                             </div>
 
                             {/* Skills */}
-                            <div className="pt-2 sm:pt-3 flex flex-wrap gap-1 sm:gap-1.5 gap-y-1 items-center">
+                            <div className="pt-3 flex flex-wrap gap-1.5 sm:gap-2 gap-y-1.5 items-center">
                                 {project.skills.slice(0, 4).map((skill) => (
-                                    <span key={skill} className="px-1.5 sm:px-2 py-0.5 rounded-sm bg-primary/5 text-text-secondary text-[8px] sm:text-[9px] font-mono uppercase tracking-wider">
+                                    <span key={skill} className="px-2 sm:px-2 py-0.5 sm:py-1 rounded-sm bg-primary/5 text-text-secondary text-[10px] sm:text-[11px] font-mono uppercase tracking-wider">
                                         {skill}
                                     </span>
                                 ))}
                                 {project.skills.length > 4 && (
-                                    <span className="text-[8px] sm:text-[9px] font-mono text-text-muted">
+                                    <span className="text-[10px] sm:text-[11px] font-mono text-text-muted">
                                         +{project.skills.length - 4}
                                     </span>
                                 )}

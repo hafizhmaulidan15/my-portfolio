@@ -26,45 +26,45 @@ const Hero = () => {
             <div className="container relative z-10 mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10 items-center">
                     
-                    <div className="lg:col-span-6 space-y-2 sm:space-y-4 md:space-y-5 animate-slide-in-left">
-                        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full bg-surface border border-border text-accent-blue text-[9px] sm:text-[10px] md:text-xs font-medium">
-                            <Factory size={12} weight="bold" className="sm:w-[14px] sm:h-[14px]" />
+                    <div className="lg:col-span-6 space-y-3 sm:space-y-4 md:space-y-5 animate-slide-in-left">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 sm:py-1.5 rounded-full bg-surface border border-border text-accent-blue text-[11px] sm:text-xs md:text-sm font-medium">
+                            <Factory size={14} weight="bold" className="sm:w-4 sm:h-4" />
                             <span className="tracking-wide">HEAD OF UNIT & PRODUCTION LEADER</span>
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
-                            <h1 className="t-stagger-line text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-bold tracking-tighter leading-[1.1] text-foreground">
+                            <h1 className="t-stagger-line text-[26px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-bold tracking-tighter leading-[1.1] text-foreground">
                                 MUHAMMAD <br />
                                 <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary">MAULIDAN</span>
                             </h1>
 
-                            <p className="t-stagger-line t-stagger-line--2 text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed mt-1 sm:mt-3">
+                            <p className="t-stagger-line t-stagger-line--2 text-sm sm:text-[15px] md:text-base text-text-secondary leading-relaxed mt-2 sm:mt-3">
                                 <span className="text-foreground font-semibold">Head of Unit at Rumah Susu Indonesia</span> | Operations & Production Management | Dairy Manufacturing & Process Optimization
                             </p>
 
-                            <p className="t-stagger-line t-stagger-line--3 text-[11px] sm:text-xs md:text-sm text-text-secondary max-w-[60ch] leading-relaxed mt-1 sm:mt-3">
+                            <p className="t-stagger-line t-stagger-line--3 text-xs sm:text-sm md:text-[15px] text-text-secondary max-w-[60ch] leading-relaxed mt-2 sm:mt-3">
                                 Operations & Production Leader specializing in end-to-end dairy manufacturing, process optimization, and quality systems.
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap gap-2 sm:gap-3 pt-1 sm:pt-2">
+                        <div className="flex flex-wrap gap-3 pt-2 sm:pt-3">
                             <Link 
                                 to="/contact"
-                                className="px-4 py-2.5 sm:px-6 sm:py-3 bg-primary text-foreground text-xs sm:text-sm font-medium rounded-lg border border-primary flex items-center gap-1.5 sm:gap-2 transition-all duration-200 hover:bg-primary-hover hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
+                                className="px-5 py-3 sm:px-6 sm:py-3 bg-primary text-foreground text-sm sm:text-[15px] font-medium rounded-lg border border-primary flex items-center gap-2 transition-all duration-200 hover:bg-primary-hover hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
                             >
-                                <Envelope size={16} weight="bold" className="sm:w-[18px] sm:h-[18px]" />
+                                <Envelope size={18} weight="bold" />
                                 Connect now
                             </Link>
                             <Link 
                                 to="/projects"
-                                className="px-4 py-2.5 sm:px-6 sm:py-3 bg-surface border border-border text-foreground text-xs sm:text-sm font-medium rounded-lg flex items-center gap-1.5 sm:gap-2 transition-all duration-200 hover:bg-surface-hover hover:border-border-light hover:scale-[1.03] active:scale-[0.98] shadow-floating"
+                                className="px-5 py-3 sm:px-6 sm:py-3 bg-surface border border-border text-foreground text-sm sm:text-[15px] font-medium rounded-lg flex items-center gap-2 transition-all duration-200 hover:bg-surface-hover hover:border-border-light hover:scale-[1.03] active:scale-[0.98] shadow-floating"
                             >
                                 View works
-                                <ArrowUpRight size={16} weight="bold" className="sm:w-[18px] sm:h-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                <ArrowUpRight size={18} weight="bold" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                             </Link>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2 sm:gap-4 md:gap-8 pt-2 sm:pt-4">
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-8 pt-2 sm:pt-4">
                             <div>
                                 <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-foreground">
                                     Up to <span className="t-digit-group is-animating">
@@ -73,7 +73,7 @@ const Hero = () => {
                                         <span className="t-digit" data-stagger="1">K</span>
                                     </span>
                                 </div>
-                                <div className="text-[10px] md:text-xs text-text-tertiary uppercase tracking-widest mt-1">Units/Batch</div>
+                                <div className="text-xs md:text-sm text-text-tertiary uppercase tracking-widest mt-1">Units/Batch</div>
                             </div>
                             <div>
                                 <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-accent-blue">
@@ -84,46 +84,46 @@ const Hero = () => {
                                         <span className="t-digit" data-stagger="3">3</span>
                                     </span>
                                 </div>
-                                <div className="text-[10px] md:text-xs text-text-tertiary uppercase tracking-widest mt-1">GPA</div>
+                                <div className="text-xs md:text-sm text-text-tertiary uppercase tracking-widest mt-1">GPA</div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:gap-8 justify-items-start animate-slide-in-right">
+                    <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-4 md:gap-6 lg:gap-8 justify-items-start animate-slide-in-right">
                         <Link to="/experience" className="group block w-full">
-                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-1.5 sm:gap-3 md:gap-4 p-3 sm:p-5 md:p-6 lg:p-7">
-                                <div className="flex items-center gap-1.5 sm:gap-3 md:gap-4">
-                                    <div className="p-1.5 sm:p-2.5 md:p-3 bg-primary/10 rounded-sm text-primary">
-                                        <Factory size={16} weight="duotone" className="sm:w-[20px] sm:h-[20px] md:w-[24px] md:h-[24px]" />
+                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
+                                <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                                    <div className="p-2 sm:p-2.5 md:p-3 bg-primary/10 rounded-sm text-primary">
+                                        <Factory size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                     </div>
-                                    <div className="flex items-center gap-1 sm:gap-2">
-                                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-success"></div>
-                                        <span className="text-[8px] sm:text-[9px] md:text-[10px] font-mono text-success uppercase tracking-wider">Active</span>
+                                    <div className="flex items-center gap-1.5 sm:gap-2">
+                                        <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-success"></div>
+                                        <span className="text-[10px] sm:text-[11px] md:text-xs font-mono text-success uppercase tracking-wider">Active</span>
                                     </div>
                                 </div>
-                                <h2 className="text-[11px] sm:text-sm md:text-base font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h2>
-                                <div className="grid grid-cols-2 gap-2 sm:gap-4 pt-1 sm:pt-3 mt-auto">
+                                <h2 className="text-sm sm:text-[15px] md:text-base font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h2>
+                                <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-2 sm:pt-3 mt-auto">
                                     <div>
-                                        <div className="text-[10px] sm:text-xs md:text-sm font-bold font-mono text-primary">25K</div>
-                                        <div className="text-[7px] sm:text-[9px] md:text-[10px] text-text-tertiary uppercase tracking-wider">Batch</div>
+                                        <div className="text-xs sm:text-sm md:text-[15px] font-bold font-mono text-primary">25K</div>
+                                        <div className="text-[9px] sm:text-[10px] md:text-xs text-text-tertiary uppercase tracking-wider">Batch</div>
                                     </div>
                                     <div>
-                                        <div className="text-[10px] sm:text-xs md:text-sm font-bold font-mono text-accent-blue">E2E</div>
-                                        <div className="text-[7px] sm:text-[9px] md:text-[10px] text-text-tertiary uppercase tracking-wider">Chain</div>
+                                        <div className="text-xs sm:text-sm md:text-[15px] font-bold font-mono text-accent-blue">E2E</div>
+                                        <div className="text-[9px] sm:text-[10px] md:text-xs text-text-tertiary uppercase tracking-wider">Chain</div>
                                     </div>
                                 </div>
                             </GlassPanel>
                         </Link>
 
                         <Link to="/skills" className="group block w-full">
-                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-1.5 sm:gap-3 md:gap-4 p-3 sm:p-5 md:p-6 lg:p-7">
-                                <div className="p-1.5 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
-                                    <ChartBar size={16} weight="duotone" className="sm:w-[20px] sm:h-[20px] md:w-[24px] md:h-[24px]" />
+                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
+                                <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
+                                    <ChartBar size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                 </div>
-                                <h2 className="text-[11px] sm:text-sm md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Operations Management</h2>
-                                <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 mt-auto">
+                                <h2 className="text-sm sm:text-[15px] md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Operations Management</h2>
+                                <div className="flex flex-wrap gap-1.5 sm:gap-1.5 md:gap-2 mt-auto">
                                     {['SOP Dev', 'QC', 'Supply Chain', 'Team Lead'].map((s) => (
-                                        <span key={s} className="px-1 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[7px] sm:text-[9px] md:text-[10px] font-mono uppercase tracking-wider">
+                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[9px] sm:text-[10px] md:text-xs font-mono uppercase tracking-wider">
                                             {s}
                                         </span>
                                     ))}
@@ -131,15 +131,15 @@ const Hero = () => {
                             </GlassPanel>
                         </Link>
 
-                        <Link to="/certifications" className="group block w-full sm:col-span-2 sm:justify-self-center sm:max-w-md">
-                            <GlassPanel variant="overlap" className="flex flex-col gap-1.5 sm:gap-3 md:gap-4 p-3 sm:p-5 md:p-6 lg:p-7">
-                                <div className="p-1.5 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
-                                    <Lightning size={16} weight="duotone" className="sm:w-[20px] sm:h-[20px] md:w-[24px] md:h-[24px]" />
+                        <Link to="/certifications" className="group block w-full sm:col-span-2 sm:justify-self-center sm:max-w-lg">
+                            <GlassPanel variant="overlap" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
+                                <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
+                                    <Lightning size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                 </div>
-                                <h2 className="text-[11px] sm:text-sm md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Core Competencies</h2>
-                                <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 mt-auto">
+                                <h2 className="text-sm sm:text-[15px] md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Core Competencies</h2>
+                                <div className="flex flex-wrap gap-1.5 sm:gap-1.5 md:gap-2 mt-auto">
                                     {['Prod Planning', 'Process Opt', 'BPOM', 'Cold Chain'].map((s) => (
-                                        <span key={s} className="px-1 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[7px] sm:text-[9px] md:text-[10px] font-mono uppercase tracking-wider">
+                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[9px] sm:text-[10px] md:text-xs font-mono uppercase tracking-wider">
                                             {s}
                                         </span>
                                     ))}

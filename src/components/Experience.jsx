@@ -176,8 +176,8 @@ const Experience = () => {
                                                 <div className="flex gap-6 pt-3">
                                                     {exp.metrics.map((m, mIdx) => (
                                                         <div key={mIdx}>
-                                                            <div className={`text-sm font-bold font-mono tracking-tighter ${m.color}`}>{m.value}</div>
-                                                            <div className="text-[9px] text-text-tertiary uppercase tracking-wider">{m.label}</div>
+                                                            <div className={`text-[15px] sm:text-base font-bold font-mono tracking-tighter ${m.color}`}>{m.value}</div>
+                                                            <div className="text-[10px] sm:text-xs text-text-tertiary uppercase tracking-wider">{m.label}</div>
                                                         </div>
                                                     ))}
                                                 </div>
