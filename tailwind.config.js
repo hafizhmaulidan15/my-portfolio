@@ -34,6 +34,7 @@ export default {
         'primary-active': '#0e4eb1',
         accent: {
           blue: '#50baff',
+          green: '#22C55E',
         },
         success: '#00BB7F',
         interactive: {

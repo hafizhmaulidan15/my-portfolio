@@ -378,20 +378,6 @@
     background-clip: text;
   }
 
-  .text-gradient-warm {
-    background: linear-gradient(135deg, #1181ff, #50baff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .text-gradient-cool {
-    background: linear-gradient(135deg, #1181ff, #50baff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   .glow-primary {
     box-shadow: 0 0 30px rgba(17, 129, 255, 0.15);
   }
