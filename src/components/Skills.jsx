@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
     Brain, CaretDown, ChartBar, ChartPieSlice, ClipboardText,
-    Circuitry, Factory, Globe, Pulse, TerminalWindow,
+    Circuitry, Factory, Flask, Globe, Pulse, TerminalWindow,
     Truck, UsersThree, Wrench, ArrowUpRight
 } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
@@ -13,12 +13,14 @@ const sections = [
         iconBg: 'bg-accent-blue/10',
         tagColor: 'bg-accent-blue/10 text-accent-blue',
         skills: [
-            { name: 'SOP Development', icon: <ClipboardText size={20} weight="duotone" />, context: 'Designed and implemented SOP architecture for pasteurization, QC, cold chain, and peroxide falsification testing at Rumah Susu Indonesia.', project: 'Rumah Susu Indonesia' },
+            { name: 'Cheese Production & R&D', icon: <Flask size={20} weight="duotone" />, context: 'Led first commercial Mozzarella production (500 L into 36 kg / 180 pcs, 7.2% yield). Running Processed Cheddar R&D through 9 formulation trials with 113.8% trial yield.', project: 'Rumah Susu Indonesia' },
+            { name: 'SOP Development', icon: <ClipboardText size={20} weight="duotone" />, context: 'Designed SOP architecture for pasteurization, QC, cold chain, and peroxide falsification testing. Authored Mozzarella SOP suite and ratchet loading standards.', project: 'Rumah Susu Indonesia' },
             { name: 'Cold Chain Management', icon: <Truck size={20} weight="duotone" />, context: 'Upgraded cold chain with reinforced belts to prevent box damage. Maintained 2-8°C across cooling, storage, and distribution.', project: 'Rumah Susu Indonesia' },
-            { name: 'Production Planning', icon: <Factory size={20} weight="duotone" />, context: 'Managing 2,000-3,500L/week capacity across pasteurized milk and moza cheese production with a lean team of 4.', project: 'Rumah Susu Indonesia' },
+            { name: 'Production Planning', icon: <Factory size={20} weight="duotone" />, context: 'Managing 2,000-3,500L/week capacity across pasteurized milk, moza, and cheese production with a lean team of 4.', project: 'Rumah Susu Indonesia' },
             { name: 'Quality Control (QC)', icon: <ChartPieSlice size={20} weight="duotone" />, context: 'Lactoscan analysis, pH/TS/added water monitoring, alcohol & peroxide tests, organoleptic evaluation. Reject rate under 1%.', project: 'Rumah Susu Indonesia' },
+            { name: 'Supplier Quality Intelligence', icon: <ChartBar size={20} weight="duotone" />, context: 'Digitized per-supplier milk quality data — fat, SNF, protein, alcohol test, volume — on a live dashboard enabling data-driven supplier selection.', project: 'Rumah Susu Indonesia' },
             { name: 'Traceability Systems', icon: <Pulse size={20} weight="duotone" />, context: 'Implemented 3-batch sample retention for spoilage traceability from production through delivery.', project: 'Rumah Susu Indonesia' },
-            { name: 'Supply Chain Coordination', icon: <Globe size={20} weight="duotone" />, context: 'Raw milk supply coordination with KPS cooperatives, delivery scheduling, and stock reconciliation.', project: 'Rumah Susu Indonesia' },
+            { name: 'Supply Chain Coordination', icon: <Globe size={20} weight="duotone" />, context: 'Raw milk supply coordination with KPS cooperatives, standardized ratchet loading SOPs (Box Biru & Tray), delivery scheduling, and stock reconciliation.', project: 'Rumah Susu Indonesia' },
             { name: 'Team Leadership', icon: <UsersThree size={20} weight="duotone" />, context: 'Leading a 4-person production team at Rumah Susu Indonesia Tasikmalaya across all operational shifts.', project: null },
             { name: 'Quality Prediction Dashboard', icon: <ChartBar size={20} weight="duotone" />, context: 'Built a real-time milk quality prediction tool using Random Forest & XGBoost, predicting grade from 7 production parameters.', project: 'Milk Quality Prediction' },
         ]
@@ -29,7 +31,7 @@ const sections = [
         iconBg: 'bg-primary/10',
         tagColor: 'bg-primary/10 text-primary',
         skills: [
-            { name: 'IoT & Embedded Systems', icon: <Circuitry size={20} weight="duotone" />, context: 'ESP32/Arduino firmware development, sensor integration, MQTT communication — deployed in 5+ monitoring and automation projects.', project: 'Flood Detection & Monitoring System' },
+            { name: 'IoT & Embedded Systems', icon: <Circuitry size={20} weight="duotone" />, context: 'ESP32/Arduino firmware, sensor integration, MQTT, Arduino IoT Cloud, FastLED/WS2812B — deployed in 5+ monitoring and automation projects.', project: 'Flood Detection & Monitoring System' },
             { name: 'Data Analysis & ML', icon: <Brain size={20} weight="duotone" />, context: 'Python (Pandas, NumPy), Random Forest, XGBoost for milk quality prediction and market screening across 660+ companies.', project: 'IDX Market Screener' },
             { name: 'Web Development', icon: <TerminalWindow size={20} weight="duotone" />, context: 'React, JavaScript, HTML/CSS for portfolio, company profiles, educational platforms, and internal dashboards.', project: 'DR.MATT Company Profile' },
             { name: 'Networking', icon: <Globe size={20} weight="duotone" />, context: 'Certified Junior Network Engineer (Kominfo DTS) — VLAN, OSPF, IPv4/IPv6, Cisco automation.', project: null },

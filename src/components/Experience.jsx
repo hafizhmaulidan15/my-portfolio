@@ -13,16 +13,17 @@ const Experience = () => {
             title: 'Head of Unit',
             company: 'Rumah Susu Indonesia',
             location: 'Tasikmalaya, West Java',
-            date: 'Apr 2026 - Present',
-            description: 'Leading end-to-end production operations for pasteurized milk (25k cups/batch). Developed SOPs from scratch, managing supply chain coordination with local dairy cooperatives (KPS). Implemented digital inventory systems with 100% accuracy and real-time production monitoring.',
+            date: 'Mar 2026 - Present',
+            description: 'Leading end-to-end production operations for pasteurized milk (25k cups/batch) and led the first commercial Mozzarella production — converting 500 L of fresh milk into 36 kg / 180 units at 7.2% yield, from equipment procurement and troubleshooting (inverter, blade mixer, boiler water contamination) to the first shipment to Bogor. Currently leading Processed Cheddar R&D through 9 formulation trials (113.8% trial yield), building a supplier milk-quality intelligence system, and standardizing distribution loading with ratchet SOPs.',
             type: 'leadership',
             icon: <Factory size={18} weight="bold" />,
             color: 'accent-blue',
             metrics: [
                 { value: '25K', label: 'units/batch', color: 'text-primary' },
-                { value: '100%', label: 'inventory accuracy', color: 'text-accent-blue' }
+                { value: '7.2%', label: 'mozza yield', color: 'text-accent-blue' },
+                { value: '113.8%', label: 'cheddar trial yield', color: 'text-primary' }
             ],
-            pillars: ['SOP Design', 'Cold Chain', 'QC Protocols', 'Supply Chain']
+            pillars: ['SOP Design', 'Product R&D', 'Cold Chain', 'QC Protocols', 'Supply Chain']
         },
         {
             title: 'Frontend Developer',
@@ -95,6 +96,14 @@ const Experience = () => {
             description: '256 hours of training in IPv4/IPv6 architecture, OSPF routing, and Cisco automation.',
             icon: <GraduationCap size={20} weight="duotone" />,
             color: 'accent-blue'
+        },
+        {
+            title: 'AI & LLMs for Network Engineers',
+            provider: 'Cisco Networking Academy',
+            date: '2025',
+            description: 'AI, GenAI, and LLM fundamentals applied to infrastructure and operations workflows.',
+            icon: <ChartLineUp size={20} weight="duotone" />,
+            color: 'primary'
         },
     ];
 

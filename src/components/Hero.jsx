@@ -43,7 +43,7 @@ const Hero = () => {
                             </p>
 
                             <p className="t-stagger-line t-stagger-line--3 text-xs sm:text-sm md:text-[15px] text-text-secondary max-w-[60ch] leading-relaxed mt-2 sm:mt-3">
-                                Operations & Production Leader specializing in end-to-end dairy manufacturing, process optimization, and quality systems.
+                                Operations leader building systems end-to-end in dairy manufacturing — from the first commercial Mozzarella production run and Processed Cheddar R&D to quality dashboards and process optimization.
                             </p>
                         </div>
 
@@ -108,8 +108,8 @@ const Hero = () => {
                                         <div className="text-[9px] sm:text-[10px] md:text-xs text-text-tertiary uppercase tracking-wider">Batch</div>
                                     </div>
                                     <div>
-                                        <div className="text-xs sm:text-sm md:text-[15px] font-bold font-mono text-accent-blue">E2E</div>
-                                        <div className="text-[9px] sm:text-[10px] md:text-xs text-text-tertiary uppercase tracking-wider">Chain</div>
+                                        <div className="text-xs sm:text-sm md:text-[15px] font-bold font-mono text-accent-blue">7.2%</div>
+                                        <div className="text-[9px] sm:text-[10px] md:text-xs text-text-tertiary uppercase tracking-wider">Mozza Yield</div>
                                     </div>
                                 </div>
                             </GlassPanel>

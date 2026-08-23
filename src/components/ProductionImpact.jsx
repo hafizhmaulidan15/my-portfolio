@@ -236,26 +236,15 @@ const ProductionImpact = () => {
                 bg="bg-primary/10"
                 accent="border-l-primary"
               />
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="group"
-              >
-                <GlassPanel className="flex flex-col gap-3 p-5 border-l-[3px] border-l-white/[0.08] h-full opacity-60">
-                  <div className="p-2 rounded-sm w-fit bg-white/[0.04] text-text-tertiary">
-                    <Flask size={18} weight="duotone" />
-                  </div>
-                  <div className="font-mono text-xl font-bold tracking-tighter text-text-tertiary leading-tight">
-                    Coming Soon
-                  </div>
-                  <div className="space-y-0.5">
-                    <div className="text-[10px] text-text-tertiary uppercase tracking-widest font-medium">Cheese Production</div>
-                    <div className="text-[9px] text-text-tertiary/40 italic">in development</div>
-                  </div>
-                </GlassPanel>
-              </motion.div>
+              <MetricCard
+                icon={<Flask size={18} weight="duotone" />}
+                label="Mozzarella First Batch"
+                value="180 pcs"
+                subtitle="36 kg from 500 L fresh milk · 7.2% yield · shipped to Bogor"
+                color="text-success"
+                bg="bg-success/10"
+                accent="border-l-success"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

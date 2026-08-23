@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Student, MapPin, Briefcase, Factory, ChartPieSlice, Globe, Circle } from '@phosphor-icons/react';
+import { Student, MapPin, Briefcase, Factory, ChartPieSlice, Flask, ShieldCheck } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 
 
@@ -16,7 +16,7 @@ const About = () => {
         {
             icon: <Student size={24} weight="duotone" />,
             title: 'Education',
-            description: 'B.Eng - IPB University (GPA 3.33)',
+            description: 'S.Tr.Kom — IPB University (GPA 3.33)',
             color: 'text-primary',
             bg: 'bg-primary/10',
             glow: 'border-glow-top-primary'
@@ -40,10 +40,10 @@ const About = () => {
     ];
 
     const achievements = [
-        { text: 'Cold Chain Upgrade', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-blue' },
-        { text: '<1% Reject Rate', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
-        { text: 'Traceability System', icon: <Globe size={14} weight="duotone" />, color: 'text-accent-blue' },
-        { text: 'Quality Dashboard', icon: <Circle size={14} weight="duotone" />, color: 'text-success' },
+        { text: 'Mozzarella First Batch — 7.2% Yield', icon: <Factory size={14} weight="duotone" />, color: 'text-primary' },
+        { text: 'Cheddar R&D — 113.8% Trial Yield', icon: <Flask size={14} weight="duotone" />, color: 'text-accent-blue' },
+        { text: '<1% Reject Rate', icon: <ShieldCheck size={14} weight="duotone" />, color: 'text-success' },
+        { text: 'Supplier Quality Dashboard', icon: <ChartPieSlice size={14} weight="duotone" />, color: 'text-accent-blue' },
     ];
 
     return (
@@ -92,7 +92,7 @@ const About = () => {
                                     I joined Rumah Susu Indonesia in March 2026 as part of a new unit in Tasikmalaya. Alongside a lean team of <span className="text-foreground font-medium">four people</span>, I helped set up the SOP architecture, QC protocols — lactoscan analysis, peroxide tests, alcohol tests — and establish the cold chain and production workflows, processing <span className="text-foreground font-medium">2,000–3,500 liters per week</span>.
                                 </p>
                                 <p>
-                                    Beyond volume, I worked on a cold chain upgrade — reinforced belts so delivery boxes wouldn't crack in transit — set up a <span className="text-foreground font-medium">3-batch sample retention</span> system to trace spoilage, and built a milk quality dashboard tracking pH, TS, and added water in real time. Reject rates stayed under <span className="text-foreground font-medium">1%</span>. Products: pasteurized milk and moza cheese, with yogurt on the roadmap.
+                                    Beyond volume, I led the unit's first commercial Mozzarella production — <span className="text-foreground font-medium">500 liters of fresh milk into 36 kg / 180 units at 7.2% yield</span>, from equipment procurement and troubleshooting to the first shipment to Bogor — and standardized its SOPs, production forms, and reporting. I'm now driving Processed Cheddar R&D through nine formulation trials, built a supplier milk-quality dashboard tracking fat, SNF, protein, and alcohol test per KPS, and set up a 3-batch sample retention system to trace spoilage. Reject rates stayed under <span className="text-foreground font-medium">1%</span>. Products: pasteurized milk and moza cheese, with processed cheddar scaling up next.
                                 </p>
                                 
                                 <div className="pt-4">

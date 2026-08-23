@@ -1,0 +1,287 @@
+================================================================================
+           MASTER SKILLS PROFILE - MUHAMMAD HAFIZH MAULIDAN
+   Referensi PRD baru & perbaikan web portfolio (Agustus 2026)
+   Sumber: ABOUT_ME.md, DESIGN.md, MASTER_SKILLS.md + LinkedIn terverifikasi
+================================================================================
+
+--------------------------------------------------------------------------------
+1. IDENTITAS & POSITIONING
+--------------------------------------------------------------------------------
+Head of Unit - Rumah Susu Indonesia (Mar 2026-sekarang, Tasikmalaya, on-site).
+S.Tr.Kom. Teknik Komputer & Mekatronika, IPB University (2021-2025, GPA 3.33).
+LinkedIn: linkedin.com/in/hafizhmaulidan - 1.733 followers, 500+ connections.
+
+HEADLINE LINKEDIN RESMI:
+"Head of Unit at Rumah Susu Indonesia | Operations & Production Management
+ Dairy Manufacturing"
+
+TOP SKILLS LINKEDIN: Operations Management, Production Management,
+Quality Management, Standard Operating Procedure (SOP).
+
+POSITIONING PORTFOLIO: "Pembangun sistem, bukan operator."
+Jembatan antara lantai produksi (susu, mesin, cold chain) dan dunia digital
+(dashboard, API, IoT, ML). Semua yang dia pegang dibangun sistemnya dari nol:
+SOP, dashboard real-time, cold chain monitoring, model ML, prototipe IoT.
+
+CATATAN NARASI (penting untuk konsistensi konten):
+- LinkedIn = tone moderasi, fokus operasional (target recruiter ops/produsi).
+- Portfolio = tone "system builder" penuh + depth teknis.
+- Keduanya valid; sadari bedanya, jangan campur dalam satu copywriting.
+
+TARGET KARIER: Operations & Production Management - kontribusi ke operasional
+harian + membangun sistem yang membantu bisnis scale.
+PREFERENSI KERJA (open to work, recruiters only): Jakarta +4 lokasi lain,
+On-site / Hybrid.
+
+DIFFERENTIATOR: Bisa wiring ESP32 pagi hari, deploy ML API siang hari,
+lead tim produksi sore hari. Jarang ada Production Leader yang bisa coding
+dashboard DAN wiring ESP32.
+
+CORE DRIVE: Repeatable operational systems that scale. Improvement operasional
+tidak selalu dari perubahan besar - sering dari sistem yang jelas dan keputusan
+berbasis data (kutipan About LinkedIn).
+
+--------------------------------------------------------------------------------
+2. SKILL DOMAINS & CAPAIAN TERUKUR
+--------------------------------------------------------------------------------
+
+OPERASI & PRODUKSI (Expert)
+- Lead unit produksi 25.000 unit/batch (1.250L susu -> ~10.000 cup
+  pasteurisasi), tim lintas produksi/loading/distribusi.
+- Scaling produksi dari nol ke 2.000-3.500 L/minggu.
+- Waste rate <= 3% (target perusahaan), reject rate < 1%.
+- Koordinasi suplai raw milk dengan 3-4 koperasi susu (KPS).
+
+ACHIEVEMENT UTAMA (urutan prioritas storytelling):
+1. PRODUCTION MANAGEMENT - MOZZARELLA: memimpin produksi mozzarella perdana
+   RSI Tasikmalaya: 500 L susu segar -> 36 kg / 180 pcs @200g, yield 7.2%.
+   End-to-end: pengadaan alat/bahan, trial, troubleshooting (inverter,
+   blade mixer, kontaminasi air boiler), packaging, pengiriman perdana
+   ke Bogor.
+2. R&D - PROCESSED CHEDDAR: 9 trial formulasi & proses (komposisi, tekstur,
+   rasa, pewarna, metode pemasakan, mixing). Metode pematangan maizena
+   terpisah dengan chopper. Flavor final: Mohler. Yield trial 113.8%.
+   Lanjut ke scale-up + finalisasi SOP. <- achievement teknis TERKUAT,
+   wajib ditonjolkan (product/process development dari nol).
+3. PROCESS STANDARDIZATION - MOZZARELLA: SOP Produksi Mozzarella + Form
+   Produksi + Laporan Produksi; mencakup personal hygiene, persiapan alat,
+   Lactoscan, proses produksi, stretch test, taste test, chilling, vacuum,
+   labeling.
+4. QUALITY & SUPPLIER INTELLIGENCE: digitalisasi data kualitas susu per
+   supplier/KPS (Karya Nugraha, Kemuning, Larasati) - fat, SNF, protein,
+   alcohol test, volume, parameter Lactoscan - di dashboard. Seleksi
+   supplier berbasis data aktual.
+5. OPERATIONS DIGITALIZATION: web-based Production & Inventory Management
+   Dashboard (monitoring produksi, inventory, KPI, reporting).
+6. DISTRIBUTION & LOADING STANDARDIZATION: SOP ratchet untuk pengamanan
+   muatan; standar terpisah Box Biru vs Tray (batas layer, jumlah tumpukan,
+   posisi muatan, pemasangan ratchet, verifikasi pra-keberangkatan).
+
+POSITIONING NARASI: Head of Unit -> Operations -> Production -> R&D ->
+Quality Systems -> Digitalization. Bukan "orang yang mengawasi produksi",
+tapi pembangun sistem operasi, pengembang produk, pemecah masalah teknis,
+dan digitalisator proses.
+
+Expert: production planning, QA/QC (lactoscan, alcohol/peroxide test),
+SOP development & standardization, inventory control.
+
+IOT & EMBEDDED (Expert)
+- ESP32/ESP8266 firmware C/C++ (Arduino IDE, PlatformIO, ESP-IDF), Arduino.
+- Advanced: sensor (ultrasonic, DHT22, DS18B20, RFID RC522, TCS34725),
+  aktuator (relay, L298N, servo, pump), protokol (HTTP/REST, MQTT, UART,
+  I2C, SPI), PCB design, FastLED/WS2812B, Arduino IoT Cloud.
+- Bukti:
+  * Flood Monitoring System - ESP32, 3x ultrasonic + flow sensor, relay,
+    Telegram Bot, cloud tiap 30 detik. DEPLOYED di lapangan (waterproof).
+    Downtime turun 40%, uptime 99%, emergency response turun 40%.
+  * Autonomous Fire-Fighting Robot - final project IPB, sensor fusion otonom.
+  * Curug Cikoneng LED installation - ESP32, RTC scheduling, IP65, on-site.
+  * Microgreen automation (Admigre) - JURNAL Ilmiah Teknik Elektro IPB 2024.
+
+WEB & SOFTWARE (Advanced)
+- React.js/Next.js, JavaScript/TypeScript, Tailwind, HTML/CSS (expert),
+  REST API, Git, Python Flask. Intermediate: Node.js, Supabase/PostgreSQL.
+- SEO/AEO/GEO: JSON-LD @graph, speakable schema, llms.txt, hreflang EN+ID.
+- Bukti:
+  * NanoRobotic website (PT Matra Kreasi Mandiri, freelance Sep-Des 2025):
+    full lifecycle solo frontend, ZERO critical error saat launch, WhatsApp
+    API kustom untuk semua contact form & tombol "Join Now", Bootstrap
+    mobile-first, SEO & performance optimization, cross-browser testing.
+    Versi LinkedIn: platform edukasi robotik & coding anak usia 3-15 tahun,
+    kolaborasi tim desain, layout kelas Online/Hybrid/Offline + kurikulum.
+  * Inventory Dashboard Rumah Susu - LIVE dipakai harian, real-time stock,
+    multi-user (Next.js + Google Sheets API).
+  * Yield Optimizer Keju, InvoiceKilat (Supabase RLS + PDF export),
+    filmroll (TMDB API), My Brownies e-commerce, drmatt.id.
+
+DATA & MACHINE LEARNING (Advanced)
+- Pandas/NumPy, data cleaning & time-series (advanced), Fuzzy Logic Mamdani,
+  Excel power user. Intermediate: scikit-learn, XGBoost, TF/PyTorch.
+- FLAGSHIP: Milk Quality Prediction Model - F1 weighted 0.92
+  (Random Forest + XGBoost), 7 parameter produksi, SHAP explainability,
+  FastAPI endpoint <15ms inference. PRD: ML-Quality-Prediction-PRD.md.
+- IDX stock screener (660+ emiten). Rice prediction (fuzzy logic)
+  - JASTH IPB 2024.
+- Standar ML workflow: baseline interpretable dulu, advanced kalau perlu.
+  Wajib: F1 metrik, SHAP, deployment, repo publik terdokumentasi.
+
+IT INFRASTRUKTUR & NETWORKING (Advanced)
+- Expert: hardware troubleshooting & assembly, printer/POS repair.
+- Advanced: Windows admin, LAN/WAN, TCP/IP/DNS/DHCP/VLAN/OSPF, preventive
+  maintenance, remote support. Intermediate: Linux, Cisco/Mikrotik, VPS.
+
+SOFT SKILLS: Problem solving & root cause analysis (expert), technical
+documentation (expert), leadership lintas fungsi, komunikasi stakeholder,
+kerja Agile terbukti (sprint planning/review di proyek Banana Ripeness).
+
+RISET: 4 publikasi/paper IPB. Thesis 100+ halaman sistem klasifikasi otomatis.
+MINAT BERIKUTNYA: Edge AI/embedded AI, computer vision, network security OT/IoT,
+industrial automation (PLC/HMI/SCADA), robotics sensor fusion.
+
+--------------------------------------------------------------------------------
+3. SERTIFIKASI TERVERIFIKASI LINKEDIN (22 total, 10 tampil publik)
+--------------------------------------------------------------------------------
+1. Integrated Speaking English - Language Center Bogor/IPB (Nov 2025)
+   ID: NO. 2864 / IS / XI / 2025
+2. Hardware Installation Supervisor - BNSP (Sep 2025)
+   ID: 213/LSP.928.1/IX/2025
+   Kompetensi: disaster recovery planning, hardware spec, system analysis,
+   IT maintenance.
+3. Google Analytics Certification - Google Skillshop (Agu 2025,
+   expires Agu 2026). ID: 158655543.
+4. Data Science & Analytics - HP LIFE (Agu 2025).
+5. Data Visualization Basics - Dicoding Academy (Mei 2025). ID: 07Z631Y72ZQR.
+   16 jam: Gestalt principles, preattentive attributes.
+6. Understanding AI and LLMs as a Network Engineer (AI4NE) - Cisco (Apr 2025).
+7. Advance Python - Skilvul (Jan 2025). OOP, recursion, lambda,
+   parallelism & concurrency.
+8. JavaScript Dasar - Skilvul (Sep 2024). DOM, ES6.
+9. Intro to Programming - Kaggle (Sep 2024).
+10. Problem Solving (Basic) - HackerRank (Sep 2024). ID: f63b39015a5f.
+
+Lainnya dari ABOUT_ME.md (belum tampil di LinkedIn): Kominfo Junior Network
+Engineer 2024-2028, DBS Foundation MLOps, DBS Data Science & AI, LSP Digital
+Marketing BNSP, Basic Barista BNSP, K3, MS Excel.
+
+BAHASA: English professional working proficiency - Language Center cert +
+Duolingo Score 109 (tercantum di LinkedIn).
+
+--------------------------------------------------------------------------------
+4. PROYEK DETAIL TAMBAHAN DARI LINKEDIN
+--------------------------------------------------------------------------------
+ADVANCED BANANA RIPENESS DETECTION SYSTEM (Okt-Nov 2024)
+- Tim 2 orang, metodologi Agile: task division, sprint review, progress
+  tracking.
+- TCS34725 RGB color sensor untuk klasifikasi kematangan berdasarkan nilai
+  RGB.
+- Real-time monitoring ESP32 + Arduino IoT Cloud (live tracking &
+  visualisasi).
+- J5019 module + LCD display untuk output status langsung.
+- Koordinasi dengan client & PT Matra Kreasi Mandiri (client-focused).
+- Casing custom: 3D probe sensor + acrylic assembly.
+- Nilai jual: kolaborasi tim + Agile + end-to-end concept-to-deployment
+  dengan mindset client-focused.
+
+NANO ROBOTIC EDUCATION PLATFORM (Agu 2024-Jan 2025, di PT Matra Kreasi)
+- Platform edukasi robotik & coding anak 3-15 th, tagline "Smart Way in
+  Technology for Brighter Future".
+- Responsif multi-device, layout kelas Online/Hybrid/Offline + info kurikulum,
+  optimasi performa, kolaborasi tim desain untuk UI ramah anak.
+
+--------------------------------------------------------------------------------
+5. STANDAR DESAIN & KUALITAS WEB (WAJIB)
+--------------------------------------------------------------------------------
+DESAIN
+- Premium & intentional: setiap elemen punya tujuan, tolak default generik AI.
+- Cinematic & spatial: whitespace masif (py-32), ritme sinematik.
+- Konsisten dengan DESIGN.md sebagai design bible.
+
+TEKNIS
+- Animasikan HANYA transform & opacity. Larang animasi top/left/width/height.
+- CSS Grid untuk layout. min-h-[100dvh], bukan h-screen.
+- Lazy load komponen berat; mobile-first; larang horizontal scroll.
+- Isolasi UI interaktif dari komponen statis.
+
+TIPOGRAFI & WARNA
+- Banned font: Inter, Roboto, Arial. Pakai: Plus Jakarta Sans (current),
+  Geist, Outfit, Satoshi.
+- Maks 1 warna aksen (<80% saturasi), basis netral (Zinc/Slate).
+  Larang pure #000000.
+
+KOMPONEN & MOTION
+- Kartu hanya jika elevasi = hierarki. Prefer border-t/divide-y/negative space.
+- Interaksi lengkap: loading, empty, error state. Feedback taktil :active.
+- Spring physics (stiffness 100, damping 20). Larang linear easing.
+- Staggered reveals + micro-interactions perpetual.
+- Live data > static data (pola Google Sheets live wajib dipertahankan).
+
+KONTEN ANTI-SLOP
+- Banned: emoji dekorasi, marketing klise ("Unleash", "Seamless"), avatar
+  generik, label section tanpa makna, ikon/blob tanpa fungsi.
+- Wajib: teks readable, klaim didukung angka nyata, copywriting konsisten
+  dengan positioning "system builder".
+
+IMAGE-FIRST WORKFLOW (redesign visual):
+Generate referensi desain per-section -> analisa mendalam -> implementasi
+setia. Jangan drift ke default generik.
+
+BANNED LIST FINAL: gradien ungu/biru AI, 3 kolom kartu identik,
+box-dalam-box-dalam-box, pure #000000, mobile above-the-fold cluttered,
+animasi non-accelerated.
+
+--------------------------------------------------------------------------------
+6. KONTEKS WEB SAAT INI & KANDIDAT PERBAIKAN
+--------------------------------------------------------------------------------
+STACK: React 19 + Vite 7 (code splitting, manual chunks) + Tailwind 3.4 +
+React Router 7 + GSAP/Framer Motion/Lenis (lazy) + Recharts (lazy) +
+Phosphor Icons + Radix UI/CVA. Deploy Vercel + Analytics.
+Data live: Google Apps Script API via useProductionData.js.
+
+KEKUATAN YANG WAJIB DIPERTAHANKAN:
+1. Live production data (bukan placeholder) - pembeda utama.
+2. Angka capaian nyata di seluruh halaman.
+3. SEO/AEO infrastructure mature.
+4. Custom build dari nol, narasi "system builder" konsisten.
+
+KANDIDAT PERBAIKAN (input PRD):
+1. Konflik palet purple (#A855F7 di DESIGN.md) vs aturan anti-gradien-ungu
+   -> putuskan: migrate accent ATAU dokumentasikan sebagai brand choice.
+2. Font Syne vs rekomendasi Plus Jakarta Sans/Satoshi -> evaluasi konsistensi.
+3. Case study dedicated flagship (Milk Quality ML, Inventory Dashboard, Flood
+   Monitoring, Banana Ripeness versi Agile/client) ala problem-solution-result.
+4. Backend sendiri (Vercel Serverless / Supabase) untuk contact form,
+   view counter - melengkapi Google Sheets.
+5. Performance audit ulang (Lighthouse) + verifikasi A11Y_AUDIT.md.
+6. Sinkronkan data antar-sumber (lihat Bagian 7) sebelum publikasi baru.
+
+--------------------------------------------------------------------------------
+7. DISKREPANSI ANTAR-SUMBER (PERLU KEPUTUSAN SEBELUM DIPAKAI DI PRD)
+--------------------------------------------------------------------------------
+1. Tanggal akhir kerja freelance Frontend Developer:
+   LinkedIn: Sep-Des 2025 | ABOUT_ME.md: Sep 2025-Jan 2026. Pilih satu.
+2. Credential ID BNSP Hardware Installation Supervisor:
+   LinkedIn: 213/LSP.928.1/IX/2025 | ABOUT_ME.md: 62090 2152 6 0005076 2025.
+   Verifikasi sertifikat fisik/PDF mana yang benar.
+3. Proyek Banana Ripeness:
+   ABOUT_ME.md: Mei 2026 | LinkedIn: Okt-Nov 2024. Kemungkinan dua fase
+   proyek berbeda atau salah tanggal - klarifikasi.
+4. Jumlah sertifikasi: LinkedIn bilang 22, hanya 10 tampil publik -
+   lengkapi sisanya di LinkedIn agar konsisten dengan portfolio.
+5. IPB: LinkedIn menulis "Bachelor of Technology" Aug 2021-Agu 2025;
+   ABOUT_ME.md: S.Tr.Kom. D4 2021-2025. Samakan gelar resmi.
+
+--------------------------------------------------------------------------------
+8. TEMPLATE PRD MINIMUM
+--------------------------------------------------------------------------------
+1. Ringkasan            5. Data (sumber, struktur, volume)
+2. Problem              6. Metrik sukses (angka terukur)
+3. Scope P0/P1/P2       7. Milestone + deliverables bertabel
+4. Tech Stack           8. Risks & mitigasi + design notes (Bagian 5)
+
+PRINSIP: Setiap fitur jawab "sistem apa yang dibangun dari nol?"
+Output measurable. Simple-interpretable dulu. Deployment bukan opsional.
+Dokumentasi adalah deliverable.
+
+================================================================================
+END - living document, update tiap ada capaian/sumber baru.
+================================================================================

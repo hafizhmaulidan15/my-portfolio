@@ -86,17 +86,19 @@ const Projects = () => {
             icon: <Factory size={28} weight="duotone" />,
             role: 'Head of Unit',
             roleType: 'lead',
-            description: 'Orchestrating end-to-end production architecture and SOPs for dairy processing.',
+            description: 'End-to-end production architecture: milk SOPs, first Mozzarella production run, Processed Cheddar R&D, and distribution loading standards.',
             responsibilities: [
                 'Engineered production workflows for 25,000 units per batch, optimizing throughput.',
-                'Developed comprehensive QC protocols and supply chain management strategies.',
-                'Led cross-functional coordination between production and local cooperatives.',
+                'Authored Mozzarella production SOPs, forms, and reporting — hygiene to vacuum sealing.',
+                'Led Cheddar R&D through 9 formulation trials; defined maizena-maturation method.',
+                'Standardized ratchet loading SOPs per Box Biru & Tray with pre-departure verification.',
+                'Developed QC protocols and supplier quality intelligence from Lactoscan data.',
             ],
-            skills: ['Ops Strategy', 'QCMilk', 'Cold Chain'],
+            skills: ['Ops Strategy', 'Product R&D', 'Cold Chain'],
             stats: [
                 { value: '25K', label: 'Batch' },
-                { value: '100%', label: 'SOPs' },
-                { value: 'Team', label: 'Coord' }
+                { value: '9', label: 'Cheddar Trials' },
+                { value: '7.2%', label: 'Mozza Yield' }
             ],
         },
         {
