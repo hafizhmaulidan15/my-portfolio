@@ -1,4 +1,5 @@
 import { Briefcase, Factory, Code, TerminalWindow, Globe, ShieldCheck, ChartBarHorizontal, GraduationCap, ChartLineUp } from '@phosphor-icons/react';
+import { leadershipJournals } from '../data/leadership';
 
 const experiences = [
     {
@@ -123,6 +124,37 @@ const Experience = () => {
                             <div><div className="text-sm font-medium leading-none">Pak Rio Adhari</div><div className="text-xs text-text-tertiary">Management — Rumah Susu Indonesia</div></div>
                             <span className="ml-auto hidden sm:inline font-mono text-[11px] px-2 py-1 rounded-full bg-gradient-icon border border-primary/10">Direct supervisor</span>
                         </div>
+                    </div>
+                </div>
+
+                {/* Leadership Journal — new section, blue accent like Cheese Production & R&D */}
+                <div id="leadership-journal" className="mt-20">
+                    <div className="flex items-center gap-3 mb-2">
+                        <span className="h-px w-8 bg-primary/20 hidden sm:block" aria-hidden="true"></span>
+                        <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Leadership Journal — Document decisions</p>
+                    </div>
+                    <h3 className="font-display text-[24px] md:text-[28px] font-[700] tracking-[-0.02em] leading-tight text-foreground">Decisions that moved <span className="text-primary">production</span></h3>
+                    <p className="text-sm text-text-secondary mt-2 max-w-[60ch]">4 entries — linked to projects, status completed, reflection included.</p>
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {leadershipJournals.map((j) => (
+                            <div key={j.id} className="p-4 rounded-xl border border-border bg-surface hover:border-primary/20 transition-colors">
+                                <div className="flex items-center justify-between gap-2">
+                                    <span className="font-mono text-[11px] px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/15">COMPLETED</span>
+                                    <span className="font-mono text-[11px] text-text-tertiary">{new Date(j.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                                </div>
+                                <h4 className="font-medium text-sm mt-3 leading-tight">{j.meetingTitle}</h4>
+                                <div className="mt-3 pl-3 border-l-2 border-primary">
+                                    <p className="text-xs font-mono uppercase tracking-wide text-text-tertiary">Key Decision</p>
+                                    <p className="text-sm leading-relaxed mt-1">{j.decision}</p>
+                                </div>
+                                <div className="mt-3 space-y-2">
+                                    <p className="text-xs font-mono uppercase tracking-wide text-text-tertiary">Action Plan</p>
+                                    <p className="text-sm leading-relaxed text-text-secondary whitespace-pre-line">{j.actionPlan}</p>
+                                    {j.reflection && <p className="text-sm leading-relaxed bg-black/[0.02] border border-border rounded-lg p-3 italic">“{j.reflection}”</p>}
+                                    {j.relatedProjectTitle && <p className="font-mono text-[11px] text-text-tertiary">Related to: <span className="text-primary">{j.relatedProjectTitle}</span></p>}
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
