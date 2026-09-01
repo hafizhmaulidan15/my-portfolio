@@ -4,7 +4,7 @@ import {
     Circuitry, Factory, Flask, Globe, Pulse, TerminalWindow,
     Truck, UsersThree, Wrench, ArrowUpRight
 } from '@phosphor-icons/react';
-import { GlassPanel } from './ui/GlassPanel';
+
 
 const sections = [
     {
@@ -64,17 +64,15 @@ const Skills = () => {
                             </h3>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-3" style={{gridAutoFlow:'dense'}}>
+                        <div className="divide-y divide-border border-y border-border">
                             {section.skills.map((skill, ski) => {
                                 const id = `${si}-${ski}`;
                                 const open = expanded.has(id);
                                 const isFeatured = si === 0 && ski === 0;
                                 return (
-                                    <GlassPanel
+                                    <div
                                         key={id}
-                                        variant={isFeatured ? 'elevated' : 'borderless'}
-                                        noHover
-                                        className={`skill-card cursor-pointer transition-all duration-200 overflow-hidden group ${isFeatured ? 'sm:col-span-2 lg:col-span-2 border border-primary/15' : ''}`}
+                                        className={`group flex flex-col gap-1 py-4 px-2 -mx-2 rounded-lg hover:bg-black/[0.02] cursor-pointer transition-colors ${isFeatured ? 'border-l-2 border-primary pl-3' : 'pl-2'}`}
                                         onClick={() => toggle(id)}
                                     >
                                         <div className="flex items-center gap-3 p-3">
@@ -108,7 +106,7 @@ const Skills = () => {
                                                 )}
                                             </div>
                                         </div>
-                                    </GlassPanel>
+                                    </div>
                                 );
                             })}
                         </div>

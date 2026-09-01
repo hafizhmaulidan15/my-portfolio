@@ -1,163 +1,102 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import { Envelope, ArrowUpRight, Factory, Lightning, ChartBar } from '@phosphor-icons/react';
-import { GlassPanel } from './ui/GlassPanel';
+import { ArrowUpRight, Factory } from '@phosphor-icons/react';
 
 const Hero = () => {
     const staggerRef = useRef(null);
-
     useEffect(() => {
         const el = staggerRef.current;
         if (!el) return;
-        const timer = setTimeout(() => el.classList.add('is-shown'), 100);
-        return () => clearTimeout(timer);
+        const t = setTimeout(() => el.classList.add('is-shown'), 80);
+        return () => clearTimeout(t);
     }, []);
 
     return (
-        <div className="overflow-x-hidden w-full max-w-full">
-        <section id="home" className="hero-speakable relative min-h-dvh flex items-center justify-center overflow-hidden bg-background py-24 md:py-32">
-            <div className="fixed inset-0 z-0 pointer-events-none">
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black_40%,transparent_100%)]"></div>
-            </div>
-            
-            <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] bg-primary/[0.06] blur-[160px] rounded-full pointer-events-none"></div>
+        <section id="home" className="hero-speakable relative bg-background overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none opacity-[0.035]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`}} aria-hidden="true"></div>
 
-            <div className="container relative z-10 mx-auto px-4 sm:px-6 max-w-[1400px]">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10 items-center">
-                    
-                    <div className="lg:col-span-6 space-y-4 md:space-y-6 animate-slide-in-left">
+            <div className="container relative z-10 mx-auto px-6 lg:px-8 max-w-[1400px]">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[calc(100dvh-64px)] py-12 lg:py-16">
+                    {/* Left editorial — 7 cols */}
+                    <div className="lg:col-span-7 space-y-6">
                         <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
-                            <span className="h-px w-8 bg-text-tertiary/40 hidden sm:block" aria-hidden="true"></span>
-                            Tasikmalaya — Dairy Operations • Since Mar 2026
+                            <span className="h-px w-8 bg-foreground/15 hidden sm:block" aria-hidden="true"></span>
+                            Head of Unit — Rumah Susu Indonesia / Tasikmalaya
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
-                            <h1 className="t-stagger-line font-display text-[clamp(2.4rem,6vw,4.4rem)] font-[800] tracking-[-0.04em] leading-[0.85] text-foreground max-w-5xl text-balance">
-                                MUHAMMAD <span className="text-primary">HAFIZH</span> <span className="text-text-secondary font-[600]">MAULIDAN</span>
+                            <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.045em] leading-[0.85] text-foreground text-balance">
+                                Systems that<br />
+                                <span className="font-[300] italic tracking-[-0.03em] text-text-tertiary">scale</span> dairy<br />
+                                production.
                             </h1>
-
-                            <p className="t-stagger-line t-stagger-line--2 text-sm sm:text-[15px] md:text-base text-text-secondary leading-relaxed mt-2 sm:mt-3">
-                                <span className="text-foreground font-semibold">Head of Unit at Rumah Susu Indonesia</span> | Operations & Production Management | Dairy Manufacturing & Process Optimization
-                            </p>
-
-                            <p className="t-stagger-line t-stagger-line--3 text-xs sm:text-sm md:text-[15px] text-text-secondary max-w-[60ch] leading-relaxed mt-2 sm:mt-3">
-                                Operations leader building systems end-to-end in dairy manufacturing — from the first commercial Mozzarella production run and Processed Cheddar R&D to quality dashboards and process optimization.
+                            <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
+                                I build repeatable operations end-to-end — from <span className="text-foreground font-medium">500 L → 36 kg mozzarella at 7.2% yield</span> and 9-trial cheddar R&D to cold-chain and supplier intelligence. Not overseeing — building.
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-3">
-                            <Link 
-                                to="/contact"
-                                className="group inline-flex items-center gap-3 pl-6 pr-1.5 py-1.5 bg-primary text-white text-sm font-medium rounded-full border border-primary transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-primary-hover active:scale-[0.98]"
-                            >
-                                <span>Connect now</span>
-                                <span className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105 transition-transform duration-500">
-                                    <Envelope size={14} weight="bold" />
+                        <div className="flex flex-wrap items-center gap-3 pt-1">
+                            <Link to="/contact" className="group inline-flex items-center gap-3 pl-6 pr-1.5 py-1.5 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-foreground/90 active:scale-[0.98]">
+                                <span>Start a conversation</span>
+                                <span className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500">
+                                    <ArrowUpRight size={14} weight="bold" />
                                 </span>
                             </Link>
-                            <Link 
-                                to="/projects"
-                                className="px-5 py-3 bg-transparent text-foreground text-sm font-medium flex items-center gap-2 underline decoration-foreground/20 underline-offset-4 hover:decoration-foreground transition-all duration-200"
-                            >
-                                View works
-                                <ArrowUpRight size={14} weight="bold" />
+                            <Link to="/projects" className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-foreground underline decoration-foreground/15 underline-offset-4 hover:decoration-foreground/40 transition-colors">
+                                View case studies
                             </Link>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-8 pt-2 sm:pt-4">
+                        <div className="grid grid-cols-3 gap-6 pt-6 mt-2 border-t border-border max-w-[480px]">
                             <div>
-                                <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-foreground">
-                                    Up to <span className="t-digit-group is-animating">
-                                        <span className="t-digit">2</span>
-                                        <span className="t-digit">5</span>
-                                        <span className="t-digit" data-stagger="1">K</span>
-                                    </span>
-                                </div>
-                                <div className="text-xs md:text-sm text-text-tertiary uppercase tracking-widest mt-1">Units/Batch</div>
+                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">25K</div>
+                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">units / batch</div>
+                                <div className="text-xs text-text-tertiary mt-1"> pasteurized cups</div>
                             </div>
                             <div>
-                                <div className="text-xl md:text-2xl lg:text-[28px] font-bold font-mono tracking-tighter text-accent-blue">
-                                    <span className="t-digit-group is-animating">
-                                        <span className="t-digit">3</span>
-                                        <span className="t-digit" data-stagger="1">.</span>
-                                        <span className="t-digit" data-stagger="2">3</span>
-                                        <span className="t-digit" data-stagger="3">3</span>
-                                    </span>
-                                </div>
-                                <div className="text-xs md:text-sm text-text-tertiary uppercase tracking-widest mt-1">GPA</div>
+                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">7.2%</div>
+                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">mozza yield</div>
+                                <div className="text-xs text-text-tertiary mt-1">180 pcs first run</div>
+                            </div>
+                            <div>
+                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">&lt;1%</div>
+                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">reject rate</div>
+                                <div className="text-xs text-text-tertiary mt-1">3-batch retention</div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="lg:col-span-6 grid grid-cols-2 auto-rows-fr gap-3 sm:gap-4 md:gap-4 justify-items-stretch animate-slide-in-right" style={{gridAutoFlow:'dense'}}>
-                        <Link to="/experience" className="group block w-full col-span-2 sm:col-span-1 sm:row-span-2 overflow-hidden">
-                            <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem] h-full">
-                            <GlassPanel variant="plain" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 rounded-[1.25rem] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] overflow-hidden">
-                                <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-                                    <div className="p-2 sm:p-2.5 md:p-3 bg-primary/10 rounded-sm text-primary">
-                                        <Factory size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
-                                    </div>
-                                    <div className="flex items-center gap-1.5 sm:gap-2">
-                                        <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-success"></div>
-                                        <span className="text-[10px] sm:text-[11px] md:text-xs font-mono text-success uppercase tracking-wider">Active</span>
-                                    </div>
-                                </div>
-                                <h2 className="text-sm sm:text-[15px] md:text-base font-semibold text-foreground group-hover:text-primary transition-colors">Production Leadership</h2>
-                                <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-2 sm:pt-3 mt-auto">
-                                    <div>
-                                        <div className="text-xs sm:text-sm md:text-[15px] font-bold font-mono text-primary">25K</div>
-                                        <div className="text-[9px] sm:text-[10px] md:text-xs text-text-tertiary uppercase tracking-wider">Batch</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-xs sm:text-sm md:text-[15px] font-bold font-mono text-accent-blue">7.2%</div>
-                                        <div className="text-[9px] sm:text-[10px] md:text-xs text-text-tertiary uppercase tracking-wider">Mozza Yield</div>
+                    {/* Right visual — 5 cols, Double-Bezel */}
+                    <div className="lg:col-span-5 lg:pl-4">
+                        <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[2rem]">
+                            <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(15,15,17,0.08)]">
+                                <div className="aspect-[4/3] relative overflow-hidden bg-[#E8E0D5]">
+                                    <img src="https://picsum.photos/seed/dairy-steel-lab/800/600" alt="Dairy steel lab — cold chain" width="800" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover grayscale-[0.15] contrast-[1.04]" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+                                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-mono tracking-wide text-foreground border border-black/5">Tasikmalaya Plant • 2026</span>
+                                        <span className="w-2 h-2 rounded-full bg-success animate-pulse border border-white" aria-hidden="true"></span>
                                     </div>
                                 </div>
-                            </GlassPanel>
-                            </div>
-                        </Link>
-
-                        <Link to="/skills" className="group block w-full overflow-hidden">
-                            <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem] h-full">
-                            <GlassPanel variant="plain" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 rounded-[1.25rem] overflow-hidden">
-                                <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
-                                    <ChartBar size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
-                                </div>
-                                <h2 className="text-sm sm:text-[15px] md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Operations Management</h2>
-                                <div className="flex flex-wrap gap-1.5 sm:gap-1.5 md:gap-2 mt-auto">
-                                    {['SOP Dev', 'QC', 'Supply Chain', 'Team Lead'].map((s) => (
-                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[9px] sm:text-[10px] md:text-xs font-mono uppercase tracking-wider">
-                                            {s}
+                                <div className="p-4 flex items-center justify-between border-t border-border bg-surface">
+                                    <div className="flex items-center gap-2.5">
+                                        <span className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center">
+                                            <Factory size={14} weight="bold" />
                                         </span>
-                                    ))}
+                                        <div>
+                                            <div className="text-sm font-medium leading-none">Production Ops</div>
+                                            <div className="text-xs text-text-tertiary">25K/batch • 4-person lean team</div>
+                                        </div>
+                                    </div>
+                                    <span className="font-mono text-xs px-2 py-1 rounded-full bg-success/10 text-success border border-success/15">Live</span>
                                 </div>
-                            </GlassPanel>
                             </div>
-                        </Link>
-
-                        <Link to="/certifications" className="group block w-full col-span-2 overflow-hidden">
-                            <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem] h-full">
-                            <GlassPanel variant="plain" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 rounded-[1.25rem] overflow-hidden">
-                                <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
-                                    <Lightning size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
-                                </div>
-                                <h2 className="text-sm sm:text-[15px] md:text-base font-semibold text-foreground group-hover:text-accent-blue transition-colors">Core Competencies</h2>
-                                <div className="flex flex-wrap gap-1.5 sm:gap-1.5 md:gap-2 mt-auto">
-                                    {['Prod Planning', 'Process Opt', 'BPOM', 'Cold Chain'].map((s) => (
-                                        <span key={s} className="px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 md:py-1.5 bg-accent-blue/10 text-accent-blue text-[9px] sm:text-[10px] md:text-xs font-mono uppercase tracking-wider">
-                                            {s}
-                                        </span>
-                                    ))}
-                                </div>
-                            </GlassPanel>
-                            </div>
-                        </Link>
+                        </div>
+                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center">Built from zero — SOPs, QC lactoscan, supplier intelligence, distribution ratchet SOPs</p>
                     </div>
-
                 </div>
             </div>
         </section>
-        </div>
     );
 };
 
