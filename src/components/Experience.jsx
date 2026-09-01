@@ -154,16 +154,16 @@ const Experience = () => {
                                 return (
                                     <motion.div 
                                         key={idx}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: idx * 0.15 }}
+                                        initial={{ opacity: 0, y: 8 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.4, delay: idx * 0.06 }}
                                         viewport={{ once: true }}
                                         className="relative pl-10 group"
                                     >
                                         <div className={`absolute left-0 top-1.5 w-[23px] h-[23px] rounded-full bg-background border-2 ${colors.border} transition-all z-10 flex items-center justify-center`}>
                                             <div className={`w-2 h-2 rounded-full ${colors.bg.replace('/10', '/50')} ${colors.text} transition-colors`}></div>
                                         </div>
-                                        <div className="space-y-1.5 md:space-y-2 p-3 sm:p-4 rounded-md bg-surface/60 group-hover:bg-surface backdrop-blur-sm shadow-floating group-hover:shadow-lifted">
+                                        <div className="space-y-1.5 md:space-y-2 p-3 sm:p-4 rounded-lg bg-surface border border-border">
                                             <div className="flex items-center gap-3 flex-wrap">
                                                 <span className="text-xs font-mono text-text-tertiary uppercase tracking-widest">{exp.date}</span>
                                                 {exp.type === 'leadership' && (
@@ -216,31 +216,20 @@ const Experience = () => {
                             </h2>
                         </div>
 
-                        <div className="space-y-3">
+                        <div className="divide-y divide-border border-y border-border">
                             {certifications.map((cert, idx) => {
                                 const colors = getColorClasses(cert.color);
                                 return (
-                                    <motion.div
-                                        key={idx}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: idx * 0.1 }}
-                                        viewport={{ once: true }}
-                                    >
-                                        <GlassPanel variant="borderless" className={`flex gap-4 p-4 ${colors.glow} transition-all`}>
-                                            <div className={`p-2.5 ${colors.bg} rounded-sm ${colors.text} group-hover:scale-105 transition-transform`}>
-                                                {cert.icon}
+                                    <div key={idx} className="flex gap-3 py-4">
+                                        <span className={`mt-0.5 p-1.5 h-fit rounded-md bg-black/[0.04] border border-black/5 ${colors.text}`}>{cert.icon}</span>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-start justify-between gap-2">
+                                                <h4 className="font-medium text-sm leading-tight">{cert.title}</h4>
+                                                <span className="text-[11px] font-mono text-text-tertiary shrink-0">{cert.date}</span>
                                             </div>
-                                            <div className="space-y-1.5">
-                                                <div className="flex justify-between items-start">
-                                                    <h4 className={`font-semibold text-sm md:text-[16px] ${colors.text}`}>{cert.title}</h4>
-                                                    <span className="text-[10px] font-mono text-text-tertiary">{cert.date}</span>
-                                                </div>
-                                                <p className="text-xs text-text-tertiary font-medium uppercase tracking-wider">{cert.provider}</p>
-                                                <p className="text-xs text-text-tertiary leading-relaxed">{cert.description}</p>
-                                            </div>
-                                        </GlassPanel>
-                                    </motion.div>
+                                            <p className="text-xs font-mono uppercase tracking-wide text-text-tertiary">{cert.provider}</p>
+                                        </div>
+                                    </div>
                                 );
                             })}
                         </div>
