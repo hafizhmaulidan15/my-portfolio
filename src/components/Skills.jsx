@@ -52,27 +52,29 @@ const Skills = () => {
     };
 
     return (
-        <section id="skills" className="py-12 md:py-[72px] bg-background relative overflow-hidden">
-            <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] space-y-8 md:space-y-12">
+        <section id="skills" className="py-24 md:py-32 bg-background relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`}} aria-hidden="true"></div>
+            <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] space-y-10 md:space-y-16">
                 {sections.map((section, si) => (
-                    <div key={si} className="space-y-4 md:space-y-6">
-                        <div className="section-title space-y-2 text-center">
-                            <h3 className={`text-[18px] font-semibold tracking-tight ${section.accentColor}`}>
+                    <div key={si} className="space-y-5">
+                        <div className="space-y-2 text-left border-l-2 border-primary/20 pl-4">
+                            <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">{si === 0 ? 'Operations — Dairy Floor' : 'Engineering — Systems & Code'}</p>
+                            <h3 className={`font-display text-[22px] md:text-[26px] font-[700] tracking-[-0.02em] leading-tight ${section.accentColor} text-balance`}>
                                 {section.title}
                             </h3>
-                            <div className="bg-primary/20 h-px w-8 mx-auto"></div>
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-3" style={{gridAutoFlow:'dense'}}>
                             {section.skills.map((skill, ski) => {
                                 const id = `${si}-${ski}`;
                                 const open = expanded.has(id);
+                                const isFeatured = si === 0 && ski === 0;
                                 return (
                                     <GlassPanel
                                         key={id}
-                                        variant="borderless"
+                                        variant={isFeatured ? 'elevated' : 'borderless'}
                                         noHover
-                                        className={`skill-card cursor-pointer transition-all duration-200 w-full sm:w-[calc(50%-4px)] lg:w-[calc(33.333%-8px)]`}
+                                        className={`skill-card cursor-pointer transition-all duration-200 overflow-hidden group ${isFeatured ? 'sm:col-span-2 lg:col-span-2 border border-primary/15' : ''}`}
                                         onClick={() => toggle(id)}
                                     >
                                         <div className="flex items-center gap-3 p-3">

@@ -2,15 +2,26 @@ import {
     Globe, Pulse, Database, Factory, Code
 } from '@phosphor-icons/react';
 
+const spanMap = {
+    0: 'md:col-span-2 md:row-span-2',
+    14: 'md:col-span-1 md:row-span-2',
+    13: 'md:col-span-1',
+    15: 'md:col-span-1',
+    16: 'md:col-span-1',
+    17: 'md:col-span-2',
+    18: 'md:col-span-1',
+    19: 'md:col-span-1',
+};
+
 const colors = {
-    13: { from: 'from-blue-500/20', via: 'via-blue-500/5', border: 'border-blue-500/20', text: 'text-blue-400', bg: 'bg-blue-500/10' },
-    14: { from: 'from-emerald-500/20', via: 'via-emerald-500/5', border: 'border-emerald-500/20', text: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-    15: { from: 'from-sky-500/20', via: 'via-sky-500/5', border: 'border-sky-500/20', text: 'text-sky-400', bg: 'bg-sky-500/10' },
-    0: { from: 'from-violet-500/20', via: 'via-violet-500/5', border: 'border-violet-500/20', text: 'text-violet-400', bg: 'bg-violet-500/10' },
-    16: { from: 'from-amber-500/20', via: 'via-amber-500/5', border: 'border-amber-500/20', text: 'text-amber-400', bg: 'bg-amber-500/10' },
-    17: { from: 'from-orange-500/20', via: 'via-orange-500/5', border: 'border-orange-500/20', text: 'text-orange-400', bg: 'bg-orange-500/10' },
-    18: { from: 'from-yellow-500/20', via: 'via-yellow-500/5', border: 'border-yellow-500/20', text: 'text-yellow-400', bg: 'bg-yellow-500/10' },
-    19: { from: 'from-rose-500/20', via: 'via-rose-500/5', border: 'border-rose-500/20', text: 'text-rose-400', bg: 'bg-rose-500/10' },
+    0: { border: 'border-primary/20', text: 'text-primary', bg: 'bg-primary/10' },
+    13: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
+    14: { border: 'border-primary/15', text: 'text-primary', bg: 'bg-primary/10' },
+    15: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
+    16: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
+    17: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
+    18: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
+    19: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
 };
 
 const Projects = () => {
@@ -192,19 +203,24 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-24 bg-background relative overflow-hidden">
+        <section id="projects" className="py-24 md:py-32 bg-background relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`}} aria-hidden="true"></div>
             <div className="container mx-auto px-6 max-w-[1400px]">
-                <h2 className="text-5xl font-bold mb-20 tracking-tighter">Selected Works.</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="mb-12">
+                    <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-3">Selected Works — 2024 → Present</p>
+                    <h2 className="font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground text-balance">Built from zero,<br/>measured in yield.</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[320px] gap-4" style={{gridAutoFlow:'dense'}}>
                     {projects.map((project) => {
                         const c = colors[project.id];
+                        const span = spanMap[project.id] || '';
                         return (
                             <div key={project.id}
-                                className={`project-card bg-white/[0.02] border ${c.border} p-8 rounded-3xl transition-all duration-300 hover:bg-white/[0.04] relative`}>
+                                className={`project-card group bg-surface border ${c.border} p-6 md:p-7 rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.12] hover:shadow-[0_8px_32px_rgba(0,0,0,0.24)] ${span}`}>
 
-                                <div className="relative">
-                                    <div className="flex items-start justify-between mb-6">
-                                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${c.from} ${c.via} flex items-center justify-center border ${c.border} ${c.text}`}>
+                                <div className="relative flex flex-col h-full">
+                                    <div className="flex items-start justify-between mb-5">
+                                        <div className={`w-11 h-11 rounded-lg bg-white/[0.04] flex items-center justify-center border border-white/[0.06] ${c.text} group-hover:scale-105 transition-transform duration-700`}>
                                             {project.icon}
                                         </div>
                                         <span className={`px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest ${c.bg} ${c.text} border ${c.border}`}>
@@ -213,13 +229,13 @@ const Projects = () => {
                                     </div>
 
                                     <div className="space-y-1 mb-3">
-                                        <h3 className="text-2xl font-semibold">{project.title}</h3>
-                                        <p className="text-xs text-text-tertiary font-mono">
-                                            {project.association} &middot; {project.period}
+                                        <h3 className="font-display text-[18px] md:text-[20px] font-semibold leading-tight tracking-tight text-foreground text-pretty">{project.title}</h3>
+                                        <p className="text-[11px] text-text-tertiary font-mono tracking-wide">
+                                            {project.association} · {project.period}
                                         </p>
                                     </div>
 
-                                    <p className="text-text-secondary mb-6 leading-relaxed">{project.description}</p>
+                                    <p className="text-text-secondary text-[13.5px] leading-relaxed line-clamp-3 mb-4 text-pretty">{project.description}</p>
 
                                     {project.responsibilities.length > 0 && (
                                         <ul className="space-y-2.5 mb-6">
@@ -233,11 +249,11 @@ const Projects = () => {
                                     )}
 
                                     {project.stats.length > 0 && (
-                                        <div className="flex gap-8 mb-6 py-4 border-t border-white/[0.06]">
+                                        <div className="flex gap-6 mb-4 py-3 border-t border-white/[0.06] mt-auto">
                                             {project.stats.map((s, i) => (
                                                 <div key={i}>
-                                                    <p className="text-base font-bold text-foreground">{s.value}</p>
-                                                    <p className="text-xs text-text-muted mt-0.5">{s.label}</p>
+                                                    <p className="text-[13px] font-bold font-mono tabular-nums text-foreground">{s.value}</p>
+                                                    <p className="text-[11px] text-text-muted uppercase tracking-wide">{s.label}</p>
                                                 </div>
                                             ))}
                                         </div>

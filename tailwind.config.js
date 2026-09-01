@@ -29,9 +29,9 @@ export default {
           900: '#134995',
           950: '#112d5a',
         },
-        primary: '#1181ff',
-        'primary-hover': '#0a69eb',
-        'primary-active': '#0e4eb1',
+        primary: '#5B8DD1',
+        'primary-hover': '#4A7FC0',
+        'primary-active': '#3D6AA3',
         accent: {
           blue: '#50baff',
           green: '#22C55E',
@@ -42,8 +42,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        mono: ['Fira Code', 'Monaco', 'monospace'],
+        sans: ['Geist', 'Outfit', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        display: ['Satoshi', 'Cabinet Grotesk', 'Outfit', 'sans-serif'],
+        mono: ['Fira Code', 'Geist Mono', 'Monaco', 'monospace'],
       },
       fontSize: {
         'display': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],

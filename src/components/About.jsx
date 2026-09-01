@@ -47,10 +47,8 @@ const About = () => {
     ];
 
     return (
-            <section id="about" className="py-12 md:py-[72px] lg:py-0 lg:min-h-screen lg:flex lg:items-center bg-background relative overflow-hidden">
-                <div className="absolute top-1/4 -left-40 w-80 h-80 bg-primary/8 blur-[100px] rounded-full pointer-events-none"></div>
-                <div className="absolute bottom-1/4 -right-40 w-80 h-80 bg-accent-blue/6 blur-[100px] rounded-full pointer-events-none"></div>
-                <div className="absolute top-1/2 left-1/2 w-60 h-60 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
+            <section id="about" className="py-24 md:py-32 bg-background relative overflow-hidden">
+                <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`}} aria-hidden="true"></div>
                 
                 <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
@@ -84,11 +82,11 @@ const About = () => {
                                     </div>
                                 </motion.div>
 
-                                <div className="space-y-3 text-center md:text-left">
-                                    <h2 className="text-[24px] sm:text-[26px] md:text-[30px] font-semibold tracking-tight text-foreground">
-                                        Operations & Production <span className="text-gradient-primary">Leader</span>
+                                <div className="space-y-3 text-left">
+                                    <h2 className="font-display text-[28px] md:text-[34px] font-[800] tracking-[-0.03em] leading-[0.95] text-foreground text-balance">
+                                        Operations & Production <span className="inline-block w-10 h-6 md:w-14 md:h-7 rounded-full align-middle bg-cover bg-center mx-1.5 border border-white/10 relative top-[-1px]" style={{backgroundImage:'url(https://picsum.photos/seed/milk-lab/200/100)', filter:'grayscale(0.15) contrast(1.05)'}} aria-hidden="true"></span> <span className="text-gradient-primary">Leader</span>
                                     </h2>
-                                    
+                                    <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Tasikmalaya • Dairy Manufacturing • Cold Chain</p>
                                 </div>
                             </div>
 
@@ -114,22 +112,25 @@ const About = () => {
                             </div>
                         </div>
 
-                            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 self-center">
-                                {infoCards.map((info, idx) => (
+                            <div className="lg:col-span-5 grid grid-cols-2 auto-rows-fr gap-3 sm:gap-4 self-center" style={{gridAutoFlow:'dense'}}>
+                                {infoCards.map((info, idx) => {
+                                    const variants = ['elevated','overlap','borderless','secondary'];
+                                    const spans = ['col-span-2','col-span-1','col-span-1','col-span-2'];
+                                    return (
                                     <GlassPanel 
                                         key={idx} 
-                                        variant="overlap"
-                                        className={`flex flex-col gap-3 sm:gap-5 group transition-all p-5 sm:p-6 md:p-7 min-h-[140px] sm:min-h-[160px] ${info.glow}`}
+                                        variant={variants[idx] || 'overlap'}
+                                        className={`flex flex-col gap-3 sm:gap-4 group overflow-hidden p-4 sm:p-5 min-h-[130px] ${info.glow} ${spans[idx]}`}
                                     >
                                         <div className={`p-2.5 sm:p-3 ${info.bg} ${info.color} w-fit group-hover:scale-105 transition-transform`}>
                                             {info.icon}
                                         </div>
-                                        <div className="space-y-1.5">
-                                            <h4 className="font-semibold text-[16px] sm:text-[17px] md:text-[18px] tracking-tight text-foreground">{info.title}</h4>
-                                            <p className="text-text-tertiary text-sm sm:text-[15px] leading-snug">{info.description}</p>
+                                        <div className="space-y-1">
+                                            <h4 className="font-display font-semibold text-[15px] md:text-[16px] tracking-tight text-foreground">{info.title}</h4>
+                                            <p className="text-text-tertiary text-[13px] leading-snug text-pretty">{info.description}</p>
                                         </div>
                                     </GlassPanel>
-                                ))}
+                                )})}
                         </div>
 
                     </div>

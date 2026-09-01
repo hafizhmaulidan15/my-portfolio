@@ -14,7 +14,8 @@ const Hero = () => {
     }, []);
 
     return (
-        <section id="home" className="hero-speakable relative min-h-dvh flex items-center justify-center overflow-hidden bg-background">
+        <div className="overflow-x-hidden w-full max-w-full">
+        <section id="home" className="hero-speakable relative min-h-dvh flex items-center justify-center overflow-hidden bg-background py-24 md:py-32">
             <div className="fixed inset-0 z-0 pointer-events-none">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black_40%,transparent_100%)]"></div>
             </div>
@@ -26,16 +27,17 @@ const Hero = () => {
             <div className="container relative z-10 mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10 items-center">
                     
-                    <div className="lg:col-span-6 space-y-3 sm:space-y-4 md:space-y-5 animate-slide-in-left">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 sm:py-1.5 rounded-full bg-surface border border-border text-accent-blue text-[11px] sm:text-xs md:text-sm font-medium">
-                            <Factory size={14} weight="bold" className="sm:w-4 sm:h-4" />
-                            <span className="tracking-wide">HEAD OF UNIT & PRODUCTION LEADER</span>
+                    <div className="lg:col-span-6 space-y-4 md:space-y-6 animate-slide-in-left">
+                        <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
+                            <span className="h-px w-8 bg-text-tertiary/40 hidden sm:block" aria-hidden="true"></span>
+                            Tasikmalaya — Dairy Operations • Since Mar 2026
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
-                            <h1 className="t-stagger-line text-[26px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-bold tracking-tighter leading-[1.1] text-foreground">
-                                MUHAMMAD <br />
-                                <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary">MAULIDAN</span>
+                            <h1 className="t-stagger-line font-display text-[clamp(2.2rem,6vw,4.2rem)] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground max-w-5xl text-balance">
+                                MUHAMMAD
+                                <span className="inline-block w-14 h-7 md:w-20 md:h-9 rounded-full align-middle bg-cover bg-center mx-2 md:mx-3 border border-white/10 overflow-hidden relative top-[-2px]" style={{backgroundImage:'url(https://picsum.photos/seed/dairy-steel/400/180)', filter:'grayscale(0.2) contrast(1.05)'}} aria-hidden="true"></span>
+                                <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary font-medium">MAULIDAN</span>
                             </h1>
 
                             <p className="t-stagger-line t-stagger-line--2 text-sm sm:text-[15px] md:text-base text-text-secondary leading-relaxed mt-2 sm:mt-3">
@@ -89,9 +91,9 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-4 md:gap-6 lg:gap-8 justify-items-start animate-slide-in-right">
-                        <Link to="/experience" className="group block w-full">
-                            <GlassPanel variant="elevated" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 border border-primary/10">
+                    <div className="lg:col-span-6 grid grid-cols-2 auto-rows-fr gap-3 sm:gap-4 md:gap-4 justify-items-stretch animate-slide-in-right" style={{gridAutoFlow:'dense'}}>
+                        <Link to="/experience" className="group block w-full col-span-2 sm:col-span-1 sm:row-span-2 overflow-hidden">
+                            <GlassPanel variant="elevated" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 border border-primary/10 group-hover:border-primary/20 transition-colors overflow-hidden">
                                 <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
                                     <div className="p-2 sm:p-2.5 md:p-3 bg-primary/10 rounded-sm text-primary">
                                         <Factory size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
@@ -115,8 +117,8 @@ const Hero = () => {
                             </GlassPanel>
                         </Link>
 
-                        <Link to="/skills" className="group block w-full">
-                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
+                        <Link to="/skills" className="group block w-full overflow-hidden">
+                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 overflow-hidden group-hover:scale-[1.005] transition-transform duration-700">
                                 <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
                                     <ChartBar size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                 </div>
@@ -131,8 +133,8 @@ const Hero = () => {
                             </GlassPanel>
                         </Link>
 
-                        <Link to="/certifications" className="group block w-full sm:col-span-2 sm:justify-self-center sm:max-w-lg">
-                            <GlassPanel variant="borderless" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
+                        <Link to="/certifications" className="group block w-full col-span-2 overflow-hidden">
+                            <GlassPanel variant="borderless" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 overflow-hidden">
                                 <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
                                     <Lightning size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                 </div>
@@ -151,6 +153,7 @@ const Hero = () => {
                 </div>
             </div>
         </section>
+        </div>
     );
 };
 

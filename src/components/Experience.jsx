@@ -129,21 +129,19 @@ const Experience = () => {
     };
 
     return (
-        <section id="experience" className="py-12 md:py-[72px] bg-background relative overflow-hidden">
-            <div className="absolute top-1/3 -left-32 w-64 h-64 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-1/3 -right-32 w-64 h-64 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
-            <div className="absolute top-2/3 left-1/3 w-48 h-48 bg-primary/4 blur-[60px] rounded-full pointer-events-none"></div>
+        <section id="experience" className="py-24 md:py-32 bg-background relative overflow-hidden">
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`}} aria-hidden="true"></div>
 
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
                     
                     <div className="lg:col-span-7 space-y-6 md:space-y-8">
-                        <div className="space-y-3">
-                            <div className="flex items-center gap-3 text-primary font-mono text-sm tracking-widest uppercase">
-                                <Briefcase size={18} weight="bold" />
-                                <span>Career path</span>
+                        <div className="space-y-3 lg:sticky lg:top-24">
+                            <div className="flex items-center gap-3 text-primary font-mono text-[11px] tracking-[0.18em] uppercase">
+                                <Briefcase size={16} weight="bold" />
+                                <span>Career path — 2022 → Present</span>
                             </div>
-                            <h2 className="text-[22px] md:text-[24px] font-semibold tracking-tight text-foreground">
+                            <h2 className="font-display text-[26px] md:text-[30px] font-[800] tracking-[-0.03em] leading-[0.95] text-foreground text-balance">
                                 Professional <span className="text-gradient-primary">experience</span>
                             </h2>
                         </div>
@@ -299,8 +297,8 @@ const Experience = () => {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                        <GlassPanel variant="overlap" className="p-4 sm:p-6 flex flex-col gap-3 sm:gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4" style={{gridAutoFlow:'dense'}}>
+                        <GlassPanel variant="elevated" className="p-5 sm:p-6 flex flex-col gap-3 sm:gap-4 md:col-span-2 border border-primary/10">
                             <div className="relative">
                                 <span className="text-4xl text-primary/20 font-serif absolute -top-2 -left-1 leading-none select-none">&ldquo;</span>
                                 <p className="text-sm text-text-secondary leading-relaxed relative z-10 pl-4">

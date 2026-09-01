@@ -16,12 +16,18 @@
     color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Geist', 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-variant-numeric: tabular-nums;
     font-display: swap;
     overflow-x: hidden;
     width: 100%;
     -webkit-overflow-scrolling: touch;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Satoshi', 'Cabinet Grotesk', 'Outfit', sans-serif;
+    letter-spacing: -0.03em;
   }
 
   body::before {
@@ -32,9 +38,9 @@
     right: 0;
     height: 800px;
     background:
-      radial-gradient(ellipse at 15% 0%, rgba(17, 129, 255, 0.12) 0%, transparent 60%),
-      radial-gradient(ellipse at 85% 10%, rgba(80, 186, 255, 0.08) 0%, transparent 55%),
-      radial-gradient(ellipse at 50% 30%, rgba(17, 129, 255, 0.04) 0%, transparent 50%);
+      radial-gradient(ellipse at 15% 0%, rgba(91, 141, 209, 0.10) 0%, transparent 60%),
+      radial-gradient(ellipse at 85% 10%, rgba(91, 141, 209, 0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 30%, rgba(91, 141, 209, 0.03) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
   }
@@ -47,8 +53,8 @@
     right: 0;
     height: 500px;
     background:
-      radial-gradient(ellipse at 30% 100%, rgba(17, 129, 255, 0.06) 0%, transparent 60%),
-      radial-gradient(ellipse at 70% 100%, rgba(80, 186, 255, 0.05) 0%, transparent 55%);
+      radial-gradient(ellipse at 30% 100%, rgba(91, 141, 209, 0.05) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 100%, rgba(180, 175, 165, 0.04) 0%, transparent 55%);
     pointer-events: none;
     z-index: 0;
   }
@@ -58,18 +64,18 @@
   }
 
   a {
-    color: #1181ff;
+    color: #5B8DD1;
     text-decoration: none;
     transition: color 200ms ease;
   }
 
   a:hover {
-    color: #0a69eb;
+    color: #4A7FC0;
   }
 
   a:focus-visible {
     outline: none;
-    outline: 2px solid #1181ff;
+    outline: 2px solid #5B8DD1;
     outline-offset: 2px;
   }
 
@@ -78,38 +84,39 @@
   textarea:focus-visible,
   select:focus-visible {
     outline: none;
-    outline: 2px solid #1181ff;
+    outline: 2px solid #5B8DD1;
     outline-offset: 2px;
   }
 
   ::selection {
-    background-color: rgba(17, 129, 255, 0.3);
+    background-color: rgba(91, 141, 209, 0.28);
     color: #FFFFFF;
   }
 }
 
 @layer components {
   .btn-primary {
-    background-color: #1181ff;
+    background-color: #5B8DD1;
     color: #FFFFFF;
     padding: 12px 24px;
     border-radius: 10px;
-    border: 1px solid #1181ff;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px, 0 0 20px rgba(17, 129, 255, 0.15);
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    border: 1px solid #5B8DD1;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 0 20px rgba(91, 141, 209, 0.14);
+    font-family: 'Geist', 'Outfit', sans-serif;
     font-size: 14px;
     font-weight: 500;
     transition: all 200ms ease;
   }
 
   .btn-primary:hover {
-    background-color: #0a69eb;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, 0 0 30px rgba(17, 129, 255, 0.25);
+    background-color: #4A7FC0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12), 0 0 28px rgba(91, 141, 209, 0.22);
   }
 
   .btn-primary:active {
-    background-color: #0e4eb1;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px 0px;
+    background-color: #3D6AA3;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+    transform: translateY(1px) scale(0.98);
   }
 
   .btn-primary:disabled {
@@ -372,18 +379,18 @@
   }
 
   .text-gradient-primary {
-    background: linear-gradient(135deg, #1181ff, #50baff);
+    background: linear-gradient(135deg, #5B8DD1, #8BAED6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glow-primary {
-    box-shadow: 0 0 30px rgba(17, 129, 255, 0.15);
+    box-shadow: 0 0 28px rgba(91, 141, 209, 0.13);
   }
 
   .glow-teal {
-    box-shadow: 0 0 30px rgba(80, 186, 255, 0.12);
+    box-shadow: 0 0 28px rgba(139, 174, 214, 0.11);
   }
 
   .glow-red {
