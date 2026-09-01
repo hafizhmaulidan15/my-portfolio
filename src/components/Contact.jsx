@@ -16,11 +16,11 @@ const Contact = () => {
     const [openFaq, setOpenFaq] = useState(null);
 
     const faqs = [
-        { q: 'What can you help with in dairy operations?', a: 'End-to-end: SOPs, QC lactoscan, cold chain 2–8°C, supplier intelligence per KPS, and distribution ratchet SOPs — built from zero at Rumah Susu Indonesia.' },
-        { q: 'How did you achieve 7.2% mozzarella yield?', a: 'First commercial run 500 L → 36 kg / 180 pcs. Solved inverter, blade mixer, boiler contamination, standardized stretch/taste tests and vacuum sealing.' },
-        { q: 'Are you available for freelance / consulting?', a: 'Open to operations consulting, SOP development, and dashboard builds (Next.js + Sheets API). Contact via form — I reply within 24h.' },
-        { q: 'How does the supplier quality dashboard work?', a: 'Live Google Sheets API — tracks fat, SNF, protein, alcohol test, volume per supplier (Karya Nugraha, Kemuning, Larasati) for data-driven selection.' },
-        { q: 'What is your scaling approach?', a: 'Repeatable systems over heroic effort: SOPs + 3-batch retention traceability + <1% reject rate, lean 4-person team, 25K units/batch.' },
+        { q: 'How do you lead operational teams?', a: 'By setting clear SOPs, defining ownership per shift, and leading with daily alignment — clarity over micromanagement. I focus on enabling the team to run without constant supervision.' },
+        { q: 'What is your SOP development process?', a: 'Start from field observation, map the actual workflow, draft with operators, trial, then standardize. Every SOP includes hygiene, step-by-step, QC checks, and verification.' },
+        { q: 'How do you ensure quality and compliance?', a: 'Through layered checks: intake verification, in-process QC, 3-batch retention, and trend analysis. Quality is built into the process, not inspected at the end.' },
+        { q: 'Are you available for operations consulting?', a: 'Open to consulting on operations management, SOP standardization, and team alignment. Contact via form — I reply within 24h.' },
+        { q: 'How do you drive continuous improvement?', a: 'By tracking metrics, reviewing deviations, and iterating SOPs. Small, consistent improvements compound — from yield to cold-chain reliability.' },
     ];
 
     useGSAP(() => {

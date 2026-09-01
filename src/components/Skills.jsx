@@ -11,15 +11,15 @@ const sections = [
         mono: 'Dairy Floor — Systems',
         accentColor: 'text-primary',
         skills: [
-            { name: 'Cheese Production & R&D', icon: <Flask size={18} weight="light" />, context: 'Led first commercial Mozzarella (500 L → 36 kg / 180 pcs, 7.2% yield). Running Cheddar R&D 9 trials, 113.8% yield.', project: 'Rumah Susu Indonesia', featured: true },
+            { name: 'Cheese Production & R&D', icon: <Flask size={18} weight="light" />, context: 'Led first commercial mozzarella and cheddar development — from trial to standardized SOP.', project: 'Rumah Susu Indonesia', featured: true },
             { name: 'SOP Development', icon: <ClipboardText size={18} weight="light" />, context: 'SOP architecture pasteurization, QC, cold chain, peroxide falsification. Mozzarella SOP suite + ratchet loading standards.', project: 'Rumah Susu Indonesia' },
             { name: 'Cold Chain Management', icon: <Truck size={18} weight="light" />, context: 'Reinforced belts, 2–8°C across cooling, storage, distribution to Bogor/Sukabumi/Lampung.', project: 'Rumah Susu Indonesia' },
-            { name: 'Production Planning', icon: <Factory size={18} weight="light" />, context: '2,000–3,500L/week, 25K cups/batch, lean team of 4.', project: 'Rumah Susu Indonesia' },
+            { name: 'Production Planning', icon: <Factory size={18} weight="light" />, context: 'Production planning and scheduling across intake, pasteurization, and distribution.', project: 'Rumah Susu Indonesia' },
             { name: 'Quality Control', icon: <ChartPieSlice size={18} weight="light" />, context: 'Lactoscan, pH/TS, alcohol & peroxide, organoleptic. Reject <1%, 3-batch retention.', project: 'Rumah Susu Indonesia' },
             { name: 'Supplier Intelligence', icon: <ChartBar size={18} weight="light" />, context: 'Per-KPS fat/SNF/protein/alcohol/volume dashboard — data-driven supplier selection.', project: 'Rumah Susu Indonesia' },
             { name: 'Traceability', icon: <Pulse size={18} weight="light" />, context: '3-batch retention traceability production → delivery.', project: 'Rumah Susu Indonesia' },
             { name: 'Supply Chain', icon: <Globe size={18} weight="light" />, context: 'KPS coordination, ratchet SOPs Box Biru/Tray, scheduling, stock rec.', project: 'Rumah Susu Indonesia' },
-            { name: 'Team Leadership', icon: <UsersThree size={18} weight="light" />, context: 'Leading 4-person Tasikmalaya ops across shifts.', project: null },
+            { name: 'Team Leadership', icon: <UsersThree size={18} weight="light" />, context: 'Leading Tasikmalaya ops — shift coordination, SOP adherence, and team development.', project: null },
             { name: 'Quality Prediction', icon: <ChartBar size={18} weight="light" />, context: 'Random Forest/XGBoost grade from 7 params, real-time dashboard.', project: 'Milk Quality Prediction' },
         ]
     },

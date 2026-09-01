@@ -31,7 +31,7 @@ const Hero = () => {
                                 by design.
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
-                                Head of Unit, Rumah Susu Indonesia — Tasikmalaya. Scaling <span className="text-foreground font-medium">2,000–3,500 L/week</span> from intake to cold chain, powered by supplier intelligence and trial-driven R&D.
+                                What turns intake into SOPs and trials into scale? <Link to="/projects" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">See Projects →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership log →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact →</Link>
                             </p>
                         </div>
 
@@ -49,19 +49,19 @@ const Hero = () => {
 
                         <div className="grid grid-cols-3 gap-6 pt-6 mt-2 border-t border-border max-w-[480px]">
                             <div>
-                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">25K</div>
-                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">units / batch</div>
-                                <div className="text-xs text-text-tertiary mt-1"> pasteurized cups</div>
+                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">12</div>
+                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">SOPs & Forms</div>
+                                <div className="text-xs text-text-tertiary mt-1">standardized</div>
                             </div>
                             <div>
-                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">7.2%</div>
-                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">mozza yield</div>
-                                <div className="text-xs text-text-tertiary mt-1">180 pcs first run</div>
+                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">3</div>
+                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">KPS partners</div>
+                                <div className="text-xs text-text-tertiary mt-1">quality network</div>
                             </div>
                             <div>
-                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">&lt;1%</div>
-                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">reject rate</div>
-                                <div className="text-xs text-text-tertiary mt-1">3-batch retention</div>
+                                <div className="font-display text-[28px] font-[700] tracking-[-0.03em] text-foreground tabular-nums">3</div>
+                                <div className="font-mono text-[11px] tracking-[0.12em] text-text-tertiary uppercase">Cities</div>
+                                <div className="text-xs text-text-tertiary mt-1">distribution</div>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center max-w-[42ch] mx-auto leading-relaxed">“Driven by data, grounded in operational reality. I believe that sustainable manufacturing excellence requires aligning raw material quality with targeted product lines, minimizing waste through proactive intelligence, and leading teams with clarity and purpose.”</p>
+                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center max-w-[36ch] mx-auto leading-relaxed">“Driven by data, grounded in reality — quality aligned, waste minimized, teams led with purpose.”</p>
                     </div>
                 </div>
             </div>
