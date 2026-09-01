@@ -93,8 +93,10 @@ const ProductionImpact = () => {
               <ProductionBarChart data={data.cupTrend} title="Cup Production — Out trend" unit="Units" />
               <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed — In trend" unit="L" />
             </div>
+          </>
+        )}
 
-            {/* Achievements — Milestones */}
+        {/* Achievements — Milestones — always visible, not blocked by loading */}
             <div id="achievements-timeline" className="mt-16">
               <div className="flex items-center gap-3 mb-2">
                 <span className="h-px w-8 bg-primary/20 hidden sm:block" aria-hidden="true"></span>
@@ -179,8 +181,6 @@ const ProductionImpact = () => {
                 </div>
               </div>
             </div>
-          </>
-        )}
       </div>
     </section>
   );
