@@ -25,9 +25,9 @@ const Hero = () => {
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
-                            <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.045em] leading-[0.85] text-foreground text-balance">
+                            <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.88] text-foreground text-balance">
                                 Systems that<br />
-                                <span className="font-[300] italic tracking-[-0.03em] text-gradient-foreground">scale</span> dairy<br />
+                                <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground inline-block pr-2">scale</span> dairy<br />
                                 production.
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
