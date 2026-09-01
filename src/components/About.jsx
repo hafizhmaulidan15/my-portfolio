@@ -1,10 +1,10 @@
 import { Flask, Truck, Thermometer, Drop } from '@phosphor-icons/react';
 
 const steps = [
-  { n: '01', title: 'Raw Intake', desc: 'Lactoscan + alcohol & peroxide tests per KPS. Data fat/SNF/protein/volume tracked per supplier.', icon: <Drop size={16} weight="bold" /> },
-  { n: '02', title: 'Pasteurization', desc: 'Process SOPs from zero — 2,000–3,500 L/week with 4-person lean team, 25K cups/batch.', icon: <Thermometer size={16} weight="bold" /> },
-  { n: '03', title: 'QC & Lab', desc: '3-batch retention, pH/TS/added water, reject <1%. Mozzarella 500 L → 36 kg / 180 pcs at 7.2% yield.', icon: <Flask size={16} weight="bold" /> },
-  { n: '04', title: 'Cold Chain', desc: 'Distribution to Bogor/Sukabumi/Lampung — ratchet SOPs Box Biru vs Tray, load verification.', icon: <Truck size={16} weight="bold" /> },
+  { n: '01', title: 'Sourcing & Intake', desc: 'Supplier intelligence per KPS — fat, SNF, protein, alcohol test tracked live. Volume per supplier drives intake decisions.', icon: <Drop size={16} weight="bold" /> },
+  { n: '02', title: 'Thermal & SOP', desc: 'Cheese vat standard (no PHE) — saves 80 L/CIP, avoids chemical contamination. Pasteurization logged with temp/duration.', icon: <Thermometer size={16} weight="bold" /> },
+  { n: '03', title: 'R&D & Standardization', desc: 'Mozzarella 7.2% (500 L → 36 kg) and Cheddar 9 trials (113.8%) → SOPs, stretch/taste tests, chiller/vacuum.', icon: <Flask size={16} weight="bold" /> },
+  { n: '04', title: 'Intelligence & Delivery', desc: '3-batch retention, trend analytics, ratchet SOPs (Box Biru/Tray) and verification before dispatch to Bogor/Sukabumi/Lampung.', icon: <Truck size={16} weight="bold" /> },
 ];
 
 const About = () => {
@@ -28,22 +28,22 @@ const About = () => {
 
             <div className="space-y-4">
               <h2 className="font-display text-[32px] md:text-[38px] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground text-balance">
-                Operations built<br /><span className="font-[300] italic text-gradient-foreground">from zero.</span>
+                Data-driven,<br /><span className="font-[300] italic text-gradient-foreground">field-proven.</span>
               </h2>
               <div className="space-y-4 text-[15px] leading-[1.7] text-text-secondary max-w-[52ch] text-pretty">
                 <p>
-                  Joined Rumah Susu Indonesia Mar 2026 to set up the Tasikmalaya unit with a lean team of <span className="text-foreground font-medium">four</span>. Built SOPs, QC lactoscan, cold chain, and workflows that now process <span className="text-foreground font-medium">2,000–3,500 L/week</span>.
+                  Operating from Tasikmalaya — aligning <span className="text-foreground font-medium">raw milk quality</span> with product strategy. Every batch ties back to supplier data (fat, SNF, protein) and targeted yield, not guesswork.
                 </p>
                 <p>
-                  Led the first commercial <span className="text-foreground font-medium">Mozzarella (500 L → 36 kg / 180 pcs, 7.2%)</span> from procurement to Bogor shipment — troubleshooting inverter, blade mixer, boiler contamination — and standardized SOPs, forms, and reporting. Now driving <span className="text-foreground font-medium">Processed Cheddar R&D (9 trials, 113.8% yield)</span> with supplier intelligence across KPS.
+                  Focus: <span className="text-foreground font-medium">minimize waste</span> through proactive intelligence (3-batch retention, pH/TS, ratchet SOPs) and <span className="text-foreground font-medium">lead with clarity</span> for a lean 4-person team running 25K units/batch end-to-end.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-3 gap-3 pt-4 border-t border-border max-w-[420px]">
-              <div><div className="font-display text-xl font-bold tabular-nums">7.2%</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Mozza yield</div></div>
-              <div><div className="font-display text-xl font-bold tabular-nums">113.8%</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Cheddar trial</div></div>
-              <div><div className="font-display text-xl font-bold tabular-nums">&lt;1%</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Reject rate</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">2.5K</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Avg L / week</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">25K</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Units / batch</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">4</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Lean team</div></div>
             </div>
           </div>
 
@@ -51,7 +51,7 @@ const About = () => {
           <div className="lg:col-span-7 lg:pl-8">
             <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.75rem]">
               <div className="bg-surface rounded-[1.25rem] border border-black/[0.06] p-6 md:p-7">
-                <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-6">Production flow — intake to distribution</div>
+                <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-6">Operating System — data to dispatch</div>
                 <div className="relative">
                   <div className="absolute left-[11px] top-2 bottom-2 w-px bg-border hidden sm:block" aria-hidden="true"></div>
                   <div className="space-y-7">

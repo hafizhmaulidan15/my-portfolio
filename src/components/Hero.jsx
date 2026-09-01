@@ -26,12 +26,12 @@ const Hero = () => {
 
                         <div className="t-stagger" ref={staggerRef}>
                             <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.88] text-foreground text-balance">
-                                Systems that<br />
-                                <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground inline-block pr-2">scale</span> dairy<br />
-                                production.
+                                Aligning quality<br />
+                                <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground inline-block pr-2">with scale</span> —<br />
+                                by design.
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
-                                I build repeatable operations end-to-end — from <span className="text-foreground font-medium">500 L → 36 kg mozzarella at 7.2% yield</span> and 9-trial cheddar R&D to cold-chain and supplier intelligence. Not overseeing — building.
+                                Head of Unit, Rumah Susu Indonesia — Tasikmalaya. Scaling <span className="text-foreground font-medium">2,000–3,500 L/week</span> from intake to cold chain, powered by supplier intelligence and trial-driven R&D.
                             </p>
                         </div>
 
@@ -70,13 +70,18 @@ const Hero = () => {
                     <div className="lg:col-span-5 lg:pl-4">
                         <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[2rem]">
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
-                                <div className="aspect-[4/3] relative overflow-hidden bg-surface">
-                                    <img src="https://picsum.photos/seed/dairy-steel-lab/800/600" alt="Dairy steel lab — cold chain" width="800" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover grayscale-[0.15] contrast-[1.04]" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
-                                    <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                                        <span className="px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur text-[11px] font-mono tracking-wide text-foreground border border-border">Tasikmalaya Plant • 2026</span>
-                                        <span className="w-2 h-2 rounded-full bg-success animate-pulse border border-white" aria-hidden="true"></span>
+                                <div className="aspect-[4/3] relative overflow-hidden bg-surface grid grid-cols-2 gap-0">
+                                    <div className="relative overflow-hidden">
+                                        <img src="https://picsum.photos/seed/mozzarella-cheese/400/600" alt="Mozzarella cheese — 36kg from 500L" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Mozzarella 7.2%</span>
                                     </div>
+                                    <div className="relative overflow-hidden border-l border-white/10">
+                                        <img src="https://picsum.photos/seed/cheddar-cheese/400/600" alt="Cheddar cheese — 9 trial R&D" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Cheddar 9 trials</span>
+                                    </div>
+                                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur text-[11px] font-mono tracking-wide text-foreground border border-border">Milk • Cheese • Scale</div>
                                 </div>
                                 <div className="p-4 flex items-center justify-between border-t border-border bg-surface">
                                     <div className="flex items-center gap-2.5">
@@ -92,7 +97,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center">Built from zero — SOPs, QC lactoscan, supplier intelligence, distribution ratchet SOPs</p>
+                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center max-w-[42ch] mx-auto leading-relaxed">“Driven by data, grounded in operational reality. I believe that sustainable manufacturing excellence requires aligning raw material quality with targeted product lines, minimizing waste through proactive intelligence, and leading teams with clarity and purpose.”</p>
                     </div>
                 </div>
             </div>

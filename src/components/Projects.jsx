@@ -4,35 +4,35 @@ const Projects = () => {
     const featured = [
         {
             id: 0,
-            kicker: 'Case Study — First Commercial Run',
-            title: 'Mozzarella Production System',
-            period: 'Mar 2026 • Tasikmalaya',
+            kicker: 'Case Study — From Zero to Market',
+            title: 'Pembuatan Mozzarela',
+            period: 'Mei–Juni 2026 • Tasikmalaya → Bogor',
             image: 'https://picsum.photos/seed/mozza-steel/800/500',
-            description: 'Built from zero: 500 L fresh milk → 36 kg / 180 pcs at 7.2% yield. From equipment procurement (inverter, blade mixer, boiler) to SOPs, stretch/taste tests, and first shipment to Bogor.',
-            bullets: ['SOP suite hygiene → vacuum sealing', '9-step QC lactoscan to chilling', 'Supplier intelligence per KPS lactoscan'],
-            stats: [{ v: '7.2%', l: 'yield' }, { v: '180', l: 'pcs' }, { v: '500 L', l: 'milk in' }],
+            description: 'Perjalanan produksi mozzarella dari nol hingga siap jual — 1.5 bulan intensif. Batch MZ-160626-01 jadi tolok ukur: 500L susu TS 11.8% → 36kg / 180 pcs @200gr, yield 7.2%, reject 0, tekstur elastis.',
+            bullets: ['Timeline: 12 Mei planning • 23-25 Mei unboxing mixer • 16-17 Jun 500L 4 batch cheese vat • 19 Jun packaging • 23 Jun kirim Zarafa Bogor', 'Kendala: inverter rusak, blade terpisah, air boiler chemical → REJECT 9 Jun pahit/asam, trial 20L gagal', 'SOP: hygiene → lactoscan → stretch/taste → chiller/vacuum + Form Produksi 16 Juni'],
+            stats: [{ v: '7.2%', l: 'yield' }, { v: '180', l: 'pcs @200gr' }, { v: '500L', l: 'TS 11.8%' }],
             href: '#',
+            postmortem: ['Air boiler chemical sanitasi → wajib air mineral', 'Susu bongkaran cups no stretch → pakai susu segar', 'Cheese vat hemat 80L/CIP vs PHE', 'Perforated plate untuk penirisan curd', 'Yield Tasik 7.2% < 10% rata-rata — optimasi next', 'Pemanasan 500L 4j55m — evaluasi boiler'],
         },
         {
-            id: 14,
-            kicker: 'ML • SHAP Explainability',
-            title: 'Milk Quality Prediction',
-            period: 'Jun 2026',
-            image: 'https://picsum.photos/seed/milk-lab-data/800/500',
-            description: 'Random Forest + XGBoost predicting grade A/B/C/Reject from 7 params. F1 0.92, <15ms, FastAPI. SHAP for regulatory-grade feature importance.',
-            bullets: ['F1 0.92 weighted across grades', '7 inputs: fat, SNF, protein, pH, temp, age', 'SHAP explainability'],
-            stats: [{ v: '0.92', l: 'F1' }, { v: '7', l: 'params' }, { v: '<15ms', l: 'infer' }],
-            href: 'https://github.com/hafizhmaulidan15/milk-quality-prediction',
+            id: 1,
+            kicker: 'R&D — 9 Trials to Scale',
+            title: 'Pengembangan Cheddar Olahan',
+            period: 'Mei–Juli 2026 • 9 Trial',
+            image: 'https://picsum.photos/seed/cheddar-rd/800/500',
+            description: 'Dari mixer dapur kasar tepung → chopper final 113.8%. Eksplorasi curd/EMC, air, pemanasan, pewarna, dan terobosan perisa Toffieco vs Mohler — chopper menang.',
+            bullets: ['Trial 1 mixer dapur kasar • 2-4 curd/EMC & air • 5-6 tekstur pewarna • 7 Toffieco/Mohler • 8 maizena terpisah • 9 chopper final', 'Perisa Mohler gurih terpilih, maizena chopper jadi SOP final', 'Target: mixer semi-industri untuk skala komersial'],
+            stats: [{ v: '113.8%', l: 'yield T9' }, { v: '9', l: 'trials' }, { v: 'Mohler', l: 'perisa' }],
+            href: '#',
+            postmortem: ['Mixer dapur kurang kuat → semi-industri', 'SHMP hidrolisis >60°C', 'Maizena terpisah hilangkan tepung', 'Mohler > Toffieco untuk cheddar gurih', 'Cold storage tidak kurangi air — perlu showcase'],
         },
     ];
 
     const more = [
         { title: 'Rumah Susu Inventory Dashboard', desc: 'Next.js + Google Sheets real-time stock opname, 100% accuracy, team access.', href: 'https://github.com/hafizhmaulidan15/Rumah-Susu-Dashboard' },
         { title: 'Aussie WHV 2026', desc: 'Next.js 14 resource hub — visa types, living guides, CI/CD Vercel.', href: 'https://github.com/hafizhmaulidan15/aussie-WHV' },
-        { title: 'InvoiceKilat', desc: 'Supabase RLS + react-pdf, revenue dashboard.', href: 'https://github.com/hafizhmaulidan15/invoicekilat' },
         { title: 'Yield Optimizer Keju', desc: 'Next.js + Recharts, yield engine for field entry.', href: 'https://github.com/hafizhmaulidan15/yield-optimizer-keju' },
-        { title: 'Banana Ripeness Detection', desc: 'C++ Arduino TCS34725, 3-stage ripeness.', href: 'https://github.com/hafizhmaulidan15/BananaRipness' },
-        { title: 'filmroll', desc: 'TMDB discovery, search & curated collections.', href: 'https://github.com/hafizhmaulidan15/filmroll' },
+        { title: 'Parmesan — Planning', desc: 'Next strategic cheese — 0% progress, roadmap after cheddar scale-up.', href: '#' },
     ];
 
     return (
@@ -65,6 +65,16 @@ const Projects = () => {
                                             <li key={b} className="text-sm text-text-secondary flex gap-2"><span className="mt-2 w-1 h-1 rounded-full bg-foreground/30 shrink-0"></span><span>{b}</span></li>
                                         ))}
                                     </ul>
+                                    {f.postmortem && (
+                                        <div className="mt-3 p-3 rounded-lg bg-black/[0.02] border border-border">
+                                            <p className="font-mono text-[11px] uppercase tracking-wide text-text-tertiary">Post-Mortem</p>
+                                            <ul className="mt-2 space-y-1">
+                                                {f.postmortem.map((p, i) => (
+                                                    <li key={i} className="text-xs leading-relaxed text-text-secondary flex gap-2"><span className="text-primary mt-0.5">•</span><span>{p}</span></li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
                                     <div className="flex gap-6 pt-3 mt-auto border-t border-border">
                                         {f.stats.map((s) => (
                                             <div key={s.l}><div className="font-mono text-sm font-bold tabular-nums">{s.v}</div><div className="font-mono text-[11px] uppercase tracking-wide text-text-tertiary">{s.l}</div></div>

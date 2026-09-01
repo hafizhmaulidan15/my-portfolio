@@ -1,5 +1,7 @@
 import { Briefcase, Factory, Code, TerminalWindow, Globe, ShieldCheck, ChartBarHorizontal, GraduationCap, ChartLineUp } from '@phosphor-icons/react';
 import { leadershipJournals } from '../data/leadership';
+import { achievements } from '../data/achievements';
+import { coreCompetencies } from '../data/portfolio';
 
 const experiences = [
     {
@@ -93,7 +95,50 @@ const Experience = () => {
                     ))}
                 </div>
 
-                {/* Certs — compact grid, not GlassPanel */}
+                {/* Key Achievements — expanded, blue accent like Cheese Production & R&D */}
+                <div className="mt-16">
+                    <div className="flex items-center gap-3 mb-2">
+                        <span className="h-px w-8 bg-primary/20 hidden sm:block" aria-hidden="true"></span>
+                        <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Key Achievements — Impact measured</p>
+                    </div>
+                    <h3 className="font-display text-[24px] md:text-[28px] font-[700] tracking-[-0.02em] leading-tight">Proven wins, <span className="text-primary">not claims</span></h3>
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {achievements.map((a) => (
+                            <div key={a.id} className="p-5 rounded-xl border border-border bg-surface hover:border-primary/20 transition-colors">
+                                <div className="flex items-center justify-between gap-2">
+                                    <span className={`font-mono text-[11px] px-2 py-1 rounded-full border ${a.category === 'QUALITY' ? 'bg-blue-500/10 text-blue-600 border-blue-500/15' : 'bg-amber-500/10 text-amber-600 border-amber-500/15'}`}>{a.category}</span>
+                                    <span className="font-mono text-[11px] text-text-tertiary">{new Date(a.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+                                </div>
+                                <h4 className="font-display font-semibold text-[16px] leading-tight mt-3">{a.title}</h4>
+                                <p className="text-[13.5px] leading-relaxed text-text-secondary mt-2">{a.description}</p>
+                                <div className="mt-3 p-3 rounded-lg bg-primary/5 border-l-2 border-primary">
+                                    <p className="font-mono text-[11px] uppercase tracking-wide text-primary">Impact</p>
+                                    <p className="text-sm leading-relaxed mt-1 text-text-secondary">{a.impact}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Core Competencies — expanded */}
+                <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 rounded-xl border border-primary/15 bg-primary/[0.03]">
+                    <div className="lg:col-span-4">
+                        <h3 className="font-display text-[18px] font-semibold flex items-center gap-2"><span className="w-1 h-6 bg-primary rounded-full"></span>Core Competencies</h3>
+                        <p className="text-sm text-text-tertiary mt-2">Expanded — production to R&D, end-to-end.</p>
+                    </div>
+                    <div className="lg:col-span-8">
+                        <div className="flex flex-wrap gap-2">
+                            {coreCompetencies.map((c) => (
+                                <span key={c} className="px-3 py-1.5 rounded-full bg-surface border border-border text-sm font-medium hover:border-primary/20 hover:text-primary transition-colors">{c}</span>
+                            ))}
+                            <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">Cold Chain & Distribution</span>
+                            <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">Data & Supplier Intelligence</span>
+                            <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">SOP & Standardization</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Certs — compact grid */}
                 <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-4">
                         <h3 className="font-display text-[18px] font-semibold">Core certified</h3>
@@ -101,8 +146,8 @@ const Experience = () => {
                     </div>
                     <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {certs.map((c) => (
-                            <div key={c.title} className="flex gap-3 p-4 rounded-xl border border-border bg-surface">
-                                <span className="w-8 h-8 rounded-lg bg-gradient-icon border border-primary/10 flex items-center justify-center shrink-0 text-text-tertiary">{c.icon}</span>
+                            <div key={c.title} className="flex gap-3 p-4 rounded-xl border border-border bg-surface hover:border-primary/15 transition-colors">
+                                <span className="w-8 h-8 rounded-lg bg-gradient-icon border border-primary/10 flex items-center justify-center shrink-0 text-primary">{c.icon}</span>
                                 <div className="min-w-0">
                                     <div className="font-medium text-sm leading-tight text-pretty">{c.title}</div>
                                     <div className="font-mono text-xs text-text-tertiary">{c.org} • {c.date}</div>
