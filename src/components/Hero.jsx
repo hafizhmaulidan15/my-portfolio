@@ -34,10 +34,8 @@ const Hero = () => {
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
-                            <h1 className="t-stagger-line font-display text-[clamp(2.2rem,6vw,4.2rem)] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground max-w-5xl text-balance">
-                                MUHAMMAD
-                                <span className="inline-block w-14 h-7 md:w-20 md:h-9 rounded-full align-middle bg-cover bg-center mx-2 md:mx-3 border border-white/10 overflow-hidden relative top-[-2px]" style={{backgroundImage:'url(https://picsum.photos/seed/dairy-steel/400/180)', filter:'grayscale(0.2) contrast(1.05)'}} aria-hidden="true"></span>
-                                <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary font-medium">MAULIDAN</span>
+                            <h1 className="t-stagger-line font-display text-[clamp(2.4rem,6vw,4.4rem)] font-[800] tracking-[-0.04em] leading-[0.85] text-foreground max-w-5xl text-balance">
+                                MUHAMMAD <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary font-[600]">MAULIDAN</span>
                             </h1>
 
                             <p className="t-stagger-line t-stagger-line--2 text-sm sm:text-[15px] md:text-base text-text-secondary leading-relaxed mt-2 sm:mt-3">

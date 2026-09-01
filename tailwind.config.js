@@ -33,10 +33,10 @@ export default {
         'primary-hover': '#4A7FC0',
         'primary-active': '#3D6AA3',
         accent: {
-          blue: '#50baff',
-          green: '#22C55E',
+          blue: '#7AB8D4',
+          green: '#5BA68C',
         },
-        success: '#00BB7F',
+        success: '#3A9E7B',
         interactive: {
           button: 'rgba(255, 255, 255, 0.045)',
         },
