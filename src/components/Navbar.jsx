@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GithubLogo, LinkedinLogo, List, X } from '@phosphor-icons/react';
+import { GithubLogo, LinkedinLogo, List, X, Factory } from '@phosphor-icons/react';
 import { cn } from '../lib/utils';
 
 const Navbar = () => {
@@ -24,11 +24,11 @@ const Navbar = () => {
                 <div className="max-w-[1400px] mx-auto w-full flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2.5 group shrink-0">
-                        <span className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold text-base transition-transform duration-200 group-hover:scale-105">
-                            H
+                        <span className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white transition-transform duration-200 group-hover:scale-105 group-hover:rotate-[-8deg]">
+                            <Factory size={18} weight="bold" />
                         </span>
                         <span className="text-foreground font-semibold tracking-tight text-sm group-hover:text-primary transition-colors duration-200">
-                            MAULIDAN
+                            OPS
                         </span>
                     </Link>
 
@@ -81,10 +81,10 @@ const Navbar = () => {
             <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
                 <div className="flex items-center justify-between px-4 h-14">
                     <Link to="/" className="flex items-center gap-2">
-                        <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold text-sm">
-                            H
+                        <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
+                            <Factory size={16} weight="bold" />
                         </span>
-                        <span className="text-foreground font-semibold tracking-tight text-xs">MAULIDAN</span>
+                        <span className="text-foreground font-semibold tracking-tight text-xs">OPS</span>
                     </Link>
 
                     <button
