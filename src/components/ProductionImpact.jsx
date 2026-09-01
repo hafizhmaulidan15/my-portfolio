@@ -1,8 +1,10 @@
+// @ts-check
 import { motion } from 'framer-motion';
 import { ChartBar, Factory, WarningCircle, Flask } from '@phosphor-icons/react';
 import { GlassPanel } from './ui/GlassPanel';
 import { useProductionImpact } from '../hooks/useProductionData';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
+import { memo } from 'react';
 
 function formatNumber(n) {
   if (!n && n !== 0) return '—';
@@ -10,7 +12,7 @@ function formatNumber(n) {
   return n.toLocaleString();
 }
 
-function MetricCard({ icon, label, value, subtitle, color, bg, accent }) {
+const MetricCard = memo(function MetricCard({ icon, label, value, subtitle, color, bg, accent }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -33,7 +35,7 @@ function MetricCard({ icon, label, value, subtitle, color, bg, accent }) {
       </GlassPanel>
     </motion.div>
   );
-}
+});
 
 function ChartTooltip({ active, payload, label, unit }) {
   if (!active || !payload?.length) return null;
@@ -90,7 +92,7 @@ function SkeletonChart() {
   );
 }
 
-function ProductionBarChart({ data, title, icon, color, unit }) {
+const ProductionBarChart = memo(function ProductionBarChart({ data, title, icon, color, unit }) {
   if (!data || data.length === 0) {
     return (
       <GlassPanel className="p-5 h-full">
@@ -138,9 +140,9 @@ function ProductionBarChart({ data, title, icon, color, unit }) {
           </BarChart>
         </ResponsiveContainer>
       </div>
-    </GlassPanel>
+      </GlassPanel>
   );
-}
+});
 
 const ProductionImpact = () => {
   const { data, error } = useProductionImpact();

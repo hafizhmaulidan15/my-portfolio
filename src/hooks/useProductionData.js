@@ -1,5 +1,38 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { PRODUCTION_API } from '../data/production-config';
+
+const CACHE_KEY = 'rsi-production-impact';
+const CACHE_TTL = 5 * 60 * 1000; // 5 min
+const RETRY_MAX = 3;
+const RETRY_BASE_DELAY = 800;
+
+function fetchWithRetry(url, signal, retries = RETRY_MAX) {
+  const attempt = (n) =>
+    fetch(url, { signal }).then((res) => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res;
+    }).catch((err) => {
+      if (signal.aborted) throw err;
+      if (n >= retries) throw err;
+      const delay = RETRY_BASE_DELAY * 2 ** n;
+      return new Promise((r) => setTimeout(r, delay)).then(() => attempt(n + 1));
+    });
+  return attempt(0);
+}
+
+function readCache() {
+  try {
+    const raw = sessionStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    const { ts, data } = JSON.parse(raw);
+    if (Date.now() - ts > CACHE_TTL) return null;
+    return data;
+  } catch { return null; }
+}
+
+function writeCache(data) {
+  try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data })); } catch { /* quota */ }
+}
 
 function parseDate(val) {
   if (!val) return null;
@@ -49,81 +82,87 @@ function parseSheetTrend(rows, field = 'In', minValue = 0) {
 }
 
 export function useProductionImpact() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const cached = readCache();
+  const [data, setData] = useState(cached);
+  const [loading, setLoading] = useState(!cached);
   const [error, setError] = useState(null);
+  const abortRef = useRef(null);
+  const fetchingRef = useRef(false);
+  const dataRef = useRef(cached);
+  useEffect(() => { dataRef.current = data; }, [data]);
 
-  useEffect(() => {
-    let mounted = true;
+  const fetchData = useCallback(async ({ background = false } = {}) => {
+    if (fetchingRef.current) return;
+    fetchingRef.current = true;
+    const ctrl = new AbortController();
+    abortRef.current = ctrl;
+    if (!background) setError(null);
+    try {
+      const [summaryRes, cupRes, susuRes] = await Promise.all([
+        fetchWithRetry(`${PRODUCTION_API.URL}?action=summary`, ctrl.signal),
+        fetchWithRetry(`${PRODUCTION_API.URL}?sheet=cup 130 ml`, ctrl.signal),
+        fetchWithRetry(`${PRODUCTION_API.URL}?sheet=susu`, ctrl.signal),
+      ]);
 
-    async function fetchData() {
-      try {
-        const [summaryRes, cupRes, susuRes] = await Promise.all([
-          fetch(`${PRODUCTION_API.URL}?action=summary`),
-          fetch(`${PRODUCTION_API.URL}?sheet=cup 130 ml`),
-          fetch(`${PRODUCTION_API.URL}?sheet=susu`),
-        ]);
+      const [summary, cupRows, susuRows] = await Promise.all([
+        summaryRes.json(),
+        cupRes.json(),
+        susuRes.json(),
+      ]);
 
-        if (!summaryRes.ok || !cupRes.ok || !susuRes.ok) {
-          throw new Error('Failed to fetch data');
-        }
+      if (ctrl.signal.aborted) return;
+      if (!Array.isArray(summary)) throw new Error('Invalid summary format');
 
-        const [summary, cupRows, susuRows] = await Promise.all([
-          summaryRes.json(),
-          cupRes.json(),
-          susuRes.json(),
-        ]);
+      const susuSummary = summary.find((s) => s.name === 'susu');
+      const totalProduction = susuSummary ? (susuSummary.totalIn || 0) : 0;
 
-        if (!mounted) return;
-        if (!Array.isArray(summary)) throw new Error('Invalid summary format');
-
-        // Only milk volume in liters
-        const susuSummary = summary.find(s => s.name === 'susu');
-        const totalProduction = susuSummary ? (susuSummary.totalIn || 0) : 0;
-
-        // Cup 130 ml trend (Out = actual production usage) + reject rate
-        const cupTrend = Array.isArray(cupRows) ? parseSheetTrend(cupRows, 'Out', 4000) : [];
-        let rejectTotal = 0;
-        let totalCupOut = 0;
-        if (Array.isArray(cupRows)) {
-          cupRows.forEach(row => {
-            const outVal = cleanNum(row.Out || row.out);
-            const ket = (row.Keterangan || row.keterangan || '').toString().toLowerCase();
-            if (ket.includes('test') || ket.includes('testing') || ket.includes('silinder')) return;
-            totalCupOut += outVal;
-            if (ket.includes('reject') || ket.includes('afkir')) {
-              rejectTotal += outVal;
-            }
-          });
-        }
-        const rejectRate = totalCupOut > 0
-          ? Math.round((rejectTotal / totalCupOut) * 10000) / 100
-          : 0;
-
-        // Susu trend + batch count from susu sheet
-        const susuTrend = Array.isArray(susuRows) ? parseSheetTrend(susuRows, 'In', 800) : [];
-        const batchCount = susuTrend.length;
-        const avgPerBatch = batchCount > 0 ? Math.round(totalProduction / batchCount) : 0;
-
-        setData({
-          totalProduction,
-          rejectRate,
-          avgPerBatch,
-          cupTrend,
-          susuTrend,
-          distributionCities: ['Bogor', 'Sukabumi', 'Lampung'],
+      const cupTrend = Array.isArray(cupRows) ? parseSheetTrend(cupRows, 'Out', 4000) : [];
+      let rejectTotal = 0;
+      let totalCupOut = 0;
+      if (Array.isArray(cupRows)) {
+        cupRows.forEach((row) => {
+          const outVal = cleanNum(row.Out || row.out);
+          const ket = (row.Keterangan || row.keterangan || '').toString().toLowerCase();
+          if (ket.includes('test') || ket.includes('testing') || ket.includes('silinder')) return;
+          totalCupOut += outVal;
+          if (ket.includes('reject') || ket.includes('afkir')) rejectTotal += outVal;
         });
-      } catch (err) {
-        if (mounted) setError(err.message);
-      } finally {
-        if (mounted) setLoading(false);
       }
-    }
+      const rejectRate = totalCupOut > 0 ? Math.round((rejectTotal / totalCupOut) * 10000) / 100 : 0;
 
-    fetchData();
-    const interval = setInterval(fetchData, 300000);
-    return () => { mounted = false; clearInterval(interval); };
+      const susuTrend = Array.isArray(susuRows) ? parseSheetTrend(susuRows, 'In', 800) : [];
+      const batchCount = susuTrend.length;
+      const avgPerBatch = batchCount > 0 ? Math.round(totalProduction / batchCount) : 0;
+
+      const next = {
+        totalProduction,
+        rejectRate,
+        avgPerBatch,
+        cupTrend,
+        susuTrend,
+        distributionCities: ['Bogor', 'Sukabumi', 'Lampung'],
+      };
+      setData(next);
+      writeCache(next);
+      setError(null);
+    } catch (err) {
+      if (err.name === 'AbortError') return;
+      if (!background || !dataRef.current) setError(err.message || 'Failed to fetch production data');
+    } finally {
+      fetchingRef.current = false;
+      setLoading(false);
+    }
   }, []);
 
-  return { data, loading, error };
+  useEffect(() => {
+    // SWR: if cached, revalidate in background
+    fetchData({ background: !!cached });
+    const interval = setInterval(() => fetchData({ background: true }), 300000);
+    return () => {
+      abortRef.current?.abort();
+      clearInterval(interval);
+    };
+  }, [fetchData, cached]);
+
+  return { data, loading, error, refetch: () => fetchData({ background: false }) };
 }

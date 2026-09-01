@@ -69,6 +69,11 @@ const About = () => {
                                         <img 
                                             src="/profile-avatar.png" 
                                             alt="Muhammad Hafizh Maulidan" 
+                                            width="192"
+                                            height="192"
+                                            loading="lazy"
+                                            decoding="async"
+                                            fetchPriority="low"
                                             className="w-full h-full object-cover object-[center_35%] transition-all duration-300"
                                             onError={(e) => { e.target.src = "https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=1447E6&color=fff&size=512"; }}
                                         />

@@ -91,7 +91,7 @@ const Hero = () => {
 
                     <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-4 md:gap-6 lg:gap-8 justify-items-start animate-slide-in-right">
                         <Link to="/experience" className="group block w-full">
-                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
+                            <GlassPanel variant="elevated" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 border border-primary/10">
                                 <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
                                     <div className="p-2 sm:p-2.5 md:p-3 bg-primary/10 rounded-sm text-primary">
                                         <Factory size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
@@ -132,7 +132,7 @@ const Hero = () => {
                         </Link>
 
                         <Link to="/certifications" className="group block w-full sm:col-span-2 sm:justify-self-center sm:max-w-lg">
-                            <GlassPanel variant="overlap" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
+                            <GlassPanel variant="borderless" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7">
                                 <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
                                     <Lightning size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                 </div>

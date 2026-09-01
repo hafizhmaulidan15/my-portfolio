@@ -13,7 +13,7 @@ export default {
         foreground: '#FFFFFF',
         'text-secondary': '#E4E4E7',
         'text-tertiary': '#A1A1AA',
-        'text-muted': '#9F9FA9',
+        'text-muted': '#B5B5BF',
         'border-light': 'rgba(255, 255, 255, 0.25)',
         'border': 'rgba(255, 255, 255, 0.1)',
         'tory-blue': {
