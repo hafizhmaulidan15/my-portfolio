@@ -4,7 +4,6 @@ import './index.css';
 import { Analytics } from '@vercel/analytics/react';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 import { usePageMeta } from './hooks/usePageMeta';
-import gsap from 'gsap';
 
 const Navbar = lazy(() => import('./components/Navbar'));
 const Hero = lazy(() => import('./components/Hero'));
@@ -41,30 +40,8 @@ function App() {
   useSmoothScroll();
   usePageMeta();
 
-  useEffect(() => {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
-    
-    const moveCursor = (e) => {
-      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.2 });
-    };
-    window.addEventListener('mousemove', moveCursor);
-    return () => {
-      window.removeEventListener('mousemove', moveCursor);
-      cursor.remove();
-    };
-  }, []);
-
   return (
     <div className="app bg-background min-h-screen flex flex-col">
-      <style>{`
-        .custom-cursor {
-          width: 12px; height: 12px; background: white; border-radius: 50%;
-          position: fixed; top: 0; left: 0; pointer-events: none;
-          z-index: 9999; mix-blend-mode: difference;
-        }
-      `}</style>
       <ScrollToTop />
       <Suspense fallback={<LoadingFallback />}>
         <Navbar />
