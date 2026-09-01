@@ -26,7 +26,7 @@ const sections = [
     {
         title: 'Engineering & Technical',
         mono: 'Systems & Code',
-        accentColor: 'text-text-tertiary',
+        accentColor: 'text-primary',
         skills: [
             { name: 'IoT & Embedded', icon: <Circuitry size={18} weight="light" />, context: 'ESP32/Arduino, MQTT, Arduino IoT Cloud, FastLED — 5+ deployments, 99% uptime.', project: 'Flood Detection' },
             { name: 'Data & ML', icon: <Brain size={18} weight="light" />, context: 'Python Pandas/NumPy, RF/XGBoost, 660+ companies screened.', project: 'IDX Screener' },
