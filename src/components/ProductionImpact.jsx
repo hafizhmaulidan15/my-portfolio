@@ -36,9 +36,9 @@ const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit 
         <div className="w-full h-[220px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} margin={{ top: 5, right: 5, left: -15, bottom: 0 }}>
-              <XAxis dataKey="date" tick={{ fill: '#71717B', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={{ stroke: 'rgba(15,15,17,0.08)' }} interval="preserveStartEnd" />
-              <YAxis tick={{ fill: '#71717B', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={false} tickFormatter={v => v >= 1000 ? (v/1000).toFixed(0) + 'K' : v} width={34} />
-              <Tooltip content={<ChartTooltip unit={unit} />} cursor={{ fill: 'rgba(15,15,17,0.04)' }} />
+              <XAxis dataKey="date" tick={{ fill: '#6B7A90', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={{ stroke: 'rgba(232,238,246,0.08)' }} interval="preserveStartEnd" />
+              <YAxis tick={{ fill: '#6B7A90', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={false} tickFormatter={v => v >= 1000 ? (v/1000).toFixed(0) + 'K' : v} width={34} />
+              <Tooltip content={<ChartTooltip unit={unit} />} cursor={{ fill: 'rgba(232,238,246,0.04)' }} />
               <Bar dataKey="value" fill="#5B8DD1" radius={[6, 6, 0, 0]} barCategoryGap="22%" />
             </BarChart>
           </ResponsiveContainer>
