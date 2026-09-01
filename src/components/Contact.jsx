@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { GithubLogo, LinkedinLogo, PaperPlaneTilt, CheckCircle, Spinner, WarningCircle } from '@phosphor-icons/react';
+import { GithubLogo, LinkedinLogo, PaperPlaneTilt, CheckCircle, Spinner, WarningCircle, CaretDown } from '@phosphor-icons/react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +13,15 @@ const Contact = () => {
     const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
     const [status, setStatus] = useState('idle'); // idle | sending | success | error
     const [errors, setErrors] = useState({});
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const faqs = [
+        { q: 'What can you help with in dairy operations?', a: 'End-to-end: SOPs, QC lactoscan, cold chain 2–8°C, supplier intelligence per KPS, and distribution ratchet SOPs — built from zero at Rumah Susu Indonesia.' },
+        { q: 'How did you achieve 7.2% mozzarella yield?', a: 'First commercial run 500 L → 36 kg / 180 pcs. Solved inverter, blade mixer, boiler contamination, standardized stretch/taste tests and vacuum sealing.' },
+        { q: 'Are you available for freelance / consulting?', a: 'Open to operations consulting, SOP development, and dashboard builds (Next.js + Sheets API). Contact via form — I reply within 24h.' },
+        { q: 'How does the supplier quality dashboard work?', a: 'Live Google Sheets API — tracks fat, SNF, protein, alcohol test, volume per supplier (Karya Nugraha, Kemuning, Larasati) for data-driven selection.' },
+        { q: 'What is your scaling approach?', a: 'Repeatable systems over heroic effort: SOPs + 3-batch retention traceability + <1% reject rate, lean 4-person team, 25K units/batch.' },
+    ];
 
     useGSAP(() => {
         gsap.from('.contact-fade', {
@@ -73,7 +82,7 @@ const Contact = () => {
         if (errors[field]) setErrors(e => ({ ...e, [field]: '' }));
     };
 
-    const inputClass = 'w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-foreground text-sm placeholder-text-tertiary outline-none transition-all duration-200 focus:border-primary/50 focus:bg-white/[0.06] focus:shadow-[0_0_0_3px_rgba(17,129,255,0.1)]';
+    const inputClass = 'w-full bg-black/[0.02] border border-border rounded-xl px-4 py-3 text-foreground text-sm placeholder-text-tertiary outline-none transition-all duration-200 focus:border-primary/50 focus:bg-white/[0.06] focus:shadow-[0_0_0_3px_rgba(17,129,255,0.1)]';
     const labelClass = 'text-sm text-text-secondary font-medium';
 
     return (
@@ -147,6 +156,26 @@ const Contact = () => {
                                 className="text-text-tertiary hover:text-primary transition-all duration-200 hover:-translate-y-1 p-2 inline-block" aria-label="LinkedIn Profile">
                                 <LinkedinLogo size={28} weight="duotone" />
                             </a>
+                        </div>
+                    </div>
+
+                    <div className="mt-16 pt-8 border-t border-border max-w-xl mx-auto">
+                        <h3 className="font-display text-[18px] font-semibold tracking-tight">FAQ</h3>
+                        <p className="text-sm text-text-tertiary mt-1">Quick answers — click to expand.</p>
+                        <div className="mt-6 divide-y divide-border border-y border-border">
+                            {faqs.map((f, i) => (
+                                <div key={i} className="py-4 cursor-pointer group" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
+                                    <div className="flex items-start justify-between gap-4">
+                                        <h4 className="font-medium text-sm leading-snug pr-2">{f.q}</h4>
+                                        <CaretDown size={14} weight="bold" className={`shrink-0 mt-0.5 text-text-tertiary transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
+                                    </div>
+                                    <div className={`grid transition-all duration-300 ${openFaq === i ? 'grid-rows-[1fr] opacity-100 mt-2' : 'grid-rows-[0fr] opacity-0'}`}>
+                                        <div className="overflow-hidden">
+                                            <p className="text-sm leading-relaxed text-text-secondary text-pretty">{f.a}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
