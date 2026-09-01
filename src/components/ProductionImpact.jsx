@@ -31,7 +31,7 @@ const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit 
   }
   return (
     <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.5rem]">
-      <div className="bg-surface rounded-[1.1rem] border border-white/10 p-5">
+      <div className="bg-surface rounded-[1.1rem] border border-border p-5">
         <h3 className="font-medium text-sm mb-4">{title}</h3>
         <div className="w-full h-[220px]">
           <ResponsiveContainer width="100%" height="100%">

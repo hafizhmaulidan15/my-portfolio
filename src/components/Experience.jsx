@@ -113,7 +113,7 @@ const Experience = () => {
 
                 {/* Testimonial — single editorial quote */}
                 <div className="mt-16 p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.75rem]">
-                    <div className="bg-surface rounded-[1.25rem] border border-white/10 p-6 md:p-8">
+                    <div className="bg-surface rounded-[1.25rem] border border-border p-6 md:p-8">
                         <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-3">What collaborators say</div>
                         <blockquote className="font-display text-[18px] md:text-[22px] leading-[1.4] tracking-[-0.015em] text-pretty">
                             “Hafizh has demonstrated exceptional capability in building Rumah Susu Indonesia's Tasikmalaya unit from the ground up. His systematic approach — from SOP architecture to cold chain — has been instrumental in scaling production.”

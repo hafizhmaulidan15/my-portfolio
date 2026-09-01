@@ -10,10 +10,10 @@ export default {
         background: '#0B1220',
         surface: '#121E32',
         'surface-hover': '#1A2A44',
-        foreground: '#E8EEF6',
+        foreground: '#CBD5E1',
         'text-secondary': '#94A3B8',
-        'text-tertiary': '#6B7A90',
-        'text-muted': '#8A9AB0',
+        'text-tertiary': '#64748B',
+        'text-muted': '#6B7A90',
         'border-light': 'rgba(232,238,246,0.14)',
         'border': 'rgba(232,238,246,0.08)',
         'tory-blue': {

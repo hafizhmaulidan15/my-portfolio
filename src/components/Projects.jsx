@@ -47,11 +47,11 @@ const Projects = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {featured.map((f) => (
                         <div key={f.id} className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.75rem] h-full">
-                            <div className="bg-surface rounded-[1.25rem] overflow-hidden border border-white/10 flex flex-col h-full">
-                                <div className="aspect-[4/2.6] relative overflow-hidden bg-[#EDE8E0]">
+                            <div className="bg-surface rounded-[1.25rem] overflow-hidden border border-border flex flex-col h-full">
+                                <div className="aspect-[4/2.6] relative overflow-hidden bg-surface">
                                     <img src={f.image} alt={f.title} width="800" height="520" loading="lazy" decoding="async" className="w-full h-full object-cover grayscale-[0.12] contrast-[1.03]" />
                                     <div className="absolute top-3 left-3 flex items-center gap-2">
-                                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-mono tracking-wide border border-white/10">{f.kicker}</span>
+                                        <span className="px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur text-[11px] font-mono tracking-wide border border-border">{f.kicker}</span>
                                     </div>
                                 </div>
                                 <div className="p-5 md:p-6 flex flex-col gap-3 flex-1">
@@ -79,7 +79,7 @@ const Projects = () => {
 
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3">
                     {more.map((m) => (
-                        <a key={m.title} href={m.href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between gap-4 p-4 rounded-xl border border-border bg-surface hover:bg-white/[0.03] hover:border-white/10 transition-colors">
+                        <a key={m.title} href={m.href} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between gap-4 p-4 rounded-xl border border-border bg-surface hover:bg-white/[0.03] hover:border-border transition-colors">
                             <div className="min-w-0">
                                 <div className="font-medium text-[14px] leading-tight group-hover:text-foreground transition-colors">{m.title}</div>
                                 <div className="text-[13px] text-text-tertiary leading-snug truncate">{m.desc}</div>
