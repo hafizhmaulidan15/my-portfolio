@@ -49,7 +49,7 @@ function ChartTooltip({ active, payload, label, unit }) {
 
 function SkeletonBar({ className, style }) {
   return (
-    <div className={`relative overflow-hidden rounded-sm bg-white/[0.04] ${className}`} style={style}>
+    <div className={`relative overflow-hidden rounded-sm bg-black/[0.02] ${className}`} style={style}>
       <div className="absolute inset-0 animate-shimmer bg-[length:200%_100%] bg-gradient-to-r from-transparent via-white/[0.07] to-transparent" />
     </div>
   );

@@ -15,13 +15,13 @@ const spanMap = {
 
 const colors = {
     0: { border: 'border-primary/20', text: 'text-primary', bg: 'bg-primary/10' },
-    13: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
+    13: { border: 'border-border', text: 'text-text-secondary', bg: 'bg-black/[0.02]' },
     14: { border: 'border-primary/15', text: 'text-primary', bg: 'bg-primary/10' },
-    15: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
-    16: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
-    17: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
-    18: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
-    19: { border: 'border-white/[0.08]', text: 'text-text-secondary', bg: 'bg-white/[0.04]' },
+    15: { border: 'border-border', text: 'text-text-secondary', bg: 'bg-black/[0.02]' },
+    16: { border: 'border-border', text: 'text-text-secondary', bg: 'bg-black/[0.02]' },
+    17: { border: 'border-border', text: 'text-text-secondary', bg: 'bg-black/[0.02]' },
+    18: { border: 'border-border', text: 'text-text-secondary', bg: 'bg-black/[0.02]' },
+    19: { border: 'border-border', text: 'text-text-secondary', bg: 'bg-black/[0.02]' },
 };
 
 const Projects = () => {
@@ -216,11 +216,11 @@ const Projects = () => {
                         const span = spanMap[project.id] || '';
                         return (
                             <div key={project.id}
-                                className={`project-card group bg-surface border ${c.border} p-6 md:p-7 rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.12] hover:shadow-[0_8px_32px_rgba(0,0,0,0.24)] ${span}`}>
+                                className={`project-card group bg-surface border ${c.border} p-6 md:p-7 rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-border hover:shadow-[0_8px_32px_rgba(0,0,0,0.24)] ${span}`}>
 
                                 <div className="relative flex flex-col h-full">
                                     <div className="flex items-start justify-between mb-5">
-                                        <div className={`w-11 h-11 rounded-lg bg-white/[0.04] flex items-center justify-center border border-white/[0.06] ${c.text} group-hover:scale-105 transition-transform duration-700`}>
+                                        <div className={`w-11 h-11 rounded-lg bg-black/[0.02] flex items-center justify-center border border-border ${c.text} group-hover:scale-105 transition-transform duration-700`}>
                                             {project.icon}
                                         </div>
                                         <span className={`px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest ${c.bg} ${c.text} border ${c.border}`}>
@@ -249,7 +249,7 @@ const Projects = () => {
                                     )}
 
                                     {project.stats.length > 0 && (
-                                        <div className="flex gap-6 mb-4 py-3 border-t border-white/[0.06] mt-auto">
+                                        <div className="flex gap-6 mb-4 py-3 border-t border-border mt-auto">
                                             {project.stats.map((s, i) => (
                                                 <div key={i}>
                                                     <p className="text-[13px] font-bold font-mono tabular-nums text-foreground">{s.value}</p>
@@ -263,14 +263,14 @@ const Projects = () => {
                                         <div className="flex flex-wrap gap-2">
                                             {project.skills.map(s => (
                                                 <span key={s}
-                                                    className="px-3 py-1.5 text-xs font-mono text-text-tertiary bg-white/[0.03] rounded-lg border border-white/[0.06] hover:border-white/[0.15] transition-colors">
+                                                    className="px-3 py-1.5 text-xs font-mono text-text-tertiary bg-black/[0.02] rounded-lg border border-border hover:border-white/[0.15] transition-colors">
                                                     {s}
                                                 </span>
                                             ))}
                                         </div>
                                         {project.source && (
                                             <a href={project.source} target="_blank" rel="noopener noreferrer"
-                                                className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-text-tertiary hover:text-primary border border-white/[0.08] hover:border-primary/40 rounded-lg transition-colors flex-shrink-0">
+                                                className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-text-tertiary hover:text-primary border border-border hover:border-primary/40 rounded-lg transition-colors flex-shrink-0">
                                                 <Code size={14} /> Source
                                             </a>
                                         )}

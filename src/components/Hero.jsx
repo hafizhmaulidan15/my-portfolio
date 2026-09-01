@@ -45,20 +45,22 @@ const Hero = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-wrap gap-3 pt-2 sm:pt-3">
+                        <div className="flex flex-wrap items-center gap-3 pt-2 sm:pt-3">
                             <Link 
                                 to="/contact"
-                                className="px-5 py-3 sm:px-6 sm:py-3 bg-primary text-foreground text-sm sm:text-[15px] font-medium rounded-lg border border-primary flex items-center gap-2 transition-all duration-200 hover:bg-primary-hover hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)]"
+                                className="group inline-flex items-center gap-3 pl-6 pr-1.5 py-1.5 bg-primary text-white text-sm font-medium rounded-full border border-primary transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-primary-hover active:scale-[0.98]"
                             >
-                                <Envelope size={18} weight="bold" />
-                                Connect now
+                                <span>Connect now</span>
+                                <span className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105 transition-transform duration-500">
+                                    <Envelope size={14} weight="bold" />
+                                </span>
                             </Link>
                             <Link 
                                 to="/projects"
-                                className="px-5 py-3 sm:px-6 sm:py-3 bg-surface border border-border text-foreground text-sm sm:text-[15px] font-medium rounded-lg flex items-center gap-2 transition-all duration-200 hover:bg-surface-hover hover:border-border-light hover:scale-[1.03] active:scale-[0.98] shadow-floating"
+                                className="px-5 py-3 bg-transparent text-foreground text-sm font-medium flex items-center gap-2 underline decoration-foreground/20 underline-offset-4 hover:decoration-foreground transition-all duration-200"
                             >
                                 View works
-                                <ArrowUpRight size={18} weight="bold" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                <ArrowUpRight size={14} weight="bold" />
                             </Link>
                         </div>
 
@@ -89,7 +91,8 @@ const Hero = () => {
 
                     <div className="lg:col-span-6 grid grid-cols-2 auto-rows-fr gap-3 sm:gap-4 md:gap-4 justify-items-stretch animate-slide-in-right" style={{gridAutoFlow:'dense'}}>
                         <Link to="/experience" className="group block w-full col-span-2 sm:col-span-1 sm:row-span-2 overflow-hidden">
-                            <GlassPanel variant="elevated" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 border border-primary/10 group-hover:border-primary/20 transition-colors overflow-hidden">
+                            <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem] h-full">
+                            <GlassPanel variant="plain" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 rounded-[1.25rem] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] overflow-hidden">
                                 <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
                                     <div className="p-2 sm:p-2.5 md:p-3 bg-primary/10 rounded-sm text-primary">
                                         <Factory size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
@@ -111,10 +114,12 @@ const Hero = () => {
                                     </div>
                                 </div>
                             </GlassPanel>
+                            </div>
                         </Link>
 
                         <Link to="/skills" className="group block w-full overflow-hidden">
-                            <GlassPanel variant="overlap" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 overflow-hidden group-hover:scale-[1.005] transition-transform duration-700">
+                            <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem] h-full">
+                            <GlassPanel variant="plain" className="h-full flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 rounded-[1.25rem] overflow-hidden">
                                 <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
                                     <ChartBar size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                 </div>
@@ -127,10 +132,12 @@ const Hero = () => {
                                     ))}
                                 </div>
                             </GlassPanel>
+                            </div>
                         </Link>
 
                         <Link to="/certifications" className="group block w-full col-span-2 overflow-hidden">
-                            <GlassPanel variant="borderless" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 overflow-hidden">
+                            <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem] h-full">
+                            <GlassPanel variant="plain" className="flex flex-col gap-2 sm:gap-3 md:gap-4 p-4 sm:p-5 md:p-6 lg:p-7 rounded-[1.25rem] overflow-hidden">
                                 <div className="p-2 sm:p-2.5 md:p-3 bg-accent-blue/10 rounded-sm text-accent-blue w-fit">
                                     <Lightning size={20} weight="duotone" className="sm:w-[22px] sm:h-[22px] md:w-[24px] md:h-[24px]" />
                                 </div>
@@ -143,6 +150,7 @@ const Hero = () => {
                                     ))}
                                 </div>
                             </GlassPanel>
+                            </div>
                         </Link>
                     </div>
 

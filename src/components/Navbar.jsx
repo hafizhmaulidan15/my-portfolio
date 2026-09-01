@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <>
             {/* Desktop Top Navbar */}
-            <header className="hidden lg:flex fixed top-0 left-0 right-0 z-50 h-16 bg-background/80 backdrop-blur-md border-b border-white/[0.06] items-center px-6">
+            <header className="hidden lg:flex fixed top-0 left-0 right-0 z-50 h-16 bg-background/80 backdrop-blur-md border-b border-border items-center px-6">
                 <div className="max-w-[1400px] mx-auto w-full flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2.5 group shrink-0">
@@ -78,7 +78,7 @@ const Navbar = () => {
             </header>
 
             {/* Mobile Top Bar */}
-            <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/[0.06]">
+            <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
                 <div className="flex items-center justify-between px-4 h-14">
                     <Link to="/" className="flex items-center gap-2">
                         <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-foreground font-bold text-sm">
@@ -103,7 +103,7 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
             />
             <div
-                className={`lg:hidden fixed top-14 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-white/[0.06] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
+                className={`lg:hidden fixed top-14 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
             >
                 <nav className="px-4 py-4 space-y-1">
                     {navLinks.map((link) => {

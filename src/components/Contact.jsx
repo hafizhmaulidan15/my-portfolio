@@ -73,7 +73,7 @@ const Contact = () => {
         if (errors[field]) setErrors(e => ({ ...e, [field]: '' }));
     };
 
-    const inputClass = 'w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-foreground text-sm placeholder-text-tertiary outline-none transition-all duration-200 focus:border-primary/50 focus:bg-white/[0.06] focus:shadow-[0_0_0_3px_rgba(17,129,255,0.1)]';
+    const inputClass = 'w-full bg-black/[0.02] border border-border rounded-xl px-4 py-3 text-foreground text-sm placeholder-text-tertiary outline-none transition-all duration-200 focus:border-primary/50 focus:bg-white/[0.06] focus:shadow-[0_0_0_3px_rgba(17,129,255,0.1)]';
     const labelClass = 'text-sm text-text-secondary font-medium';
 
     return (
