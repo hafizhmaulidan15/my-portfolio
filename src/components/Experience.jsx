@@ -75,7 +75,7 @@ const Experience = () => {
                             </div>
                             <div className="lg:col-span-9">
                                 <div className="flex items-start gap-3">
-                                    <span className="hidden sm:flex w-8 h-8 rounded-lg bg-black/[0.04] border border-black/5 items-center justify-center shrink-0"><Factory size={16} weight="light" /></span>
+                                    <span className="hidden sm:flex w-8 h-8 rounded-lg bg-white/[0.04] border border-white/10 items-center justify-center shrink-0"><Factory size={16} weight="light" /></span>
                                     <div className="flex-1 min-w-0">
                                         <h3 className="font-display text-[18px] font-semibold leading-tight">{e.title}</h3>
                                         <div className="font-mono text-xs tracking-wide text-text-tertiary">{e.company} • {e.location}</div>
@@ -84,7 +84,7 @@ const Experience = () => {
                                 <p className="mt-3 text-[14px] leading-[1.7] text-text-secondary max-w-[68ch] text-pretty">{e.description}</p>
                                 <div className="flex flex-wrap gap-1.5 mt-3">
                                     {e.tags.map((t) => (
-                                        <span key={t} className="px-2 py-1 rounded-full bg-black/[0.04] border border-black/5 text-[11px] font-mono tracking-wide text-text-secondary">{t}</span>
+                                        <span key={t} className="px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-mono tracking-wide text-text-secondary">{t}</span>
                                     ))}
                                 </div>
                             </div>
@@ -101,7 +101,7 @@ const Experience = () => {
                     <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {certs.map((c) => (
                             <div key={c.title} className="flex gap-3 p-4 rounded-xl border border-border bg-surface">
-                                <span className="w-8 h-8 rounded-lg bg-black/[0.04] border border-black/5 flex items-center justify-center shrink-0 text-text-tertiary">{c.icon}</span>
+                                <span className="w-8 h-8 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center shrink-0 text-text-tertiary">{c.icon}</span>
                                 <div className="min-w-0">
                                     <div className="font-medium text-sm leading-tight text-pretty">{c.title}</div>
                                     <div className="font-mono text-xs text-text-tertiary">{c.org} • {c.date}</div>
@@ -112,8 +112,8 @@ const Experience = () => {
                 </div>
 
                 {/* Testimonial — single editorial quote */}
-                <div className="mt-16 p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem]">
-                    <div className="bg-surface rounded-[1.25rem] border border-black/5 p-6 md:p-8">
+                <div className="mt-16 p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[1.75rem]">
+                    <div className="bg-surface rounded-[1.25rem] border border-white/10 p-6 md:p-8">
                         <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-3">What collaborators say</div>
                         <blockquote className="font-display text-[18px] md:text-[22px] leading-[1.4] tracking-[-0.015em] text-pretty">
                             “Hafizh has demonstrated exceptional capability in building Rumah Susu Indonesia's Tasikmalaya unit from the ground up. His systematic approach — from SOP architecture to cold chain — has been instrumental in scaling production.”
@@ -121,7 +121,7 @@ const Experience = () => {
                         <div className="mt-4 flex items-center gap-3">
                             <div className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center text-xs font-bold">R</div>
                             <div><div className="text-sm font-medium leading-none">Pak Rio Adhari</div><div className="text-xs text-text-tertiary">Management — Rumah Susu Indonesia</div></div>
-                            <span className="ml-auto hidden sm:inline font-mono text-[11px] px-2 py-1 rounded-full bg-black/[0.04] border border-black/5">Direct supervisor</span>
+                            <span className="ml-auto hidden sm:inline font-mono text-[11px] px-2 py-1 rounded-full bg-white/[0.04] border border-white/10">Direct supervisor</span>
                         </div>
                     </div>
                 </div>

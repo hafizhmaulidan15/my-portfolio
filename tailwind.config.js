@@ -7,15 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#FDFBF7',
-        surface: '#FFFFFF',
-        'surface-hover': '#F5F5F0',
-        foreground: '#0F0F11',
-        'text-secondary': '#3F3F46',
-        'text-tertiary': '#71717B',
-        'text-muted': '#A1A1AA',
-        'border-light': 'rgba(15,15,17,0.12)',
-        'border': 'rgba(15,15,17,0.08)',
+        background: '#0B1220',
+        surface: '#121E32',
+        'surface-hover': '#1A2A44',
+        foreground: '#E8EEF6',
+        'text-secondary': '#94A3B8',
+        'text-tertiary': '#6B7A90',
+        'text-muted': '#8A9AB0',
+        'border-light': 'rgba(232,238,246,0.14)',
+        'border': 'rgba(232,238,246,0.08)',
         'tory-blue': {
           50: '#edf8ff',
           100: '#d7eeff',

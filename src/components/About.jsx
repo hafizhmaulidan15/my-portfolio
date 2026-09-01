@@ -17,7 +17,7 @@ const About = () => {
           {/* Left editorial */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-[14px] overflow-hidden ring-1 ring-black/5 bg-surface">
+              <div className="w-16 h-16 rounded-[14px] overflow-hidden ring-1 ring-white/10 bg-surface">
                 <img src="/profile-avatar.png" alt="Muhammad Hafizh Maulidan" width="64" height="64" loading="lazy" decoding="async" className="w-full h-full object-cover object-[center_30%]" onError={(e)=>{e.target.src="https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=E8E0D5&color=1A1E23&size=128"}} />
               </div>
               <div>
@@ -49,7 +49,7 @@ const About = () => {
 
           {/* Right timeline */}
           <div className="lg:col-span-7 lg:pl-8">
-            <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.75rem]">
+            <div className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[1.75rem]">
               <div className="bg-surface rounded-[1.25rem] border border-black/[0.06] p-6 md:p-7">
                 <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-6">Production flow — intake to distribution</div>
                 <div className="relative">
@@ -64,7 +64,7 @@ const About = () => {
                           <div className="flex items-center gap-2 mb-1">
                             <span className="font-mono text-[11px] tracking-wide text-text-tertiary">{s.n}</span>
                             <span className="w-6 h-px bg-border hidden sm:block" aria-hidden="true"></span>
-                            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide px-2 py-1 rounded-full bg-black/[0.04] border border-black/5 text-text-secondary">{s.icon} {s.title}</span>
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-text-secondary">{s.icon} {s.title}</span>
                           </div>
                           <p className="text-sm leading-relaxed text-text-secondary text-pretty">{s.desc}</p>
                         </div>

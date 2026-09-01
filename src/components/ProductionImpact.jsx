@@ -30,8 +30,8 @@ const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit 
     );
   }
   return (
-    <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[1.5rem]">
-      <div className="bg-surface rounded-[1.1rem] border border-black/5 p-5">
+    <div className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[1.5rem]">
+      <div className="bg-surface rounded-[1.1rem] border border-white/10 p-5">
         <h3 className="font-medium text-sm mb-4">{title}</h3>
         <div className="w-full h-[220px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -63,9 +63,9 @@ const ProductionImpact = () => {
 
         {!showContent ? (
           <div className="mt-10 grid grid-cols-3 gap-4">
-            <div className="h-[140px] rounded-xl bg-black/[0.04] animate-pulse"></div>
-            <div className="h-[140px] rounded-xl bg-black/[0.04] animate-pulse"></div>
-            <div className="h-[140px] rounded-xl bg-black/[0.04] animate-pulse"></div>
+            <div className="h-[140px] rounded-xl bg-white/[0.04] animate-pulse"></div>
+            <div className="h-[140px] rounded-xl bg-white/[0.04] animate-pulse"></div>
+            <div className="h-[140px] rounded-xl bg-white/[0.04] animate-pulse"></div>
           </div>
         ) : (
           <>

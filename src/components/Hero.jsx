@@ -68,13 +68,13 @@ const Hero = () => {
 
                     {/* Right visual — 5 cols, Double-Bezel */}
                     <div className="lg:col-span-5 lg:pl-4">
-                        <div className="p-1.5 bg-black/[0.04] ring-1 ring-black/5 rounded-[2rem]">
+                        <div className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[2rem]">
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(15,15,17,0.08)]">
                                 <div className="aspect-[4/3] relative overflow-hidden bg-[#E8E0D5]">
                                     <img src="https://picsum.photos/seed/dairy-steel-lab/800/600" alt="Dairy steel lab — cold chain" width="800" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover grayscale-[0.15] contrast-[1.04]" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
                                     <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-mono tracking-wide text-foreground border border-black/5">Tasikmalaya Plant • 2026</span>
+                                        <span className="px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-mono tracking-wide text-foreground border border-white/10">Tasikmalaya Plant • 2026</span>
                                         <span className="w-2 h-2 rounded-full bg-success animate-pulse border border-white" aria-hidden="true"></span>
                                     </div>
                                 </div>
