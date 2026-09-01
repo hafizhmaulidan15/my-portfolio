@@ -142,7 +142,7 @@ const Experience = () => {
                                 <span>Career path — 2022 → Present</span>
                             </div>
                             <h2 className="font-display text-[26px] md:text-[30px] font-[800] tracking-[-0.03em] leading-[0.95] text-foreground text-balance">
-                                Professional <span className="text-gradient-primary">experience</span>
+                                Professional <span className="text-primary">experience</span>
                             </h2>
                         </div>
 
@@ -212,7 +212,7 @@ const Experience = () => {
                                 <span>Verification</span>
                             </div>
                             <h2 className="text-[22px] md:text-[24px] font-semibold tracking-tight text-foreground">
-                                Core <span className="text-gradient-warm">certified</span>
+                                Core <span className="text-primary">certified</span>
                             </h2>
                         </div>
 
@@ -293,7 +293,7 @@ const Experience = () => {
                             <span>What collaborators say</span>
                         </div>
                         <h2 className="text-[22px] md:text-[24px] font-semibold tracking-tight text-foreground">
-                            Trusted by <span className="text-gradient-primary">peers</span>
+                            Trusted by <span className="text-primary">peers</span>
                         </h2>
                     </div>
 

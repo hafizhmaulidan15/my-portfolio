@@ -84,7 +84,7 @@ const About = () => {
 
                                 <div className="space-y-3 text-left">
                                     <h2 className="font-display text-[28px] md:text-[34px] font-[800] tracking-[-0.03em] leading-[0.95] text-foreground text-balance">
-                                        Operations & Production <span className="inline-block w-10 h-6 md:w-14 md:h-7 rounded-full align-middle bg-cover bg-center mx-1.5 border border-white/10 relative top-[-1px]" style={{backgroundImage:'url(https://picsum.photos/seed/milk-lab/200/100)', filter:'grayscale(0.15) contrast(1.05)'}} aria-hidden="true"></span> <span className="text-gradient-primary">Leader</span>
+                                        Operations & Production <span className="inline-block w-10 h-6 md:w-14 md:h-7 rounded-full align-middle bg-cover bg-center mx-1.5 border border-white/10 relative top-[-1px]" style={{backgroundImage:'url(https://picsum.photos/seed/milk-lab/200/100)', filter:'grayscale(0.15) contrast(1.05)'}} aria-hidden="true"></span> <span className="text-primary">Leader</span>
                                     </h2>
                                     <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Tasikmalaya • Dairy Manufacturing • Cold Chain</p>
                                 </div>

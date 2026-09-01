@@ -1,5 +1,4 @@
 import { BookOpen, Calendar, GraduationCap } from '@phosphor-icons/react';
-import { GlassPanel } from './ui/GlassPanel';
 
 const Publications = () => {
     const publications = [
@@ -15,16 +14,14 @@ const Publications = () => {
     ];
 
     return (
-        <section className="py-12 md:py-[72px] bg-background relative overflow-hidden">
-            <div className="absolute top-0 right-1/3 w-72 h-72 bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
+        <section className="py-24 md:py-32 bg-background relative overflow-hidden">
 
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
                     <div className="space-y-2 md:space-y-3">
-                        <div className="h-0.5 w-10 bg-gradient-to-r from-accent-blue to-primary"></div>
+                        <div className="h-0.5 w-10 bg-primary/60"></div>
                         <h2 className="text-[22px] sm:text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
-                            Published <span className="text-gradient-cool">works</span>
+                            Published <span className="text-primary">works</span>
                         </h2>
                         <p className="text-text-secondary max-w-[50ch] text-sm md:text-[16px]">
                             Research publication in IoT and Automation engineering.
@@ -32,9 +29,9 @@ const Publications = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+                <div className="max-w-[720px]">
                     {publications.map((pub, index) => (
-                        <GlassPanel key={index} className="flex flex-col p-5 sm:p-6 border-border/50 hover:border-primary/20 transition-all group h-full max-w-md">
+                        <div key={index} className="border-l-2 border-primary/30 pl-6 md:pl-8 py-2 group">
                             <div className="flex items-start justify-between mb-4">
                                 <div className={`p-2.5 ${pub.bg} rounded-sm ${pub.color} group-hover:scale-105 transition-transform`}>
                                     <BookOpen size={20} weight="duotone" />
@@ -57,11 +54,11 @@ const Publications = () => {
                                 </p>
                             </div>
                             
-                            <div className="mt-4 pt-3 border-t border-white/[0.06] flex items-center gap-2 text-sm font-mono text-text-tertiary">
+                            <div className="mt-4 flex items-center gap-2 text-sm font-mono text-text-tertiary">
                                 <Calendar size={14} weight="duotone" />
                                 <span>{pub.date}</span>
                             </div>
-                        </GlassPanel>
+                        </div>
                     ))}
                 </div>
             </div>

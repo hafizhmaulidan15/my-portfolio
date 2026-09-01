@@ -21,22 +21,21 @@ const certData = [
 
 const Certifications = () => {
     return (
-        <section id="certifications" className="py-12 md:py-[72px] bg-background relative overflow-hidden">
-            <div className="absolute top-1/3 -right-32 w-80 h-80 bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-1/3 -left-32 w-72 h-72 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
+        <section id="certifications" className="py-24 md:py-32 bg-background relative overflow-hidden">
+            <div className="absolute top-1/3 -right-32 w-80 h-80 bg-primary/[0.04] blur-[100px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="space-y-2 md:space-y-3 mb-6 md:mb-10">
-                    <div className="h-0.5 w-10 bg-gradient-to-r from-primary to-accent-blue"></div>
+                    <div className="h-0.5 w-10 bg-primary/60"></div>
                     <h2 className="text-[24px] md:text-[28px] font-semibold tracking-tight text-foreground">
-                        Certified <span className="text-gradient-warm">competencies</span>
+                        Certified <span className="text-primary">competencies</span>
                     </h2>
                     <p className="text-text-secondary max-w-[50ch] text-[16px]">
                         Industry-recognized credentials across data, network, and programming domains.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-rows-fr" style={{gridAutoFlow:'dense'}}>
                     {certData.map((cert, idx) => (
                         <motion.div
                             key={idx}

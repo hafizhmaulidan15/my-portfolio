@@ -150,9 +150,8 @@ const ProductionImpact = () => {
   const showContent = data && !error;
 
   return (
-    <section id="impact" className="py-12 md:py-[72px] bg-background relative overflow-hidden">
-      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
+    <section id="impact" className="py-24 md:py-32 bg-background relative overflow-hidden">
+      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-primary/[0.04] blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] relative z-10">
         <motion.div
@@ -167,7 +166,7 @@ const ProductionImpact = () => {
             <span>Live from production floor</span>
           </div>
           <h2 className="text-[24px] md:text-[28px] font-bold tracking-tighter text-foreground">
-            Production <span className="text-gradient-primary">Impact</span>
+            Production <span className="text-primary">Impact</span>
           </h2>
         </motion.div>
 

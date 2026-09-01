@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#09090B',
-        surface: '#18181B',
+        background: '#0F0F11',
+        surface: '#1A1A1E',
         'surface-hover': '#27272A',
-        foreground: '#FFFFFF',
+        foreground: '#F5F5F3',
         'text-secondary': '#E4E4E7',
         'text-tertiary': '#A1A1AA',
         'text-muted': '#B5B5BF',
@@ -42,8 +42,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Geist', 'Outfit', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        display: ['Satoshi', 'Cabinet Grotesk', 'Outfit', 'sans-serif'],
+        sans: ['Geist', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        display: ['Satoshi', 'Geist', 'sans-serif'],
         mono: ['Fira Code', 'Geist Mono', 'Monaco', 'monospace'],
       },
       fontSize: {

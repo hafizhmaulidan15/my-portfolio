@@ -77,25 +77,22 @@ const Contact = () => {
     const labelClass = 'text-sm text-text-secondary font-medium';
 
     return (
-        <section id="contact" ref={container} className="py-12 md:py-[72px] bg-background relative overflow-hidden min-h-[calc(100dvh-64px)] flex items-center">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/8 blur-[120px] rounded-full pointer-events-none"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent-blue/6 blur-[100px] rounded-full pointer-events-none"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent-blue/4 blur-[80px] rounded-full pointer-events-none"></div>
+        <section id="contact" ref={container} className="py-24 md:py-32 bg-background relative overflow-hidden min-h-[calc(100dvh-64px)] flex items-center">
+            <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[520px] h-[520px] bg-primary/[0.04] blur-[120px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px] relative z-10">
                 <div className="max-w-3xl mx-auto">
-                    <div className="space-y-6 text-center contact-fade">
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-primary/10 text-primary text-xs sm:text-sm font-medium tracking-widest uppercase">
-                            <PaperPlaneTilt size={14} weight="bold" />
-                            <span>Ready to collaborate</span>
+                    <div className="space-y-6 text-left max-w-xl mx-auto contact-fade">
+                        <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase flex items-center gap-2">
+                            <span className="h-px w-6 bg-text-tertiary/40 hidden sm:block" aria-hidden="true"></span>
+                            Ready to collaborate — Tasikmalaya & Bogor
                         </div>
 
-                        <h2 className="text-[28px] md:text-[32px] lg:text-[40px] font-bold tracking-tighter text-foreground leading-[1.1]">
-                            Let's build the <br />
-                            <span className="text-gradient-primary">next frontier</span>
+                        <h2 className="font-display text-[32px] md:text-[40px] font-[800] tracking-[-0.03em] leading-[0.9] text-foreground text-balance">
+                            Let's build the <span className="text-primary">next frontier</span>
                         </h2>
 
-                        <p className="text-text-secondary text-[16px] md:text-[18px] leading-relaxed max-w-[50ch] mx-auto">
+                        <p className="text-text-secondary text-[16px] md:text-[17px] leading-relaxed max-w-[60ch] text-pretty">
                             I am currently seeking opportunities to apply my expertise in operations management and production leadership.
                             Whether you have a specific inquiry or just want to connect, my inbox is open.
                         </p>
@@ -126,7 +123,7 @@ const Contact = () => {
                         </div>
 
                         <button type="submit" disabled={status === 'sending'}
-                            className="w-full px-6 py-3 bg-primary text-foreground font-body rounded-xl flex items-center justify-center gap-2 hover:bg-primary-hover hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-[0_0_20px_rgba(17,129,255,0.15)] hover:shadow-[0_0_30px_rgba(17,129,255,0.25)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+                            className="w-full px-6 py-3 bg-primary text-foreground font-body rounded-xl flex items-center justify-center gap-2 hover:bg-primary-hover active:translate-y-[1px] active:scale-[0.98] transition-all duration-200 shadow-[0_1px_2px_rgba(15,23,42,0.08)] disabled:opacity-50 disabled:cursor-not-allowed">
                             {status === 'sending' ? (
                                 <><Spinner size={18} className="animate-spin" /> Sending...</>
                             ) : status === 'success' ? (

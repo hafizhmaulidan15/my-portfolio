@@ -20,9 +20,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black_40%,transparent_100%)]"></div>
             </div>
             
-            <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/10 blur-[150px] rounded-full pointer-events-none animate-fade-in"></div>
-            <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-accent-blue/10 blur-[120px] rounded-full pointer-events-none animate-fade-in animation-delay-200"></div>
-            <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-accent-blue/5 blur-[100px] rounded-full pointer-events-none animate-fade-in animation-delay-400"></div>
+            <div className="absolute top-1/4 -left-32 w-[600px] h-[600px] bg-primary/[0.06] blur-[160px] rounded-full pointer-events-none"></div>
 
             <div className="container relative z-10 mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-10 items-center">
@@ -35,7 +33,7 @@ const Hero = () => {
 
                         <div className="t-stagger" ref={staggerRef}>
                             <h1 className="t-stagger-line font-display text-[clamp(2.4rem,6vw,4.4rem)] font-[800] tracking-[-0.04em] leading-[0.85] text-foreground max-w-5xl text-balance">
-                                MUHAMMAD <span className="text-gradient-primary">HAFIZH</span> <span className="text-text-secondary font-[600]">MAULIDAN</span>
+                                MUHAMMAD <span className="text-primary">HAFIZH</span> <span className="text-text-secondary font-[600]">MAULIDAN</span>
                             </h1>
 
                             <p className="t-stagger-line t-stagger-line--2 text-sm sm:text-[15px] md:text-base text-text-secondary leading-relaxed mt-2 sm:mt-3">
