@@ -384,10 +384,21 @@
   }
 
   .text-gradient-primary {
-    background: linear-gradient(135deg, #5B8DD1, #8BAED6);
+    background: linear-gradient(135deg, #5B8DD1 0%, #7AB8D4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .text-gradient-foreground {
+    background: linear-gradient(135deg, #E8EEF6 0%, #94A3B8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-icon {
+    background: linear-gradient(135deg, rgba(91,141,209,0.16) 0%, rgba(122,184,212,0.08) 100%);
   }
 
   .glow-primary {

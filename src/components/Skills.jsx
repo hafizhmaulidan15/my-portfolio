@@ -62,7 +62,7 @@ const Skills = () => {
                                 return (
                                     <div key={id} className={`group py-4 flex flex-col gap-1 cursor-pointer ${skill.featured ? 'bg-white/[0.02] -mx-3 px-3 rounded-lg border-l-2 border-primary' : ''}`} onClick={() => toggle(id)}>
                                         <div className="flex items-start gap-3">
-                                            <span className="mt-0.5 p-1.5 rounded-md bg-white/[0.04] border border-white/10 text-text-secondary group-hover:text-foreground transition-colors">{skill.icon}</span>
+                                            <span className="mt-0.5 p-1.5 rounded-md bg-gradient-icon border border-primary/10 text-text-secondary group-hover:text-foreground transition-colors">{skill.icon}</span>
                                             <div className="flex-1 min-w-0">
                                                 <div className="flex items-center gap-2">
                                                     <span className="font-medium text-[14px] leading-tight">{skill.name}</span>

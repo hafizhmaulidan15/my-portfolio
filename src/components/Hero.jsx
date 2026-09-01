@@ -27,7 +27,7 @@ const Hero = () => {
                         <div className="t-stagger" ref={staggerRef}>
                             <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.045em] leading-[0.85] text-foreground text-balance">
                                 Systems that<br />
-                                <span className="font-[300] italic tracking-[-0.03em] text-text-tertiary">scale</span> dairy<br />
+                                <span className="font-[300] italic tracking-[-0.03em] text-gradient-foreground">scale</span> dairy<br />
                                 production.
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
@@ -68,7 +68,7 @@ const Hero = () => {
 
                     {/* Right visual — 5 cols, Double-Bezel */}
                     <div className="lg:col-span-5 lg:pl-4">
-                        <div className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[2rem]">
+                        <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[2rem]">
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
                                 <div className="aspect-[4/3] relative overflow-hidden bg-[#E8E0D5]">
                                     <img src="https://picsum.photos/seed/dairy-steel-lab/800/600" alt="Dairy steel lab — cold chain" width="800" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover grayscale-[0.15] contrast-[1.04]" />

@@ -28,7 +28,7 @@ const About = () => {
 
             <div className="space-y-4">
               <h2 className="font-display text-[32px] md:text-[38px] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground text-balance">
-                Operations built<br /><span className="font-[300] italic text-text-tertiary">from zero.</span>
+                Operations built<br /><span className="font-[300] italic text-gradient-foreground">from zero.</span>
               </h2>
               <div className="space-y-4 text-[15px] leading-[1.7] text-text-secondary max-w-[52ch] text-pretty">
                 <p>
@@ -49,7 +49,7 @@ const About = () => {
 
           {/* Right timeline */}
           <div className="lg:col-span-7 lg:pl-8">
-            <div className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[1.75rem]">
+            <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.75rem]">
               <div className="bg-surface rounded-[1.25rem] border border-black/[0.06] p-6 md:p-7">
                 <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-6">Production flow — intake to distribution</div>
                 <div className="relative">
@@ -64,7 +64,7 @@ const About = () => {
                           <div className="flex items-center gap-2 mb-1">
                             <span className="font-mono text-[11px] tracking-wide text-text-tertiary">{s.n}</span>
                             <span className="w-6 h-px bg-border hidden sm:block" aria-hidden="true"></span>
-                            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide px-2 py-1 rounded-full bg-white/[0.04] border border-white/10 text-text-secondary">{s.icon} {s.title}</span>
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide px-2 py-1 rounded-full bg-gradient-icon border border-primary/10 text-text-secondary">{s.icon} {s.title}</span>
                           </div>
                           <p className="text-sm leading-relaxed text-text-secondary text-pretty">{s.desc}</p>
                         </div>

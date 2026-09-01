@@ -98,7 +98,7 @@ const Contact = () => {
                         </div>
 
                         <h2 className="font-display text-[32px] md:text-[40px] font-[800] tracking-[-0.03em] leading-[0.9] text-foreground text-balance">
-                            Let's build the <span className="text-primary">next frontier</span>
+                            Let's build the <span className="text-gradient-primary">next frontier</span>
                         </h2>
 
                         <p className="text-text-secondary text-[16px] md:text-[17px] leading-relaxed max-w-[60ch] text-pretty">

@@ -30,7 +30,7 @@ const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit 
     );
   }
   return (
-    <div className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[1.5rem]">
+    <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.5rem]">
       <div className="bg-surface rounded-[1.1rem] border border-white/10 p-5">
         <h3 className="font-medium text-sm mb-4">{title}</h3>
         <div className="w-full h-[220px]">
@@ -57,7 +57,7 @@ const ProductionImpact = () => {
       <div className="container mx-auto px-6 lg:px-8 max-w-[1400px]">
         <div className="max-w-[720px]">
           <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Live from production floor — Google Sheets API</p>
-          <h2 className="mt-3 font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-balance">Production <span className="font-[300] italic text-text-tertiary">impact.</span></h2>
+          <h2 className="mt-3 font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-balance">Production <span className="font-[300] italic text-gradient-foreground">impact.</span></h2>
           <p className="mt-3 text-[15px] leading-relaxed text-text-secondary max-w-[60ch] text-pretty">Real output, reject, and raw milk trends — not placeholders. Updated every 5 minutes with SWR cache and retry.</p>
         </div>
 

@@ -40,13 +40,13 @@ const Projects = () => {
             <div className="container mx-auto px-6 lg:px-8 max-w-[1400px]">
                 <div className="max-w-[720px] mb-10">
                     <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Selected Works — built from zero, measured in yield</p>
-                    <h2 className="mt-3 font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground text-balance">Case studies,<br /><span className="font-[300] italic text-text-tertiary">not cards.</span></h2>
+                    <h2 className="mt-3 font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground text-balance">Case studies,<br /><span className="font-[300] italic text-gradient-foreground">not cards.</span></h2>
                     <p className="mt-4 text-[15px] leading-[1.6] text-text-secondary max-w-[60ch] text-pretty">Two systems that scaled production. The rest — compact, verifiable, linked.</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {featured.map((f) => (
-                        <div key={f.id} className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[1.75rem] h-full">
+                        <div key={f.id} className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.75rem] h-full">
                             <div className="bg-surface rounded-[1.25rem] overflow-hidden border border-white/10 flex flex-col h-full">
                                 <div className="aspect-[4/2.6] relative overflow-hidden bg-[#EDE8E0]">
                                     <img src={f.image} alt={f.title} width="800" height="520" loading="lazy" decoding="async" className="w-full h-full object-cover grayscale-[0.12] contrast-[1.03]" />
