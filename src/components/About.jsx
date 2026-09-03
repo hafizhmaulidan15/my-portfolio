@@ -1,8 +1,10 @@
-﻿const steps = [
-  { n: '01', title: 'Clarity in Sourcing', desc: 'Decisions anchored on supplier data  not assumptions.', icon: <i className="bi bi-droplet text-[16px]"></i> },
-  { n: '02', title: 'Discipline in Process', desc: 'Standards that hold under pressure  time, temperature, hygiene.', icon: <i className="bi bi-thermometer-half text-[16px]"></i> },
-  { n: '03', title: 'Learning through Trials', desc: 'Trials as learning  taste, texture, and yield inform the next batch.', icon: <i className="bi bi-flask text-[16px]"></i> },
-  { n: '04', title: 'Reliability in Delivery', desc: 'Verification before dispatch  every batch, every time.', icon: <i className="bi bi-truck text-[16px]"></i> },
+﻿import { Users, ClipboardCheck, TrendingUp, ShieldCheck } from 'lucide-react';
+
+const steps = [
+  { n: '01', title: 'Alignment', desc: 'Clear SOPs and shift ownership  everyone knows the standard, no guesswork.', icon: <Users size={16} /> },
+  { n: '02', title: 'Accountability', desc: 'Discipline in execution  time, temperature, hygiene logged and owned.', icon: <ClipboardCheck size={16} /> },
+  { n: '03', title: 'Improvement', desc: 'Trials as learning loops  taste, texture, yield feed the next SOP revision.', icon: <TrendingUp size={16} /> },
+  { n: '04', title: 'Reliability', desc: 'Verification before dispatch  quality and cold-chain checks, every batch.', icon: <ShieldCheck size={16} /> },
 ];
 
 const About = () => {
@@ -12,7 +14,7 @@ const About = () => {
 
       <div className="container mx-auto px-6 lg:px-8 max-w-[1400px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10">
-          {/* Left editorial */}
+          {/* Left editorial  managerial */}
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-[14px] overflow-hidden ring-1 ring-white/10 bg-surface">
@@ -20,49 +22,49 @@ const About = () => {
               </div>
               <div>
                 <div className="font-display text-[17px] font-semibold leading-none">Muhammad Hafizh Maulidan</div>
-                <div className="font-mono text-[11px] tracking-[0.14em] text-text-tertiary uppercase">S.Tr.Kom  IPB University • GPA 3.33</div>
+                <div className="font-mono text-[11px] tracking-[0.14em] text-text-tertiary uppercase">Head of Unit  Operations Lead</div>
               </div>
             </div>
 
             <div className="space-y-4">
               <h2 className="font-display text-[32px] md:text-[38px] font-[800] tracking-[-0.04em] leading-[0.9] text-foreground text-balance">
-                Data-driven,<br /><span className="font-[300] italic text-gradient-foreground">field-proven.</span>
+                Leadership with<br /><span className="font-[300] italic text-gradient-foreground">operational rigor.</span>
               </h2>
               <div className="space-y-4 text-[15px] leading-[1.7] text-text-secondary max-w-[52ch] text-pretty">
                 <p>
-                  Operating from Tasikmalaya  aligning <span className="text-foreground font-medium">raw milk quality</span> with product vision. Every batch reflects supplier clarity and process discipline.
+                  Managing Tasikmalaya operations  <span className="text-foreground font-medium">people, process, and product</span> aligned. From supplier clarity to cold-chain reliability, every decision ties to repeatable scale.
                 </p>
                 <p>
-                  Focus: <span className="text-foreground font-medium">minimize waste</span> through proactive checks and <span className="text-foreground font-medium">lead with clarity</span>  from intake to cold chain.
+                  Focus: <span className="text-foreground font-medium">clarity in alignment</span>, <span className="text-foreground font-medium">accountability in execution</span>, and <span className="text-foreground font-medium">continuous improvement</span> through trials and team feedback.
                 </p>
               </div>
             </div>
 
             <div className="grid grid-cols-3 gap-3 pt-4 border-t border-border max-w-[420px]">
-              <div><div className="font-display text-xl font-bold tabular-nums">12</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">SOPs & Forms</div></div>
-              <div><div className="font-display text-xl font-bold tabular-nums">3</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">KPS Network</div></div>
-              <div><div className="font-display text-xl font-bold tabular-nums">3</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Cities Served</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">4</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Team led</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">12</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">SOPs live</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">3</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Cities served</div></div>
             </div>
           </div>
 
-          {/* Right timeline */}
+          {/* Right  managerial principles */}
           <div className="lg:col-span-7 lg:pl-8">
-            <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.75rem]">
-              <div className="bg-surface rounded-[1.25rem] border border-black/[0.06] p-6 md:p-7">
-                <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-6">Principles in Practice</div>
+            <div className="p-1.5 bg-white/[0.04] ring-1 ring-white/10 rounded-[1.75rem]">
+              <div className="bg-surface rounded-[1.25rem] border border-border p-6 md:p-7">
+                <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-6">Managerial Principles</div>
                 <div className="relative">
                   <div className="absolute left-[11px] top-2 bottom-2 w-px bg-border hidden sm:block" aria-hidden="true"></div>
                   <div className="space-y-7">
                     {steps.map((s) => (
                       <div key={s.n} className="relative flex gap-4">
-                        <div className="hidden sm:flex w-[22px] h-[22px] rounded-full bg-transparent border border-border items-center justify-center shrink-0 z-10">
-                          <span className="w-1.5 h-1.5 rounded-full bg-foreground/60"></span>
+                        <div className="hidden sm:flex w-[22px] h-[22px] rounded-full bg-background border border-border items-center justify-center shrink-0 z-10">
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
                         </div>
                         <div className="flex-1 min-w-0 pb-1">
                           <div className="flex items-center gap-2 mb-1">
                             <span className="font-mono text-[11px] tracking-wide text-text-tertiary">{s.n}</span>
                             <span className="w-6 h-px bg-border hidden sm:block" aria-hidden="true"></span>
-                            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide px-2 py-1 rounded-full bg-gradient-icon border border-primary/10 text-text-secondary">{s.icon} {s.title}</span>
+                            <span className="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wide px-2 py-1 rounded-full bg-primary/10 border border-primary/15 text-primary">{s.icon} {s.title}</span>
                           </div>
                           <p className="text-sm leading-relaxed text-text-secondary text-pretty">{s.desc}</p>
                         </div>

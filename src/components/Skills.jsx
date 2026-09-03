@@ -4,7 +4,7 @@
         mono: 'Dairy Floor  Systems',
         accentColor: 'text-primary',
         skills: [
-            { name: 'Cheese Production & R&D', icon: <i className="bi bi-flask text-[18px]"></i>, context: 'Led first commercial mozzarella and cheddar development  from trial to standardized SOP.', project: 'Rumah Susu Indonesia', featured: true },
+            { name: 'Research and development', icon: <i className="bi bi-flask text-[18px]"></i>, context: 'Led first commercial mozzarella and cheddar development  from trial to standardized SOP.', project: 'Rumah Susu Indonesia', featured: true },
             { name: 'SOP Development', icon: <i className="bi bi-clipboard-check text-[18px]"></i>, context: 'SOP architecture pasteurization, QC, cold chain, peroxide falsification. Mozzarella SOP suite + ratchet loading standards.', project: 'Rumah Susu Indonesia' },
             { name: 'Cold Chain Management', icon: <i className="bi bi-truck text-[18px]"></i>, context: 'Reinforced belts, 2–8°C across cooling, storage, distribution to Bogor/Sukabumi/Lampung.', project: 'Rumah Susu Indonesia' },
             { name: 'Production Planning', icon: <i className="bi bi-building text-[18px]"></i>, context: 'Production planning and scheduling across intake, pasteurization, and distribution.', project: 'Rumah Susu Indonesia' },

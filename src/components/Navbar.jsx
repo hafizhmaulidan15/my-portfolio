@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
 
@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <>
-            {/* Desktop — Fluid Island Pill */}
+            {/* Desktop  Fluid Island Pill */}
             <header className="hidden lg:flex fixed top-6 left-1/2 -translate-x-1/2 z-50 w-auto">
                 <div className="flex items-center gap-6 px-2 py-2 bg-surface/90 backdrop-blur-xl rounded-full">
                     <Link to="/" className="flex items-center gap-2.5 group shrink-0">
@@ -59,7 +59,7 @@ const Navbar = () => {
                 </div>
             </header>
 
-            {/* Mobile Top Bar — Fluid Island */}
+            {/* Mobile Top Bar  Fluid Island */}
             <header className="lg:hidden fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[360px]">
                 <div className="flex items-center justify-between px-1.5 py-1.5 bg-surface/90 backdrop-blur-xl rounded-full">
                     <Link to="/" className="flex items-center gap-2.5 pl-1 pr-2" onClick={() => setIsMobileMenuOpen(false)}>
@@ -109,7 +109,7 @@ const Navbar = () => {
                             <i className="bi bi-linkedin text-[18px]"></i>
                         </a>
                     </div>
-                    <p className={`font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mt-6 transition-all duration-700 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: isMobileMenuOpen ? '420ms' : '0ms' }}>Tasikmalaya — Dairy Operations</p>
+                    <p className={`font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mt-6 transition-all duration-700 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} style={{ transitionDelay: isMobileMenuOpen ? '420ms' : '0ms' }}>Tasikmalaya  Dairy Operations</p>
                 </nav>
             </div>
         </>

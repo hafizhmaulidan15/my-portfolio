@@ -1,4 +1,4 @@
-import { achievements } from '../data/achievements';
+﻿import { achievements } from '../data/achievements';
 import { Link } from 'react-router-dom';
 
 const AchievementsPage = () => {
@@ -6,9 +6,9 @@ const AchievementsPage = () => {
     <section className="py-24 md:py-32 bg-transparent min-h-screen">
       <div className="container mx-auto px-6 lg:px-8 max-w-[1400px]">
         <div className="max-w-[720px] mb-12">
-          <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Milestones — Proven wins, not claims</p>
+          <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Milestones  Proven wins, not claims</p>
           <h1 className="mt-3 font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-balance">Achievements <span className="font-[300] italic text-gradient-foreground">& Milestones</span></h1>
-          <p className="mt-3 text-[15px] leading-relaxed text-text-secondary max-w-[60ch] text-pretty">Record professional wins, metrics improved, and impact delivered — code-based, no DB. Full detail, not truncated.</p>
+          <p className="mt-3 text-[15px] leading-relaxed text-text-secondary max-w-[60ch] text-pretty">Record professional wins, metrics improved, and impact delivered  code-based, no DB. Full detail, not truncated.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -32,7 +32,7 @@ const AchievementsPage = () => {
           <aside className="lg:col-span-4 space-y-4">
             <div className="p-5 rounded-xl border border-border bg-surface">
               <h3 className="font-display text-sm font-semibold">How this page works</h3>
-              <p className="text-sm leading-relaxed text-text-secondary mt-2">This is a dedicated, route-based page (<code className="font-mono text-xs bg-black/[0.04] px-1 py-0.5 rounded">/achievements</code>) — not an embedded section. Data hardcode di <code className="font-mono text-xs bg-black/[0.04] px-1 py-0.5 rounded">src/data/achievements.js</code>.</p>
+              <p className="text-sm leading-relaxed text-text-secondary mt-2">This is a dedicated, route-based page (<code className="font-mono text-xs bg-black/[0.04] px-1 py-0.5 rounded">/achievements</code>)  not an embedded section. Data hardcode di <code className="font-mono text-xs bg-black/[0.04] px-1 py-0.5 rounded">src/data/achievements.js</code>.</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <Link to="/experience" className="px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-medium hover:border-primary/20">← Experience</Link>
                 <Link to="/impact" className="px-3 py-1.5 rounded-full bg-primary text-white text-xs font-medium">View Impact →</Link>

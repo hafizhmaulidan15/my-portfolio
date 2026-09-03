@@ -1,4 +1,4 @@
-const Footer = () => {
+﻿const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
@@ -16,7 +16,6 @@ const Footer = () => {
       links: [
         { label: "Impact", href: "/impact" },
         { label: "Contact", href: "/contact" },
-        { label: "Achievements", href: "/experience#leadership-journal", pulse: true },
       ],
     },
   ];
@@ -57,7 +56,7 @@ const Footer = () => {
               <span className="text-text-tertiary text-sm">• Dairy Ops</span>
             </div>
             <p className="text-sm leading-relaxed text-text-secondary max-w-[28ch] text-pretty">
-              Head of Unit — Rumah Susu Indonesia. Scaling dairy production from intake to cold chain with data-driven SOPs and lean team execution.
+              Head of Unit  Rumah Susu Indonesia. Scaling dairy production from intake to cold chain with data-driven SOPs and lean team execution.
             </p>
           </div>
 
@@ -114,7 +113,7 @@ const Footer = () => {
             ))}
           </div>
           <p className="text-center md:text-left font-mono text-xs tracking-wide text-text-tertiary">
-            &copy; {currentYear} Muhammad Hafizh Maulidan — Ops • Dairy Manufacturing
+            &copy; {currentYear} Muhammad Hafizh Maulidan  Ops • Dairy Manufacturing
           </p>
         </div>
       </div>

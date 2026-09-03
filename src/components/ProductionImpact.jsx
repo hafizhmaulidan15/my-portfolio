@@ -104,12 +104,12 @@ const ProductionImpact = () => {
             </div>
 
             <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ProductionBarChart data={data.cupTrend} title="Cup Production — Out trend" unit="Units" />
-              <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed — In trend" unit="L" />
+              <ProductionBarChart data={data.cupTrend} title="Cup Production  Out trend" unit="Units" />
+              <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed  In trend" unit="L" />
             </div>
             <div className="mt-6">
               <PointsChart
-                title="Weekly Quality Points — Demo"
+                title="Weekly Quality Points  Demo"
                 data={demoPointsData}
                 levels={[
                   { value: 500, color: "#5B8DD1" },

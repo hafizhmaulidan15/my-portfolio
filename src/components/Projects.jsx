@@ -10,7 +10,7 @@
             bullets: ['Timeline: 12 Mei planning • 23-25 Mei unboxing mixer • 16-17 Jun 500L 4 batch cheese vat • 19 Jun packaging • 23 Jun kirim Zarafa Bogor', 'Kendala: inverter rusak, blade terpisah, air boiler chemical → REJECT 9 Jun pahit/asam, trial 20L gagal', 'SOP: hygiene → lactoscan → stretch/taste → chiller/vacuum + Form Produksi 16 Juni'],
             stats: [{ v: '10%', l: 'yield' }, { v: '180', l: 'pcs @200gr' }, { v: '500L', l: 'TS 11.8%' }],
             href: '#',
-            postmortem: ['Air boiler chemical sanitasi → wajib air mineral', 'Susu bongkaran cups no stretch → pakai susu segar', 'Cheese vat hemat 80L/CIP vs PHE', 'Perforated plate untuk penirisan curd', 'Yield Tasik 10% — target tercapai rata-rata  optimasi next', 'Pemanasan 500L 4j55m  evaluasi boiler'],
+            postmortem: ['Air boiler chemical sanitasi → wajib air mineral', 'Susu bongkaran cups no stretch → pakai susu segar', 'Cheese vat hemat 80L/CIP vs PHE', 'Perforated plate untuk penirisan curd', 'Yield Tasik 10%  target tercapai rata-rata  optimasi next', 'Pemanasan 500L 4j55m  evaluasi boiler'],
         },
         {
             id: 1,

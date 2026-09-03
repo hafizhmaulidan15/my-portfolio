@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const pageMeta = {
@@ -24,7 +24,7 @@ const pageMeta = {
   },
   '/achievements': {
     title: 'Achievements | Muhammad Hafizh Maulidan',
-    description: 'Milestones and achievements — milk quality digitalization, mozzarella first production, SOP standardization, and distribution SOPs.',
+    description: 'Milestones and achievements  milk quality digitalization, mozzarella first production, SOP standardization, and distribution SOPs.',
     keywords: 'achievements, milestones, dairy operations, production'
   },
   '/publications': {

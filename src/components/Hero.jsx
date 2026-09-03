@@ -16,11 +16,11 @@ const Hero = () => {
 
             <div className="container relative z-10 mx-auto px-6 lg:px-8 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[100dvh] pt-24 lg:pt-28 pb-12 lg:pb-16">
-                    {/* Left editorial — 7 cols */}
+                    {/* Left editorial  7 cols */}
                     <div className="lg:col-span-7 space-y-6">
                         <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
                             <span className="h-px w-8 bg-foreground/15 hidden sm:block" aria-hidden="true"></span>
-                            Head of Unit — Dairy Manufacturing • Tasikmalaya
+                            Head of Unit  Dairy Manufacturing • Tasikmalaya
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
@@ -65,7 +65,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    {/* Right visual — 5 cols, Double-Bezel */}
+                    {/* Right visual  5 cols, Double-Bezel */}
                     <div className="lg:col-span-5 lg:pl-4">
                         <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[2rem]">
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
@@ -96,7 +96,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center max-w-[36ch] mx-auto leading-relaxed text-balance">“Driven by data, grounded in reality <br />quality aligned, waste minimized, teams led with purpose.”</p>
+                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-justify max-w-[42ch] mx-auto leading-relaxed [text-align-last:justify] hyphens-auto">“Driven by data, grounded in reality  quality aligned, waste minimized, teams led with purpose.”</p>
                     </div>
                 </div>
             </div>
