@@ -49,8 +49,8 @@ const Navbar = () => {
                         })}
                     </nav>
                     <div className="flex items-center gap-2 shrink-0">
-                        <a href="https://github.com/hafizhmaulidan15" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-primary transition-all duration-200" aria-label="GitHub Profile">
-                            <i className="bi bi-github text-[16px]"></i>
+                        <a href="mailto:mhafizh.maulidan@gmail.com" aria-label="Gmail" className="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-primary transition-all duration-200">
+                            <i className="bi bi-envelope text-[16px]"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/hafizhmaulidan/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg flex items-center justify-center text-text-muted hover:text-primary transition-all duration-200" aria-label="LinkedIn Profile">
                             <i className="bi bi-linkedin text-[16px]"></i>
@@ -102,8 +102,8 @@ const Navbar = () => {
                         );
                     })}
                     <div className={`flex items-center gap-3 mt-8 pt-8 border-t border-border/50 transition-all duration-700 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`} style={{ transitionDelay: isMobileMenuOpen ? '380ms' : '0ms' }}>
-                        <a href="https://github.com/hafizhmaulidan15" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-text-muted hover:text-foreground hover:border-foreground/20 transition-colors" aria-label="GitHub">
-                            <i className="bi bi-github text-[18px]"></i>
+                        <a href="mailto:mhafizh.maulidan@gmail.com" aria-label="Gmail" className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-text-muted hover:text-foreground hover:border-foreground/20 transition-colors">
+                            <i className="bi bi-envelope text-[18px]"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/hafizhmaulidan/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-text-muted hover:text-foreground hover:border-foreground/20 transition-colors" aria-label="LinkedIn">
                             <i className="bi bi-linkedin text-[18px]"></i>

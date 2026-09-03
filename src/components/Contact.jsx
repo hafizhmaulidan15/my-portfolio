@@ -1,4 +1,5 @@
 ﻿import { useState, useRef } from 'react';
+import { PaperPlaneTilt, CheckCircle, Spinner, WarningCircle, CaretDown } from '@phosphor-icons/react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -147,9 +148,9 @@ const Contact = () => {
                     <div className="pt-16 space-y-4 text-center contact-fade">
                         <p className="text-xs sm:text-sm font-mono text-text-tertiary uppercase tracking-[0.2em]">Peripheral links</p>
                         <div className="flex justify-center gap-4">
-                            <a href="https://github.com/hafizhmaulidan15" target="_blank" rel="noopener noreferrer"
-                                className="text-text-tertiary hover:text-primary transition-all duration-200 hover:-translate-y-1 p-2 inline-block" aria-label="GitHub Profile">
-                                <i className="bi bi-github text-[28px]"></i>
+                            <a href="mailto:mhafizh.maulidan@gmail.com" aria-label="Gmail"
+                                className="text-text-tertiary hover:text-primary transition-all duration-200 hover:-translate-y-1 p-2 inline-block">
+                                <i className="bi bi-envelope text-[28px]"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/hafizhmaulidan/" target="_blank" rel="noopener noreferrer"
                                 className="text-text-tertiary hover:text-primary transition-all duration-200 hover:-translate-y-1 p-2 inline-block" aria-label="LinkedIn Profile">
