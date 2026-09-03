@@ -29,7 +29,8 @@ const Hero = () => {
                                 <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground">with clarity.</span>
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
-                                Built for scale, grounded in data. <Link to="/achievements" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Explore Achievements →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact →</Link>
+                                Built for scale, grounded in data.<br />
+                                <Link to="/achievements" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Explore Achievements →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact</Link>
                             </p>
                         </div>
 
