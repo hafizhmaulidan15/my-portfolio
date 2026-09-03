@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { ArrowUpRight, Factory } from '@phosphor-icons/react';
 
@@ -12,23 +12,23 @@ const Hero = () => {
     }, []);
 
     return (
-        <section id="home" className="hero-speakable relative bg-background overflow-hidden">
+        <section id="home" className="hero-speakable relative bg-transparent overflow-hidden">
             <div className="absolute inset-0 pointer-events-none opacity-[0.035]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`}} aria-hidden="true"></div>
 
             <div className="container relative z-10 mx-auto px-6 lg:px-8 max-w-[1400px]">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[calc(100dvh-64px)] py-12 lg:py-16">
-                    {/* Left editorial — 7 cols */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[100dvh] pt-24 lg:pt-28 pb-12 lg:pb-16">
+                    {/* Left editorial  7 cols */}
                     <div className="lg:col-span-7 space-y-6">
                         <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
                             <span className="h-px w-8 bg-foreground/15 hidden sm:block" aria-hidden="true"></span>
-                            Head of Unit — Rumah Susu Indonesia / Tasikmalaya
+                            Head of Unit  Rumah Susu Indonesia / Tasikmalaya
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
-                            <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.88] text-foreground text-balance">
+                            <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.96] text-foreground text-balance">
                                 Aligning quality<br />
-                                <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground inline-block pr-2">with scale</span> —<br />
-                                by design.
+                                <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground inline-block pr-2 py-1">with scale</span> <br />
+                                <span className="inline-block pt-1">by design.</span>
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
                                 What turns intake into SOPs and trials into scale? <Link to="/projects" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">See Projects →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership log →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact →</Link>
@@ -38,7 +38,7 @@ const Hero = () => {
                         <div className="flex flex-wrap items-center gap-3 pt-1">
                             <Link to="/contact" className="group inline-flex items-center gap-3 pl-6 pr-1.5 py-1.5 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-foreground/90 active:scale-[0.98]">
                                 <span>Start a conversation</span>
-                                <span className="w-8 h-8 rounded-full bg-background/10 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500">
+                                <span className="w-8 h-8 rounded-full bg-transparent/10 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500">
                                     <ArrowUpRight size={14} weight="bold" />
                                 </span>
                             </Link>
@@ -66,18 +66,18 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    {/* Right visual — 5 cols, Double-Bezel */}
+                    {/* Right visual  5 cols, Double-Bezel */}
                     <div className="lg:col-span-5 lg:pl-4">
                         <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[2rem]">
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
                                 <div className="aspect-[4/3] relative overflow-hidden bg-surface grid grid-cols-2 gap-0">
                                     <div className="relative overflow-hidden">
-                                        <img src="https://picsum.photos/seed/mozzarella-cheese/400/600" alt="Mozzarella cheese — 36kg from 500L" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+                                        <img src="https://picsum.photos/seed/mozzarella-cheese/400/600" alt="Mozzarella cheese  36kg from 500L" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                                         <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Mozzarella 10,5%</span>
                                     </div>
                                     <div className="relative overflow-hidden border-l border-white/10">
-                                        <img src="https://picsum.photos/seed/cheddar-cheese/400/600" alt="Cheddar cheese — 9 trial R&D" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+                                        <img src="https://picsum.photos/seed/cheddar-cheese/400/600" alt="Cheddar cheese  9 trial R&D" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                                         <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Cheddar 9 trials</span>
                                     </div>
@@ -97,7 +97,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center max-w-[36ch] mx-auto leading-relaxed">“Driven by data, grounded in reality — quality aligned, waste minimized, teams led with purpose.”</p>
+                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-center max-w-[36ch] mx-auto leading-relaxed text-balance">“Driven by data, grounded in reality <br />quality aligned, waste minimized, teams led with purpose.”</p>
                     </div>
                 </div>
             </div>

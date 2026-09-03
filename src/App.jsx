@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+﻿import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, lazy, Suspense } from 'react';
 import './index.css';
 import { Analytics } from '@vercel/analytics/react';
@@ -18,6 +18,7 @@ const Footer = lazy(() => import('./components/Footer'));
 const NotFound = lazy(() => import('./components/NotFound'));
 const ProductionImpact = lazy(() => import('./components/ProductionImpact'));
 const BackToTop = lazy(() => import('./components/BackToTop'));
+const TubelightDemo = lazy(() => import('./components/ui/tubelight-demo'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,7 +30,7 @@ function ScrollToTop() {
 
 function LoadingFallback() {
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center pt-24">
+    <div className="min-h-screen gradient flex flex-col items-center justify-center pt-24">
       <div className="w-12 h-12 rounded-full border-2 border-primary/20 border-t-primary animate-spin mb-4"></div>
       <div className="text-text-tertiary text-sm font-mono">Loading...</div>
     </div>
@@ -41,13 +42,13 @@ function App() {
   usePageMeta();
 
   return (
-    <div className="app bg-background min-h-screen flex flex-col overflow-x-hidden w-full max-w-full">
+    <div className="app bg-transparent min-h-screen flex flex-col overflow-x-hidden w-full max-w-full">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-foreground focus:text-background focus:rounded-md focus:text-sm focus:font-medium">Skip to content</a>
       <div className="noise-overlay" aria-hidden="true" />
       <ScrollToTop />
       <Suspense fallback={<LoadingFallback />}>
         <Navbar />
-        <div className="pt-16 lg:pt-16 flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col">
             <main id="main-content" className="flex-1 page-fade">
               <Routes>
                 <Route path="/" element={<Hero />} />
@@ -59,6 +60,7 @@ function App() {
                 <Route path="/certifications" element={<Certifications />} />
                 <Route path="/publications" element={<Publications />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/tubelight-demo" element={<TubelightDemo />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
