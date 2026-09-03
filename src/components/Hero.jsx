@@ -1,6 +1,5 @@
 ﻿import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
-import { ArrowUpRight, Factory } from '@phosphor-icons/react';
 
 const Hero = () => {
     const staggerRef = useRef(null);
@@ -21,17 +20,16 @@ const Hero = () => {
                     <div className="lg:col-span-7 space-y-6">
                         <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
                             <span className="h-px w-8 bg-foreground/15 hidden sm:block" aria-hidden="true"></span>
-                            Head of Unit  Rumah Susu Indonesia / Tasikmalaya
+                            Head of Unit — Dairy Manufacturing • Tasikmalaya
                         </div>
 
                         <div className="t-stagger" ref={staggerRef}>
-                            <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.96] text-foreground text-balance">
-                                Aligning quality<br />
-                                <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground inline-block pr-2 py-1">with scale</span> <br />
-                                <span className="inline-block pt-1">by design.</span>
+                            <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.92] text-foreground text-balance">
+                                Aligning quality <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground">with scale</span><br />
+                                by design.
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
-                                What turns intake into SOPs and trials into scale? <Link to="/projects" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">See Projects →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership log →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact →</Link>
+                                Built for scale, grounded in data. <Link to="/projects" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Explore Projects →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact →</Link>
                             </p>
                         </div>
 
@@ -39,7 +37,7 @@ const Hero = () => {
                             <Link to="/contact" className="group inline-flex items-center gap-3 pl-6 pr-1.5 py-1.5 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-foreground/90 active:scale-[0.98]">
                                 <span>Start a conversation</span>
                                 <span className="w-8 h-8 rounded-full bg-transparent/10 flex items-center justify-center group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500">
-                                    <ArrowUpRight size={14} weight="bold" />
+                                    <i className="bi bi-arrow-up-right text-[14px]"></i>
                                 </span>
                             </Link>
                             <Link to="/projects" className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-foreground underline decoration-foreground/15 underline-offset-4 hover:decoration-foreground/40 transition-colors">
@@ -72,9 +70,9 @@ const Hero = () => {
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
                                 <div className="aspect-[4/3] relative overflow-hidden bg-surface grid grid-cols-2 gap-0">
                                     <div className="relative overflow-hidden">
-                                        <img src="https://picsum.photos/seed/mozzarella-cheese/400/600" alt="Mozzarella cheese  36kg from 500L" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+                                        <img src="https://picsum.photos/seed/mozzarella-cheese/400/600" alt="Mozzarella cheese  42.2kg avg from 500L" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Mozzarella 10,5%</span>
+                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Mozzarella 10%</span>
                                     </div>
                                     <div className="relative overflow-hidden border-l border-white/10">
                                         <img src="https://picsum.photos/seed/cheddar-cheese/400/600" alt="Cheddar cheese  9 trial R&D" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
@@ -86,7 +84,7 @@ const Hero = () => {
                                 <div className="p-4 flex items-center justify-between border-t border-border bg-surface">
                                     <div className="flex items-center gap-2.5">
                                         <span className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center">
-                                            <Factory size={14} weight="bold" />
+                                            <i className="bi bi-building text-[14px]"></i>
                                         </span>
                                         <div>
                                             <div className="text-sm font-medium leading-none">Production Ops</div>
