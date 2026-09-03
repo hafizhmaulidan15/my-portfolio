@@ -1,12 +1,12 @@
-// @ts-check
+﻿// @ts-check
 import { memo } from 'react';
-import { ChartBar, Factory, WarningCircle, Flask } from '@phosphor-icons/react';
 import { useProductionImpact } from '../hooks/useProductionData';
-import { achievements } from '../data/achievements';
+import { PointsChart } from '@/components/ui/points-chart';
+import { LoaderBars } from '@/components/ui/loaders-bars';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
 function formatNumber(n) {
-  if (!n && n !== 0) return '—';
+  if (!n && n !== 0) return '';
   if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
   return n.toLocaleString();
 }
@@ -23,12 +23,7 @@ function ChartTooltip({ active, payload, label, unit }) {
 
 const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit }) {
   if (!data || data.length === 0) {
-    return (
-      <div className="p-6 border border-border rounded-xl bg-surface">
-        <h3 className="font-medium text-sm mb-4">{title}</h3>
-        <div className="flex items-center justify-center h-[180px] text-text-tertiary text-sm">No data available</div>
-      </div>
-    );
+    return null;
   }
   return (
     <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.5rem]">
@@ -49,25 +44,45 @@ const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit 
   );
 });
 
+const demoPointsData = [
+  { date: "Mon", total: 320, change: 0 },
+  { date: "Tue", total: 450, change: 130 },
+  { date: "Wed", total: 610, change: 160 },
+  { date: "Thu", total: 780, change: 170 },
+  { date: "Fri", total: 920, change: 140 },
+  { date: "Sat", total: 1100, change: 180 },
+  { date: "Sun", total: 1280, change: 180 },
+];
+
 const ProductionImpact = () => {
   const { data, error } = useProductionImpact();
   const showContent = data && !error;
 
   return (
-    <section id="impact" className="py-24 md:py-32 bg-background border-t border-border relative overflow-hidden">
+    <section id="impact" className="py-24 md:py-32 bg-transparent border-t border-border relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-8 max-w-[1400px]">
         <div className="max-w-[720px]">
-          <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Live from production floor — Google Sheets API</p>
+          <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Live from production floor  Google Sheets API</p>
           <h2 className="mt-3 font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-balance">Production <span className="font-[300] italic text-gradient-foreground">impact.</span></h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-text-secondary max-w-[60ch] text-pretty">Real output, reject, and raw milk trends — not placeholders. Updated every 5 minutes with SWR cache and retry.</p>
+          <p className="mt-3 text-[15px] leading-relaxed text-text-secondary max-w-[60ch] text-pretty">Real output, reject, and raw milk trends  not placeholders. Updated every 5 minutes with SWR cache and retry.</p>
         </div>
 
         {!showContent ? (
-          <div className="mt-10 grid grid-cols-3 gap-4">
-            <div className="h-[140px] rounded-xl bg-white/[0.04] animate-pulse"></div>
-            <div className="h-[140px] rounded-xl bg-white/[0.04] animate-pulse"></div>
-            <div className="h-[140px] rounded-xl bg-white/[0.04] animate-pulse"></div>
-          </div>
+          <>
+            <div className="mt-10 grid grid-cols-3 gap-4">
+              <div className="h-[140px] rounded-xl bg-surface border border-border animate-pulse"></div>
+              <div className="h-[140px] rounded-xl bg-surface border border-border animate-pulse"></div>
+              <div className="h-[140px] rounded-xl bg-surface border border-border animate-pulse"></div>
+            </div>
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
+                <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
+              </div>
+              <div className="p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
+                <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
+              </div>
+            </div>
+          </>
         ) : (
           <>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-4">
@@ -82,9 +97,9 @@ const ProductionImpact = () => {
                 <div className="text-sm text-text-tertiary">cup 130 ml • target &lt;1%</div>
               </div>
               <div className="md:col-span-4 p-6 rounded-xl bg-surface border border-border">
-                <div className="flex items-center gap-2 font-mono text-[11px] tracking-wide uppercase text-text-tertiary"><Flask size={14} weight="light" /> Mozzarella First Batch</div>
-                <div className="mt-2 font-display text-[28px] font-bold tabular-nums">180 pcs</div>
-                <div className="text-sm text-text-tertiary">36 kg from 500 L • 10,5% yield • shipped to Bogor</div>
+                <div className="flex items-center gap-2 font-mono text-[11px] tracking-wide uppercase text-text-tertiary"><i className="bi bi-flask text-[14px]"></i> Mozzarella First Batch</div>
+                <div className="mt-2 font-display text-[28px] font-bold tabular-nums">211 pcs avg (422 total)</div>
+                <div className="text-sm text-text-tertiary">42.2 kg avg from 500 L • 10% yield • shipped to Bogor</div>
               </div>
             </div>
 
@@ -92,34 +107,20 @@ const ProductionImpact = () => {
               <ProductionBarChart data={data.cupTrend} title="Cup Production — Out trend" unit="Units" />
               <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed — In trend" unit="L" />
             </div>
+            <div className="mt-6">
+              <PointsChart
+                title="Weekly Quality Points — Demo"
+                data={demoPointsData}
+                levels={[
+                  { value: 500, color: "#5B8DD1" },
+                  { value: 900, color: "#3A9E7B" },
+                ]}
+                yAxisLabel="Points"
+                headerRight={<span className="text-xs font-mono text-text-tertiary">Levels: 500 • 900</span>}
+              />
+            </div>
           </>
         )}
-
-        {/* Achievements — Milestones — always visible, not blocked by loading */}
-            <div id="achievements-timeline" className="mt-16">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="h-px w-8 bg-primary/20 hidden sm:block" aria-hidden="true"></span>
-                <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Milestones & Achievements — Record wins</p>
-              </div>
-              <h3 className="font-display text-[24px] md:text-[28px] font-[700] tracking-[-0.02em] leading-tight">Impact delivered, <span className="text-primary">measured</span></h3>
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                {achievements.map((a) => (
-                  <div key={a.id} className="p-4 rounded-xl border border-border bg-surface hover:border-primary/15 transition-colors">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className={`font-mono text-[11px] px-2 py-1 rounded-full border ${a.category === 'QUALITY' ? 'bg-blue-500/10 text-blue-600 border-blue-500/15' : 'bg-amber-500/10 text-amber-600 border-amber-500/15'}`}>{a.category}</span>
-                      <span className="font-mono text-[11px] text-text-tertiary">{new Date(a.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
-                    </div>
-                    <h4 className="font-medium text-sm mt-3 leading-tight">{a.title}</h4>
-                    <p className="text-sm leading-relaxed text-text-secondary mt-2 line-clamp-4">{a.description}</p>
-                    <div className="mt-3 p-3 rounded-lg bg-yellow-50 border border-yellow-200">
-                      <p className="font-mono text-[11px] uppercase tracking-wide text-yellow-800">Impact</p>
-                      <p className="text-sm leading-relaxed mt-1 text-yellow-900">{a.impact}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
 
       </div>
     </section>

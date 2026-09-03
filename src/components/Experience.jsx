@@ -1,6 +1,4 @@
-import { Briefcase, Factory, Code, TerminalWindow, Globe, ShieldCheck, ChartBarHorizontal, GraduationCap, ChartLineUp } from '@phosphor-icons/react';
-import { leadershipJournals } from '../data/leadership';
-import { achievements } from '../data/achievements';
+﻿import { leadershipJournals } from '../data/leadership';
 import { coreCompetencies } from '../data/portfolio';
 
 const experiences = [
@@ -8,37 +6,37 @@ const experiences = [
         title: 'Head of Unit',
         company: 'Rumah Susu Indonesia',
         location: 'Tasikmalaya',
-        date: 'Mar 2026 — Present',
+        date: 'Mar 2026  Present',
         meta: 'Lead • Full-time • On-site',
-        description: 'Built the Tasikmalaya unit from zero. Led first commercial Mozzarella — 500 L → 36 kg / 180 pcs at 10,5% yield (inverter, blade mixer, boiler troubleshooting) to Bogor shipment. Standardized SOPs, forms, reporting. Now leading Processed Cheddar R&D (9 trials, 113.8% yield), supplier intelligence dashboard (fat/SNF/protein/alcohol per KPS), and ratchet SOPs Box Biru/Tray.',
-        metrics: [{ v: '25K', l: 'units / batch' }, { v: '10,5%', l: 'mozza yield' }, { v: '113.8%', l: 'cheddar trial' }],
+        description: 'Built the Tasikmalaya unit from zero. Led first commercial Mozzarella  500 L → 42.2 kg avg / 211 pcs avg (422 total) at 10% yield (inverter, blade mixer, boiler troubleshooting) to Bogor shipment. Standardized SOPs, forms, reporting. Now leading Processed Cheddar R&D (9 trials, 113.8% yield), supplier intelligence dashboard (fat/SNF/protein/alcohol per KPS), and ratchet SOPs Box Biru/Tray.',
+        metrics: [{ v: '25K', l: 'units / batch' }, { v: '10%', l: 'mozza yield' }, { v: '113.8%', l: 'cheddar trial' }],
         tags: ['SOP Design', 'Product R&D', 'Cold Chain', 'QC', 'Supply Chain'],
     },
     {
         title: 'Frontend Developer',
         company: 'PT. Matra Kreasi Mandiri',
-        location: 'Bogor — Hybrid',
-        date: 'Sep 2025 — Jan 2026',
+        location: 'Bogor  Hybrid',
+        date: 'Sep 2025  Jan 2026',
         meta: 'Freelance • Lead',
-        description: 'Built nanorobotic.co.id end-to-end for 3–15y education. WhatsApp API for all CTAs, Bootstrap mobile-first, zero critical error at launch. Led small tech team + cross-functional stakeholders.',
-        metrics: [{ v: '5', l: 'projects' }, { v: '0', l: 'critical errors' }],
+        description: 'Built nanorobotic.co.id end-to-end for 3–15y education. WhatsApp API for all CTAs, Bootstrap mobile-first, launched with thorough cross-browser testing. Led small tech team and coordinated across stakeholders.',
+        metrics: [{ v: '5', l: 'projects delivered' }],
         tags: ['React', 'WhatsApp API', 'SEO'],
     },
     {
         title: 'IoT Engineer Intern',
         company: 'PT. Matra Kreasi Mandiri',
-        location: 'Bogor — On-site',
-        date: 'Aug 2024 — Nov 2024',
+        location: 'Bogor  On-site',
+        date: 'Aug 2024  Nov 2024',
         meta: 'Internship • Field',
-        description: '24/7 monitoring systems (ESP32, sensors, relay). Cut downtime 40% via calibration + preventive maintenance. Field install with IP65 waterproof enclosures.',
-        metrics: [{ v: '–40%', l: 'downtime' }, { v: '99%', l: 'uptime' }],
+        description: 'Built 24/7 monitoring systems with ESP32, sensors, and relay control. Improved stability through calibration and preventive maintenance. Deployed with IP65 waterproof enclosures for field conditions.',
+        metrics: [{ v: '40%', l: 'downtime cut' }, { v: '3', l: 'field systems' }],
         tags: ['ESP32', 'C++', 'MQTT', 'Calibration'],
     },
     {
         title: 'Web Developer Intern',
         company: 'PT. Matra Kreasi Mandiri',
-        location: 'Bogor — On-site',
-        date: 'Aug 2024 — Nov 2024',
+        location: 'Bogor  On-site',
+        date: 'Aug 2024  Nov 2024',
         meta: 'Internship',
         description: 'Maintained drmatt.id + IoT dashboards for real-time sensor viz. Responsive, cross-device, integrated device-to-cloud.',
         metrics: [{ v: '2', l: 'sites' }, { v: '3', l: 'dashboards' }],
@@ -47,23 +45,23 @@ const experiences = [
 ];
 
 const certs = [
-    { title: 'Hardware Installation Supervisor', org: 'BNSP', date: '2025—2028', icon: <ShieldCheck size={16} weight="light" /> },
-    { title: 'Google Analytics Specialist', org: 'Google Skillshop', date: '2025—2026', icon: <ChartBarHorizontal size={16} weight="light" /> },
-    { title: 'Junior Network Engineer', org: 'Kominfo DTS', date: '2024', icon: <GraduationCap size={16} weight="light" /> },
-    { title: 'AI & LLMs for Network Engineers', org: 'Cisco', date: '2025', icon: <ChartLineUp size={16} weight="light" /> },
+    { title: 'Hardware Installation Supervisor', org: 'BNSP', date: '2025  2028', icon: <i className="bi bi-shield-check text-[16px]"></i> },
+    { title: 'Google Analytics Specialist', org: 'Google Skillshop', date: '2025  2026', icon: <i className="bi bi-bar-chart text-[16px]"></i> },
+    { title: 'Junior Network Engineer', org: 'Kominfo DTS', date: '2024', icon: <i className="bi bi-mortarboard text-[16px]"></i> },
+    { title: 'AI & LLMs for Network Engineers', org: 'Cisco', date: '2025', icon: <i className="bi bi-graph-up text-[16px]"></i> },
 ];
 
 const Experience = () => {
     return (
-        <section id="experience" className="py-24 md:py-32 bg-background border-t border-border relative overflow-hidden">
+        <section id="experience" className="py-24 md:py-32 bg-transparent border-t border-border relative overflow-hidden">
             <div className="container mx-auto px-6 lg:px-8 max-w-[1400px]">
                 {/* Header */}
                 <div className="max-w-[720px] mb-12">
-                    <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Career — Operations to Systems</p>
+                    <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Career - Operations to Systems</p>
                     <h2 className="mt-3 font-display text-[36px] md:text-[48px] font-[800] tracking-[-0.04em] leading-[0.9] text-balance">From line to lab,<br /><span className="font-[300] italic text-gradient-foreground">built to scale.</span></h2>
                 </div>
 
-                {/* Experiences — editorial list, not timeline cards */}
+                {/* Experiences  editorial list, not timeline cards */}
                 <div className="divide-y divide-border border-y border-border">
                     {experiences.map((e) => (
                         <div key={e.title} className="grid grid-cols-1 lg:grid-cols-12 gap-6 py-8">
@@ -78,7 +76,7 @@ const Experience = () => {
                             </div>
                             <div className="lg:col-span-9">
                                 <div className="flex items-start gap-3">
-                                    <span className="hidden sm:flex w-8 h-8 rounded-lg bg-gradient-icon border border-primary/10 items-center justify-center shrink-0"><Factory size={16} weight="light" /></span>
+                                    <span className="hidden sm:flex w-8 h-8 rounded-lg bg-gradient-icon border border-primary/10 items-center justify-center shrink-0"><i className="bi bi-building text-[16px]"></i></span>
                                     <div className="flex-1 min-w-0">
                                         <h3 className="font-display text-[18px] font-semibold leading-tight">{e.title}</h3>
                                         <div className="font-mono text-xs tracking-wide text-text-tertiary">{e.company} • {e.location}</div>
@@ -95,50 +93,25 @@ const Experience = () => {
                     ))}
                 </div>
 
-                {/* Key Achievements — expanded, blue accent like Cheese Production & R&D */}
-                <div className="mt-16">
-                    <div className="flex items-center gap-3 mb-2">
-                        <span className="h-px w-8 bg-primary/20 hidden sm:block" aria-hidden="true"></span>
-                        <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Key Achievements — Impact measured</p>
-                    </div>
-                    <h3 className="font-display text-[24px] md:text-[28px] font-[700] tracking-[-0.02em] leading-tight">Proven wins, <span className="text-primary">not claims</span></h3>
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {achievements.map((a) => (
-                            <div key={a.id} className="p-5 rounded-xl border border-border bg-surface hover:border-primary/20 transition-colors">
-                                <div className="flex items-center justify-between gap-2">
-                                    <span className={`font-mono text-[11px] px-2 py-1 rounded-full border ${a.category === 'QUALITY' ? 'bg-blue-500/10 text-blue-600 border-blue-500/15' : 'bg-amber-500/10 text-amber-600 border-amber-500/15'}`}>{a.category}</span>
-                                    <span className="font-mono text-[11px] text-text-tertiary">{new Date(a.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
-                                </div>
-                                <h4 className="font-display font-semibold text-[16px] leading-tight mt-3">{a.title}</h4>
-                                <p className="text-[13.5px] leading-relaxed text-text-secondary mt-2">{a.description}</p>
-                                <div className="mt-3 p-3 rounded-lg bg-primary/5 border-l-2 border-primary">
-                                    <p className="font-mono text-[11px] uppercase tracking-wide text-primary">Impact</p>
-                                    <p className="text-sm leading-relaxed mt-1 text-text-secondary">{a.impact}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Core Competencies — expanded */}
+                {/* Core Competencies  expanded */}
                 <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 rounded-xl border border-primary/15 bg-primary/[0.03]">
                     <div className="lg:col-span-4">
                         <h3 className="font-display text-[18px] font-semibold flex items-center gap-2"><span className="w-1 h-6 bg-primary rounded-full"></span>Core Competencies</h3>
-                        <p className="text-sm text-text-tertiary mt-2">Expanded — production to R&D, end-to-end.</p>
+                        <p className="text-sm text-text-tertiary mt-2">Expanded  production to R&D, end-to-end.</p>
                     </div>
                     <div className="lg:col-span-8">
                         <div className="flex flex-wrap gap-2">
                             {coreCompetencies.map((c) => (
-                                <span key={c} className="px-3 py-1.5 rounded-full bg-surface border border-border text-sm font-medium hover:border-primary/20 hover:text-primary transition-colors">{c}</span>
+                                <span key={c} className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">{c}</span>
                             ))}
-                            <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">Cold Chain & Distribution</span>
-                            <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">Data & Supplier Intelligence</span>
-                            <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">SOP & Standardization</span>
+                            <span className="px-3 py-1.5 rounded-full bg-surface border border-border text-sm font-medium">Cold Chain & Distribution</span>
+                            <span className="px-3 py-1.5 rounded-full bg-surface border border-border text-sm font-medium">Data & Supplier Intelligence</span>
+                            <span className="px-3 py-1.5 rounded-full bg-surface border border-border text-sm font-medium">SOP & Standardization</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Certs — compact grid */}
+                {/* Certs  compact grid */}
                 <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-4">
                         <h3 className="font-display text-[18px] font-semibold">Core certified</h3>
@@ -157,29 +130,29 @@ const Experience = () => {
                     </div>
                 </div>
 
-                {/* Testimonial — single editorial quote */}
+                {/* Testimonial  single editorial quote */}
                 <div className="mt-16 p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.75rem]">
                     <div className="bg-surface rounded-[1.25rem] border border-border p-6 md:p-8">
                         <div className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase mb-3">What collaborators say</div>
                         <blockquote className="font-display text-[18px] md:text-[22px] leading-[1.4] tracking-[-0.015em] text-pretty">
-                            “Hafizh has demonstrated exceptional capability in building Rumah Susu Indonesia's Tasikmalaya unit from the ground up. His systematic approach — from SOP architecture to cold chain — has been instrumental in scaling production.”
+                            “Hafizh has demonstrated exceptional capability in building Rumah Susu Indonesia's Tasikmalaya unit from the ground up. His systematic approach  from SOP architecture to cold chain  has been instrumental in scaling production.”
                         </blockquote>
                         <div className="mt-4 flex items-center gap-3">
                             <div className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center text-xs font-bold">R</div>
-                            <div><div className="text-sm font-medium leading-none">Pak Rio Adhari</div><div className="text-xs text-text-tertiary">Management — Rumah Susu Indonesia</div></div>
+                            <div><div className="text-sm font-medium leading-none">Pak Rio Adhari</div><div className="text-xs text-text-tertiary">Management  Rumah Susu Indonesia</div></div>
                             <span className="ml-auto hidden sm:inline font-mono text-[11px] px-2 py-1 rounded-full bg-gradient-icon border border-primary/10">Direct supervisor</span>
                         </div>
                     </div>
                 </div>
 
-                {/* Leadership Journal — new section, blue accent like Cheese Production & R&D */}
+                {/* Leadership Journal  new section, blue accent like Cheese Production & R&D */}
                 <div id="leadership-journal" className="mt-20">
                     <div className="flex items-center gap-3 mb-2">
                         <span className="h-px w-8 bg-primary/20 hidden sm:block" aria-hidden="true"></span>
-                        <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Leadership Journal — Document decisions</p>
+                        <p className="font-mono text-[11px] tracking-[0.18em] text-text-tertiary uppercase">Leadership Journal  Document decisions</p>
                     </div>
                     <h3 className="font-display text-[24px] md:text-[28px] font-[700] tracking-[-0.02em] leading-tight text-foreground">Decisions that moved <span className="text-primary">production</span></h3>
-                    <p className="text-sm text-text-secondary mt-2 max-w-[60ch]">4 entries — linked to projects, status completed, reflection included.</p>
+                    <p className="text-sm text-text-secondary mt-2 max-w-[60ch]">4 entries  linked to projects, status completed, reflection included.</p>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
                         {leadershipJournals.map((j) => (
                             <div key={j.id} className="p-4 rounded-xl border border-border bg-surface hover:border-primary/20 transition-colors">
