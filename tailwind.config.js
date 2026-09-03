@@ -43,7 +43,7 @@ export default {
       },
       fontFamily: {
         sans: ['Geist', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        display: ['Satoshi', 'Geist', 'sans-serif'],
+        display: ['Clash Display', 'Satoshi', 'Geist', 'sans-serif'],
         mono: ['Fira Code', 'Geist Mono', 'Monaco', 'monospace'],
       },
       fontSize: {

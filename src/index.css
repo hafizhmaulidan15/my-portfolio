@@ -33,8 +33,9 @@
   }
 
   h1, h2, h3 {
-    font-family: 'Satoshi', 'Geist', sans-serif;
+    font-family: 'Clash Display', 'Satoshi', 'Geist', sans-serif;
     letter-spacing: -0.04em;
+    font-weight: 700;
   }
 
   /* Editorial Luxury grain  paper feel */
