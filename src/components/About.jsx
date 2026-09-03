@@ -1,15 +1,13 @@
-import { Flask, Truck, Thermometer, Drop } from '@phosphor-icons/react';
-
-const steps = [
-  { n: '01', title: 'Clarity in Sourcing', desc: 'Decisions anchored on supplier data — not assumptions.', icon: <Drop size={16} weight="bold" /> },
-  { n: '02', title: 'Discipline in Process', desc: 'Standards that hold under pressure — time, temperature, hygiene.', icon: <Thermometer size={16} weight="bold" /> },
-  { n: '03', title: 'Learning through Trials', desc: 'Trials as learning — taste, texture, and yield inform the next batch.', icon: <Flask size={16} weight="bold" /> },
-  { n: '04', title: 'Reliability in Delivery', desc: 'Verification before dispatch — every batch, every time.', icon: <Truck size={16} weight="bold" /> },
+﻿const steps = [
+  { n: '01', title: 'Clarity in Sourcing', desc: 'Decisions anchored on supplier data  not assumptions.', icon: <i className="bi bi-droplet text-[16px]"></i> },
+  { n: '02', title: 'Discipline in Process', desc: 'Standards that hold under pressure  time, temperature, hygiene.', icon: <i className="bi bi-thermometer-half text-[16px]"></i> },
+  { n: '03', title: 'Learning through Trials', desc: 'Trials as learning  taste, texture, and yield inform the next batch.', icon: <i className="bi bi-flask text-[16px]"></i> },
+  { n: '04', title: 'Reliability in Delivery', desc: 'Verification before dispatch  every batch, every time.', icon: <i className="bi bi-truck text-[16px]"></i> },
 ];
 
 const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-background relative overflow-hidden border-t border-border">
+    <section id="about" className="py-24 md:py-32 bg-transparent relative overflow-hidden border-t border-border">
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`}} aria-hidden="true"></div>
 
       <div className="container mx-auto px-6 lg:px-8 max-w-[1400px]">
@@ -22,7 +20,7 @@ const About = () => {
               </div>
               <div>
                 <div className="font-display text-[17px] font-semibold leading-none">Muhammad Hafizh Maulidan</div>
-                <div className="font-mono text-[11px] tracking-[0.14em] text-text-tertiary uppercase">S.Tr.Kom — IPB University • GPA 3.33</div>
+                <div className="font-mono text-[11px] tracking-[0.14em] text-text-tertiary uppercase">S.Tr.Kom  IPB University • GPA 3.33</div>
               </div>
             </div>
 
@@ -32,10 +30,10 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-[15px] leading-[1.7] text-text-secondary max-w-[52ch] text-pretty">
                 <p>
-                  Operating from Tasikmalaya — aligning <span className="text-foreground font-medium">raw milk quality</span> with product vision. Every batch reflects supplier clarity and process discipline.
+                  Operating from Tasikmalaya  aligning <span className="text-foreground font-medium">raw milk quality</span> with product vision. Every batch reflects supplier clarity and process discipline.
                 </p>
                 <p>
-                  Focus: <span className="text-foreground font-medium">minimize waste</span> through proactive checks and <span className="text-foreground font-medium">lead with clarity</span> — from intake to cold chain.
+                  Focus: <span className="text-foreground font-medium">minimize waste</span> through proactive checks and <span className="text-foreground font-medium">lead with clarity</span>  from intake to cold chain.
                 </p>
               </div>
             </div>
@@ -57,7 +55,7 @@ const About = () => {
                   <div className="space-y-7">
                     {steps.map((s) => (
                       <div key={s.n} className="relative flex gap-4">
-                        <div className="hidden sm:flex w-[22px] h-[22px] rounded-full bg-background border border-border items-center justify-center shrink-0 z-10">
+                        <div className="hidden sm:flex w-[22px] h-[22px] rounded-full bg-transparent border border-border items-center justify-center shrink-0 z-10">
                           <span className="w-1.5 h-1.5 rounded-full bg-foreground/60"></span>
                         </div>
                         <div className="flex-1 min-w-0 pb-1">

@@ -1,10 +1,10 @@
-export const strategicProjects = [
+﻿export const strategicProjects = [
   {
     id: 1,
     title: 'Pembuatan Mozzarela',
     status: 'completed',
-    overview: 'Perjalanan produksi mozzarella dari nol hingga siap jual (Mei-Juni 2026). Timeline lengkap: 12 Mei – perencanaan awal, keputusan mozzarella sebagai produk pertama. 13 Mei – pembelian alat (panci 45/40cm, kompor 2, regulator 2, box donat 20pcs). 23-25 Mei – unboxing mixer, blade terpisah, first production mozzarella. 26 Mei-5 Jun – packaging 249 pcs, trial roti panggang. 9 Jun – REJECT semua keju karena pahit/asam (kontaminasi air boiler chemical). 10-11 Jun – trial 20L susu pasteurisasi gagal (no stretch, no smooth, no sticky). 16-17 Jun – BATCH SUKSES: 500L susu segar via cheese vat, cooking 23:30-17:32 (4 batch), curd disimpan freezer. 19 Jun – packaging 180 pcs @200gr = 36kg (yield 10,5%). 23 Jun – PENGIRIMAN PERDANA ke Zarafa Bogor, diterima Alhamdulillah.',
-    businessImpact: 'Produk mozzarella siap jual pertama RSI Tasik: 180 pcs @200gr (36kg dari 500L susu, yield 10,5%). Telah dikirim ke Bogor untuk distribusi konsumen. SOP produksi dan form produksi mozzarella sudah dibakukan. Batch pertama berhasil dengan reject 0 dan tekstur elastis.',
+    overview: 'Perjalanan produksi mozzarella dari nol hingga siap jual (Mei-Juni 2026). Timeline lengkap: 12 Mei – perencanaan awal, keputusan mozzarella sebagai produk pertama. 13 Mei – pembelian alat (panci 45/40cm, kompor 2, regulator 2, box donat 20pcs). 23-25 Mei – unboxing mixer, blade terpisah, first production mozzarella. 26 Mei-5 Jun – packaging 249 pcs, trial roti panggang. 9 Jun – REJECT semua keju karena pahit/asam (kontaminasi air boiler chemical). 10-11 Jun – trial 20L susu pasteurisasi gagal (no stretch, no smooth, no sticky). 16-17 Jun – BATCH SUKSES: 500L susu segar via cheese vat, cooking 23:30-17:32 (4 batch), curd disimpan freezer. 19 Jun – packaging 211 pcs avg (422 total) @200gr = 42.2kg avg (yield 10%). 23 Jun – PENGIRIMAN PERDANA ke Zarafa Bogor, diterima Alhamdulillah.',
+    businessImpact: 'Produk mozzarella siap jual pertama RSI Tasik: 211 pcs avg (422 total) @200gr (42.2kg avg dari 500L susu, yield 10%). Telah dikirim ke Bogor untuk distribusi konsumen. SOP produksi dan form produksi mozzarella sudah dibakukan. Batch pertama berhasil dengan reject 0 dan tekstur elastis.',
   },
   {
     id: 2,

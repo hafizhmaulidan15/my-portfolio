@@ -1,27 +1,26 @@
-import { motion } from 'framer-motion';
-import { ShieldCheck, ChartBar, GraduationCap, Globe, Code, Network, Certificate, Student } from '@phosphor-icons/react';
+﻿import { motion } from 'framer-motion';
 import { GlassPanel } from './ui/GlassPanel';
 
 const certData = [
-    { title: 'Integrated Speaking English', org: 'Language Center', date: 'Nov 2025', icon: <Globe size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'Hardware Installation Supervisor', org: 'BNSP', date: 'Sep 2025', icon: <ShieldCheck size={16} />, color: 'text-primary', bg: 'bg-primary/10' },
-    { title: 'Google Analytics Certification', org: 'Google', date: 'Aug 2025', icon: <ChartBar size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'Data Science & Analytics', org: 'HP LIFE', date: 'Aug 2025', icon: <ChartBar size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'Data Visualization Basics', org: 'Dicoding Academy', date: 'May 2025', icon: <ChartBar size={16} />, color: 'text-primary', bg: 'bg-primary/10' },
-    { title: 'Understanding AI and LLMs as a Network Engineer', org: 'Cisco', date: 'Apr 2025', icon: <Network size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'Advance Python', org: 'Skilvul', date: 'Jan 2025', icon: <Code size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'Algorithm & Data Structures with Python', org: 'Skilvul', date: 'Sep 2024', icon: <Code size={16} />, color: 'text-primary', bg: 'bg-primary/10' },
-    { title: 'Python Essentials 1', org: 'Cisco', date: 'May 2024', icon: <Code size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'Networking Basics', org: 'Cisco', date: 'Apr 2024', icon: <Network size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'Junior Network Engineer', org: 'Kominfo', date: 'Feb 2024', icon: <GraduationCap size={16} />, color: 'text-primary', bg: 'bg-primary/10' },
-    { title: 'CCNA: Introduction to Networks', org: 'Cisco', date: 'Jun 2022', icon: <Network size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: '7 Habits of Highly Effective', org: 'FranklinCovey', date: 'Aug 2021', icon: <Certificate size={16} />, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
-    { title: 'SEAMEO TVET Student Exchange', org: 'Politeknik Mersing', date: 'Jun 2022', icon: <Student size={16} />, color: 'text-primary', bg: 'bg-primary/10' },
+    { title: 'Integrated Speaking English', org: 'Language Center', date: 'Nov 2025', icon: <i className="bi bi-globe text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'Hardware Installation Supervisor', org: 'BNSP', date: 'Sep 2025', icon: <i className="bi bi-shield-check text-[16px]"></i>, color: 'text-primary', bg: 'bg-primary/10' },
+    { title: 'Google Analytics Certification', org: 'Google', date: 'Aug 2025', icon: <i className="bi bi-bar-chart text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'Data Science & Analytics', org: 'HP LIFE', date: 'Aug 2025', icon: <i className="bi bi-bar-chart text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'Data Visualization Basics', org: 'Dicoding Academy', date: 'May 2025', icon: <i className="bi bi-bar-chart text-[16px]"></i>, color: 'text-primary', bg: 'bg-primary/10' },
+    { title: 'Understanding AI and LLMs as a Network Engineer', org: 'Cisco', date: 'Apr 2025', icon: <i className="bi bi-hdd-network text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'Advance Python', org: 'Skilvul', date: 'Jan 2025', icon: <i className="bi bi-code-slash text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'Algorithm & Data Structures with Python', org: 'Skilvul', date: 'Sep 2024', icon: <i className="bi bi-code-slash text-[16px]"></i>, color: 'text-primary', bg: 'bg-primary/10' },
+    { title: 'Python Essentials 1', org: 'Cisco', date: 'May 2024', icon: <i className="bi bi-code-slash text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'Networking Basics', org: 'Cisco', date: 'Apr 2024', icon: <i className="bi bi-hdd-network text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'Junior Network Engineer', org: 'Kominfo', date: 'Feb 2024', icon: <i className="bi bi-mortarboard text-[16px]"></i>, color: 'text-primary', bg: 'bg-primary/10' },
+    { title: 'CCNA: Introduction to Networks', org: 'Cisco', date: 'Jun 2022', icon: <i className="bi bi-hdd-network text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: '7 Habits of Highly Effective', org: 'FranklinCovey', date: 'Aug 2021', icon: <i className="bi bi-award text-[16px]"></i>, color: 'text-accent-blue', bg: 'bg-accent-blue/10' },
+    { title: 'SEAMEO TVET Student Exchange', org: 'Politeknik Mersing', date: 'Jun 2022', icon: <i className="bi bi-mortarboard text-[16px]"></i>, color: 'text-primary', bg: 'bg-primary/10' },
 ];
 
 const Certifications = () => {
     return (
-        <section id="certifications" className="py-24 md:py-32 bg-background relative overflow-hidden">
+        <section id="certifications" className="py-24 md:py-32 bg-transparent relative overflow-hidden">
             <div className="absolute top-1/3 -right-32 w-80 h-80 bg-primary/[0.04] blur-[100px] rounded-full pointer-events-none"></div>
 
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
@@ -46,7 +45,7 @@ const Certifications = () => {
                         >
                             <GlassPanel className="p-4 sm:p-4 h-full flex flex-col gap-2 sm:gap-3 group hover:border-primary/20 transition-all">
                                 <div className="flex items-start gap-2 sm:gap-3">
-                                    <div className={`p-2 sm:p-2 rounded-sm ${cert.bg} ${cert.color} shrink-0 group-hover:scale-105 transition-transform`}>
+                                    <div className={`p-2 sm:p-2 rounded-sm ${cert.bg} ${cert.color} shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center`}>
                                         {cert.icon}
                                     </div>
                                     <div className="min-w-0 flex-1 space-y-1">

@@ -16,7 +16,7 @@ const Hero = () => {
 
             <div className="container relative z-10 mx-auto px-6 lg:px-8 max-w-[1400px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[100dvh] pt-24 lg:pt-28 pb-12 lg:pb-16">
-                    {/* Left editorial  7 cols */}
+                    {/* Left editorial — 7 cols */}
                     <div className="lg:col-span-7 space-y-6">
                         <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
                             <span className="h-px w-8 bg-foreground/15 hidden sm:block" aria-hidden="true"></span>
@@ -25,11 +25,11 @@ const Hero = () => {
 
                         <div className="t-stagger" ref={staggerRef}>
                             <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.92] text-foreground text-balance">
-                                Aligning quality <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground">with scale</span><br />
-                                by design.
+                                Leading operations<br />
+                                <span className="font-[300] italic tracking-[-0.02em] text-gradient-foreground">with clarity.</span>
                             </h1>
                             <p className="t-stagger-line t-stagger-line--2 mt-5 text-[16px] lg:text-[18px] leading-[1.6] text-text-secondary max-w-[52ch] text-pretty">
-                                Built for scale, grounded in data. <Link to="/projects" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Explore Projects →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact →</Link>
+                                Built for scale, grounded in data. <Link to="/achievements" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Explore Achievements →</Link> <span className="text-text-tertiary">·</span> <Link to="/experience" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Leadership →</Link> <span className="text-text-tertiary">·</span> <Link to="/impact" className="text-foreground underline decoration-primary/30 underline-offset-4 hover:decoration-primary">Live Impact →</Link>
                             </p>
                         </div>
 
@@ -40,8 +40,8 @@ const Hero = () => {
                                     <i className="bi bi-arrow-up-right text-[14px]"></i>
                                 </span>
                             </Link>
-                            <Link to="/projects" className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-foreground underline decoration-foreground/15 underline-offset-4 hover:decoration-foreground/40 transition-colors">
-                                View case studies
+                            <Link to="/achievements" className="px-4 py-2 text-sm font-medium text-text-secondary hover:text-foreground underline decoration-foreground/15 underline-offset-4 hover:decoration-foreground/40 transition-colors">
+                                View achievements
                             </Link>
                         </div>
 
@@ -64,7 +64,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    {/* Right visual  5 cols, Double-Bezel */}
+                    {/* Right visual — 5 cols, Double-Bezel */}
                     <div className="lg:col-span-5 lg:pl-4">
                         <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[2rem]">
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
@@ -88,7 +88,7 @@ const Hero = () => {
                                         </span>
                                         <div>
                                             <div className="text-sm font-medium leading-none">Production Ops</div>
-                                            <div className="text-xs text-text-tertiary">25K/batch • 4-person lean team</div>
+                                            <div className="text-xs text-text-tertiary">25K/batch • Lean team</div>
                                         </div>
                                     </div>
                                     <span className="font-mono text-xs px-2 py-1 rounded-full bg-success/10 text-success border border-success/15">Live</span>

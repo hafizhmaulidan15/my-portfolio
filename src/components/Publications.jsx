@@ -1,6 +1,4 @@
-import { BookOpen, Calendar, GraduationCap } from '@phosphor-icons/react';
-
-const Publications = () => {
+﻿const Publications = () => {
     const publications = [
         {
             title: 'IoT-based Automation Tool Innovation to Optimize Microgreen Cultivation',
@@ -14,7 +12,7 @@ const Publications = () => {
     ];
 
     return (
-        <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+        <section className="py-24 md:py-32 bg-transparent relative overflow-hidden">
 
             <div className="container mx-auto px-4 sm:px-6 max-w-[1400px]">
                 <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
@@ -33,8 +31,8 @@ const Publications = () => {
                     {publications.map((pub, index) => (
                         <div key={index} className="border-l-2 border-primary/30 pl-6 md:pl-8 py-2 group">
                             <div className="flex items-start justify-between mb-4">
-                                <div className={`p-2.5 ${pub.bg} rounded-sm ${pub.color} group-hover:scale-105 transition-transform`}>
-                                    <BookOpen size={20} weight="duotone" />
+                                <div className={`p-2.5 ${pub.bg} rounded-sm ${pub.color} group-hover:scale-105 transition-transform flex items-center justify-center`}>
+                                    <i className="bi bi-book text-[20px]"></i>
                                 </div>
                                 <span className="text-xs font-mono text-text-tertiary px-2 py-1 rounded-sm bg-interactive-button border border-border uppercase">
                                     {pub.category}
@@ -46,7 +44,7 @@ const Publications = () => {
                                     {pub.title}
                                 </h3>
                                 <div className="flex items-center gap-2 text-sm sm:text-[15px] text-text-tertiary">
-                                    <GraduationCap size={14} weight="duotone" />
+                                    <i className="bi bi-mortarboard text-[14px]"></i>
                                     <span>{pub.journal}</span>
                                 </div>
                                 <p className="text-text-secondary text-sm sm:text-[15px] leading-relaxed">
@@ -55,7 +53,7 @@ const Publications = () => {
                             </div>
                             
                             <div className="mt-4 flex items-center gap-2 text-sm font-mono text-text-tertiary">
-                                <Calendar size={14} weight="duotone" />
+                                <i className="bi bi-calendar text-[14px]"></i>
                                 <span>{pub.date}</span>
                             </div>
                         </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { CaretUp } from '@phosphor-icons/react';
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
@@ -18,7 +17,7 @@ const BackToTop = () => {
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
-      <CaretUp size={18} weight="bold" />
+      <i className="bi bi-chevron-up text-[18px]"></i>
     </button>
   );
 };

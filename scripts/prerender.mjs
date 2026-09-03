@@ -14,10 +14,6 @@ const routes = {
     title: 'Experience | Muhammad Hafizh Maulidan',
     description: 'Professional experience: Head of Unit at Rumah Susu Indonesia, Frontend Developer at PT Matra Kreasi Mandiri.',
   },
-  '/projects': {
-    title: 'Projects | Muhammad Hafizh Maulidan',
-    description: 'Featured projects: Production Operations SOP, Milk Quality Prediction, Inventory Dashboard.',
-  },
   '/publications': {
     title: 'Publications | Muhammad Hafizh Maulidan',
     description: 'Research publications on IoT Automation and Engineering applications.',
@@ -33,6 +29,10 @@ const routes = {
   '/impact': {
     title: 'Production Impact | Muhammad Hafizh Maulidan',
     description: 'Live production data from Rumah Susu Indonesia: total output, reject rates, cup production trends, and raw milk processing metrics.',
+  },
+  '/achievements': {
+    title: 'Achievements | Muhammad Hafizh Maulidan',
+    description: 'Milestones and achievements — milk quality digitalization, mozzarella first production, SOP standardization, and distribution SOPs.',
   },
 };
 

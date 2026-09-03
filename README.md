@@ -1,4 +1,4 @@
-# Muhammad Hafizh Maulidan — Portfolio
+﻿# Muhammad Hafizh Maulidan  Portfolio
 
 Personal portfolio website highlighting operations & production management experience, dairy manufacturing leadership, and technical project work.
 
@@ -31,13 +31,13 @@ Personal portfolio website highlighting operations & production management exper
 
 ## AEO / GEO / SEO
 
-- **JSON-LD `@graph`** — 6 entity types: WebPage (speakable), Person, Organization, BreadcrumbList, FAQPage, ItemList
-- **Speakable schema** — voice/AI assistants can read Hero section aloud
-- **Entity graph** — `@id` references, `sameAs`, `hasOccupation`, `knowsLanguage` (EN + ID)
-- **Dual-language FAQ** — 5 English + 3 Indonesian Q&A for answer engines
-- **`llms.txt` / `llms-full.txt`** — markdown context for LLM crawlers (GEO)
-- **Hreflang** — EN + ID + x-default
-- **OG / Twitter cards** — rich social previews
+- **JSON-LD `@graph`**  6 entity types: WebPage (speakable), Person, Organization, BreadcrumbList, FAQPage, ItemList
+- **Speakable schema**  voice/AI assistants can read Hero section aloud
+- **Entity graph**  `@id` references, `sameAs`, `hasOccupation`, `knowsLanguage` (EN + ID)
+- **Dual-language FAQ**  5 English + 3 Indonesian Q&A for answer engines
+- **`llms.txt` / `llms-full.txt`**  markdown context for LLM crawlers (GEO)
+- **Hreflang**  EN + ID + x-default
+- **OG / Twitter cards**  rich social previews
 
 ## Routes
 

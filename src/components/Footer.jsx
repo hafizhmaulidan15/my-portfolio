@@ -1,6 +1,3 @@
-import { Mail, Phone, MapPin, Factory } from "lucide-react";
-import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -11,7 +8,7 @@ const Footer = () => {
         { label: "About", href: "/about" },
         { label: "Skills", href: "/skills" },
         { label: "Experience", href: "/experience" },
-        { label: "Projects", href: "/projects" },
+        { label: "Achievements", href: "/achievements" },
       ],
     },
     {
@@ -26,24 +23,24 @@ const Footer = () => {
 
   const contactInfo = [
     {
-      icon: <Mail size={16} className="text-[#3ca2fa]" />,
+      icon: <i className="bi bi-envelope text-[16px] text-[#3ca2fa]"></i>,
       text: "mhafizh.maulidan@gmail.com",
       href: "mailto:mhafizh.maulidan@gmail.com",
     },
     {
-      icon: <Phone size={16} className="text-[#3ca2fa]" />,
+      icon: <i className="bi bi-telephone text-[16px] text-[#3ca2fa]"></i>,
       text: "+62 896-0381-8819",
       href: "tel:+6289603818819",
     },
     {
-      icon: <MapPin size={16} className="text-[#3ca2fa]" />,
+      icon: <i className="bi bi-geo-alt text-[16px] text-[#3ca2fa]"></i>,
       text: "Tasikmalaya / Bogor, Indonesia",
     },
   ];
 
   const socialLinks = [
-    { icon: <GithubLogo size={18} weight="fill" />, label: "GitHub", href: "https://github.com/hafizhmaulidan15" },
-    { icon: <LinkedinLogo size={18} weight="fill" />, label: "LinkedIn", href: "https://www.linkedin.com/in/hafizhmaulidan/" },
+    { icon: <i className="bi bi-github text-[18px]"></i>, label: "GitHub", href: "https://github.com/hafizhmaulidan15" },
+    { icon: <i className="bi bi-linkedin text-[18px]"></i>, label: "LinkedIn", href: "https://www.linkedin.com/in/hafizhmaulidan/" },
   ];
 
   return (
@@ -54,7 +51,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
               <span className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white">
-                <Factory size={18} weight="bold" />
+                <i className="bi bi-building text-[18px]"></i>
               </span>
               <span className="text-foreground text-xl font-bold tracking-tight">Hafizh</span>
               <span className="text-text-tertiary text-sm">• Dairy Ops</span>

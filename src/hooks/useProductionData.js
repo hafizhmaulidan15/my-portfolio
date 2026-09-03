@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+﻿import { useState, useEffect, useRef, useCallback } from 'react';
 import { PRODUCTION_API } from '../data/production-config';
 
 const CACHE_KEY = 'rsi-production-impact';
-const CACHE_TTL = 15 * 60 * 1000; // 15 min — localStorage biar tab baru tetap instan
+const CACHE_TTL = 15 * 60 * 1000; // 15 min  localStorage biar tab baru tetap instan
 const RETRY_MAX = 3;
 const RETRY_BASE_DELAY = 400; // 400 → 800 → 1600 (total ~2.8s, dulu 5.6s)
 const FETCH_TIMEOUT = 7000; // 7 detik per request, biar nggak hang
@@ -185,7 +185,7 @@ export function useProductionImpact() {
   }, []);
 
   useEffect(() => {
-    // SWR: if cached, revalidate in background — first visit pakai FALLBACK langsung, jadi nggak skeleton lama
+    // SWR: if cached, revalidate in background  first visit pakai FALLBACK langsung, jadi nggak skeleton lama
     fetchData({ background: !!cached });
     const interval = setInterval(() => fetchData({ background: true }), 300000);
     return () => {

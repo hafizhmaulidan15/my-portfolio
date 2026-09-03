@@ -5,7 +5,7 @@ const routes = [
   { path: '/about', title: /About \|/ },
   { path: '/skills', title: /Skills \|/ },
   { path: '/experience', title: /Experience \|/ },
-  { path: '/projects', title: /Projects \|/ },
+  { path: '/achievements', title: /Achievements \|/ },
   { path: '/impact', title: /Production Impact \|/ },
   { path: '/contact', title: /Contact \|/ },
 ];
@@ -24,7 +24,7 @@ test.describe('portfolio smoke', () => {
     await page.goto('/');
     // About is SPA route, check canonical exists
     await page.goto('/about');
-    await expect(page.locator('h2', { hasText: 'Operations & Production' })).toBeVisible();
+    await expect(page.locator('h2', { hasText: 'Data-driven' })).toBeVisible();
   });
 
   test('no console errors on home', async ({ page }) => {

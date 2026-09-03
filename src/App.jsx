@@ -10,7 +10,6 @@ const Hero = lazy(() => import('./components/Hero'));
 const About = lazy(() => import('./components/About'));
 const Skills = lazy(() => import('./components/Skills'));
 const Experience = lazy(() => import('./components/Experience'));
-const Projects = lazy(() => import('./components/Projects'));
 const Certifications = lazy(() => import('./components/Certifications'));
 const Publications = lazy(() => import('./components/Publications'));
 const Contact = lazy(() => import('./components/Contact'));
@@ -19,6 +18,7 @@ const NotFound = lazy(() => import('./components/NotFound'));
 const ProductionImpact = lazy(() => import('./components/ProductionImpact'));
 const BackToTop = lazy(() => import('./components/BackToTop'));
 const TubelightDemo = lazy(() => import('./components/ui/tubelight-demo'));
+const AchievementsPage = lazy(() => import('./components/AchievementsPage'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -56,10 +56,10 @@ function App() {
                 <Route path="/skills" element={<Skills />} />
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/impact" element={<ProductionImpact />} />
-                <Route path="/projects" element={<Projects />} />
                 <Route path="/certifications" element={<Certifications />} />
                 <Route path="/publications" element={<Publications />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/achievements" element={<AchievementsPage />} />
                 <Route path="/tubelight-demo" element={<TubelightDemo />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
