@@ -13,7 +13,7 @@ export const achievements = [
     date: '2026-06-19',
     category: 'PRODUCTION',
     description: 'Berhasil memproduksi mozzarella pertama dari 500L susu segar menjadi 36kg (180 pcs @200gr) di pabrik Tasikmalaya. Proses mencakup pengadaan lengkap alat dan bahan dari nol, koordinasi multi-pihak (Pak Trie, KUD, manajemen), serta penyelesaian berbagai kendala teknis (inverter rusak, kontaminasi air boiler, blade mixer tidak termasuk).',
-    impact: 'Produk mozzarella siap jual pertama RSI. Yield 7.2% dari 500L susu. Telah dikirim dan didistribusikan ke konsumen Bogor. SOP produksi dan form produksi mozzarella telah dibakukan.',
+    impact: 'Produk mozzarella siap jual pertama RSI. Yield 10,5% dari 500L susu. Telah dikirim dan didistribusikan ke konsumen Bogor. SOP produksi dan form produksi mozzarella telah dibakukan.',
   },
   {
     id: 3,

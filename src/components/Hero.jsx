@@ -74,7 +74,7 @@ const Hero = () => {
                                     <div className="relative overflow-hidden">
                                         <img src="https://picsum.photos/seed/mozzarella-cheese/400/600" alt="Mozzarella cheese — 36kg from 500L" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Mozzarella 7.2%</span>
+                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Mozzarella 10,5%</span>
                                     </div>
                                     <div className="relative overflow-hidden border-l border-white/10">
                                         <img src="https://picsum.photos/seed/cheddar-cheese/400/600" alt="Cheddar cheese — 9 trial R&D" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />

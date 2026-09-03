@@ -10,8 +10,8 @@ const experiences = [
         location: 'Tasikmalaya',
         date: 'Mar 2026 — Present',
         meta: 'Lead • Full-time • On-site',
-        description: 'Built the Tasikmalaya unit from zero. Led first commercial Mozzarella — 500 L → 36 kg / 180 pcs at 7.2% yield (inverter, blade mixer, boiler troubleshooting) to Bogor shipment. Standardized SOPs, forms, reporting. Now leading Processed Cheddar R&D (9 trials, 113.8% yield), supplier intelligence dashboard (fat/SNF/protein/alcohol per KPS), and ratchet SOPs Box Biru/Tray.',
-        metrics: [{ v: '25K', l: 'units / batch' }, { v: '7.2%', l: 'mozza yield' }, { v: '113.8%', l: 'cheddar trial' }],
+        description: 'Built the Tasikmalaya unit from zero. Led first commercial Mozzarella — 500 L → 36 kg / 180 pcs at 10,5% yield (inverter, blade mixer, boiler troubleshooting) to Bogor shipment. Standardized SOPs, forms, reporting. Now leading Processed Cheddar R&D (9 trials, 113.8% yield), supplier intelligence dashboard (fat/SNF/protein/alcohol per KPS), and ratchet SOPs Box Biru/Tray.',
+        metrics: [{ v: '25K', l: 'units / batch' }, { v: '10,5%', l: 'mozza yield' }, { v: '113.8%', l: 'cheddar trial' }],
         tags: ['SOP Design', 'Product R&D', 'Cold Chain', 'QC', 'Supply Chain'],
     },
     {

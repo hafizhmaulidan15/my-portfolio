@@ -2,17 +2,40 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { PRODUCTION_API } from '../data/production-config';
 
 const CACHE_KEY = 'rsi-production-impact';
-const CACHE_TTL = 5 * 60 * 1000; // 5 min
+const CACHE_TTL = 15 * 60 * 1000; // 15 min — localStorage biar tab baru tetap instan
 const RETRY_MAX = 3;
-const RETRY_BASE_DELAY = 800;
+const RETRY_BASE_DELAY = 400; // 400 → 800 → 1600 (total ~2.8s, dulu 5.6s)
+const FETCH_TIMEOUT = 7000; // 7 detik per request, biar nggak hang
+
+const FALLBACK_DATA = {
+  totalProduction: 53200,
+  rejectRate: 0.85,
+  avgPerBatch: 2120,
+  cupTrend: [],
+  susuTrend: [],
+  distributionCities: ['Bogor', 'Sukabumi', 'Lampung'],
+};
+
+function fetchWithTimeout(url, signal, timeout = FETCH_TIMEOUT) {
+  const ctrl = new AbortController();
+  const onAbort = () => ctrl.abort();
+  if (signal) signal.addEventListener('abort', onAbort);
+  const timer = setTimeout(() => ctrl.abort(), timeout);
+  return fetch(url, { signal: ctrl.signal })
+    .finally(() => {
+      clearTimeout(timer);
+      if (signal) signal.removeEventListener('abort', onAbort);
+    });
+}
 
 function fetchWithRetry(url, signal, retries = RETRY_MAX) {
   const attempt = (n) =>
-    fetch(url, { signal }).then((res) => {
+    fetchWithTimeout(url, signal).then((res) => {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return res;
     }).catch((err) => {
-      if (signal.aborted) throw err;
+      if (signal?.aborted) throw err;
+      if (err.name === 'AbortError') throw err;
       if (n >= retries) throw err;
       const delay = RETRY_BASE_DELAY * 2 ** n;
       return new Promise((r) => setTimeout(r, delay)).then(() => attempt(n + 1));
@@ -22,7 +45,7 @@ function fetchWithRetry(url, signal, retries = RETRY_MAX) {
 
 function readCache() {
   try {
-    const raw = sessionStorage.getItem(CACHE_KEY);
+    const raw = localStorage.getItem(CACHE_KEY);
     if (!raw) return null;
     const { ts, data } = JSON.parse(raw);
     if (Date.now() - ts > CACHE_TTL) return null;
@@ -31,7 +54,7 @@ function readCache() {
 }
 
 function writeCache(data) {
-  try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data })); } catch { /* quota */ }
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data })); } catch { /* quota */ }
 }
 
 function parseDate(val) {
@@ -83,12 +106,13 @@ function parseSheetTrend(rows, field = 'In', minValue = 0) {
 
 export function useProductionImpact() {
   const cached = readCache();
-  const [data, setData] = useState(cached);
+  const initial = cached || FALLBACK_DATA;
+  const [data, setData] = useState(initial);
   const [loading, setLoading] = useState(!cached);
   const [error, setError] = useState(null);
   const abortRef = useRef(null);
   const fetchingRef = useRef(false);
-  const dataRef = useRef(cached);
+  const dataRef = useRef(initial);
   useEffect(() => { dataRef.current = data; }, [data]);
 
   const fetchData = useCallback(async ({ background = false } = {}) => {
@@ -135,11 +159,11 @@ export function useProductionImpact() {
       const avgPerBatch = batchCount > 0 ? Math.round(totalProduction / batchCount) : 0;
 
       const next = {
-        totalProduction,
-        rejectRate,
-        avgPerBatch,
-        cupTrend,
-        susuTrend,
+        totalProduction: totalProduction || dataRef.current?.totalProduction || FALLBACK_DATA.totalProduction,
+        rejectRate: rejectRate || dataRef.current?.rejectRate || FALLBACK_DATA.rejectRate,
+        avgPerBatch: avgPerBatch || dataRef.current?.avgPerBatch || FALLBACK_DATA.avgPerBatch,
+        cupTrend: cupTrend.length ? cupTrend : dataRef.current?.cupTrend || [],
+        susuTrend: susuTrend.length ? susuTrend : dataRef.current?.susuTrend || [],
         distributionCities: ['Bogor', 'Sukabumi', 'Lampung'],
       };
       setData(next);
@@ -147,7 +171,13 @@ export function useProductionImpact() {
       setError(null);
     } catch (err) {
       if (err.name === 'AbortError') return;
-      if (!background || !dataRef.current) setError(err.message || 'Failed to fetch production data');
+      // fallback sudah tampil, jangan timpa dengan error kalau ada data
+      if (!dataRef.current || dataRef.current === FALLBACK_DATA) {
+        setData(FALLBACK_DATA);
+      }
+      if (!background || !dataRef.current || dataRef.current === FALLBACK_DATA) {
+        setError(err.message || 'Failed to fetch production data');
+      }
     } finally {
       fetchingRef.current = false;
       setLoading(false);
@@ -155,7 +185,7 @@ export function useProductionImpact() {
   }, []);
 
   useEffect(() => {
-    // SWR: if cached, revalidate in background
+    // SWR: if cached, revalidate in background — first visit pakai FALLBACK langsung, jadi nggak skeleton lama
     fetchData({ background: !!cached });
     const interval = setInterval(() => fetchData({ background: true }), 300000);
     return () => {

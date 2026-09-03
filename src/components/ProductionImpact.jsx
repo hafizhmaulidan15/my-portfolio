@@ -84,7 +84,7 @@ const ProductionImpact = () => {
               <div className="md:col-span-4 p-6 rounded-xl bg-surface border border-border">
                 <div className="flex items-center gap-2 font-mono text-[11px] tracking-wide uppercase text-text-tertiary"><Flask size={14} weight="light" /> Mozzarella First Batch</div>
                 <div className="mt-2 font-display text-[28px] font-bold tabular-nums">180 pcs</div>
-                <div className="text-sm text-text-tertiary">36 kg from 500 L • 7.2% yield • shipped to Bogor</div>
+                <div className="text-sm text-text-tertiary">36 kg from 500 L • 10,5% yield • shipped to Bogor</div>
               </div>
             </div>
 

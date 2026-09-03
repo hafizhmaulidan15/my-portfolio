@@ -28,7 +28,7 @@ const Navbar = () => {
                             <Factory size={18} weight="bold" />
                         </span>
                         <span className="text-foreground font-semibold tracking-tight text-sm group-hover:text-primary transition-colors duration-200">
-                            OPS
+                            Portfolio
                         </span>
                     </Link>
 
@@ -84,7 +84,7 @@ const Navbar = () => {
                         <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
                             <Factory size={16} weight="bold" />
                         </span>
-                        <span className="text-foreground font-semibold tracking-tight text-xs">OPS</span>
+                        <span className="text-foreground font-semibold tracking-tight text-xs">Portfolio</span>
                     </Link>
 
                     <button
