@@ -49,7 +49,7 @@ const Skills = () => {
                         <div className="lg:col-span-8 divide-y divide-border border-y border-border">
                             {section.skills.map((skill) => {
                                 return (
-                                    <div key={skill.name} className={`group py-4 flex flex-col gap-1 ${skill.featured ? 'bg-white/[0.02] -mx-3 px-3 rounded-lg border-l-2 border-primary' : ''}`}>
+                                    <div key={skill.name} className="group py-4 flex flex-col gap-1 bg-white/[0.02] -mx-3 px-3 rounded-lg border-l-2 border-primary">
                                         <div className="flex items-start gap-3">
                                             <span className="mt-0.5 p-1.5 rounded-md bg-gradient-icon border border-primary/10 text-text-secondary flex items-center justify-center">{skill.icon}</span>
                                             <div className="flex-1 min-w-0">
