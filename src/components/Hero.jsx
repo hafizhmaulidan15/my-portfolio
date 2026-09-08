@@ -96,7 +96,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className="mt-3 font-mono text-[11px] tracking-wide text-text-tertiary text-justify max-w-[42ch] mx-auto leading-relaxed [text-align-last:justify] hyphens-auto">“Driven by data, grounded in reality  quality aligned, waste minimized, teams led with purpose.”</p>
+                        <p className="mt-4 font-mono text-[11px] tracking-[0.12em] text-text-tertiary text-center max-w-[30ch] sm:max-w-[34ch] mx-auto leading-[1.6] text-balance">“Driven by data, grounded in reality.<br />Quality aligned, waste minimized, teams led with purpose.”</p>
                     </div>
                 </div>
             </div>
