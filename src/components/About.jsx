@@ -41,9 +41,9 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-3 pt-4 border-t border-border max-w-[420px]">
-              <div><div className="font-display text-xl font-bold tabular-nums">4</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Team led</div></div>
-              <div><div className="font-display text-xl font-bold tabular-nums">12</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">SOPs live</div></div>
-              <div><div className="font-display text-xl font-bold tabular-nums">3</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Cities served</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">8</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Systems Live</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">15%</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Waste Cut</div></div>
+              <div><div className="font-display text-xl font-bold tabular-nums">24/7</div><div className="font-mono text-[10px] tracking-wide uppercase text-text-tertiary">Cold Chain</div></div>
             </div>
           </div>
 
