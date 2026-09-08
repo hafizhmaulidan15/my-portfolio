@@ -88,8 +88,8 @@ const Hero = () => {
                                             <i className="bi bi-building text-[14px]"></i>
                                         </span>
                                         <div>
-                                            <div className="text-sm font-medium leading-none">Production Ops</div>
-                                            <div className="text-xs text-text-tertiary">25K/batch • Lean team</div>
+                                            <div className="text-sm font-medium leading-none">Rumah Susu Indonesia</div>
+                                            <div className="text-xs text-text-tertiary">Dairy • Cheese • Cold Chain</div>
                                         </div>
                                     </div>
                                     <span className="font-mono text-xs px-2 py-1 rounded-full bg-success/10 text-success border border-success/15">Live</span>
