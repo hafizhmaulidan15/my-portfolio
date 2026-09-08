@@ -71,16 +71,16 @@ const Hero = () => {
                             <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
                                 <div className="aspect-[4/3] relative overflow-hidden bg-surface grid grid-cols-2 gap-0">
                                     <div className="relative overflow-hidden">
-                                        <img src="https://picsum.photos/seed/mozzarella-cheese/400/600" alt="Mozzarella cheese  42.2kg avg from 500L" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Mozzarella 10%</span>
+                                        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=400&h=600&fit=crop&crop=center" alt="Peternakan sapi — dairy farm" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Peternakan Sapi</span>
                                     </div>
                                     <div className="relative overflow-hidden border-l border-white/10">
-                                        <img src="https://picsum.photos/seed/cheddar-cheese/400/600" alt="Cheddar cheese  9 trial R&D" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Cheddar 9 trials</span>
+                                        <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=600&fit=crop&crop=center" alt="Proses pembuatan keju — cheese making" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+                                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/90 text-[10px] font-mono tracking-wide text-foreground border border-white/20">Pembuatan Keju</span>
                                     </div>
-                                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur text-[11px] font-mono tracking-wide text-foreground border border-border">Milk • Cheese • Scale</div>
+                                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-full bg-surface/90 backdrop-blur text-[11px] font-mono tracking-wide text-foreground border border-border">Farm • Milk • Cheese</div>
                                 </div>
                                 <div className="p-4 flex items-center justify-between border-t border-border bg-surface">
                                     <div className="flex items-center gap-2.5">
