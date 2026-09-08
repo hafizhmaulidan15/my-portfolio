@@ -18,10 +18,10 @@ const Hero = () => {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center min-h-[100dvh] pt-24 lg:pt-28 pb-12 lg:pb-16">
      {/* Left editorial 7 cols */}
      <div className="lg:col-span-7 space-y-6">
-      <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
-       <span className="h-px w-8 bg-foreground/15 hidden sm:block" aria-hidden="true"></span>
-       Head of Unit Dairy Manufacturing Tasikmalaya
-      </div>
+       <div className="font-mono text-[11px] tracking-[0.2em] text-text-tertiary uppercase flex items-center gap-3">
+        <span className="h-px w-8 bg-foreground/15 hidden sm:block" aria-hidden="true"></span>
+        Head of Unit Dairy Manufacturing
+       </div>
 
       <div className="t-stagger" ref={staggerRef}>
        <h1 className="t-stagger-line font-display text-[42px] sm:text-[54px] lg:text-[64px] font-[800] tracking-[-0.04em] leading-[0.92] text-foreground text-balance">
@@ -69,15 +69,9 @@ const Hero = () => {
      <div className="lg:col-span-5 lg:pl-4">
       <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[2rem]">
        <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
-         <div className="aspect-[4/3] relative overflow-hidden bg-surface grid grid-cols-2 gap-0">
-          <div className="relative overflow-hidden">
-           <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=400&h=600&fit=crop&crop=center" alt="Dairy farm" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+         <div className="aspect-[4/3] relative overflow-hidden bg-surface">
+           <img src="/image.png" alt="Dairy operations" width="800" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-          </div>
-          <div className="relative overflow-hidden border-l border-white/10">
-           <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=600&fit=crop&crop=center" alt="Mozzarella production" width="400" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
-           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-          </div>
          </div>
         <div className="p-4 flex items-center justify-between border-t border-border bg-surface">
          <div className="flex items-center gap-2.5">
@@ -86,7 +80,7 @@ const Hero = () => {
           </span>
            <div>
             <div className="text-sm font-medium leading-none">Rumah Susu Indonesia</div>
-            <div className="text-xs text-text-tertiary">Tasikmalaya</div>
+            <div className="text-xs text-text-tertiary">Head of Unit · Tasikmalaya</div>
            </div>
          </div>
          <span className="font-mono text-xs px-2 py-1 rounded-full bg-success/10 text-success border border-success/15">Live</span>
