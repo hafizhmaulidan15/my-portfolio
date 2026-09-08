@@ -2,17 +2,20 @@
 import { PRODUCTION_API } from '../data/production-config';
 
 const CACHE_KEY = 'rsi-production-impact';
-const CACHE_TTL = 15 * 60 * 1000; // 15 min  localStorage biar tab baru tetap instan
+const CACHE_TTL = 15 * 60 * 1000;
 const RETRY_MAX = 3;
-const RETRY_BASE_DELAY = 400; // 400 → 800 → 1600 (total ~2.8s, dulu 5.6s)
-const FETCH_TIMEOUT = 7000; // 7 detik per request, biar nggak hang
+const RETRY_BASE_DELAY = 400;
+const FETCH_TIMEOUT = 7000;
 
 const FALLBACK_DATA = {
   totalProduction: 53200,
   rejectRate: 0.85,
   avgPerBatch: 2120,
+  totalMoza: 84.4,
+  avgMoza: 42.2,
   cupTrend: [],
   susuTrend: [],
+  mozaTrend: [],
   distributionCities: ['Bogor', 'Sukabumi', 'Lampung'],
 };
 
@@ -21,11 +24,10 @@ function fetchWithTimeout(url, signal, timeout = FETCH_TIMEOUT) {
   const onAbort = () => ctrl.abort();
   if (signal) signal.addEventListener('abort', onAbort);
   const timer = setTimeout(() => ctrl.abort(), timeout);
-  return fetch(url, { signal: ctrl.signal })
-    .finally(() => {
-      clearTimeout(timer);
-      if (signal) signal.removeEventListener('abort', onAbort);
-    });
+  return fetch(url, { signal: ctrl.signal }).finally(() => {
+    clearTimeout(timer);
+    if (signal) signal.removeEventListener('abort', onAbort);
+  });
 }
 
 function fetchWithRetry(url, signal, retries = RETRY_MAX) {
@@ -43,6 +45,41 @@ function fetchWithRetry(url, signal, retries = RETRY_MAX) {
   return attempt(0);
 }
 
+async function fetchJsonSafe(res) {
+  const text = await res.text();
+  if (text.trim().startsWith('<!DOCTYPE') || text.trim().startsWith('<html')) {
+    throw new Error('Apps Script error — sheet not found or script error');
+  }
+  try {
+    return JSON.parse(text);
+  } catch {
+    throw new Error('Invalid JSON from Apps Script');
+  }
+}
+
+async function fetchSheet(sheetName, signal) {
+  const url = `${PRODUCTION_API.URL}?sheet=${encodeURIComponent(sheetName)}`;
+  const res = await fetchWithRetry(url, signal);
+  return fetchJsonSafe(res);
+}
+
+async function fetchMozaWithFallback(signal) {
+  for (const name of PRODUCTION_API.SHEETS.MOZA_ALTS) {
+    try {
+      const data = await fetchSheet(name, signal);
+      if (Array.isArray(data) && data.length > 0) {
+        return { data, sheetUsed: name };
+      }
+      // empty array still counts as found, but try next if completely empty and we want to try others? keep first successful
+      if (Array.isArray(data)) return { data, sheetUsed: name };
+    } catch (e) {
+      // try next alt name
+      continue;
+    }
+  }
+  return { data: [], sheetUsed: null };
+}
+
 function readCache() {
   try {
     const raw = localStorage.getItem(CACHE_KEY);
@@ -54,7 +91,7 @@ function readCache() {
 }
 
 function writeCache(data) {
-  try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data })); } catch { /* quota */ }
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data })); } catch {}
 }
 
 function parseDate(val) {
@@ -104,6 +141,25 @@ function parseSheetTrend(rows, field = 'In', minValue = 0) {
     .filter(item => item.value > 0);
 }
 
+function parseMozaTrend(rows) {
+  // Moza sheet expected columns: Tgl, Keluar/Out/Qty, Keterangan, etc. Try common fields
+  if (!Array.isArray(rows) || rows.length === 0) return { trend: [], total: 0 };
+  // try to detect quantity field: Qty, Jumlah, Keluar, Out, Berat, Kg
+  const sample = rows[0] || {};
+  const keys = Object.keys(sample);
+  const qtyKey = keys.find(k => /qty|jumlah|keluar|out|berat|kg|pcs/i.test(k)) || 'Qty';
+  const trend = parseSheetTrend(rows, qtyKey, 10);
+  let total = 0;
+  rows.forEach(row => {
+    const ket = (row.Keterangan || row.keterangan || '').toString().toLowerCase();
+    if (ket.includes('test')) return;
+    const d = parseDate(row.Tgl || row.tgl);
+    if (!d) return;
+    total += cleanNum(row[qtyKey] || row[qtyKey.toLowerCase()] || 0);
+  });
+  return { trend, total };
+}
+
 export function useProductionImpact() {
   const cached = readCache();
   const initial = cached || FALLBACK_DATA;
@@ -122,23 +178,21 @@ export function useProductionImpact() {
     abortRef.current = ctrl;
     if (!background) setError(null);
     try {
-      const [summaryRes, cupRes, susuRes] = await Promise.all([
-        fetchWithRetry(`${PRODUCTION_API.URL}?action=summary`, ctrl.signal),
-        fetchWithRetry(`${PRODUCTION_API.URL}?sheet=cup 130 ml`, ctrl.signal),
-        fetchWithRetry(`${PRODUCTION_API.URL}?sheet=susu`, ctrl.signal),
-      ]);
-
-      const [summary, cupRows, susuRows] = await Promise.all([
-        summaryRes.json(),
-        cupRes.json(),
-        susuRes.json(),
+      // Fetch core sheets in parallel with individual error handling — summary failure should not block trends
+      const [summarySettled, cupSettled, susuSettled] = await Promise.allSettled([
+        fetchWithRetry(`${PRODUCTION_API.URL}?action=summary`, ctrl.signal).then(fetchJsonSafe),
+        fetchWithRetry(`${PRODUCTION_API.URL}?sheet=${encodeURIComponent(PRODUCTION_API.SHEETS.CUP)}`, ctrl.signal).then(fetchJsonSafe),
+        fetchWithRetry(`${PRODUCTION_API.URL}?sheet=${encodeURIComponent(PRODUCTION_API.SHEETS.SUSU)}`, ctrl.signal).then(fetchJsonSafe),
       ]);
 
       if (ctrl.signal.aborted) return;
-      if (!Array.isArray(summary)) throw new Error('Invalid summary format');
 
-      const susuSummary = summary.find((s) => s.name === 'susu');
-      const totalProduction = susuSummary ? (susuSummary.totalIn || 0) : 0;
+      const summary = summarySettled.status === 'fulfilled' && Array.isArray(summarySettled.value) ? summarySettled.value : null;
+      const cupRows = cupSettled.status === 'fulfilled' && Array.isArray(cupSettled.value) ? cupSettled.value : [];
+      const susuRows = susuSettled.status === 'fulfilled' && Array.isArray(susuSettled.value) ? susuSettled.value : [];
+
+      const susuSummary = summary ? summary.find((s) => s.name === 'susu') : null;
+      const totalProduction = susuSummary ? (susuSummary.totalIn || 0) : dataRef.current?.totalProduction || FALLBACK_DATA.totalProduction;
 
       const cupTrend = Array.isArray(cupRows) ? parseSheetTrend(cupRows, 'Out', 4000) : [];
       let rejectTotal = 0;
@@ -152,18 +206,37 @@ export function useProductionImpact() {
           if (ket.includes('reject') || ket.includes('afkir')) rejectTotal += outVal;
         });
       }
-      const rejectRate = totalCupOut > 0 ? Math.round((rejectTotal / totalCupOut) * 10000) / 100 : 0;
+      const rejectRate = totalCupOut > 0 ? Math.round((rejectTotal / totalCupOut) * 10000) / 100 : dataRef.current?.rejectRate || FALLBACK_DATA.rejectRate;
 
       const susuTrend = Array.isArray(susuRows) ? parseSheetTrend(susuRows, 'In', 800) : [];
       const batchCount = susuTrend.length;
-      const avgPerBatch = batchCount > 0 ? Math.round(totalProduction / batchCount) : 0;
+      const avgPerBatch = batchCount > 0 ? Math.round(totalProduction / batchCount) : dataRef.current?.avgPerBatch || FALLBACK_DATA.avgPerBatch;
+
+      // Moza — optional, never block core metrics
+      let mozaTrend = [];
+      let totalMoza = 0;
+      let avgMoza = 0;
+      try {
+        const { data: mozaRows } = await fetchMozaWithFallback(ctrl.signal);
+        if (Array.isArray(mozaRows) && mozaRows.length > 0) {
+          const parsed = parseMozaTrend(mozaRows);
+          mozaTrend = parsed.trend;
+          totalMoza = parsed.total;
+          avgMoza = mozaTrend.length ? Math.round(totalMoza / mozaTrend.length) : 0;
+        }
+      } catch {
+        // keep fallback
+      }
 
       const next = {
         totalProduction: totalProduction || dataRef.current?.totalProduction || FALLBACK_DATA.totalProduction,
         rejectRate: rejectRate || dataRef.current?.rejectRate || FALLBACK_DATA.rejectRate,
         avgPerBatch: avgPerBatch || dataRef.current?.avgPerBatch || FALLBACK_DATA.avgPerBatch,
+        totalMoza: totalMoza || dataRef.current?.totalMoza || FALLBACK_DATA.totalMoza,
+        avgMoza: avgMoza || dataRef.current?.avgMoza || FALLBACK_DATA.avgMoza,
         cupTrend: cupTrend.length ? cupTrend : dataRef.current?.cupTrend || [],
         susuTrend: susuTrend.length ? susuTrend : dataRef.current?.susuTrend || [],
+        mozaTrend: mozaTrend.length ? mozaTrend : dataRef.current?.mozaTrend || [],
         distributionCities: ['Bogor', 'Sukabumi', 'Lampung'],
       };
       setData(next);
@@ -171,7 +244,6 @@ export function useProductionImpact() {
       setError(null);
     } catch (err) {
       if (err.name === 'AbortError') return;
-      // fallback sudah tampil, jangan timpa dengan error kalau ada data
       if (!dataRef.current || dataRef.current === FALLBACK_DATA) {
         setData(FALLBACK_DATA);
       }
@@ -185,7 +257,6 @@ export function useProductionImpact() {
   }, []);
 
   useEffect(() => {
-    // SWR: if cached, revalidate in background  first visit pakai FALLBACK langsung, jadi nggak skeleton lama
     fetchData({ background: !!cached });
     const interval = setInterval(() => fetchData({ background: true }), 300000);
     return () => {

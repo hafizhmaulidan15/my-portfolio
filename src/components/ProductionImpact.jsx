@@ -74,7 +74,10 @@ const ProductionImpact = () => {
               <div className="h-[140px] rounded-xl bg-surface border border-border animate-pulse"></div>
               <div className="h-[140px] rounded-xl bg-surface border border-border animate-pulse"></div>
             </div>
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
+                <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
+              </div>
               <div className="p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
                 <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
               </div>
@@ -97,15 +100,16 @@ const ProductionImpact = () => {
                 <div className="text-sm text-text-tertiary">cup 130 ml • target &lt;1%</div>
               </div>
               <div className="md:col-span-4 p-6 rounded-xl bg-surface border border-border">
-                <div className="flex items-center gap-2 font-mono text-[11px] tracking-wide uppercase text-text-tertiary"><i className="bi bi-flask text-[14px]"></i> Mozzarella First Batch</div>
-                <div className="mt-2 font-display text-[28px] font-bold tabular-nums">211 pcs avg (422 total)</div>
-                <div className="text-sm text-text-tertiary">42.2 kg avg from 500 L • 10% yield • shipped to Bogor</div>
+                <div className="flex items-center gap-2 font-mono text-[11px] tracking-wide uppercase text-text-tertiary"><i className="bi bi-flask text-[14px]"></i> Mozzarella — Live</div>
+                <div className="mt-2 font-display text-[28px] font-bold tabular-nums">{data.totalMoza ? formatNumber(data.totalMoza) : '—'} <span className="text-base font-medium">pcs</span></div>
+                <div className="text-sm text-text-tertiary">total • avg {data.avgMoza ? formatNumber(data.avgMoza) : '—'} pcs • 10% yield</div>
               </div>
             </div>
 
-            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ProductionBarChart data={data.cupTrend} title="Cup Production  Out trend" unit="Units" />
-              <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed  In trend" unit="L" />
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <ProductionBarChart data={data.cupTrend} title="Cup Production — Out trend" unit="Units" />
+              <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed — In trend" unit="L" />
+              <ProductionBarChart data={data.mozaTrend} title="Mozzarella — Out trend" unit="pcs" />
             </div>
             <div className="mt-6">
               <PointsChart
