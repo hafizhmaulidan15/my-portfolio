@@ -27,11 +27,6 @@
       href: "mailto:mhafizh.maulidan@gmail.com",
     },
     {
-      icon: <i className="bi bi-telephone text-[16px] text-[#3ca2fa]"></i>,
-      text: "+62 895-4026-6775",
-      href: "https://api.whatsapp.com/send/?phone=0895402667755&text=Halo%20Hafizh%2C%20senang%20berkenalan%20dengan%20Anda.%20Saya%20%5BNama%5D%20dari%20%5BPerusahaan%5D%2C%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20kolaborasi%20di%20bidang%20Operations%20%26%20Production%20Management.%20Mohon%20info%20waktu%20yang%20tepat%20untuk%20terhubung.%20Terima%20kasih.&type=phone_number&app_absent=0",
-    },
-    {
       icon: <i className="bi bi-geo-alt text-[16px] text-[#3ca2fa]"></i>,
       text: "Tasikmalaya / Bogor, Indonesia",
     },
