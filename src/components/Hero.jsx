@@ -70,7 +70,7 @@ const Hero = () => {
       <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[2rem]">
        <div className="relative bg-surface rounded-[1.4rem] overflow-hidden border border-black/[0.06] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_12px_40px_rgba(232,238,246,0.08)]">
          <div className="aspect-[4/3] relative overflow-hidden bg-surface">
-           <img src="/image.png" alt="Dairy operations" width="800" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
+           <img src="/image.png" alt="Dairy operations at Rumah Susu Indonesia — Tasikmalaya production floor" width="800" height="600" loading="eager" decoding="async" fetchPriority="high" className="w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
          </div>
         <div className="p-4 flex items-center justify-between border-t border-border bg-surface">

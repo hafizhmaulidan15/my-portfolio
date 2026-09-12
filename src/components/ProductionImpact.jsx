@@ -4,6 +4,7 @@ import { useProductionImpact } from '../hooks/useProductionData';
 import { PointsChart } from '@/components/ui/points-chart';
 import { LoaderBars } from '@/components/ui/loaders-bars';
 import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+import { motion } from 'framer-motion';
 import MeasuredChartGate from '@/components/ui/MeasuredChartGate';
 
 function formatNumber(n) {
@@ -23,7 +24,16 @@ function ChartTooltip({ active, payload, label, unit }) {
 
 const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit }) {
  if (!data || data.length === 0) {
- return null;
+  return (
+    <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.5rem] opacity-60">
+      <div className="bg-surface rounded-[1.1rem] border border-border p-6">
+        <h3 className="font-medium text-sm mb-6 tracking-wide">{title}</h3>
+        <div className="w-full h-[260px] flex items-center justify-center">
+          <LoaderBars barWidth={8} barHeight={64} gap={6} count={5} color="var(--primary)" />
+        </div>
+      </div>
+    </div>
+  );
  }
   return (
     <div className="p-1.5 bg-gradient-icon ring-1 ring-primary/10 rounded-[1.5rem]">
@@ -32,8 +42,8 @@ const ProductionBarChart = memo(function ProductionBarChart({ data, title, unit 
         <div className="w-full h-[260px]">
    <MeasuredChartGate>
    <BarChart data={data} margin={{ top: 5, right: 5, left: -15, bottom: 0 }}>
-    <XAxis dataKey="date" tick={{ fill: '#6B7A90', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={{ stroke: 'rgba(232,238,246,0.08)' }} interval="preserveStartEnd" />
-    <YAxis tick={{ fill: '#6B7A90', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={false} tickFormatter={v => v >= 1000 ? (v/1000).toFixed(0) + 'K' : v} width={34} />
+     <XAxis dataKey="date" tick={{ fill: '#8FA0B8', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={{ stroke: 'rgba(232,238,246,0.08)' }} interval="preserveStartEnd" />
+     <YAxis tick={{ fill: '#8FA0B8', fontSize: 11, fontFamily: 'Geist, monospace' }} tickLine={false} axisLine={false} tickFormatter={v => v >= 1000 ? (v/1000).toFixed(0) + 'K' : v} width={34} />
     <Tooltip content={<ChartTooltip unit={unit} />} cursor={{ fill: 'rgba(232,238,246,0.04)' }} />
     <Bar dataKey="value" fill="#5B8DD1" radius={[6, 6, 0, 0]} barCategoryGap="22%" />
    </BarChart>
@@ -74,17 +84,17 @@ const ProductionImpact = () => {
     <div className="h-[140px] rounded-xl bg-surface border border-border animate-pulse"></div>
     <div className="h-[140px] rounded-xl bg-surface border border-border animate-pulse"></div>
    </div>
-   <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-    <div className="p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
-    <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
+    <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+     <div className="lg:col-span-7 p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
+     <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
+     </div>
+     <div className="lg:col-span-5 p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
+     <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
+     </div>
+     <div className="lg:col-span-12 p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
+     <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
+     </div>
     </div>
-    <div className="p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
-    <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
-    </div>
-    <div className="p-1.5 bg-surface border border-border rounded-[1.5rem] h-[260px] flex items-center justify-center">
-    <LoaderBars barWidth={10} barHeight={90} gap={8} count={5} color="var(--primary)" />
-    </div>
-   </div>
    </>
   ) : (
    <>
@@ -112,11 +122,23 @@ const ProductionImpact = () => {
      </div>
    </div>
 
-            <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <ProductionBarChart data={data.cupTrend} title="Cup Production Out Trend" unit="Units" />
-              <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed In Trend" unit="L" />
-              <ProductionBarChart data={data.mozaTrend} title="Mozzarella Production" unit="pcs" />
-            </div>
+             <motion.div
+               className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6"
+               initial="hidden"
+               whileInView="show"
+               viewport={{ once: true, margin: "-80px" }}
+               variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12 } } }}
+             >
+               <motion.div className="lg:col-span-7" variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 20 } } }}>
+                 <ProductionBarChart data={data.cupTrend} title="Cup Production Out Trend" unit="Units" />
+               </motion.div>
+               <motion.div className="lg:col-span-5" variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 20 } } }}>
+                 <ProductionBarChart data={data.susuTrend} title="Raw Milk Processed In Trend" unit="L" />
+               </motion.div>
+               <motion.div className="lg:col-span-12" variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 20 } } }}>
+                 <ProductionBarChart data={data.mozaTrend} title="Mozzarella Production" unit="pcs" />
+               </motion.div>
+             </motion.div>
             <div className="mt-8">
     <PointsChart
     title="Weekly Quality Points Demo"

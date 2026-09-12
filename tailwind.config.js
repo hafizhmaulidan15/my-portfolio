@@ -12,8 +12,8 @@ export default {
         'surface-hover': '#252529',
         foreground: '#CBD5E1',
         'text-secondary': '#94A3B8',
-        'text-tertiary': '#6B7A90',
-        'text-muted': '#8A9AB0',
+        'text-tertiary': '#8FA0B8',
+        'text-muted': '#9AA8C0',
         'border-light': 'rgba(203,213,225,0.14)',
         'border': 'rgba(203,213,225,0.08)',
         'tory-blue': {

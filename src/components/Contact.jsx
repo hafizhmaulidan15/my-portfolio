@@ -1,5 +1,5 @@
 ﻿import { useState, useRef } from 'react';
-import { PaperPlaneTilt, CheckCircle, Spinner, WarningCircle, CaretDown } from '@phosphor-icons/react';
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,6 +10,7 @@ const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
 
 const Contact = () => {
   const container = useRef();
+  const navigate = useNavigate();
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
   const [errors, setErrors] = useState({});
@@ -68,9 +69,8 @@ const Contact = () => {
         }),
       });
       if (!res.ok) throw new Error('Submit failed');
-      setStatus('success');
       setForm({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setStatus('idle'), 5000);
+      navigate('/thank-you');
     } catch {
       setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);

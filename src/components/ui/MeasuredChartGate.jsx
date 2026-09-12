@@ -1,6 +1,8 @@
 // @ts-check
 import { cloneElement, useLayoutEffect, useRef, useState } from 'react';
 
+import { LoaderBars } from '@/components/ui/loaders-bars';
+
 export default function MeasuredChartGate({ children, className, style }) {
   const ref = useRef(null);
   const [size, setSize] = useState(null);
@@ -27,7 +29,13 @@ export default function MeasuredChartGate({ children, className, style }) {
 
   return (
     <div ref={ref} className={className} style={{ width: '100%', height: '100%', ...style }}>
-      {size ? cloneElement(children, { width: size.width, height: size.height }) : null}
+      {size ? (
+        cloneElement(children, { width: size.width, height: size.height })
+      ) : (
+        <div className="w-full h-full flex items-center justify-center bg-surface/50 rounded-lg animate-pulse">
+          <LoaderBars barWidth={8} barHeight={64} gap={6} count={5} color="var(--primary)" />
+        </div>
+      )}
     </div>
   );
 }

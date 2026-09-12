@@ -18,7 +18,7 @@ const About = () => {
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-[14px] overflow-hidden ring-1 ring-white/10 bg-surface">
-                <img src="/profile-avatar.png" alt="Muhammad Hafizh Maulidan" width="64" height="64" loading="lazy" decoding="async" className="w-full h-full object-cover object-[center_30%]" onError={(e)=>{e.target.src="https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=E8E0D5&color=1A1E23&size=128"}} />
+                <img src="/profile-avatar.jpg" alt="Muhammad Hafizh Maulidan headshot — Head of Unit, Rumah Susu Indonesia" width="64" height="64" loading="lazy" decoding="async" className="w-full h-full object-cover object-center" onError={(e)=>{e.target.src="https://ui-avatars.com/api/?name=Hafizh+Maulidan&background=E8E0D5&color=1A1E23&size=128"}} />
               </div>
               <div>
                 <div className="font-display text-[17px] font-semibold leading-none">Muhammad Hafizh Maulidan</div>

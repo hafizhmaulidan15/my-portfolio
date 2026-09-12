@@ -48,7 +48,7 @@
                 <i className="bi bi-building text-[18px]"></i>
               </span>
               <span className="text-foreground text-xl font-bold tracking-tight">Hafizh</span>
-              <span className="text-text-tertiary text-sm">• Dairy Ops</span>
+              <span className="text-text-tertiary text-sm">• Dairy Manufacturing</span>
             </div>
             <p className="text-sm leading-relaxed text-text-secondary max-w-[28ch] text-pretty">
               Head of Unit  Rumah Susu Indonesia. Scaling dairy production from intake to cold chain with data-driven SOPs and lean team execution.
@@ -107,9 +107,12 @@
               </a>
             ))}
           </div>
-          <p className="text-center md:text-left font-mono text-xs tracking-wide text-text-tertiary">
-            &copy; {currentYear} Muhammad Hafizh Maulidan  Ops • Dairy Manufacturing
-          </p>
+          <div className="flex items-center gap-4">
+            <a href="/privacy" className="font-mono text-xs tracking-wide text-text-tertiary hover:text-foreground transition-colors">Privacy</a>
+            <p className="text-center md:text-left font-mono text-xs tracking-wide text-text-tertiary">
+              &copy; {currentYear} Muhammad Hafizh Maulidan — Dairy Manufacturing
+            </p>
+          </div>
         </div>
       </div>
     </footer>

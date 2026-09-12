@@ -19,6 +19,8 @@ const ProductionImpact = lazy(() => import('./components/ProductionImpact'));
 const BackToTop = lazy(() => import('./components/BackToTop'));
 const TubelightDemo = lazy(() => import('./components/ui/tubelight-demo'));
 const AchievementsPage = lazy(() => import('./components/AchievementsPage'));
+const ThankYou = lazy(() => import('./components/ThankYou'));
+const Privacy = lazy(() => import('./components/Privacy'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -60,6 +62,8 @@ function App() {
                 <Route path="/publications" element={<Publications />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/achievements" element={<AchievementsPage />} />
+                <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="/privacy" element={<Privacy />} />
                 <Route path="/tubelight-demo" element={<TubelightDemo />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
