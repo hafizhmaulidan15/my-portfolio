@@ -110,7 +110,7 @@
           <div className="flex items-center gap-4">
             <a href="/privacy" className="font-mono text-xs tracking-wide text-text-tertiary hover:text-foreground transition-colors">Privacy</a>
             <p className="text-center md:text-left font-mono text-xs tracking-wide text-text-tertiary">
-              &copy; {currentYear} Muhammad Hafizh Maulidan — Dairy Manufacturing
+              &copy; {currentYear} Muhammad Hafizh Maulidan - Dairy Manufacturing
             </p>
           </div>
         </div>

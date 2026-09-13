@@ -102,7 +102,7 @@ const Contact = () => {
             </h2>
 
             <p className="text-text-secondary text-[16px] md:text-[17px] leading-relaxed max-w-[60ch] text-pretty">
-              I run operations on the floor — SOPs, QC, yield, and the team that makes it repeatable.
+              I run operations on the floor. SOPs, QC, yield, and the team that makes it repeatable.
               Open to production and operations roles beyond one city, including abroad. If your line needs owning, inbox is open.
             </p>
           </div>

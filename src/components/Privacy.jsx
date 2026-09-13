@@ -12,7 +12,7 @@ const Privacy = () => {
           <div className="space-y-3">
             <h2 className="font-semibold text-foreground text-[18px] tracking-tight">What is collected</h2>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Contact form: name, email, subject, message — sent via Web3Forms to the owner inbox.</li>
+              <li>Contact form: name, email, subject, message - sent via Web3Forms to the owner inbox.</li>
               <li>Production Impact: reads public Google Sheets summary via Apps Script (no auth, no PII).</li>
               <li>Analytics: Vercel Web Analytics (privacy-friendly, no cookies).</li>
             </ul>

@@ -9,7 +9,7 @@ const ThankYou = () => {
         </div>
         <h1 className="mt-6 font-display text-[32px] md:text-[40px] font-[800] tracking-[-0.03em] leading-[0.9] text-foreground">Message sent.</h1>
         <p className="mt-4 text-[16px] leading-relaxed text-text-secondary max-w-[42ch] mx-auto text-pretty">
-          Thanks for reaching out — I reply within 24 hours. If it is urgent, email me directly at{' '}
+          Thanks for reaching out. I reply within 24 hours. If it is urgent, email me directly at{' '}
           <a href="mailto:mhafizh.maulidan@gmail.com" className="underline decoration-primary/30 underline-offset-4 hover:decoration-primary text-foreground">mhafizh.maulidan@gmail.com</a>.
         </p>
         <div className="mt-8 flex flex-wrap gap-3 justify-center">

@@ -41,7 +41,7 @@ test.describe('portfolio smoke', () => {
 });
 
 // Hero uses random Unsplash images, so a fixed baseline screenshot is flaky by design.
-test.skip('visual regression — hero baseline', async ({ page }) => {
+test.skip('visual regression, hero baseline', async ({ page }) => {
   await page.goto('/');
   await page.waitForTimeout(800);
   await expect(page).toHaveScreenshot('hero.png', { maxDiffPixels: 300, threshold: 0.2 });

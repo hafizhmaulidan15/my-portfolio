@@ -1,7 +1,7 @@
-# Routing Map — Web Portfolio
+# Routing Map, Web Portfolio
 
 > Base URL: `https://portfolio-muhammad-hafizh-maulidan.vercel.app`
-> Router: `react-router-dom v7` — `src/App.jsx` (BrowserRouter, lazy + Suspense)
+> Router: `react-router-dom v7`, `src/App.jsx` (BrowserRouter, lazy + Suspense)
 > Semua halaman prerender via `scripts/prerender.mjs` + `public/sitemap.xml`
 
 ## 1. Daftar Route Aktif
@@ -20,7 +20,7 @@
 | `/tubelight-demo` | `TubelightDemo` | `src/components/ui/tubelight-demo.tsx` | *(fallback `/`)* | ❌ (demo) | ❌ |
 | `*` | `NotFound` | `src/components/NotFound.jsx` | `404` | ❌ | ❌ |
 
-> **Hidden:** `/projects` — file `src/components/Projects.jsx` masih ada tapi **route dihapus** (`src/App.jsx:60` di-comment), tidak ada di `Navbar`, `sitemap.xml`, `prerender.mjs`, atau `usePageMeta`. Akses langsung `/projects` → `NotFound`.
+> **Hidden:** `/projects`, file `src/components/Projects.jsx` masih ada tapi **route dihapus** (`src/App.jsx:60` di-comment), tidak ada di `Navbar`, `sitemap.xml`, `prerender.mjs`, atau `usePageMeta`. Akses langsung `/projects` → `NotFound`.
 
 ## 2. Navigasi Utama
 
@@ -30,11 +30,11 @@
 - **Social (both):** `https://github.com/hafizhmaulidan15` (external `_blank`), `https://www.linkedin.com/in/hafizhmaulidan/` (external)
 
 ### Footer `src/components/Footer.jsx`
-- **Explore:** `About (/about)`, `Skills (/skills)`, `Experience (/experience)`, `Achievements (/achievements)` — *sebelumnya Projects → sekarang Achievements*
+- **Explore:** `About (/about)`, `Skills (/skills)`, `Experience (/experience)`, `Achievements (/achievements)`, *sebelumnya Projects → sekarang Achievements*
 - **Operations:** `Impact (/impact)`, `Contact (/contact)`, `Achievements (/experience#leadership-journal)` dengan pulse dot
 - **Contact:** `mailto:mhafizh.maulidan@gmail.com`, `tel:+6289603818819`, `Tasikmalaya / Bogor` (no link)
 - **Social:** GitHub / LinkedIn same as Navbar
-- **Bottom:** `©` + `Privacy (/#)` `Terms (/#)` (placeholder `#` — tidak navigasi)
+- **Bottom:** `©` + `Privacy (/#)` `Terms (/#)` (placeholder `#`, tidak navigasi)
 
 ## 3. Link yang Bisa Di-Klik per Halaman
 
@@ -44,7 +44,7 @@
 - `Live Impact →` → `/impact`
 - `Start a conversation` (pill) → `/contact`
 - `View achievements` (underline) → `/achievements` (sebelumnya `/projects`)
-- Stats `12 / 3 / 3` — non-klik
+- Stats `12 / 3 / 3`, non-klik
 
 ### AchievementsPage `src/components/AchievementsPage.jsx`
 - `← Experience` → `/experience`
@@ -56,19 +56,19 @@
 ### Other Pages
 - **About, Skills, Experience, Impact, Certifications, Publications, Contact:** Tidak ada internal link utama selain via `Navbar`/`Footer`. `Experience` Leadership Journal cards punya `Related to: Pembuatan Mozzarela` (text, no link).
 - **NotFound `src/components/NotFound.jsx`:** `Back home → /`
-- **Tubelight Demo `src/components/ui/tubelight-demo.tsx`:** Demo pill nav `Home (/)`, `About (/about)`, `Achievements (/achievements)`, `Resume (/contact)` — isolated demo, tidak dipakai global.
+- **Tubelight Demo `src/components/ui/tubelight-demo.tsx`:** Demo pill nav `Home (/)`, `About (/about)`, `Achievements (/achievements)`, `Resume (/contact)`, isolated demo, tidak dipakai global.
 
 ### External Links (semua `_blank` + `rel="noopener noreferrer"`)
-- `https://github.com/hafizhmaulidan15` — Navbar (2x), Footer, AchievementsPage, Contact peripheral
-- `https://www.linkedin.com/in/hafizhmaulidan/` — Navbar (2x), Footer
-- `mailto:` / `tel:` — Contact + Footer
-- `https://picsum.photos/seed/...` — Hero, Projects (images, Unsplash stock, exist)
+- `https://github.com/hafizhmaulidan15`, Navbar (2x), Footer, AchievementsPage, Contact peripheral
+- `https://www.linkedin.com/in/hafizhmaulidan/`, Navbar (2x), Footer
+- `mailto:` / `tel:`, Contact + Footer
+- `https://picsum.photos/seed/...`, Hero, Projects (images, Unsplash stock, exist)
 
 ## 4. Peta Visual (Mermaid)
 
 ```mermaid
 flowchart LR
-    subgraph Nav [Navbar — 7 links]
+    subgraph Nav [Navbar, 7 links]
       Home --> About --> Skills --> Experience --> Impact --> Achievements --> Contact
     end
     Hero -- "Explore Achievements" --> Achievements
@@ -88,9 +88,9 @@ flowchart LR
 
 - [x] Tidak ada link ke `/projects` yang aktif di `src` (hanya `README.md:51` docs, tidak klikable)
 - [x] Semua `to="/..."` di `src` mengarah ke route yang ada di `src/App.jsx:54-64`
-- [x] `src/hooks/usePageMeta.js` & `scripts/prerender.mjs` sinkron — hapus `/projects`, tambah `/achievements`
-- [x] `public/sitemap.xml` sinkron — ganti `/projects` → `/achievements`
-- [x] `tests/e2e.spec.js` sinkron — `routes` array ganti `/projects` → `/achievements`
+- [x] `src/hooks/usePageMeta.js` & `scripts/prerender.mjs` sinkron, hapus `/projects`, tambah `/achievements`
+- [x] `public/sitemap.xml` sinkron, ganti `/projects` → `/achievements`
+- [x] `tests/e2e.spec.js` sinkron, `routes` array ganti `/projects` → `/achievements`
 - [x] `index.html` JSON-LD `BreadcrumbList` posisi 5 ganti `Projects` → `Achievements`, `ItemList` id/name/url ganti ke `#achievements`
 - [x] `NotFound` catch-all `*` untuk URL salah
 - [x] `Skip to content` (`App.jsx:46` `href="#main-content"`) untuk a11y

@@ -32,7 +32,7 @@ const routes = {
   },
   '/achievements': {
     title: 'Achievements | Muhammad Hafizh Maulidan',
-    description: 'Milestones and achievements — milk quality digitalization, mozzarella first production, SOP standardization, and distribution SOPs.',
+    description: 'Milestones and achievements, milk quality digitalization, mozzarella first production, SOP standardization, and distribution SOPs.',
   },
 };
 
@@ -40,7 +40,7 @@ const dist = 'dist';
 const base = 'https://portfolio-muhammad-hafizh-maulidan.vercel.app';
 
 if (!existsSync(join(dist, 'index.html'))) {
-  console.log('[prerender] dist/index.html not found — skip');
+  console.log('[prerender] dist/index.html not found, skip');
   process.exit(0);
 }
 

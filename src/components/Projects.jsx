@@ -10,7 +10,7 @@
       bullets: ['Timeline: May 12 planning, May 23–25 mixer unboxing, Jun 16–17 500L 4× cheese vat, Jun 19 packing, Jun 23 ship to Zarafa Bogor', 'Blockers: inverter failure, detached blade, boiler water chemical → Jun 9 REJECT bitter/sour, 20L trial failed', 'SOP: hygiene → lactoscan → stretch/taste → chill/vacuum + Production Form Jun 16'],
       stats: [{ v: '10%', l: 'yield' }, { v: '211', l: 'pcs @200g avg' }, { v: '500L', l: 'TS 11.8%' }],
       href: '#',
-      postmortem: ['Boiler chemical water → use mineral water only', 'Repacked cup milk no stretch → use fresh milk', 'Cheese vat saves 80L/CIP vs PHE', 'Perforated plate for curd draining', 'Tasik 10% yield target met, next avg optimization', '500L heating 4h55m — boiler review'],
+      postmortem: ['Boiler chemical water → use mineral water only', 'Repacked cup milk no stretch → use fresh milk', 'Cheese vat saves 80L/CIP vs PHE', 'Perforated plate for curd draining', 'Tasik 10% yield target met, next avg optimization', '500L heating 4h55m - boiler review'],
     },
     {
       id: 1,
@@ -18,11 +18,11 @@
       title: 'Processed Cheddar Development',
       period: 'May–July 2026 9 Trials',
       image: 'https://picsum.photos/seed/cheddar-rd/800/500',
-      description: 'From coarse floury kitchen mixer to 113.8% final chopper. Explored curd/EMC, water, heat, color, and flavor breakthrough Toffieco vs Mohler — chopper won.',
+      description: 'From coarse floury kitchen mixer to 113.8% final chopper. Explored curd/EMC, water, heat, color, and flavor breakthrough Toffieco vs Mohler. Chopper won.',
       bullets: ['Trials 1 kitchen mixer coarse, 2–4 curd/EMC & water, 5–6 texture/color, 7 Toffieco/Mohler, 8 separate starch, 9 final chopper', 'Mohler savory selected, separate starch via chopper as final SOP', 'Target: semi-industrial mixer for commercial scale'],
       stats: [{ v: '113.8%', l: 'yield T9' }, { v: '9', l: 'trials' }, { v: 'Mohler', l: 'flavor' }],
       href: '#',
-      postmortem: ['Kitchen mixer underpowered → semi-industrial', 'SHMP hydrolyzes >60°C', 'Separate starch removes floury taste', 'Mohler > Toffieco for savory cheddar', 'Cold storage does not reduce water — showcase needed'],
+      postmortem: ['Kitchen mixer underpowered → semi-industrial', 'SHMP hydrolyzes >60°C', 'Separate starch removes floury taste', 'Mohler > Toffieco for savory cheddar', 'Cold storage does not reduce water - showcase needed'],
     },
   ];
 
