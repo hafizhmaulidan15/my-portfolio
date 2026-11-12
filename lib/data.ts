@@ -74,7 +74,7 @@ export const PORTFOLIO_DATA = {
     name: "Muhammad Hafizh Maulidan",
     shortName: "Hafizh Maulidan",
     title: "Head of Unit Dairy Manufacturing",
-    company: "PT MAHARANI AGRO PERKASA (Rumah Susu Indonesia)",
+    company: "Rumah Susu Indonesia",
     unit: "Tasikmalaya Plant",
     location: "Tasikmalaya / Bogor, West Java, Indonesia",
     email: "mhafizh.maulidan@gmail.com",
@@ -329,7 +329,7 @@ export const PORTFOLIO_DATA = {
   education: [
     {
       institution: "Institut Pertanian Bogor (IPB University)",
-      school: "Sekolah Vokasi IPB",
+      school: "IPB University",
       degree: "Bachelor of Technology",
       field: "Computer Engineering Technology",
       period: "Aug 2021 – Aug 2025",

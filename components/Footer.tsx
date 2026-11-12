@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="flex items-center gap-4 text-[#6B7280]">
             <span>Rumah Susu Indonesia</span>
             <span>·</span>
-            <span>Sekolah Vokasi IPB</span>
+            <span>IPB University</span>
             <span>·</span>
             <span>Computer Engineering Tech</span>
           </div>

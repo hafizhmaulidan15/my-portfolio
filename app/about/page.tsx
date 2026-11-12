@@ -71,27 +71,27 @@ export default function AboutPage() {
                   Head of Unit Dairy Manufacturing
                 </span>
                 <span className="text-xs text-gray-300 block">
-                  PT MAHARANI AGRO PERKASA (Rumah Susu Indonesia) · Tasikmalaya Plant
+                  Rumah Susu Indonesia · Tasikmalaya Plant
                 </span>
               </div>
 
               <div className="pb-3 border-b border-white/10">
                 <span className="text-xs text-gray-400 block">Academic & Technical Foundation</span>
                 <span className="font-semibold text-white">
-                  Sekolah Vokasi IPB University
+                  IPB University
                 </span>
                 <span className="text-xs text-gray-300 block">
-                  Bachelor of Applied Technology · Computer Engineering Technology
+                  Bachelor of Technology, Computer Engineering Technology
                 </span>
               </div>
 
               <div className="pb-3 border-b border-white/10">
-                <span className="text-xs text-gray-400 block">Operational Coordinates</span>
+                <span className="text-xs text-gray-400 block">Production & Distribution Base</span>
                 <span className="font-semibold text-white">
-                  Tasikmalaya & Bogor, West Java
+                  Tasikmalaya · Production Hub
                 </span>
                 <span className="text-xs text-gray-300 block">
-                  Managing cold chain transit routes across West Java
+                  Supplying Bogor, Lampung, and Sukabumi through cold chain transit
                 </span>
               </div>
 
@@ -142,7 +142,6 @@ export default function AboutPage() {
                   <p className="text-sm text-[#4B5563] mt-0.5">
                     {edu.degree} · {edu.field}
                   </p>
-                  <p className="text-xs text-[#6B7280] mt-1">{edu.school}</p>
                 </div>
               </div>
               <div className="sm:text-right text-xs text-[#6B7280] space-y-1">
