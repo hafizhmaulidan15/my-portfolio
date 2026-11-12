@@ -75,7 +75,7 @@ export default function HomePage() {
 
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold font-mono text-[#164E3A] tabular-nums">
-                  64.8K
+                  52.4K
                 </div>
                 <div className="text-xs uppercase font-bold tracking-wider text-[#6B7280] pt-1">
                   L Milk Processed

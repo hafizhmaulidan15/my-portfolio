@@ -168,7 +168,7 @@ export default function ContactPage() {
                 <div className="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-[10px] uppercase font-mono text-gray-400 block">Email</span>
                   <span className="text-sm font-semibold text-white break-all">
                     {PORTFOLIO_DATA.profile.email}
@@ -185,9 +185,9 @@ export default function ContactPage() {
                 <div className="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0">
                   <Linkedin className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-[10px] uppercase font-mono text-gray-400 block">LinkedIn</span>
-                  <span className="text-sm font-semibold text-white">
+                  <span className="text-sm font-semibold text-white break-all">
                     {PORTFOLIO_DATA.profile.linkedinHandle}
                   </span>
                 </div>

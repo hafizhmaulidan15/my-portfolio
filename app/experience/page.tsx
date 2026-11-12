@@ -60,16 +60,16 @@ export default function ExperiencePage() {
                 </div>
 
                 {/* KPI badges */}
-                <div className="flex items-center gap-2.5">
+                <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:gap-2.5">
                   {item.kpis.map((kpi) => (
                     <div
                       key={kpi.label}
-                      className="px-3.5 py-2 rounded-xl bg-[#FAF8F5] border border-gray-200 text-center shrink-0"
+                      className="min-w-0 px-2.5 py-2 sm:px-3.5 rounded-xl bg-[#FAF8F5] border border-gray-200 text-center"
                     >
-                      <div className="text-base sm:text-lg font-mono font-extrabold text-[#164E3A] tabular-nums">
+                      <div className="text-sm sm:text-lg font-mono font-extrabold text-[#164E3A] tabular-nums break-words">
                         {kpi.val}
                       </div>
-                      <div className="text-[10px] uppercase font-bold text-gray-500 tracking-wider">
+                      <div className="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 tracking-wider">
                         {kpi.label}
                       </div>
                     </div>

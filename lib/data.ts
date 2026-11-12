@@ -118,10 +118,10 @@ export const PORTFOLIO_DATA = {
 
   keyMetrics: [
     {
-      value: "64.8K",
+      value: "52.4K",
       unit: "L",
       label: "Milk Processed",
-      detail: "Avg 2,000 L/batch across Tasik → Bogor → Lampung",
+      detail: "30 deliveries across 27 dates · ≈419,000 cups (125 ml)",
       highlight: true
     },
     {
@@ -154,7 +154,7 @@ export const PORTFOLIO_DATA = {
     nextShiftCountdown: "Ready for Dispatch",
     lineStatus: "Optimal Running · Temperature 2–8°C Controlled",
     lastBatchId: "MZ-160626-01",
-    latestVolumeIntake: "2,050 L (KPS Karya Nugraha)",
+    latestVolumeIntake: "1,308 L · latest intake 02 Nov 2026",
     cleanInPlaceStatus: "Verified & Neutralized"
   },
 
@@ -457,11 +457,11 @@ export const PORTFOLIO_DATA = {
         },
         {
           label: "Verified Outcome",
-          description: "Logged 64.8K Liters of raw milk with zero intake discrepancy."
+          description: "Logged 52.4K liters of raw milk across 30 deliveries with zero intake discrepancy."
         }
       ],
       impact: "Replaced manual paper tallying with objective data. Enabled prioritisation of high-fat milk suppliers, reducing curd coagulation failures and optimizing cheese yield per liter.",
-      metrics: "64.8K Liters logged with zero intake discrepancy",
+      metrics: "52.4K liters logged across 30 deliveries",
       sopRef: "SOP-QC-INTAKE-04"
     },
     {

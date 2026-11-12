@@ -31,7 +31,7 @@ export default function SkillsPage() {
         </p>
 
         {/* Filter Controls (Allowed functional segmented control) */}
-        <div className="flex items-center gap-1.5 p-1 bg-white border border-[#111827]/10 rounded-xl max-w-fit mt-4">
+        <div className="flex flex-wrap items-center gap-1.5 p-1 bg-white border border-[#111827]/10 rounded-xl max-w-full sm:max-w-fit mt-4">
           <button
             onClick={() => setActiveTab('all')}
             className={`px-4 py-2 text-xs font-semibold rounded-lg transition-all ${

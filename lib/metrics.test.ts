@@ -13,9 +13,9 @@ test('calculateCheeseYield correctly computes mozzarella yield percentage', () =
 });
 
 test('calculateRejectRate accurately measures defect percentage below 1% threshold', () => {
-  // 227L reject out of 64,750L processed = 0.350%
-  const rejectPct = calculateRejectRate(227, 64750);
-  assert.equal(rejectPct, 0.351);
+  // 183L reject out of 52,378L processed = 0.349%
+  const rejectPct = calculateRejectRate(183, 52378);
+  assert.equal(rejectPct, 0.349);
 
   // Zero processed
   assert.equal(calculateRejectRate(10, 0), 0);

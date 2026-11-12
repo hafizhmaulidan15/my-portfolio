@@ -41,10 +41,10 @@ export default function ImpactPage() {
             TOTAL MILK PROCESSED
           </span>
           <div className="text-3xl font-extrabold font-mono text-[#111827] tabular-nums">
-            64,750 L
+            52,378 L
           </div>
           <p className="text-xs text-[#6B7280]">
-            Cumulative across mozzarella, cheddar R&D, and liquid milk lines · avg 2,000 L/batch
+            30 logged deliveries across 27 dates · ≈419,000 cups (125 ml)
           </p>
         </div>
 

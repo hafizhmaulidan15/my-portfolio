@@ -28,21 +28,21 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#111827]/10 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-8 h-20">
+        <div className="flex items-center justify-between gap-3 sm:gap-8 h-20">
           
           {/* Zone 1: Single text element wordmark + icon */}
           <Link
             href="/"
-            className="flex items-center gap-3.5 group whitespace-nowrap shrink-0 text-left"
+            className="flex items-center gap-2.5 sm:gap-3.5 group min-w-0 text-left"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#164E3A] flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
+            <div className="w-10 h-10 rounded-xl bg-[#164E3A] flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105 shrink-0">
               <Factory className="w-5 h-5 text-emerald-200" />
             </div>
-            <div className="flex flex-col">
-              <span className="text-base font-bold tracking-tight text-[#111827] group-hover:text-[#164E3A] transition-colors leading-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="truncate text-base font-bold tracking-tight text-[#111827] group-hover:text-[#164E3A] transition-colors leading-tight">
                 Muhammad Hafizh Maulidan
               </span>
-              <span className="text-xs text-[#6B7280] font-medium tracking-normal">
+              <span className="truncate text-xs text-[#6B7280] font-medium tracking-normal">
                 Head of Unit · Dairy Manufacturing
               </span>
             </div>
