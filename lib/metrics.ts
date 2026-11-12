@@ -8,14 +8,6 @@ export interface MilkBatch {
   rejectLiters: number;
 }
 
-export interface SupplierIntake {
-  name: string;
-  volumeLiters: number;
-  fatPercent: number;
-  snfPercent: number;
-  alcoholTestPass: boolean;
-}
-
 /**
  * Calculates cheese yield percentage from raw milk input and cheese output
  * Standard target is ~10% (e.g. 500L milk yields ~42-50kg mozzarella)
@@ -73,17 +65,4 @@ export function validateMilkQuality(fat: number, snf: number, alcoholPass: boole
     grade: 'Substandard',
     notes: 'Below SNF or Fat minimum standard. Reject batch.'
   };
-}
-
-/**
- * Computes supplier intake volume share
- */
-export function computeSupplierShare(suppliers: SupplierIntake[]): Array<SupplierIntake & { sharePct: number }> {
-  const total = suppliers.reduce((sum, s) => sum + s.volumeLiters, 0);
-  if (total === 0) return suppliers.map(s => ({ ...s, sharePct: 0 }));
-
-  return suppliers.map(s => ({
-    ...s,
-    sharePct: Number(((s.volumeLiters / total) * 100).toFixed(1))
-  }));
 }

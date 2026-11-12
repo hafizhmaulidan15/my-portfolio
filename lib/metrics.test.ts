@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { calculateCheeseYield, calculateRejectRate, validateMilkQuality, computeSupplierShare } from './metrics';
+import { calculateCheeseYield, calculateRejectRate, validateMilkQuality } from './metrics';
 
 test('calculateCheeseYield correctly computes mozzarella yield percentage', () => {
   // 500L milk with 42.2kg cheese output
@@ -41,20 +41,4 @@ test('validateMilkQuality correctly routes grades based on fat and SNF threshold
   const lowSnf = validateMilkQuality(3.2, 7.1, true);
   assert.equal(lowSnf.passed, false);
   assert.equal(lowSnf.grade, 'Substandard');
-});
-
-test('computeSupplierShare correctly divides volumes across cooperatives', () => {
-  const suppliers = [
-    { name: 'Karya Nugraha', volumeLiters: 32000, fatPercent: 4.1, snfPercent: 8.3, alcoholTestPass: true },
-    { name: 'Kemuning', volumeLiters: 20000, fatPercent: 3.8, snfPercent: 8.1, alcoholTestPass: true },
-    { name: 'Larasati', volumeLiters: 12750, fatPercent: 3.9, snfPercent: 8.2, alcoholTestPass: true }
-  ];
-
-  const shares = computeSupplierShare(suppliers);
-  assert.equal(shares.length, 3);
-  const totalPct = shares.reduce((sum, s) => sum + s.sharePct, 0);
-  // Total share should sum to ~100%
-  assert.ok(Math.abs(totalPct - 100) < 0.5);
-  assert.equal(shares[0].name, 'Karya Nugraha');
-  assert.equal(shares[0].sharePct, 49.4);
 });

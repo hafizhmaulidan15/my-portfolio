@@ -576,9 +576,9 @@ export const PORTFOLIO_DATA = {
       issue:
         "Milk from the 14 Sep run showed a fishy, bloody off-odor and a yellowish tint.",
       rootCause:
-        "Pasteurization temperature drifted from 62 °C down to 58 °C before recovering to the low 60s, producing inconsistent heat treatment.",
+        "Vat temperature drifted from 62 °C down to 58 °C before recovering to the low 60s, producing inconsistent heat treatment.",
       action:
-        "Reworked the PHE, held hot water at 90 °C and milk at ~70 °C, and re-ran the batch under logged temperature curves.",
+        "Reworked the PHE, held hot water at 90 °C, and re-ran the batch at ~70 °C under logged temperature curves.",
       result:
         "Odor and color deviation eliminated before release; no compromised batch reached distribution.",
       sopChange:
@@ -595,11 +595,11 @@ export const PORTFOLIO_DATA = {
       action:
         "Re-cooked with ~2 L demineralized water to draw out excess salt and restore elasticity.",
       result:
-        "Salinity reduced and elasticity restored; yield held at ~6% against a 10% target, but the batch was recovered instead of scrapped.",
+        "Salinity reduced and elasticity restored; yield came in at ~6% against a 10% target, but the batch was recovered instead of scrapped.",
       sopChange:
         "Salt dosed by weight, with a pH 5.8 gate before stretching."
     }
-  ],
+  ] satisfies QcCaseEntry[],
 
   skillsData: [
     {
