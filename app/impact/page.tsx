@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Activity, Code2, ArrowRight } from 'lucide-react';
+import { Activity, Code2, ArrowRight, ClipboardCheck } from 'lucide-react';
 import { PORTFOLIO_DATA } from '@/lib/data';
 import { calculateCheeseYield, calculateRejectRate, validateMilkQuality } from '@/lib/metrics';
 
@@ -218,61 +218,74 @@ export default function ImpactPage() {
         </div>
       </div>
 
-      {/* 4. Cooperative Supplier Intelligence Table */}
+      {/* 4. QC & Troubleshooting Case Files */}
       <div className="space-y-6">
         <div className="border-b border-[#111827]/10 pb-4">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#164E3A]">
-            SUPPLIER INTELLIGENCE
-          </span>
+          <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#164E3A]">
+            <ClipboardCheck className="w-4 h-4" />
+            <span>FIELD QC · DOCUMENTED DEVIATIONS</span>
+          </div>
           <h2 className="text-2xl font-bold text-[#111827] mt-1">
-            Dairy Cooperative Sourcing Performance
+            Quality Control &amp; Troubleshooting Log
           </h2>
           <p className="text-sm text-[#4B5563]">
-            Intake metrics across contracted dairy farmer cooperatives (KPS).
+            Selected closed cases from the production logbook: what failed, why, what was done, and the SOP that changed.
           </p>
         </div>
 
-        <div className="card-surface rounded-2xl overflow-hidden border border-gray-200">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-[#FAF8F5] text-xs font-mono uppercase text-gray-500 border-b border-gray-200">
-                <tr>
-                  <th className="py-3.5 px-6">Cooperative (KPS)</th>
-                  <th className="py-3.5 px-6">Volume (L)</th>
-                  <th className="py-3.5 px-6">Volume Share (%)</th>
-                  <th className="py-3.5 px-6">Avg Fat (%)</th>
-                  <th className="py-3.5 px-6">Avg SNF (%)</th>
-                  <th className="py-3.5 px-6">Classification</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {PORTFOLIO_DATA.supplierData.map((s) => (
-                  <tr key={s.name} className="hover:bg-gray-50/80 transition-colors">
-                    <td className="py-4 px-6 font-semibold text-[#111827]">
-                      {s.name}
-                    </td>
-                    <td className="py-4 px-6 font-mono tabular-nums text-gray-700">
-                      {s.volumeLiters.toLocaleString('en-US')} L
-                    </td>
-                    <td className="py-4 px-6 font-mono tabular-nums text-gray-700">
-                      {s.sharePct.toFixed(1)}%
-                    </td>
-                    <td className="py-4 px-6 font-mono tabular-nums text-[#164E3A] font-bold">
-                      {s.fatPercent.toFixed(2)}%
-                    </td>
-                    <td className="py-4 px-6 font-mono tabular-nums text-gray-700">
-                      {s.snfPercent.toFixed(2)}%
-                    </td>
-                    <td className="py-4 px-6">
-                      <span className="text-xs font-medium text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
-                        {s.qualityGrade}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {PORTFOLIO_DATA.qcCaseFiles.map((entry) => (
+            <div
+              key={entry.id}
+              className="card-surface p-6 rounded-2xl space-y-4 border border-gray-200 hover:border-[#164E3A]/40 transition-all"
+            >
+              <div className="flex items-center justify-between gap-3 pb-3 border-b border-gray-100">
+                <span className="text-xs font-mono text-gray-500">
+                  {entry.id} · {entry.date}
+                </span>
+                <span className="px-2 py-0.5 rounded bg-emerald-100 text-[#164E3A] font-mono font-bold text-[10px]">
+                  {entry.status}
+                </span>
+              </div>
+
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono uppercase font-bold text-gray-400 tracking-wider block">
+                  ISSUE
+                </span>
+                <p className="text-sm font-semibold text-[#111827] leading-relaxed">
+                  {entry.issue}
+                </p>
+              </div>
+
+              <dl className="space-y-2.5 text-xs">
+                <div>
+                  <dt className="font-mono uppercase font-bold text-gray-400 tracking-wider text-[10px]">
+                    Root cause
+                  </dt>
+                  <dd className="text-[#4B5563] leading-relaxed">{entry.rootCause}</dd>
+                </div>
+                <div>
+                  <dt className="font-mono uppercase font-bold text-gray-400 tracking-wider text-[10px]">
+                    Action
+                  </dt>
+                  <dd className="text-[#4B5563] leading-relaxed">{entry.action}</dd>
+                </div>
+                <div>
+                  <dt className="font-mono uppercase font-bold text-gray-400 tracking-wider text-[10px]">
+                    Result
+                  </dt>
+                  <dd className="text-[#111827] font-medium leading-relaxed">{entry.result}</dd>
+                </div>
+              </dl>
+
+              <div className="pt-3 border-t border-gray-100 space-y-1">
+                <span className="text-[10px] font-mono uppercase font-bold text-[#164E3A] tracking-wider block">
+                  SOP CHANGE
+                </span>
+                <p className="text-xs text-[#4B5563] leading-relaxed">{entry.sopChange}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

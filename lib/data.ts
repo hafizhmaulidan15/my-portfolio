@@ -47,6 +47,17 @@ export interface DecisionLogEntry {
   relatedProject: string;
 }
 
+export interface QcCaseEntry {
+  id: string;
+  date: string;
+  status: string;
+  issue: string;
+  rootCause: string;
+  action: string;
+  result: string;
+  sopChange: string;
+}
+
 export interface SkillCategory {
   title: string;
   subtitle: string;
@@ -527,6 +538,69 @@ export const PORTFOLIO_DATA = {
     }
   ],
 
+  qcCaseFiles: [
+    {
+      id: "CF-01",
+      date: "07 Jun 2026",
+      status: "CLOSED",
+      issue:
+        "Mozzarella batch lost stretch and turned rubbery in the cooker.",
+      rootCause:
+        "Target pH was missed during acidification, so the casein matrix never formed properly.",
+      action:
+        "Re-blended 20% failed mozzarella curd into an 80% cheddar base instead of discarding the batch.",
+      result:
+        "100% of the failed batch recovered, pressed into cheddar and sold as a different grade — zero waste.",
+      sopChange:
+        "Rework matrix defining which failed product can be safely blended into which base."
+    },
+    {
+      id: "CF-02",
+      date: "07 Sep 2026",
+      status: "CLOSED",
+      issue:
+        "150 L raw milk failed the alcohol stability test after temperature exposure and was flagged for disposal.",
+      rootCause:
+        "Cold storage temperature fluctuated because the door was cycled repeatedly for cheese handling.",
+      action:
+        "Trialled 2.5 L into a mozzarella cook, then processed the remaining 147.5 L once the curd behaved normally.",
+      result:
+        "98% of the flagged volume recovered; 14.7 kg mozzarella produced and released with a special batch label.",
+      sopChange:
+        "Separate cold storage for raw milk and in-process cheese to stop the door cycle."
+    },
+    {
+      id: "CF-03",
+      date: "19 Sep 2026",
+      status: "CLOSED · ESCALATED",
+      issue:
+        "Milk from the 14 Sep run showed a fishy, bloody off-odor and a yellowish tint.",
+      rootCause:
+        "Pasteurization temperature drifted from 62 °C down to 58 °C before recovering to the low 60s, producing inconsistent heat treatment.",
+      action:
+        "Reworked the PHE, held hot water at 90 °C and milk at ~70 °C, and re-ran the batch under logged temperature curves.",
+      result:
+        "Odor and color deviation eliminated before release; no compromised batch reached distribution.",
+      sopChange:
+        "Temperature-gate log (water + milk) signed before milk enters pasteurization."
+    },
+    {
+      id: "CF-04",
+      date: "14 Oct 2026",
+      status: "CLOSED",
+      issue:
+        "A 400 L cook yielded only ~25 kg, with salt at roughly 2× the standard recipe and weak elasticity.",
+      rootCause:
+        "Curd break from weak agitation during citric acid dosing; pH ran at ~5.2 against a 5.8 target.",
+      action:
+        "Re-cooked with ~2 L demineralized water to draw out excess salt and restore elasticity.",
+      result:
+        "Salinity reduced and elasticity restored; yield held at ~6% against a 10% target, but the batch was recovered instead of scrapped.",
+      sopChange:
+        "Salt dosed by weight, with a pH 5.8 gate before stretching."
+    }
+  ],
+
   skillsData: [
     {
       title: "Dairy Operations & Factory Floor",
@@ -599,36 +673,6 @@ export const PORTFOLIO_DATA = {
           badge: "BNSP & Cisco Certified"
         }
       ]
-    }
-  ],
-
-  supplierData: [
-    {
-      name: "KPS Karya Nugraha",
-      volumeLiters: 32000,
-      sharePct: 49.4,
-      fatPercent: 4.1,
-      snfPercent: 8.35,
-      qualityGrade: "Tier 1 (Premium)",
-      role: "Primary Mozzarella Milk Sourcing"
-    },
-    {
-      name: "KPS Kemuning",
-      volumeLiters: 20000,
-      sharePct: 30.9,
-      fatPercent: 3.85,
-      snfPercent: 8.12,
-      qualityGrade: "Tier 1 (Cheese Suitable)",
-      role: "Pasteurized Bottled Line"
-    },
-    {
-      name: "KPS Larasati",
-      volumeLiters: 12750,
-      sharePct: 19.7,
-      fatPercent: 3.75,
-      snfPercent: 7.95,
-      qualityGrade: "Tier 2 (Standard)",
-      role: "Secondary Blend Reserve"
     }
   ],
 
