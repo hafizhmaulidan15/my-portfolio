@@ -35,13 +35,13 @@ export default function AboutPage() {
               From the Floor Up: Building Systems That Run
             </h2>
             <p>
-              I run operations where the physical work happens—on the factory floor. When establishing the Tasikmalaya unit of Rumah Susu Indonesia, the challenge was not merely installing tanks and burners, but creating a self-sustaining operational culture where every operator takes personal ownership of process parameters.
+              Running the Tasikmalaya unit is a management job before it is a technical one: targets, people, and process. Commissioning the plant meant building the team from zero, assigning shift ownership, and turning 12 procedures into daily habits across intake, pasteurization, cheese making, packaging, and cold chain. My test of a manager is simple — the line runs the same way whether or not I am in the room.
             </p>
             <p>
-              In dairy manufacturing, precision is non-negotiable. A 2°C temperature slip in chilling can spoil thousands of liters of raw milk; a 5-minute variance in cheese vat holding compromises mozzarella curd stretch and moisture. By instituting rigid yet intuitive SOPs, standardizing QC checklists (Lactoscan, alcohol stability, pH), and practicing transparent shift handovers, our team transformed high-risk batch production into a dependable daily rhythm.
+              Product development happens on the same floor. I run trial batches for mozzarella and cheddar, adjust acidification, salt, and moisture against stretch, texture, and yield targets, and scale a formula only once it repeats. Every trial is logged, so a change in the product can be traced back to pH, temperature, or milk quality instead of guesswork.
             </p>
             <p>
-              What sets my leadership apart is the bridge between physical production craftsmanship and digital systems. Backed by practical experience in IoT microcontrollers (ESP32), Python data analysis, and web engineering, I translate factory floor anomalies into structured data—allowing us to objectively rank farmer cooperatives, predict milk intake yield, and eliminate blind spots.
+              Most days, the work is problem solving. When a batch fails the alcohol test, over-salts, or will not stretch, the task is to find the process cause, recover what can be recovered, and change the SOP so the same fault does not return. That loop — intake QC, vat control, deviation review — is dairy processing at its core: milk in, stable product out, waste and risk held down. The digital tools I build exist to keep that loop visible.
             </p>
           </div>
 
