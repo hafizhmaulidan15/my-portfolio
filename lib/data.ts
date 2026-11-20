@@ -80,7 +80,7 @@ export const PORTFOLIO_DATA = {
     email: "mhafizh.maulidan@gmail.com",
     linkedin: "https://www.linkedin.com/in/hafizhmaulidan/",
     linkedinHandle: "linkedin.com/in/hafizhmaulidan",
-    statusBadge: "Operational · Two Units, One Quality Standard",
+    statusBadge: "Operational · One Plant, Two Employer Roles",
     bio: "Operations leader with a dual background in dairy manufacturing process engineering and technology systems. I currently lead a dairy production unit end-to-end: daily production, quality management, inventory, and distribution. I built the Tasikmalaya plant from the ground up — assembling the core production team, standardizing 12 SOPs from milk intake to cheese vat pasteurization, holding a 0.35% reject rate, and running multi-city cold chain distribution across West Java. My focus sits on the systems behind the output: clear procedures, organized workflows, and simple digital tools — inventory dashboards, production monitoring, QC workflows — that make daily operations easier to run and easier to scale.",
     quote: "Driven by data, grounded in reality. Quality aligned, waste minimized, teams led with purpose.",
     supervisorTestimonial: {
@@ -218,8 +218,8 @@ export const PORTFOLIO_DATA = {
         { label: "Reception Tests", val: "6 per load" },
         { label: "Tenure", val: "8 mo" }
       ],
-      overview: "Concurrent role at the supplying dairy cooperative, running production floor operations and container-level raw milk reception testing alongside the processing unit at Rumah Susu Indonesia.",
-      description: "Concurrent role at the supplying dairy cooperative, running production floor operations and container-level raw milk reception testing alongside the processing unit at Rumah Susu Indonesia.",
+      overview: "Concurrent role at the supplying cooperative, running floor operations and container-level raw milk reception testing on the same Tasikmalaya plant where I head production for Rumah Susu Indonesia.",
+      description: "Concurrent role at the supplying cooperative, running floor operations and container-level raw milk reception testing on the same Tasikmalaya plant where I head production for Rumah Susu Indonesia.",
       responsibilities: [
         "Ran daily production floor operations handling 10,000–50,000 litres of raw milk per week.",
         "Performed reception testing on every incoming milk container: pH, peroxide and carbonate adulteration screening, antibiotic residue, and mastitis screening.",

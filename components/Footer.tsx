@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-[#4B5563] leading-relaxed max-w-md">
-              Running dairy production across two Tasikmalaya units: heading the processing plant at Rumah Susu Indonesia and handling floor operations plus raw milk reception testing at Mitrayasa Dairy Natural. SOPs, cold chain, and container-level quality control.
+              Production at a single Tasikmalaya dairy plant under two employers: heading the processing unit for Rumah Susu Indonesia and running floor operations plus raw milk reception testing for Mitrayasa Dairy Natural. SOPs, cold chain, and container-level quality control.
             </p>
 
             <div className="flex items-center gap-2 text-xs text-[#6B7280]">

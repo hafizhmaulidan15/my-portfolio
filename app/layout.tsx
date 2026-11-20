@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Muhammad Hafizh Maulidan | Dairy Manufacturing & Quality Operations',
     description:
-      'Dairy manufacturing operations across two Tasikmalaya units. Production leadership, raw milk reception testing, SOP enforcement, and cold chain quality.',
+      'Dairy manufacturing operations at a single Tasikmalaya plant, across two employers. Production leadership, raw milk reception testing, SOP enforcement, and cold chain quality.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Muhammad Hafizh Maulidan | Dairy Manufacturing & Quality Operations',
     description:
-      'Dairy manufacturing operations across two Tasikmalaya units. Production leadership and raw milk quality control.',
+      'Dairy manufacturing at a single Tasikmalaya plant, across two employers. Production leadership and raw milk quality control.',
   },
 };
 

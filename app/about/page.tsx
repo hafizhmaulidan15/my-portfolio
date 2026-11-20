@@ -21,7 +21,7 @@ export default function AboutPage() {
           Leadership with <span className="text-[#164E3A]">operational rigor.</span>
         </h1>
         <p className="text-lg text-[#4B5563] leading-relaxed">
-          Managing operations across two Tasikmalaya units with people, process, and product aligned. From raw milk reception testing to cold-chain reliability, every decision ties to repeatable scale.
+          Managing operations at one Tasikmalaya dairy plant under two employers, with people, process, and product aligned. From raw milk reception testing to cold-chain reliability, every decision ties to repeatable scale.
         </p>
       </div>
 
