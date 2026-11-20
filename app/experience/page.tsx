@@ -152,6 +152,9 @@ export default function ExperiencePage() {
           <h2 className="text-2xl font-bold text-[#111827] mt-1">
             Certified Credentials
           </h2>
+          <p className="text-sm text-[#4B5563] mt-2">
+            Kept deliberately narrow: food safety, dairy quality, and the technical systems behind the floor.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -173,7 +176,7 @@ export default function ExperiencePage() {
                 {cert.issuer}
               </p>
               <span className="text-[10px] font-mono text-gray-400 block pt-1">
-                {cert.credentialId ? `ID: ${cert.credentialId}` : 'Verified credential'}
+                {cert.credentialId ? `ID: ${cert.credentialId}` : 'Credential issued'}
               </span>
             </div>
           ))}

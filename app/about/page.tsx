@@ -4,7 +4,7 @@ import { PORTFOLIO_DATA } from '@/lib/data';
 
 export const metadata = {
   title: 'About | Muhammad Hafizh Maulidan',
-  description: 'Leadership philosophy, operational background, and dairy manufacturing management at Rumah Susu Indonesia.',
+  description: 'Leadership philosophy, operational background, and dairy manufacturing across Rumah Susu Indonesia and Mitrayasa Dairy Natural.',
 };
 
 export default function AboutPage() {
@@ -15,13 +15,13 @@ export default function AboutPage() {
       <div className="space-y-4 max-w-3xl">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-xs font-semibold text-[#164E3A]">
           <UserCheck className="w-3.5 h-3.5" />
-          <span>HEAD OF UNIT · OPERATIONS LEAD</span>
+          <span>DAIRY MANUFACTURING · OPERATIONS</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#111827] leading-tight">
           Leadership with <span className="text-[#164E3A]">operational rigor.</span>
         </h1>
         <p className="text-lg text-[#4B5563] leading-relaxed">
-          Managing the Tasikmalaya plant operations with people, process, and product aligned. From raw milk supplier clarity to cold-chain reliability, every decision ties to repeatable scale.
+          Managing operations across two Tasikmalaya units with people, process, and product aligned. From raw milk reception testing to cold-chain reliability, every decision ties to repeatable scale.
         </p>
       </div>
 
@@ -66,12 +66,18 @@ export default function AboutPage() {
 
             <div className="space-y-4 text-sm">
               <div className="pb-3 border-b border-white/10">
-                <span className="text-xs text-gray-400 block">Current Plant Role</span>
+                <span className="text-xs text-gray-400 block">Current Roles</span>
                 <span className="font-semibold text-white text-base">
-                  Head of Unit Dairy Manufacturing
+                  Head of Production Unit
                 </span>
                 <span className="text-xs text-gray-300 block">
                   Rumah Susu Indonesia · Tasikmalaya Plant
+                </span>
+                <span className="font-semibold text-white text-base block pt-2">
+                  Production Assistant
+                </span>
+                <span className="text-xs text-gray-300 block">
+                  Mitrayasa Dairy Natural · Tasikmalaya
                 </span>
               </div>
 

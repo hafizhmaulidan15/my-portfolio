@@ -73,14 +73,14 @@ export const PORTFOLIO_DATA = {
   profile: {
     name: "Muhammad Hafizh Maulidan",
     shortName: "Hafizh Maulidan",
-    title: "Head of Unit Dairy Manufacturing",
-    company: "Rumah Susu Indonesia",
-    unit: "Tasikmalaya Plant",
+    title: "Dairy Manufacturing · Production & Quality",
+    company: "Rumah Susu Indonesia · Mitrayasa Dairy Natural",
+    unit: "Tasikmalaya Production Hub",
     location: "Tasikmalaya / Bogor, West Java, Indonesia",
     email: "mhafizh.maulidan@gmail.com",
     linkedin: "https://www.linkedin.com/in/hafizhmaulidan/",
     linkedinHandle: "linkedin.com/in/hafizhmaulidan",
-    statusBadge: "Operational · Managing Floor & Cold Chain",
+    statusBadge: "Operational · Two Units, One Quality Standard",
     bio: "Operations leader with a dual background in dairy manufacturing process engineering and technology systems. I currently lead a dairy production unit end-to-end: daily production, quality management, inventory, and distribution. I built the Tasikmalaya plant from the ground up — assembling the core production team, standardizing 12 SOPs from milk intake to cheese vat pasteurization, holding a 0.35% reject rate, and running multi-city cold chain distribution across West Java. My focus sits on the systems behind the output: clear procedures, organized workflows, and simple digital tools — inventory dashboards, production monitoring, QC workflows — that make daily operations easier to run and easier to scale.",
     quote: "Driven by data, grounded in reality. Quality aligned, waste minimized, teams led with purpose.",
     supervisorTestimonial: {
@@ -118,14 +118,14 @@ export const PORTFOLIO_DATA = {
 
   keyMetrics: [
     {
-      value: "52.4K",
+      value: "≈1.05M",
       unit: "L",
       label: "Milk Processed",
-      detail: "30 deliveries across 27 dates · ≈419,000 cups (125 ml)",
+      detail: "RSI 52,378 L logged + Mitrayasa ≈1.0M L, ramped to 50K L/week over the last 3 months",
       highlight: true
     },
     {
-      value: "1.1K",
+      value: "1.67K",
       unit: "pcs",
       label: "Mozzarella Total",
       detail: "First market-ready cheese line at RSI Tasikmalaya",
@@ -206,6 +206,31 @@ export const PORTFOLIO_DATA = {
         "Maintained a reject rate of just 0.35% and kept waste under 3% while optimizing cold storage loading workflows."
       ],
       skills: ["Operations Management", "React + Google Sheets API", "SOP Architecture", "Production Planning", "Lactoscan & Anti-AB QC", "Cold Chain Logistics"]
+    },
+    {
+      role: "Production Assistant",
+      company: "Mitrayasa Dairy Natural",
+      location: "Tasikmalaya, West Java (On-Site)",
+      period: "Mar 2026 – Present",
+      type: "Concurrent · Production Floor & Receiving QC",
+      kpis: [
+        { label: "Weekly Intake", val: "10–50K L" },
+        { label: "Reception Tests", val: "6 per load" },
+        { label: "Tenure", val: "8 mo" }
+      ],
+      overview: "Concurrent role at the supplying dairy cooperative, running production floor operations and container-level raw milk reception testing alongside the processing unit at Rumah Susu Indonesia.",
+      description: "Concurrent role at the supplying dairy cooperative, running production floor operations and container-level raw milk reception testing alongside the processing unit at Rumah Susu Indonesia.",
+      responsibilities: [
+        "Ran daily production floor operations handling 10,000–50,000 litres of raw milk per week.",
+        "Performed reception testing on every incoming milk container: pH, peroxide and carbonate adulteration screening, antibiotic residue, and mastitis screening.",
+        "Ran bacterial testing on each milk container before it entered the production line."
+      ],
+      achievements: [
+        "Sustained container-by-container testing across 8 months of operation at weekly intake volumes of 10,000–50,000 litres.",
+        "Moved quality gatekeeping to the point of entry, so deviations were flagged before pasteurisation rather than after a batch was already committed.",
+        "Coordinated daily scheduling with the cooperative head so weekly volume reached the line without holding raw milk beyond its stability window."
+      ],
+      skills: ["Raw Milk Reception", "Adulteration Screening", "Antibiotic Residue Testing", "Mastitis Screening", "Bacterial Testing", "Floor Operations"]
     },
     {
       role: "Web Project Lead",
@@ -290,39 +315,21 @@ export const PORTFOLIO_DATA = {
       credentialId: "8919176492MM"
     },
     {
+      title: "Science and Risk Analysis in Codex",
+      issuer: "FAO (Food and Agriculture Organization)",
+      validity: "Nov 2026"
+    },
+    {
       title: "Hardware Installation Supervisor",
       issuer: "BNSP (Badan Nasional Sertifikasi Profesi)",
       validity: "Sep 2025 – 2028",
       credentialId: "213/LSP.928.1/IX/2025"
     },
     {
-      title: "Google Analytics Certification",
-      issuer: "Google Digital Academy (Skillshop)",
-      validity: "Aug 2025 – Aug 2026",
-      credentialId: "158655543"
-    },
-    {
-      title: "Data Science & Analytics",
-      issuer: "HP LIFE",
-      validity: "Aug 2025"
-    },
-    {
       title: "Integrated Speaking English",
       issuer: "Language Center",
       validity: "Nov 2025",
       credentialId: "NO. 2864 / IS / XI / 2025"
-    },
-    {
-      title: "Understanding AI and LLMs as a Network Engineer (AI4NE)",
-      issuer: "Cisco Networking Academy",
-      validity: "Apr 2025",
-      credentialId: "00u3r4mfcsq6UUJvp5d7"
-    },
-    {
-      title: "Junior Network Engineer — Talent Scouting Academy",
-      issuer: "Kominfo Digital Talent Scholarship",
-      validity: "Feb – Jun 2024",
-      credentialId: "2007350840-62/TSA/BLSDM.Kominfo/2024"
     }
   ],
 

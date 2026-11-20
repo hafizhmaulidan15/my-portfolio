@@ -17,7 +17,7 @@ export default function HomePage() {
             {/* Kicker badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-xs font-semibold text-[#164E3A]">
               <Factory className="w-3.5 h-3.5" />
-              <span>HEAD OF UNIT · DAIRY MANUFACTURING</span>
+              <span>DAIRY MANUFACTURING · PRODUCTION & QUALITY</span>
             </div>
 
             {/* Display Headline with custom accent */}
@@ -37,7 +37,7 @@ export default function HomePage() {
 
             {/* Subheading */}
             <p className="text-lg text-[#4B5563] leading-relaxed max-w-2xl font-normal">
-              Built for scale, grounded in data. Leading Rumah Susu Indonesia&apos;s Tasikmalaya plant from the ground up: standardizing milk intake, cheese vat processing, clean-in-place protocols, and multi-city cold chain logistics.
+              Built for scale, grounded in data. Heading Rumah Susu Indonesia&apos;s processing plant while running floor operations and raw milk reception testing at Mitrayasa Dairy Natural — SOPs, cheese vat processing, and multi-city cold chain logistics.
             </p>
 
             {/* Primary Action Buttons */}
@@ -63,7 +63,7 @@ export default function HomePage() {
             <div className="pt-8 border-t border-[#111827]/10 grid grid-cols-3 gap-6">
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold font-mono text-[#111827] tabular-nums">
-                  1.1K
+                  1.67K
                 </div>
                 <div className="text-xs uppercase font-bold tracking-wider text-[#6B7280] pt-1">
                   Pcs Produced
@@ -74,14 +74,14 @@ export default function HomePage() {
               </div>
 
               <div>
-                <div className="text-3xl sm:text-4xl font-extrabold font-mono text-[#164E3A] tabular-nums">
-                  52.4K
+                <div className="text-2xl sm:text-4xl font-extrabold font-mono text-[#164E3A] tabular-nums">
+                  ≈1.05M
                 </div>
                 <div className="text-xs uppercase font-bold tracking-wider text-[#6B7280] pt-1">
                   L Milk Processed
                 </div>
                 <div className="text-xs text-[#9CA3AF] hidden sm:block">
-                  Total floor intake
+                  RSI + Mitrayasa combined
                 </div>
               </div>
 

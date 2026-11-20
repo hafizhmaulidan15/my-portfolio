@@ -43,7 +43,7 @@ export default function Navbar() {
                 Muhammad Hafizh Maulidan
               </span>
               <span className="truncate text-xs text-[#6B7280] font-medium tracking-normal">
-                Head of Unit · Dairy Manufacturing
+                Dairy Manufacturing · Production & QC
               </span>
             </div>
           </Link>

@@ -41,10 +41,10 @@ export default function ImpactPage() {
             TOTAL MILK PROCESSED
           </span>
           <div className="text-3xl font-extrabold font-mono text-[#111827] tabular-nums">
-            52,378 L
+            ≈1.05M L
           </div>
           <p className="text-xs text-[#6B7280]">
-            30 logged deliveries across 27 dates · ≈419,000 cups (125 ml)
+            RSI 52,378 L logged + Mitrayasa ≈1.0M L, ramped to 50K L/week over the last 3 months
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function ImpactPage() {
             MOZZARELLA PRODUCED
           </span>
           <div className="text-3xl font-extrabold font-mono text-amber-600 tabular-nums">
-            1,052 pcs
+            1,670 pcs
           </div>
           <p className="text-xs text-[#6B7280]">
             First commercial cheese batches packaged @200g

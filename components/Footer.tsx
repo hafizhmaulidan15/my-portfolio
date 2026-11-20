@@ -21,13 +21,13 @@ export default function Footer() {
                   Muhammad Hafizh Maulidan
                 </span>
                 <span className="text-xs text-[#6B7280]">
-                  Head of Unit · Dairy Manufacturing
+                  Dairy Manufacturing · Production & Quality
                 </span>
               </div>
             </div>
 
             <p className="text-sm text-[#4B5563] leading-relaxed max-w-md">
-              Managing end-to-end dairy manufacturing operations at Rumah Susu Indonesia. Standardizing SOPs from milk intake to cheese vat processing, maintaining 2–8°C cold chain, and leading floor teams with disciplined accountability.
+              Running dairy production across two Tasikmalaya units: heading the processing plant at Rumah Susu Indonesia and handling floor operations plus raw milk reception testing at Mitrayasa Dairy Natural. SOPs, cold chain, and container-level quality control.
             </p>
 
             <div className="flex items-center gap-2 text-xs text-[#6B7280]">
@@ -108,7 +108,7 @@ export default function Footer() {
             <div className="pt-2">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200/60 text-xs font-medium text-[#164E3A]">
                 <ShieldCheck className="w-4 h-4 text-emerald-700" />
-                <span>BNSP Hardware Supervisor & DTS Certified</span>
+                <span>FAO Antibiotics · BNSP Certified</span>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Footer() {
             © {currentYear} Muhammad Hafizh Maulidan · Dairy Operations & Production Leader.
           </p>
           <div className="flex items-center gap-4 text-[#6B7280]">
-            <span>Rumah Susu Indonesia</span>
+            <span>Rumah Susu Indonesia · Mitrayasa Dairy</span>
             <span>·</span>
             <span>IPB University</span>
             <span>·</span>

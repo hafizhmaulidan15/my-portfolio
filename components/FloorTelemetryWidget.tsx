@@ -35,7 +35,7 @@ export default function FloorTelemetryWidget() {
               </span>
             </div>
             <span className="text-xs text-gray-300 block font-medium">
-              Head of Unit · Dairy Manufacturing
+              Dairy Manufacturing · Production & Quality
             </span>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function FloorTelemetryWidget() {
       <div className="mt-4 pt-3.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs relative z-10">
         <div className="flex items-center gap-2 text-gray-300 text-[11px]">
           <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-          <span>BNSP Hardware Supervisor · IPB Computer Engineering</span>
+          <span>FAO Antibiotics · BNSP Hardware Supervisor</span>
         </div>
 
         <Link

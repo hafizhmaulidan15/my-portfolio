@@ -20,20 +20,20 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Muhammad Hafizh Maulidan | Dairy Operations & Production Leader',
+  title: 'Muhammad Hafizh Maulidan | Dairy Manufacturing & Quality Operations',
   description:
-    'Head of Unit Dairy Manufacturing at Rumah Susu Indonesia. Standardized SOPs, cold chain logistics, quality assurance, and high-discipline production leadership.',
+    'Dairy manufacturing operations at Rumah Susu Indonesia and Mitrayasa Dairy Natural. Production leadership, raw milk reception testing, SOPs, and cold chain quality.',
   openGraph: {
-    title: 'Muhammad Hafizh Maulidan | Dairy Operations & Production Leader',
+    title: 'Muhammad Hafizh Maulidan | Dairy Manufacturing & Quality Operations',
     description:
-      'Head of Unit Dairy Manufacturing at Rumah Susu Indonesia. Standardized SOPs, cold chain logistics, and dairy processing leadership.',
+      'Dairy manufacturing operations across two Tasikmalaya units. Production leadership, raw milk reception testing, SOP enforcement, and cold chain quality.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Muhammad Hafizh Maulidan | Dairy Operations & Production Leader',
+    title: 'Muhammad Hafizh Maulidan | Dairy Manufacturing & Quality Operations',
     description:
-      'Head of Unit Dairy Manufacturing at Rumah Susu Indonesia. Operations management and production leadership.',
+      'Dairy manufacturing operations across two Tasikmalaya units. Production leadership and raw milk quality control.',
   },
 };
 
