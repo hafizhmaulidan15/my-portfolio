@@ -30,7 +30,7 @@ export default function ImpactPage() {
           Production impact & <span className="text-[#164E3A]">operational metrics.</span>
         </h1>
         <p className="text-lg text-[#4B5563] leading-relaxed">
-          Real output, reject rates, and raw milk trends—grounded in real production logs. Every metric reflects live execution across intake, pasteurization, and distribution.
+          Real output, reject rates, and raw milk trends—grounded in production logs, with estimates labeled where a figure is derived rather than logged.
         </p>
       </div>
 
@@ -56,7 +56,9 @@ export default function ImpactPage() {
             0.35%
           </div>
           <p className="text-xs text-[#6B7280]">
-            Cup 130ml & bottle line (Target &lt; 1.00%)
+            Cup 130ml & bottle line, target &lt; 1.00%
+            <br />
+            183 L rejected of 52,378 L (RSI only)
           </p>
         </div>
 

@@ -68,7 +68,7 @@ export default function AboutPage() {
               <div className="pb-3 border-b border-white/10">
                 <span className="text-xs text-gray-400 block">Current Roles</span>
                 <span className="font-semibold text-white text-base">
-                  Head of Production Unit
+                  Head of Unit
                 </span>
                 <span className="text-xs text-gray-300 block">
                   Rumah Susu Indonesia · Tasikmalaya Plant
@@ -111,7 +111,7 @@ export default function AboutPage() {
                     href="/experience"
                     className="inline-flex items-center gap-1 text-emerald-400/80 hover:text-emerald-300 transition-colors pt-0.5"
                   >
-                    <span>+{PORTFOLIO_DATA.certifications.length - 2} more verified credentials</span>
+                    <span>+{PORTFOLIO_DATA.certifications.length - 2} more credentials</span>
                     <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>

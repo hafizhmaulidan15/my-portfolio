@@ -7,7 +7,7 @@ export interface ExperienceEntry {
   overview: string;
   responsibilities: string[];
   achievements: string[];
-  description: string;
+  description?: string;
   kpis: { label: string; val: string }[];
   skills: string[];
 }
@@ -73,15 +73,10 @@ export const PORTFOLIO_DATA = {
   profile: {
     name: "Muhammad Hafizh Maulidan",
     shortName: "Hafizh Maulidan",
-    title: "Dairy Manufacturing · Production & Quality",
-    company: "Rumah Susu Indonesia · Mitrayasa Dairy Natural",
-    unit: "Tasikmalaya Production Hub",
     location: "Tasikmalaya / Bogor, West Java, Indonesia",
     email: "mhafizh.maulidan@gmail.com",
     linkedin: "https://www.linkedin.com/in/hafizhmaulidan/",
     linkedinHandle: "linkedin.com/in/hafizhmaulidan",
-    statusBadge: "Operational · One Plant, Two Employer Roles",
-    bio: "Operations leader with a dual background in dairy manufacturing process engineering and technology systems. I currently lead a dairy production unit end-to-end: daily production, quality management, inventory, and distribution. I built the Tasikmalaya plant from the ground up — assembling the core production team, standardizing 12 SOPs from milk intake to cheese vat pasteurization, holding a 0.35% reject rate, and running multi-city cold chain distribution across West Java. My focus sits on the systems behind the output: clear procedures, organized workflows, and simple digital tools — inventory dashboards, production monitoring, QC workflows — that make daily operations easier to run and easier to scale.",
     quote: "Driven by data, grounded in reality. Quality aligned, waste minimized, teams led with purpose.",
     supervisorTestimonial: {
       quote: "When an over-salting issue affected cheese texture while I was off-site, Hafizh resolved it independently with impressive technical intuition. He executed a double-rinse using potable water to balance salinity and restore curd elasticity without compromising final quality.",
@@ -113,37 +108,6 @@ export const PORTFOLIO_DATA = {
       relationship: "Dairy Supply Chain Partner",
       highlight: "Digitized raw milk supply data to create clear, real-time visibility",
       quote: "Hafizh stands out for his keen eye on raw milk quality and his relentless drive to master the entire dairy chain from farm to factory. He transformed our supply operations by digitizing raw data to create clear, real-time visibility across the board. Far beyond executing routine tasks, his deep curiosity and end-to-end perspective make him an exceptional partner."
-    }
-  ],
-
-  keyMetrics: [
-    {
-      value: "≈1.05M",
-      unit: "L",
-      label: "Milk Processed",
-      detail: "RSI 52,378 L logged + Mitrayasa ≈1.0M L, ramped to 50K L/week over the last 3 months",
-      highlight: true
-    },
-    {
-      value: "1.67K",
-      unit: "pcs",
-      label: "Mozzarella Total",
-      detail: "First market-ready cheese line at RSI Tasikmalaya",
-      highlight: false
-    },
-    {
-      value: "0.35%",
-      unit: "",
-      label: "Reject Rate",
-      detail: "Strict quality pass (Target < 1.00%)",
-      highlight: true
-    },
-    {
-      value: "12+",
-      unit: "SOPs",
-      label: "Standardized Procedures",
-      detail: "Intake, cheese vat, QC, and cold chain distribution",
-      highlight: false
     }
   ],
 
@@ -191,10 +155,9 @@ export const PORTFOLIO_DATA = {
       kpis: [
         { label: "SOPs Enforced", val: "12" },
         { label: "Reject Rate", val: "0.35%" },
-        { label: "Mozzarella Scale", val: "1,000 pcs" }
+        { label: "Mozzarella Total", val: "1,670 pcs" }
       ],
       overview: "Directed end-to-end dairy facility operations, overseeing production targets, raw milk supply chain, team performance, and facility assets while coordinating directly with central management.",
-      description: "Directed end-to-end dairy facility operations, overseeing production targets, raw milk supply chain, team performance, and facility assets while coordinating directly with central management.",
       responsibilities: [
         "Managed production planning, raw milk supply coordination with local dairy cooperatives, and on-time distribution logistics.",
         "Enforced 12 core SOPs for production, food safety, hygiene, and pre-distribution quality control (Lactoscan, Anti-AB, Peroxide).",
@@ -215,11 +178,9 @@ export const PORTFOLIO_DATA = {
       type: "Concurrent · Production Floor & Receiving QC",
       kpis: [
         { label: "Weekly Intake", val: "10–50K L" },
-        { label: "Reception Tests", val: "6 per load" },
-        { label: "Tenure", val: "8 mo" }
+        { label: "Reception Tests", val: "6 per load" }
       ],
       overview: "Concurrent role at the supplying cooperative, running floor operations and container-level raw milk reception testing on the same Tasikmalaya plant where I head production for Rumah Susu Indonesia.",
-      description: "Concurrent role at the supplying cooperative, running floor operations and container-level raw milk reception testing on the same Tasikmalaya plant where I head production for Rumah Susu Indonesia.",
       responsibilities: [
         "Ran daily production floor operations handling 10,000–50,000 litres of raw milk per week.",
         "Performed reception testing on every incoming milk container: pH, peroxide and carbonate adulteration screening, antibiotic residue, and mastitis screening.",
@@ -244,7 +205,6 @@ export const PORTFOLIO_DATA = {
         { label: "Design", val: "Mobile-First" }
       ],
       overview: "Led the full lifecycle of the NanoRobotic web platform from concept to deployment, serving as project lead and sole frontend developer.",
-      description: "Led the full lifecycle of the NanoRobotic web platform from concept to deployment, serving as project lead and sole frontend developer.",
       responsibilities: [
         "Managed the full project lifecycle, from initial UI/UX concept and technical requirements to final deployment.",
         "Engineered a mobile-first, responsive interface using Bootstrap, HTML5, and CSS3.",
@@ -269,7 +229,6 @@ export const PORTFOLIO_DATA = {
         { label: "Systems", val: "Device-to-Cloud" }
       ],
       overview: "Developed and maintained IoT-driven automation systems, integrating sensors, microcontrollers, and cloud-based monitoring tools.",
-      description: "Developed and maintained IoT-driven automation systems, integrating sensors, microcontrollers, and cloud-based monitoring tools.",
       responsibilities: [
         "Designed monitoring solutions for real-time data collection, system diagnostics, and device-to-cloud communication.",
         "Conducted hardware testing, calibration, and wiring validation to ensure system reliability.",
@@ -293,7 +252,6 @@ export const PORTFOLIO_DATA = {
         { label: "Core Scope", val: "Cybersecurity" }
       ],
       overview: "Selected for the regional SEAMEO TVET Student Exchange program, gaining cross-border technical exposure to networking and cybersecurity.",
-      description: "Selected for the regional SEAMEO TVET Student Exchange program, gaining cross-border technical exposure to networking and cybersecurity.",
       responsibilities: [
         "Participated in hands-on technical labs with engineering peers from six ASEAN countries.",
         "Executed packet inspection, protocol analysis, and traffic monitoring using Wireshark.",

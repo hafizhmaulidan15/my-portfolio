@@ -60,7 +60,7 @@ export default function ExperiencePage() {
                 </div>
 
                 {/* KPI badges */}
-                <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:gap-2.5">
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-2 sm:flex sm:items-center sm:gap-2.5">
                   {item.kpis.map((kpi) => (
                     <div
                       key={kpi.label}
@@ -83,7 +83,7 @@ export default function ExperiencePage() {
                   ROLE OVERVIEW
                 </span>
                 <p className="text-sm sm:text-base text-[#111827] font-medium leading-relaxed">
-                  {item.overview || item.description}
+                  {item.overview}
                 </p>
               </div>
 

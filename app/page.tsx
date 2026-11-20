@@ -93,7 +93,7 @@ export default function HomePage() {
                   Reject Rate
                 </div>
                 <div className="text-xs text-[#9CA3AF] hidden sm:block">
-                  Strict quality pass
+                  183 L of 52,378 L
                 </div>
               </div>
             </div>
